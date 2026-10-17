@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://v0w74c2ef48w"]
+
+[ext_resource type="Script" uid="uid://dqaksykobap3x" path="res://scripts/player/detached_head.gd" id="1_mxgoy"]
+[ext_resource type="ArrayMesh" uid="uid://bk0dn6mu2lm1i" path="res://assets/cloudline/derived/robot_head.res" id="2_y68hr"]
+[ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="3_y68hr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fsdni"]
+friction = 0.7
+bounce = 0.25
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vw71k"]
+radius = 0.42
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_efnum"]
+radius = 0.72
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_soiin"]
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 0.2
+initial_velocity_max = 0.9
+gravity = Vector3(0, -1, 0)
+scale_min = 0.5
+color = Color(1, 0.9, 0.4, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_fsdni"]
+radius = 0.07
+height = 0.14
+radial_segments = 6
+rings = 3
+
+[node name="DetachedHead" type="RigidBody3D" unique_id=1980089233]
+collision_layer = 16
+collision_mask = 129
+mass = 2.5
+physics_material_override = SubResource("PhysicsMaterial_fsdni")
+can_sleep = false
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 4
+linear_damp = 0.02
+angular_damp = 0.35
+script = ExtResource("1_mxgoy")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1109044814]
+shape = SubResource("SphereShape3D_vw71k")
+
+[node name="Visual" type="Node3D" parent="." unique_id=1090127204]
+
+[node name="HeadMesh" type="MeshInstance3D" parent="Visual" unique_id=123379210]
+transform = Transform3D(34.43346, 1.4001918, -1.620459, 1.6991796, -1.9727628, 34.40159, 1.3035381, -34.415043, -2.037921, 0, 0, 0)
+mesh = ExtResource("2_y68hr")
+
+[node name="HitArea" type="Area3D" parent="." unique_id=893289122]
+collision_layer = 0
+collision_mask = 8
+monitorable = false
+
+[node name="HitShape" type="CollisionShape3D" parent="HitArea" unique_id=429840908]
+shape = SubResource("SphereShape3D_efnum")
+
+[node name="Trail" type="GPUParticles3D" parent="." unique_id=1465425628]
+material_override = ExtResource("3_y68hr")
+emitting = false
+amount = 28
+lifetime = 0.4
+one_shot = true
+explosiveness = 0.9
+process_material = SubResource("ParticleProcessMaterial_soiin")
+draw_pass_1 = SubResource("SphereMesh_fsdni")

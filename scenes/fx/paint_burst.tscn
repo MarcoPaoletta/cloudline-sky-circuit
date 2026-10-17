@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://rwwe7f8r7pss"]
+
+[ext_resource type="Material" uid="uid://fy43gxuov53k" path="res://resources/materials/paint_droplet.tres" id="1_8mfth"]
+[ext_resource type="Curve" uid="uid://ba3pynaheo8x4" path="res://resources/curves/paint_shrink.tres" id="2_7ulci"]
+[ext_resource type="Script" uid="uid://c6htvy0cqwhyq" path="res://scripts/fx/paint_burst.gd" id="3_p00iw"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_if3rn"]
+radius = 0.09
+height = 0.18
+radial_segments = 8
+rings = 4
+
+[node name="PaintBurst" type="CPUParticles3D" unique_id=365195585]
+material_override = ExtResource("1_8mfth")
+emitting = false
+amount = 16
+lifetime = 0.55
+one_shot = true
+explosiveness = 0.95
+mesh = SubResource("SphereMesh_if3rn")
+direction = Vector3(0, 1, 0)
+spread = 62.0
+gravity = Vector3(0, -15, 0)
+initial_velocity_min = 2.0
+initial_velocity_max = 5.0
+scale_amount_min = 0.6
+scale_amount_max = 1.3
+scale_amount_curve = ExtResource("2_7ulci")
+script = ExtResource("3_p00iw")

@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c5vkwfnvdjx1v"]
+
+[ext_resource type="Script" uid="uid://cgfvqoxwtu0hb" path="res://scripts/mechanics/cargo_crate.gd" id="1_qai2b"]
+[ext_resource type="PackedScene" uid="uid://b6ek0r3ur4pe8" path="res://assets/cloudline/platformer/Cubes/Cube_Crate.gltf" id="2_aowej"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="3_eqpty"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6bt0m"]
+size = Vector3(1.2, 1.2, 1.2)
+
+[sub_resource type="TorusMesh" id="TorusMesh_3yxug"]
+inner_radius = 0.95
+outer_radius = 1.05
+rings = 20
+ring_segments = 6
+
+[node name="CargoCrate" type="AnimatableBody3D" unique_id=2137911789]
+collision_layer = 128
+collision_mask = 0
+script = ExtResource("1_qai2b")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=235409560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("BoxShape3D_6bt0m")
+
+[node name="Model" parent="." unique_id=1160983099 instance=ExtResource("2_aowej")]
+transform = Transform3D(0.595, 0, 0, 0, 0.595, 0, 0, 0, 0.595, 0, 0.6, 0)
+
+[node name="HighlightRing" type="Node3D" parent="." unique_id=670662620]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="HighlightRing" unique_id=844225006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = ExtResource("3_eqpty")
+mesh = SubResource("TorusMesh_3yxug")

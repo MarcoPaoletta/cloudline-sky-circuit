@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bqnjjmisu7j0l"]
+
+[ext_resource type="PackedScene" uid="uid://b1okt30bo2d5h" path="res://assets/cloudline/platformer/Cubes/Cube_Grass_Single.gltf" id="1_5lu2t"]
+[ext_resource type="PackedScene" uid="uid://c6soylxdlus4q" path="res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf" id="2_f8aeo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kod80"]
+size = Vector3(8, 0.8, 8)
+
+[node name="Island8" type="StaticBody3D" unique_id=105439427 groups=["island", "walkable"]]
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=2061033919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("BoxShape3D_kod80")
+
+[node name="Top" parent="." unique_id=486558704 instance=ExtResource("1_5lu2t")]
+transform = Transform3D(3.58744, 0, 0, 0, 0.4, 0, 0, 0, 3.58744, 0, -0.4, 0)
+
+[node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("2_f8aeo")]
+transform = Transform3D(0.93225, 0, 0, 0, -1.10193, 1.1656341e-07, 0, -9.6333785e-08, -1.33333, 0, -0.75, 0)

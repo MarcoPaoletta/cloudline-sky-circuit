@@ -1,0 +1,143 @@
+{
+  "engine": "4.7.2-stable (gh)",
+  "robot_parts": [
+    {
+      "path": "RobotArmature/Skeleton3D/Foot_L/Foot_L",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Foot.L"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Torso2/Torso2",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Body"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Head2/Head2",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Head"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Shoulder_L/Shoulder_L",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Shoulder.L"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Arm_L/Arm_L",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "UpperArm.L"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Shoulder_R/Shoulder_R",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Shoulder.R"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Arm_R/Arm_R",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "UpperArm.R"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Leg_L/Leg_L",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "UpperLeg.L"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/LowerLeg_L/LowerLeg_L",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "LowerLeg.L"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Leg_R/Leg_R",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "UpperLeg.R"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/LowerLeg_R/LowerLeg_R",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "LowerLeg.R"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Foot_R/Foot_R",
+      "skinned": false,
+      "parent_type": "BoneAttachment3D",
+      "bone": "Foot.R"
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Hand_R",
+      "skinned": true,
+      "parent_type": "Skeleton3D",
+      "bone": ""
+    },
+    {
+      "path": "RobotArmature/Skeleton3D/Hand_L",
+      "skinned": true,
+      "parent_type": "Skeleton3D",
+      "bone": ""
+    }
+  ],
+  "robot_animations": [
+    "RobotArmature|Robot_Dance",
+    "RobotArmature|Robot_Death",
+    "RobotArmature|Robot_Idle",
+    "RobotArmature|Robot_Jump",
+    "RobotArmature|Robot_No",
+    "RobotArmature|Robot_Punch",
+    "RobotArmature|Robot_Running",
+    "RobotArmature|Robot_Sitting",
+    "RobotArmature|Robot_Standing",
+    "RobotArmature|Robot_ThumbsUp",
+    "RobotArmature|Robot_WalkJump",
+    "RobotArmature|Robot_Walking",
+    "RobotArmature|Robot_Wave",
+    "RobotArmature|Robot_Yes"
+  ],
+  "props": [
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Bouncer.gltf",
+      "meshes": 1,
+      "animations": [
+        "Bouncer_Bounce",
+        "Bouncer_Idle"
+      ]
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Lever.gltf",
+      "meshes": 1,
+      "animations": [
+        "Lever_Off",
+        "Lever_On"
+      ]
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Arrow.gltf",
+      "meshes": 1,
+      "animations": []
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Door.gltf",
+      "meshes": 2,
+      "animations": []
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Cubes/Cube_Crate.gltf",
+      "meshes": 1,
+      "animations": []
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Powerups and Pickups/Gem_Blue.gltf",
+      "meshes": 1,
+      "animations": []
+    }
+  ]
+}

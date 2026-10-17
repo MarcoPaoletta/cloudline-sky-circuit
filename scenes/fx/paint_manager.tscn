@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://dyipmuxtnm3xs"]
+
+[ext_resource type="Script" uid="uid://bny02dmaipte2" path="res://scripts/fx/paint_manager.gd" id="1_liyyq"]
+[ext_resource type="PackedScene" uid="uid://isqnm8o7cq1m" path="res://scenes/fx/paint_decal.tscn" id="2_iguue"]
+[ext_resource type="PackedScene" uid="uid://rwwe7f8r7pss" path="res://scenes/fx/paint_burst.tscn" id="3_0rnlm"]
+
+[node name="PaintManager" type="Node3D" unique_id=2113115834]
+script = ExtResource("1_liyyq")
+
+[node name="Decals" type="Node3D" parent="." unique_id=1120375955]
+
+[node name="Decal01" parent="Decals" unique_id=2086220780 instance=ExtResource("2_iguue")]
+
+[node name="Decal02" parent="Decals" unique_id=1237860166 instance=ExtResource("2_iguue")]
+
+[node name="Decal03" parent="Decals" unique_id=1724645611 instance=ExtResource("2_iguue")]
+
+[node name="Decal04" parent="Decals" unique_id=1875628767 instance=ExtResource("2_iguue")]
+
+[node name="Decal05" parent="Decals" unique_id=566651839 instance=ExtResource("2_iguue")]
+
+[node name="Decal06" parent="Decals" unique_id=1088410090 instance=ExtResource("2_iguue")]
+
+[node name="Decal07" parent="Decals" unique_id=237935185 instance=ExtResource("2_iguue")]
+
+[node name="Decal08" parent="Decals" unique_id=1925183027 instance=ExtResource("2_iguue")]
+
+[node name="Decal09" parent="Decals" unique_id=754662341 instance=ExtResource("2_iguue")]
+
+[node name="Decal10" parent="Decals" unique_id=2110460945 instance=ExtResource("2_iguue")]
+
+[node name="Decal11" parent="Decals" unique_id=117878397 instance=ExtResource("2_iguue")]
+
+[node name="Decal12" parent="Decals" unique_id=1050745178 instance=ExtResource("2_iguue")]
+
+[node name="Decal13" parent="Decals" unique_id=797144694 instance=ExtResource("2_iguue")]
+
+[node name="Decal14" parent="Decals" unique_id=714872044 instance=ExtResource("2_iguue")]
+
+[node name="Decal15" parent="Decals" unique_id=1553127276 instance=ExtResource("2_iguue")]
+
+[node name="Decal16" parent="Decals" unique_id=675827329 instance=ExtResource("2_iguue")]
+
+[node name="Decal17" parent="Decals" unique_id=890802683 instance=ExtResource("2_iguue")]
+
+[node name="Decal18" parent="Decals" unique_id=314278838 instance=ExtResource("2_iguue")]
+
+[node name="Decal19" parent="Decals" unique_id=560012870 instance=ExtResource("2_iguue")]
+
+[node name="Decal20" parent="Decals" unique_id=617239607 instance=ExtResource("2_iguue")]
+
+[node name="Decal21" parent="Decals" unique_id=1582483174 instance=ExtResource("2_iguue")]
+
+[node name="Decal22" parent="Decals" unique_id=801794494 instance=ExtResource("2_iguue")]
+
+[node name="Decal23" parent="Decals" unique_id=125683170 instance=ExtResource("2_iguue")]
+
+[node name="Decal24" parent="Decals" unique_id=114169242 instance=ExtResource("2_iguue")]
+
+[node name="Decal25" parent="Decals" unique_id=653010809 instance=ExtResource("2_iguue")]
+
+[node name="Decal26" parent="Decals" unique_id=635194544 instance=ExtResource("2_iguue")]
+
+[node name="Decal27" parent="Decals" unique_id=666282754 instance=ExtResource("2_iguue")]
+
+[node name="Decal28" parent="Decals" unique_id=1851821908 instance=ExtResource("2_iguue")]
+
+[node name="Decal29" parent="Decals" unique_id=1154887279 instance=ExtResource("2_iguue")]
+
+[node name="Decal30" parent="Decals" unique_id=997189170 instance=ExtResource("2_iguue")]
+
+[node name="Decal31" parent="Decals" unique_id=1841508779 instance=ExtResource("2_iguue")]
+
+[node name="Decal32" parent="Decals" unique_id=964194763 instance=ExtResource("2_iguue")]
+
+[node name="Decal33" parent="Decals" unique_id=422438208 instance=ExtResource("2_iguue")]
+
+[node name="Decal34" parent="Decals" unique_id=2091935813 instance=ExtResource("2_iguue")]
+
+[node name="Decal35" parent="Decals" unique_id=1172653252 instance=ExtResource("2_iguue")]
+
+[node name="Decal36" parent="Decals" unique_id=249135242 instance=ExtResource("2_iguue")]
+
+[node name="Decal37" parent="Decals" unique_id=303862149 instance=ExtResource("2_iguue")]
+
+[node name="Decal38" parent="Decals" unique_id=810200792 instance=ExtResource("2_iguue")]
+
+[node name="Decal39" parent="Decals" unique_id=1810751965 instance=ExtResource("2_iguue")]
+
+[node name="Decal40" parent="Decals" unique_id=569954509 instance=ExtResource("2_iguue")]
+
+[node name="Decal41" parent="Decals" unique_id=406367840 instance=ExtResource("2_iguue")]
+
+[node name="Decal42" parent="Decals" unique_id=1023295489 instance=ExtResource("2_iguue")]
+
+[node name="Decal43" parent="Decals" unique_id=126908492 instance=ExtResource("2_iguue")]
+
+[node name="Decal44" parent="Decals" unique_id=1569993985 instance=ExtResource("2_iguue")]
+
+[node name="Decal45" parent="Decals" unique_id=1456963637 instance=ExtResource("2_iguue")]
+
+[node name="Decal46" parent="Decals" unique_id=1475103142 instance=ExtResource("2_iguue")]
+
+[node name="Decal47" parent="Decals" unique_id=1109675194 instance=ExtResource("2_iguue")]
+
+[node name="Decal48" parent="Decals" unique_id=1329067545 instance=ExtResource("2_iguue")]
+
+[node name="Decal49" parent="Decals" unique_id=2118635141 instance=ExtResource("2_iguue")]
+
+[node name="Decal50" parent="Decals" unique_id=2081898925 instance=ExtResource("2_iguue")]
+
+[node name="Decal51" parent="Decals" unique_id=303699718 instance=ExtResource("2_iguue")]
+
+[node name="Decal52" parent="Decals" unique_id=1277573695 instance=ExtResource("2_iguue")]
+
+[node name="Decal53" parent="Decals" unique_id=1428919393 instance=ExtResource("2_iguue")]
+
+[node name="Decal54" parent="Decals" unique_id=1770355667 instance=ExtResource("2_iguue")]
+
+[node name="Decal55" parent="Decals" unique_id=468420422 instance=ExtResource("2_iguue")]
+
+[node name="Decal56" parent="Decals" unique_id=1604801552 instance=ExtResource("2_iguue")]
+
+[node name="Decal57" parent="Decals" unique_id=570612071 instance=ExtResource("2_iguue")]
+
+[node name="Decal58" parent="Decals" unique_id=715344235 instance=ExtResource("2_iguue")]
+
+[node name="Decal59" parent="Decals" unique_id=770641500 instance=ExtResource("2_iguue")]
+
+[node name="Decal60" parent="Decals" unique_id=203372255 instance=ExtResource("2_iguue")]
+
+[node name="Decal61" parent="Decals" unique_id=1263326941 instance=ExtResource("2_iguue")]
+
+[node name="Decal62" parent="Decals" unique_id=1190225603 instance=ExtResource("2_iguue")]
+
+[node name="Decal63" parent="Decals" unique_id=841252820 instance=ExtResource("2_iguue")]
+
+[node name="Decal64" parent="Decals" unique_id=1989728602 instance=ExtResource("2_iguue")]
+
+[node name="Decal65" parent="Decals" unique_id=1059518657 instance=ExtResource("2_iguue")]
+
+[node name="Decal66" parent="Decals" unique_id=821006493 instance=ExtResource("2_iguue")]
+
+[node name="Decal67" parent="Decals" unique_id=1252523771 instance=ExtResource("2_iguue")]
+
+[node name="Decal68" parent="Decals" unique_id=1783195606 instance=ExtResource("2_iguue")]
+
+[node name="Decal69" parent="Decals" unique_id=146822 instance=ExtResource("2_iguue")]
+
+[node name="Decal70" parent="Decals" unique_id=1245075261 instance=ExtResource("2_iguue")]
+
+[node name="Decal71" parent="Decals" unique_id=1642581649 instance=ExtResource("2_iguue")]
+
+[node name="Decal72" parent="Decals" unique_id=612730851 instance=ExtResource("2_iguue")]
+
+[node name="Decal73" parent="Decals" unique_id=334707976 instance=ExtResource("2_iguue")]
+
+[node name="Decal74" parent="Decals" unique_id=477927607 instance=ExtResource("2_iguue")]
+
+[node name="Decal75" parent="Decals" unique_id=877416572 instance=ExtResource("2_iguue")]
+
+[node name="Decal76" parent="Decals" unique_id=26422154 instance=ExtResource("2_iguue")]
+
+[node name="Decal77" parent="Decals" unique_id=1620140325 instance=ExtResource("2_iguue")]
+
+[node name="Decal78" parent="Decals" unique_id=1651767439 instance=ExtResource("2_iguue")]
+
+[node name="Decal79" parent="Decals" unique_id=1682659971 instance=ExtResource("2_iguue")]
+
+[node name="Decal80" parent="Decals" unique_id=248592361 instance=ExtResource("2_iguue")]
+
+[node name="Decal81" parent="Decals" unique_id=181978210 instance=ExtResource("2_iguue")]
+
+[node name="Decal82" parent="Decals" unique_id=378408618 instance=ExtResource("2_iguue")]
+
+[node name="Decal83" parent="Decals" unique_id=611557485 instance=ExtResource("2_iguue")]
+
+[node name="Decal84" parent="Decals" unique_id=754660625 instance=ExtResource("2_iguue")]
+
+[node name="Decal85" parent="Decals" unique_id=1400965815 instance=ExtResource("2_iguue")]
+
+[node name="Decal86" parent="Decals" unique_id=153977469 instance=ExtResource("2_iguue")]
+
+[node name="Decal87" parent="Decals" unique_id=1155315211 instance=ExtResource("2_iguue")]
+
+[node name="Decal88" parent="Decals" unique_id=1920352678 instance=ExtResource("2_iguue")]
+
+[node name="Decal89" parent="Decals" unique_id=499975156 instance=ExtResource("2_iguue")]
+
+[node name="Decal90" parent="Decals" unique_id=439532419 instance=ExtResource("2_iguue")]
+
+[node name="Decal91" parent="Decals" unique_id=1441167419 instance=ExtResource("2_iguue")]
+
+[node name="Decal92" parent="Decals" unique_id=480009887 instance=ExtResource("2_iguue")]
+
+[node name="Decal93" parent="Decals" unique_id=348292552 instance=ExtResource("2_iguue")]
+
+[node name="Decal94" parent="Decals" unique_id=541295453 instance=ExtResource("2_iguue")]
+
+[node name="Decal95" parent="Decals" unique_id=1318123240 instance=ExtResource("2_iguue")]
+
+[node name="Decal96" parent="Decals" unique_id=88502304 instance=ExtResource("2_iguue")]
+
+[node name="Bursts" type="Node3D" parent="." unique_id=1196610644]
+
+[node name="Burst01" parent="Bursts" unique_id=365195585 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst02" parent="Bursts" unique_id=1503578874 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst03" parent="Bursts" unique_id=405277850 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst04" parent="Bursts" unique_id=471464786 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst05" parent="Bursts" unique_id=2051221183 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst06" parent="Bursts" unique_id=1083567586 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst07" parent="Bursts" unique_id=178717684 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst08" parent="Bursts" unique_id=1202996521 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst09" parent="Bursts" unique_id=1157673587 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst10" parent="Bursts" unique_id=1254647017 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst11" parent="Bursts" unique_id=1505929827 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst12" parent="Bursts" unique_id=420375535 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst13" parent="Bursts" unique_id=1251328034 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst14" parent="Bursts" unique_id=1468692216 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst15" parent="Bursts" unique_id=228945696 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst16" parent="Bursts" unique_id=2141364780 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst17" parent="Bursts" unique_id=623352047 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst18" parent="Bursts" unique_id=745463946 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst19" parent="Bursts" unique_id=1828607346 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst20" parent="Bursts" unique_id=722236371 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst21" parent="Bursts" unique_id=1303776074 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst22" parent="Bursts" unique_id=1267245738 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst23" parent="Bursts" unique_id=777483646 instance=ExtResource("3_0rnlm")]
+
+[node name="Burst24" parent="Bursts" unique_id=950400646 instance=ExtResource("3_0rnlm")]

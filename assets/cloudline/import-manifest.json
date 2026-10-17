@@ -1,0 +1,132 @@
+{
+  "game": "Cloudline",
+  "source_website": "https://cloudline-robot-platformer.letta-corporation.chatgpt.site",
+  "imported_files": [
+    {
+      "target": "res://assets/cloudline/robot/Robot.fbx",
+      "original_archive": "downloads/robot.zip",
+      "original_member": "FBX/Robot.fbx",
+      "sha256": "38afb56db7fb17a74d30f0afc8adb5f00441a94e65d6b8ac1958732480f79eb8"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Cubes/Cube_Grass_Single.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Cubes/glTF/Cube_Grass_Single.gltf",
+      "sha256": "79d72c01739d9e9a1ef07d148949624059241aac429a0de2328f33b85ab3b684"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/RockPlatforms_Medium.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/RockPlatforms_Medium.gltf",
+      "sha256": "2aa4624faec12e8b63cc65d44c256658b1d215118bf108119a782c8337e6208a"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/RockPlatforms_Large.gltf",
+      "sha256": "3316601ca7688b4f8c4df5f04fdc2b71ce59ba9ee057267ee438e1bd0f2cf94e"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Cloud_1.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Cloud_1.gltf",
+      "sha256": "b712e52a298dcbfe0467852aff19c036ba9a83a4db0f2bb4076384b98caf37d6"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Cloud_2.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Cloud_2.gltf",
+      "sha256": "3b67cdbd76315a41f7199ff761500975dfde8b54ede5780cbde2044d34d77e58"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Cloud_3.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Cloud_3.gltf",
+      "sha256": "fc8e4fa2da9d9eb2047d5c234d361426d45d3efb844603006a481b7dfa066130"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Powerups and Pickups/Coin.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Powerups and Pickups/glTF/Coin.gltf",
+      "sha256": "c521f874e5f46666022c9360924a7ec37e2e91fac070afece64872ffdc9c8b8b"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Level and Mechanics/Goal_Flag.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Goal_Flag.gltf",
+      "sha256": "283c3eeda571ea7920aa9dbd8f601a99e33c6f757a81eed4231eb7140023475e"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Level and Mechanics/Bridge_Small.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Bridge_Small.gltf",
+      "sha256": "6ebc0d297f42fb01be7c78d86f40257b55d4d0b75b73724ccf46ecff2cd5e7bc"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Bush.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Bush.gltf",
+      "sha256": "114cd9dffc48aff7f4e1acd01c0e70803ba0799710c3b44f1626908bcedfe089"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Rock_1.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Rock_1.gltf",
+      "sha256": "c0695ff28a950877872cca641a69f1a180c358cc43fa184c9be7aed542bda8b4"
+    },
+    {
+      "target": "res://assets/cloudline/platformer/Nature/Grass_1.gltf",
+      "original_archive": "downloads/platformer.zip",
+      "original_member": "Ultimate Platformer Pack - Dec 2021/Nature/glTF/Grass_1.gltf",
+      "sha256": "82a44e4638e9ad1f325a7d4ae75af5f33bae8e76a37984d66910892638a9b387"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Jumping and Landing/sfx_movement_jump1.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Jumping and Landing/sfx_movement_jump1.wav",
+      "sha256": "99ff174713ca233a06d3fdb723a9d767681f03b48a6e16e9be546ae42efbd806"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Jumping and Landing/sfx_movement_jump10_landing.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Jumping and Landing/sfx_movement_jump10_landing.wav",
+      "sha256": "44cabfa1852bd1ab62fcfabfbaf1733885443ae9f1c794c0fdbb1c08a431a0c6"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Coins/sfx_coin_single1.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Coins/sfx_coin_single1.wav",
+      "sha256": "5db3c16ed50acd8fb02525caf5446402910fd3fb61071ae9098ac232e22a63aa"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Positive Sounds/sfx_sounds_powerup1.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Positive Sounds/sfx_sounds_powerup1.wav",
+      "sha256": "ded83f9452006571efa231e3be8a0a0cc9c48d4b316df204417e02c0e54c538b"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Footsteps/sfx_movement_footsteps1a.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/Movement/Footsteps/sfx_movement_footsteps1a.wav",
+      "sha256": "1f07453c2f40c745be27f8b4ddb363987fa0757e6e8bdc7fa77f2130dee2c0e2"
+    },
+    {
+      "target": "res://assets/cloudline/audio/Menu Sounds/sfx_menu_select1.wav",
+      "original_archive": "downloads/audio.zip",
+      "original_member": "The Essential Retro Video Game Sound Effects Collection [512 sounds] By Juhani Junkala/General Sounds/Menu Sounds/sfx_menu_select1.wav",
+      "sha256": "a739f6c39b90ba2551d5fd81d8bc2b1cd9b72b3cc1e35d76fc7e2ef6f7e6f392"
+    },
+    {
+      "target": "res://assets/cloudline/licenses/robot-bundled-license.txt",
+      "sha256": "83d8959f9fc56353ed571fbe2dc52e4bcd64508e2399501cd45ac2ce3df0bf8c"
+    },
+    {
+      "target": "res://assets/cloudline/licenses/platformer-bundled-license.txt",
+      "sha256": "de990ef6fc68cffd7fd1ae342c4d0c823b541b8848d8f76bca5d3339f4de6f6e"
+    },
+    {
+      "target": "res://assets/cloudline/licenses/audio-info.txt",
+      "sha256": "dc2faee80e8c2c6de888e0509b382fcd0ccc3124ccb0f8448b5126111e21ba2d"
+    }
+  ]
+}

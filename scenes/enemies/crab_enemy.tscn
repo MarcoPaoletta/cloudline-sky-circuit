@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://4iudmt8bnvt3"]
+
+[ext_resource type="Script" uid="uid://blr3t512lnxnh" path="res://scripts/enemies/crab_enemy.gd" id="1_taqdl"]
+[ext_resource type="PackedScene" uid="uid://chxrjbbloek2w" path="res://assets/cloudline/platformer/Enemies/Crab.gltf" id="2_h67mm"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="3_6q6xq"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="4_ebrqu"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="5_a5ohr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_chpav"]
+size = Vector3(1.3, 0.8, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_k7gos"]
+radius = 0.95
+
+[sub_resource type="SphereMesh" id="SphereMesh_2niip"]
+radial_segments = 4
+rings = 2
+
+[sub_resource type="TorusMesh" id="TorusMesh_8mhpp"]
+inner_radius = 0.95
+outer_radius = 1.09
+rings = 16
+ring_segments = 6
+
+[node name="CrabEnemy" type="CharacterBody3D" unique_id=1645236635]
+collision_layer = 4
+script = ExtResource("1_taqdl")
+paint_color_id = 1
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1386359526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_chpav")
+
+[node name="Model" type="Node3D" parent="." unique_id=337913725]
+
+[node name="Body" parent="Model" unique_id=16079030 instance=ExtResource("2_h67mm")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1931102882]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_6q6xq")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=611151081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("SphereShape3D_k7gos")
+
+[node name="WarnMark" type="Node3D" parent="." unique_id=279668131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+visible = false
+
+[node name="Diamond" type="MeshInstance3D" parent="WarnMark" unique_id=651362403]
+transform = Transform3D(0.3, 0, 0, 0, 0.45, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("4_ebrqu")
+mesh = SubResource("SphereMesh_2niip")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=1983772981]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="TargetRing" unique_id=1463380439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = ExtResource("5_a5ohr")
+mesh = SubResource("TorusMesh_8mhpp")

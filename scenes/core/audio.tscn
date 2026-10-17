@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://ms3aprt0du1s"]
+
+[ext_resource type="Script" uid="uid://t0t3318u8qoj" path="res://scripts/core/audio.gd" id="1_8wyu3"]
+
+[node name="Audio" type="Node" unique_id=1123948222]
+script = ExtResource("1_8wyu3")
+
+[node name="Voices" type="Node" parent="." unique_id=1378396615]
+
+[node name="Voice01" type="AudioStreamPlayer" parent="Voices" unique_id=1595160605]
+bus = &"SFX"
+
+[node name="Voice02" type="AudioStreamPlayer" parent="Voices" unique_id=1099566567]
+bus = &"SFX"
+
+[node name="Voice03" type="AudioStreamPlayer" parent="Voices" unique_id=520037059]
+bus = &"SFX"
+
+[node name="Voice04" type="AudioStreamPlayer" parent="Voices" unique_id=744201185]
+bus = &"SFX"
+
+[node name="Voice05" type="AudioStreamPlayer" parent="Voices" unique_id=473277690]
+bus = &"SFX"
+
+[node name="Voice06" type="AudioStreamPlayer" parent="Voices" unique_id=1127557094]
+bus = &"SFX"
+
+[node name="Voice07" type="AudioStreamPlayer" parent="Voices" unique_id=1538546681]
+bus = &"SFX"
+
+[node name="Voice08" type="AudioStreamPlayer" parent="Voices" unique_id=1978430691]
+bus = &"SFX"
+
+[node name="Voice09" type="AudioStreamPlayer" parent="Voices" unique_id=1121040953]
+bus = &"SFX"
+
+[node name="Voice10" type="AudioStreamPlayer" parent="Voices" unique_id=747103809]
+bus = &"SFX"
+
+[node name="Voice11" type="AudioStreamPlayer" parent="Voices" unique_id=2146804331]
+bus = &"SFX"
+
+[node name="Voice12" type="AudioStreamPlayer" parent="Voices" unique_id=1426271560]
+bus = &"SFX"
+
+[node name="Voice13" type="AudioStreamPlayer" parent="Voices" unique_id=484468560]
+bus = &"SFX"
+
+[node name="Voice14" type="AudioStreamPlayer" parent="Voices" unique_id=374993273]
+bus = &"SFX"
+
+[node name="Voice15" type="AudioStreamPlayer" parent="Voices" unique_id=1423193970]
+bus = &"SFX"
+
+[node name="Voice16" type="AudioStreamPlayer" parent="Voices" unique_id=209131418]
+bus = &"SFX"
+
+[node name="UiVoices" type="Node" parent="." unique_id=564474918]
+
+[node name="UiVoice01" type="AudioStreamPlayer" parent="UiVoices" unique_id=1976479851]
+bus = &"UI"
+
+[node name="UiVoice02" type="AudioStreamPlayer" parent="UiVoices" unique_id=110147650]
+bus = &"UI"
+
+[node name="UiVoice03" type="AudioStreamPlayer" parent="UiVoices" unique_id=89674718]
+bus = &"UI"
+
+[node name="UiVoice04" type="AudioStreamPlayer" parent="UiVoices" unique_id=919416764]
+bus = &"UI"
+
+[node name="MuteIndicator" type="CanvasLayer" parent="." unique_id=1441868865]
+layer = 100
+
+[node name="Anchor" type="Control" parent="MuteIndicator" unique_id=1633443280]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Badge" type="PanelContainer" parent="MuteIndicator/Anchor" unique_id=1339340890]
+unique_name_in_owner = true
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -170.0
+offset_top = 20.0
+offset_right = -24.0
+offset_bottom = 70.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_type_variation = &"BadgePanel"
+
+[node name="Row" type="HBoxContainer" parent="MuteIndicator/Anchor/Badge" unique_id=1939404635]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Speaker" type="Control" parent="MuteIndicator/Anchor/Badge/Row" unique_id=361391154]
+custom_minimum_size = Vector2(46, 34)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Body" type="Polygon2D" parent="MuteIndicator/Anchor/Badge/Row/Speaker" unique_id=18340141]
+color = Color(0.96, 0.99, 1, 1)
+polygon = PackedVector2Array(3, 11, 11, 11, 22, 3, 22, 31, 11, 23, 3, 23)
+
+[node name="WaveA" type="Line2D" parent="MuteIndicator/Anchor/Badge/Row/Speaker" unique_id=1554011557]
+unique_name_in_owner = true
+points = PackedVector2Array(26, 11, 29.5, 14, 30.5, 17, 29.5, 20, 26, 23)
+width = 3.0
+default_color = Color(0.20784, 0.83137, 0.96078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="WaveB" type="Line2D" parent="MuteIndicator/Anchor/Badge/Row/Speaker" unique_id=530517937]
+unique_name_in_owner = true
+points = PackedVector2Array(30, 6, 35.5, 12, 38, 17, 35.5, 22, 30, 28)
+width = 3.0
+default_color = Color(0.20784, 0.83137, 0.96078, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="MuteSlash" type="Line2D" parent="MuteIndicator/Anchor/Badge/Row/Speaker" unique_id=1242442601]
+unique_name_in_owner = true
+points = PackedVector2Array(26, 7, 42, 28)
+width = 4.5
+default_color = Color(1, 0.41961, 0.35294, 1)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="KeyCap" type="PanelContainer" parent="MuteIndicator/Anchor/Badge/Row" unique_id=1486676701]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"KeyCap"
+
+[node name="KeyLabel" type="Label" parent="MuteIndicator/Anchor/Badge/Row/KeyCap" unique_id=957172132]
+layout_mode = 2
+theme_type_variation = &"KeyLabel"
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1

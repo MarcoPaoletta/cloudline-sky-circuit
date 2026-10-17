@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dbkl40xg64d1p"]
+
+[ext_resource type="Script" uid="uid://e0yljflkjjr" path="res://scripts/mechanics/pickup.gd" id="1_4qwg1"]
+[ext_resource type="PackedScene" uid="uid://bpahcmql0uaxh" path="res://assets/cloudline/platformer/Powerups and Pickups/Gem_Blue.gltf" id="2_cg5p6"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="3_o5bwj"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_qyubb"]
+radius = 0.62
+
+[sub_resource type="TorusMesh" id="TorusMesh_6avx7"]
+inner_radius = 0.62
+outer_radius = 0.7
+rings = 16
+ring_segments = 6
+
+[node name="BlueGem" type="Area3D" unique_id=889450958]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_4qwg1")
+kind = 1
+pickup_id = "g00"
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=2034677784]
+shape = SubResource("SphereShape3D_qyubb")
+
+[node name="Visual" type="Node3D" parent="." unique_id=576360549]
+
+[node name="Model" parent="Visual" unique_id=349665716 instance=ExtResource("2_cg5p6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="HighlightRing" type="Node3D" parent="." unique_id=1152024314]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="HighlightRing" unique_id=1188763342]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+material_override = ExtResource("3_o5bwj")
+mesh = SubResource("TorusMesh_6avx7")

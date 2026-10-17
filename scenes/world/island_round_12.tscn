@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dykv5ukpwiim1"]
+
+[ext_resource type="Material" uid="uid://ccg5d3e6pojiy" path="res://resources/materials/dirt_orange.tres" id="1_h6t1h"]
+[ext_resource type="PackedScene" uid="uid://c6soylxdlus4q" path="res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf" id="2_hcufk"]
+[ext_resource type="Material" uid="uid://b026675djlu3t" path="res://resources/materials/grass_lime.tres" id="3_hcufk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l3fro"]
+height = 0.8
+radius = 6.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_l3fro"]
+top_radius = 6.0
+bottom_radius = 6.0
+height = 0.64
+radial_segments = 28
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fvf54"]
+top_radius = 6.04
+bottom_radius = 6.04
+height = 0.16
+radial_segments = 28
+rings = 1
+
+[node name="IslandRound12" type="StaticBody3D" unique_id=1533419963 groups=["island", "walkable"]]
+collision_mask = 0
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1544135613]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("CylinderShape3D_l3fro")
+
+[node name="Top" type="MeshInstance3D" parent="." unique_id=1489893217]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48, 0)
+material_override = ExtResource("1_h6t1h")
+mesh = SubResource("CylinderMesh_l3fro")
+surface_material_override/0 = ExtResource("1_h6t1h")
+
+[node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("2_hcufk")]
+transform = Transform3D(1.39837, 0, 0, 0, -1.65289, 1.7484555e-07, 0, -1.4450023e-07, -2, 0, -0.75, 0)
+
+[node name="Grass" type="MeshInstance3D" parent="." unique_id=1133864539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0)
+material_override = ExtResource("3_hcufk")
+mesh = SubResource("CylinderMesh_fvf54")

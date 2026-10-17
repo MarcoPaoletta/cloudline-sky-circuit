@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bn1bcxe2l1egk"]
+
+[ext_resource type="Script" path="res://scripts/ui/goal_marker.gd" id="1_qxv0x"]
+
+[node name="GoalMarker" type="Control" unique_id=279777476]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qxv0x")
+
+[node name="Icon" type="Control" parent="." unique_id=1048960416]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="Diamond" type="Polygon2D" parent="Icon" unique_id=1721231328]
+unique_name_in_owner = true
+color = Color(1, 0.82353, 0.24706, 1)
+polygon = PackedVector2Array(0, -20, 13, 0, 0, 20, -13, 0)
+
+[node name="Core" type="Polygon2D" parent="Icon/Diamond" unique_id=1559640542]
+color = Color(1, 0.96471, 0.78824, 1)
+polygon = PackedVector2Array(0, -11, 7, 0, 0, 11, -7, 0)
+
+[node name="Arrow" type="Polygon2D" parent="Icon" unique_id=1512490168]
+unique_name_in_owner = true
+visible = false
+color = Color(1, 0.82353, 0.24706, 1)
+polygon = PackedVector2Array(18, 0, -10, -15, -3, 0, -10, 15)
+
+[node name="Distance" type="Label" parent="." unique_id=559877509]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_type_variation = &"HintLabel"

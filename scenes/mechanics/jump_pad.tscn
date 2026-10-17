@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b4xyhjx5wgnu3"]
+
+[ext_resource type="Script" uid="uid://c1p0sh2xjlm0g" path="res://scripts/mechanics/jump_pad.gd" id="1_hdcwi"]
+[ext_resource type="PackedScene" uid="uid://ddwegnf5hf7y1" path="res://assets/cloudline/platformer/Level and Mechanics/Bouncer.gltf" id="2_golid"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="3_oou88"]
+[ext_resource type="PackedScene" uid="uid://cdqjakdb75jec" path="res://assets/cloudline/platformer/Level and Mechanics/Arrow_Up.gltf" id="4_oagkg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_f1nwi"]
+height = 0.8
+radius = 0.95
+
+[sub_resource type="TorusMesh" id="TorusMesh_ppmah"]
+inner_radius = 0.78
+outer_radius = 0.92
+rings = 24
+ring_segments = 6
+
+[node name="JumpPad" type="Area3D" unique_id=1717401406]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_hdcwi")
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=449343246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("CylinderShape3D_f1nwi")
+
+[node name="Visual" type="Node3D" parent="." unique_id=1072548093]
+
+[node name="Bouncer" parent="Visual" unique_id=1470423021 instance=ExtResource("2_golid")]
+transform = Transform3D(0.5, 0, 0, 0, 0.3, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Rim" type="MeshInstance3D" parent="." unique_id=1254362661]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+material_override = ExtResource("3_oou88")
+mesh = SubResource("TorusMesh_ppmah")
+
+[node name="Arrow" parent="." unique_id=97250515 instance=ExtResource("4_oagkg")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0.55, 0)

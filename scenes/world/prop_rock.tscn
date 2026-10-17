@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://js28k6fqlov7"]
+
+[ext_resource type="PackedScene" uid="uid://dic8k4m1tpyrc" path="res://assets/cloudline/platformer/Nature/Rock_1.gltf" id="1_br6kt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o80vq"]
+size = Vector3(0.9, 0.7, 0.8)
+
+[node name="PropRock" type="StaticBody3D" unique_id=331937419]
+collision_mask = 0
+
+[node name="Visual" parent="." unique_id=952838255 instance=ExtResource("1_br6kt")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1165724776]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("BoxShape3D_o80vq")

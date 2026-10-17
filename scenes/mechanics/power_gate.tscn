@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c2oquprn7ix4s"]
+
+[ext_resource type="Script" uid="uid://ob43meayl85p" path="res://scripts/mechanics/power_gate.gd" id="1_7uwao"]
+[ext_resource type="PackedScene" uid="uid://b5x80ga4uqprf" path="res://assets/cloudline/platformer/Level and Mechanics/Door.gltf" id="2_5a2ox"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nnh1c"]
+size = Vector3(2.9, 3.4, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3hhsd"]
+size = Vector3(0.55, 3.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lb4o"]
+size = Vector3(0.55, 3.8, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fsuig"]
+size = Vector3(2.8, 3.2, 2.6)
+
+[node name="PowerGate" type="AnimatableBody3D" unique_id=1125577276]
+collision_mask = 0
+script = ExtResource("1_7uwao")
+
+[node name="Visual" parent="." unique_id=842106372 instance=ExtResource("2_5a2ox")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="Blocker" type="CollisionShape3D" parent="." unique_id=874264292]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0.28)
+shape = SubResource("BoxShape3D_nnh1c")
+
+[node name="PillarL" type="CollisionShape3D" parent="." unique_id=1045438227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6, 1.9, 0)
+shape = SubResource("BoxShape3D_3hhsd")
+
+[node name="PillarR" type="CollisionShape3D" parent="." unique_id=717345166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6, 1.9, 0)
+shape = SubResource("BoxShape3D_4lb4o")
+
+[node name="Doorway" type="Area3D" parent="." unique_id=869706799]
+collision_layer = 0
+collision_mask = 134
+monitorable = false
+
+[node name="Shape" type="CollisionShape3D" parent="Doorway" unique_id=199416395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+shape = SubResource("BoxShape3D_fsuig")

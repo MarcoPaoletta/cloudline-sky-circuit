@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://x1gq37ueh1mq"]
+
+[ext_resource type="Script" uid="uid://bgkg5nx3qul1p" path="res://scripts/mechanics/ground_console.gd" id="1_xevc1"]
+[ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="2_khate"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="3_dy17o"]
+[ext_resource type="Material" uid="uid://b1dg8mlgovpc" path="res://resources/materials/glow_coral.tres" id="4_5roxa"]
+[ext_resource type="Material" uid="uid://34fxmnuavi2" path="res://resources/materials/stone_blue.tres" id="5_y6h8f"]
+[ext_resource type="PackedScene" uid="uid://beq6doxqf3adr" path="res://assets/cloudline/platformer/Level and Mechanics/Lever.gltf" id="6_rowpk"]
+[ext_resource type="PackedScene" uid="uid://bqttfignyhujj" path="res://assets/cloudline/platformer/Level and Mechanics/Arrow.gltf" id="7_nn7wr"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xah3t"]
+height = 1.4
+radius = 1.6
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_e3xrd"]
+top_radius = 1.6
+bottom_radius = 1.7
+height = 0.18
+radial_segments = 14
+
+[sub_resource type="TorusMesh" id="TorusMesh_yt5ww"]
+inner_radius = 1.42
+outer_radius = 1.58
+rings = 28
+ring_segments = 6
+
+[node name="GroundConsole" type="Area3D" unique_id=156952307]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_xevc1")
+mat_idle = ExtResource("2_khate")
+mat_active = ExtResource("3_dy17o")
+mat_blocked = ExtResource("4_5roxa")
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=1322802321]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CylinderShape3D_xah3t")
+
+[node name="Visual" type="Node3D" parent="." unique_id=1211644482]
+
+[node name="Pad" type="MeshInstance3D" parent="Visual" unique_id=1027966299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09, 0)
+material_override = ExtResource("5_y6h8f")
+mesh = SubResource("CylinderMesh_e3xrd")
+
+[node name="Lever" parent="Visual" unique_id=1980332496 instance=ExtResource("6_rowpk")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0.18, -0.2)
+
+[node name="ArrowL" parent="Visual" unique_id=38771064 instance=ExtResource("7_nn7wr")]
+transform = Transform3D(-0.4, 0, -3.4969112e-08, 0, 0.4, 0, 3.4969112e-08, 0, -0.4, -0.85, 0.2, 0.75)
+
+[node name="ArrowR" parent="Visual" unique_id=1101664388 instance=ExtResource("7_nn7wr")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0.85, 0.2, 0.75)
+
+[node name="Ring" type="MeshInstance3D" parent="." unique_id=23776869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+material_override = ExtResource("2_khate")
+mesh = SubResource("TorusMesh_yt5ww")
+
+[node name="OverviewPose" type="Camera3D" parent="." unique_id=1941526085]
+transform = Transform3D(0.70710677, -0.5416752, 0.45451948, 0, 0.64278764, 0.76604444, -0.70710677, -0.5416752, 0.45451948, 15.5, 26, 15.5)
+fov = 32.0
+near = 0.5
+far = 500.0

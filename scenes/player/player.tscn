@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://bjteps33gw8pf"]
+
+[ext_resource type="Script" uid="uid://fwfjn3580r6j" path="res://scripts/player/player.gd" id="1_gmlin"]
+[ext_resource type="PackedScene" uid="uid://kplrt8jl3pwn" path="res://assets/cloudline/robot/Robot.fbx" id="2_lvxji"]
+[ext_resource type="Script" uid="uid://bu2yjeb7m8y8e" path="res://scripts/player/player_camera.gd" id="3_p47bc"]
+[ext_resource type="PackedScene" uid="uid://v0w74c2ef48w" path="res://scenes/player/detached_head.tscn" id="4_p47bc"]
+[ext_resource type="Script" uid="uid://ddlocvdcltclf" path="res://scripts/player/head_controller.gd" id="5_75vfm"]
+[ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="6_75vfm"]
+[ext_resource type="PackedScene" uid="uid://bxfnpmkes37wh" path="res://scenes/player/fetch_arm.tscn" id="7_0owmy"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_75vfm"]
+radius = 0.35
+height = 1.6
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0owmy"]
+radius = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_0owmy"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_qek5x"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_5gtgg"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_h17s1"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_je7p5"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_fm80t"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_gx1jg"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_ugbui"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_fcs02"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_myrg7"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_kvlxm"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_uf5tr"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_lgqa7"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_8ydkj"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_3j4b4"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_yj68g"]
+radius = 0.07
+height = 0.14
+radial_segments = 8
+rings = 4
+
+[node name="Player" type="CharacterBody3D" unique_id=860313022]
+collision_layer = 2
+collision_mask = 129
+floor_max_angle = 0.9
+floor_snap_length = 0.35
+script = ExtResource("1_gmlin")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=2105246471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_75vfm")
+
+[node name="Model" type="Node3D" parent="." unique_id=350065199]
+
+[node name="Robot" parent="Model" unique_id=891737305 instance=ExtResource("2_lvxji")]
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0, 0)
+
+[node name="HeadSocket" type="Marker3D" parent="." unique_id=1451600467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.42, 0)
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=803964782]
+physics_interpolation_mode = 2
+script = ExtResource("3_p47bc")
+
+[node name="Arm" type="SpringArm3D" parent="CameraRig" unique_id=1002769814]
+shape = SubResource("SphereShape3D_0owmy")
+spring_length = 6.5
+margin = 0.25
+
+[node name="ArmEnd" type="Node3D" parent="CameraRig/Arm" unique_id=471357337]
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig/Arm/ArmEnd" unique_id=570955862]
+physics_interpolation_mode = 2
+current = true
+fov = 60.0
+near = 0.12
+far = 700.0
+
+[node name="DetachedHead" parent="." unique_id=1980089233 instance=ExtResource("4_p47bc")]
+
+[node name="HeadController" type="Node" parent="." unique_id=147490838]
+script = ExtResource("5_75vfm")
+
+[node name="ArcDots" type="Node3D" parent="HeadController" unique_id=1586111358]
+
+[node name="Dot01" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=862522492]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_0owmy")
+
+[node name="Dot02" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1803679454]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_qek5x")
+
+[node name="Dot03" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=62309306]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_5gtgg")
+
+[node name="Dot04" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1922936538]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_h17s1")
+
+[node name="Dot05" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1828003536]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_je7p5")
+
+[node name="Dot06" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=440721799]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_fm80t")
+
+[node name="Dot07" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1275360509]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_gx1jg")
+
+[node name="Dot08" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1523309935]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_ugbui")
+
+[node name="Dot09" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=247196439]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_fcs02")
+
+[node name="Dot10" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=2106688761]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_myrg7")
+
+[node name="Dot11" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1238838842]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_kvlxm")
+
+[node name="Dot12" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1599128560]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_uf5tr")
+
+[node name="Dot13" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=836525815]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_lgqa7")
+
+[node name="Dot14" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=1001449345]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_8ydkj")
+
+[node name="Dot15" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=917189966]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_3j4b4")
+
+[node name="Dot16" type="MeshInstance3D" parent="HeadController/ArcDots" unique_id=207451230]
+visible = false
+material_override = ExtResource("6_75vfm")
+mesh = SubResource("SphereMesh_yj68g")
+
+[node name="FetchArm" parent="." unique_id=875667317 instance=ExtResource("7_0owmy")]

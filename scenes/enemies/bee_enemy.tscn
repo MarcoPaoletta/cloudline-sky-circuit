@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://by3t1lq5qpkn7"]
+
+[ext_resource type="Script" uid="uid://d1vvt6weay4t1" path="res://scripts/enemies/bee_enemy.gd" id="1_rwarv"]
+[ext_resource type="PackedScene" uid="uid://75emfalhhhps" path="res://assets/cloudline/platformer/Enemies/Bee.gltf" id="2_ifan6"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="3_7hf47"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="4_hj1kl"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="5_5dnvw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_um4c7"]
+size = Vector3(0.9, 0.7, 0.9)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lhsah"]
+radius = 0.8
+
+[sub_resource type="SphereMesh" id="SphereMesh_fbvom"]
+radial_segments = 4
+rings = 2
+
+[sub_resource type="TorusMesh" id="TorusMesh_kwbwf"]
+inner_radius = 0.8
+outer_radius = 0.94
+rings = 16
+ring_segments = 6
+
+[node name="BeeEnemy" type="CharacterBody3D" unique_id=1487829610]
+collision_layer = 4
+script = ExtResource("1_rwarv")
+paint_color_id = 2
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=758586774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_um4c7")
+
+[node name="Model" type="Node3D" parent="." unique_id=302474302]
+
+[node name="Body" parent="Model" unique_id=878573118 instance=ExtResource("2_ifan6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1895025142]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_7hf47")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=603452186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_lhsah")
+
+[node name="WarnMark" type="Node3D" parent="." unique_id=1469336500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+visible = false
+
+[node name="Diamond" type="MeshInstance3D" parent="WarnMark" unique_id=607207938]
+transform = Transform3D(0.3, 0, 0, 0, 0.45, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("4_hj1kl")
+mesh = SubResource("SphereMesh_fbvom")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=1659533523]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="TargetRing" unique_id=1211959189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = ExtResource("5_5dnvw")
+mesh = SubResource("TorusMesh_kwbwf")

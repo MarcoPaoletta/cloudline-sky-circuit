@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/MarcoPaoletta/game-dev-skill",
+  "commit": "1f54afc4cd24f163eb11d8a65ce8950eedaa1edd",
+  "version": "1.9.0",
+  "pulled_at": "2026-10-17",
+  "source_commit_date": "2026-10-17T14:44:00-03:00",
+  "publication_exception": "User explicitly authorized publishing this project skill snapshot on 2026-10-17, overriding its local-only distribution rule for this project. Canonical source remains unchanged.",
+  "initial_design_revision": "562ec96fdab3ec1b57506502838a321f722bde85",
+  "update_read": "Read latest SKILL.md diff, full updated paint-splash doc, puddle/decal/material references and three actual reference stills.",
+  "previous_paint_revision": "22fe20ab13670b63b8c8326916ec4a6bdc2453d5"
+}

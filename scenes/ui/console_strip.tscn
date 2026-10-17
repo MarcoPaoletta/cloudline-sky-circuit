@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://bqbe0uhrhfjf"]
+
+[ext_resource type="Script" uid="uid://bxm75m0okajh" path="res://scripts/ui/console_strip.gd" id="1_ls7ll"]
+
+[node name="ConsoleStrip" type="Control" unique_id=1130096532]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ls7ll")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=998248021]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -138.0
+offset_right = 400.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_type_variation = &"DialoguePanel"
+
+[node name="Row" type="HBoxContainer" parent="Panel" unique_id=1916225351]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="KeyLeft" type="PanelContainer" parent="Panel/Row" unique_id=171101480]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 58)
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"KeyCap"
+
+[node name="Slot" type="Control" parent="Panel/Row/KeyLeft" unique_id=507834797]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Arrow" type="Polygon2D" parent="Panel/Row/KeyLeft/Slot" unique_id=1979293037]
+color = Color(0.03922, 0.0902, 0.14902, 1)
+polygon = PackedVector2Array(3, 17, 19, 3, 19, 11, 31, 11, 31, 23, 19, 23, 19, 31)
+
+[node name="KeyRight" type="PanelContainer" parent="Panel/Row" unique_id=1710522389]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(70, 58)
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"KeyCap"
+
+[node name="Slot" type="Control" parent="Panel/Row/KeyRight" unique_id=469662277]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Arrow" type="Polygon2D" parent="Panel/Row/KeyRight/Slot" unique_id=958221021]
+color = Color(0.03922, 0.0902, 0.14902, 1)
+polygon = PackedVector2Array(31, 17, 15, 3, 15, 11, 3, 11, 3, 23, 15, 23, 15, 31)
+
+[node name="MoveLabel" type="Label" parent="Panel/Row" unique_id=391192841]
+layout_mode = 2
+text = "Move this group"
+
+[node name="Spacer" type="Control" parent="Panel/Row" unique_id=150804284]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="KeyExit" type="PanelContainer" parent="Panel/Row" unique_id=1036732248]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 58)
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"KeyCap"
+
+[node name="Label" type="Label" parent="Panel/Row/KeyExit" unique_id=1208370574]
+layout_mode = 2
+theme_type_variation = &"KeyLabel"
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitLabel" type="Label" parent="Panel/Row" unique_id=1191891100]
+layout_mode = 2
+text = "Exit"
+
+[node name="Message" type="Label" parent="." unique_id=256447487]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -600.0
+offset_top = -230.0
+offset_right = 600.0
+offset_bottom = -150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"HeadingLabel"
+horizontal_alignment = 1

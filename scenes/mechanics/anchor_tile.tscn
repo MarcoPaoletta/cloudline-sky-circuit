@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dimm6kr64yaq8"]
+
+[ext_resource type="Script" uid="uid://b08cnplf1o53f" path="res://scripts/mechanics/anchor_tile.gd" id="1_t1l46"]
+[ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="2_4pu8h"]
+[ext_resource type="Material" uid="uid://cku1i1isuc81r" path="res://resources/materials/glow_green.tres" id="3_jllas"]
+[ext_resource type="Material" uid="uid://batfhuke340sw" path="res://resources/materials/metal_navy.tres" id="4_kswgn"]
+[ext_resource type="PackedScene" uid="uid://bqttfignyhujj" path="res://assets/cloudline/platformer/Level and Mechanics/Arrow.gltf" id="5_32qsu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ol4g"]
+size = Vector3(2.2, 1.6, 2.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7hk3n"]
+size = Vector3(2.2, 0.08, 2.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_72plc"]
+size = Vector3(1.7, 0.03, 1.7)
+
+[node name="AnchorTile" type="Area3D" unique_id=595122526]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_t1l46")
+mat_idle = ExtResource("2_4pu8h")
+mat_active = ExtResource("3_jllas")
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=444989617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("BoxShape3D_6ol4g")
+
+[node name="Pad" type="MeshInstance3D" parent="." unique_id=1654198962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+material_override = ExtResource("4_kswgn")
+mesh = SubResource("BoxMesh_7hk3n")
+
+[node name="Glow" type="MeshInstance3D" parent="." unique_id=1697230973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.095, 0)
+material_override = ExtResource("2_4pu8h")
+mesh = SubResource("BoxMesh_72plc")
+
+[node name="Arrow" parent="." unique_id=38771064 instance=ExtResource("5_32qsu")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.12, 0)

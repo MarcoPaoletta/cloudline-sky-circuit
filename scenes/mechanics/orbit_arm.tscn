@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dwjkr2pca2oi8"]
+
+[ext_resource type="Script" uid="uid://cpp2ho3idyvco" path="res://scripts/mechanics/orbit_group.gd" id="1_uo417"]
+[ext_resource type="PackedScene" uid="uid://vyrorppth0sr" path="res://assets/cloudline/platformer/Level and Mechanics/Bridge_Modular_Center.gltf" id="2_4v71j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ussfa"]
+size = Vector3(9.4, 0.4, 2.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bwdpy"]
+size = Vector3(9.4, 0.9, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i1a33"]
+size = Vector3(9.4, 0.9, 0.2)
+
+[node name="OrbitArm" type="AnimatableBody3D" unique_id=304607797]
+collision_mask = 0
+script = ExtResource("1_uo417")
+arm_center = Vector3(8, 0, 0)
+arm_half = Vector3(4.7, 1.5, 1.4)
+
+[node name="Deck" type="CollisionShape3D" parent="." unique_id=498904383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.2, 0)
+shape = SubResource("BoxShape3D_ussfa")
+
+[node name="RailL" type="CollisionShape3D" parent="." unique_id=818576568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.45, 1.05)
+shape = SubResource("BoxShape3D_bwdpy")
+
+[node name="RailR" type="CollisionShape3D" parent="." unique_id=934210352]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.45, -1.05)
+shape = SubResource("BoxShape3D_i1a33")
+
+[node name="Piece1" parent="." unique_id=105691469 instance=ExtResource("2_4v71j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.93, 0)
+
+[node name="Piece2" parent="." unique_id=1576315356 instance=ExtResource("2_4v71j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.93, 0)
+
+[node name="Piece3" parent="." unique_id=594419473 instance=ExtResource("2_4v71j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.93, 0)

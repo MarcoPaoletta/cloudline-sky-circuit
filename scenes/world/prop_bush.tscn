@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dnl51t73uks0e"]
+
+[ext_resource type="PackedScene" uid="uid://nj12bcagmrrf" path="res://assets/cloudline/platformer/Nature/Bush.gltf" id="1_nkits"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_76ns1"]
+radius = 0.62
+
+[node name="PropBush" type="StaticBody3D" unique_id=101457596]
+collision_mask = 0
+
+[node name="Visual" parent="." unique_id=999317922 instance=ExtResource("1_nkits")]
+transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 0, 0, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=437607185]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("SphereShape3D_76ns1")

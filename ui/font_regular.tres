@@ -1,0 +1,9 @@
+[gd_resource type="FontVariation" format=3 uid="uid://bxjup722x6c2j"]
+
+[ext_resource type="FontFile" uid="uid://bqijekp3qagb4" path="res://assets/cloudline/fonts/NunitoSans-Variable.ttf" id="1_2q7cu"]
+
+[resource]
+base_font = ExtResource("1_2q7cu")
+variation_opentype = {
+2003265652: 520
+}

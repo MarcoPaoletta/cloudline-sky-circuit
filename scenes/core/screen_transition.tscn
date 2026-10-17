@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c5nale8ywfobs"]
+
+[ext_resource type="Script" uid="uid://cheivfq8gs137" path="res://scripts/core/screen_transition.gd" id="1_rouxe"]
+
+[node name="ScreenTransition" type="CanvasLayer" unique_id=1529953174]
+layer = 120
+script = ExtResource("1_rouxe")
+
+[node name="Fade" type="ColorRect" parent="." unique_id=2101674654]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CaptionCenter" type="CenterContainer" parent="." unique_id=487467720]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Box" type="VBoxContainer" parent="CaptionCenter" unique_id=912844234]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Caption" type="Label" parent="CaptionCenter/Box" unique_id=99165931]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+horizontal_alignment = 1
+
+[node name="SubCaption" type="Label" parent="CaptionCenter/Box" unique_id=1233813862]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+horizontal_alignment = 1

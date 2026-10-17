@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://du1enmiowu5ft"]
+
+[ext_resource type="Script" uid="uid://di8bdksbmvjy0" path="res://scripts/mechanics/cargo_tray.gd" id="1_oiyau"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="2_hstk3"]
+[ext_resource type="Material" uid="uid://cku1i1isuc81r" path="res://resources/materials/glow_green.tres" id="3_wm0p8"]
+[ext_resource type="Material" uid="uid://batfhuke340sw" path="res://resources/materials/metal_navy.tres" id="4_ui0cb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_te8yl"]
+size = Vector3(1.7, 0.1, 1.7)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e8n2t"]
+size = Vector3(1.4, 0.04, 1.4)
+
+[sub_resource type="SphereMesh" id="SphereMesh_2pcru"]
+radius = 0.1
+height = 0.2
+radial_segments = 8
+rings = 4
+
+[node name="CargoTray" type="Node3D" unique_id=856257848]
+script = ExtResource("1_oiyau")
+mat_idle = ExtResource("2_hstk3")
+mat_docked = ExtResource("3_wm0p8")
+
+[node name="Frame" type="MeshInstance3D" parent="." unique_id=936289795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+material_override = ExtResource("4_ui0cb")
+mesh = SubResource("BoxMesh_te8yl")
+
+[node name="Inner" type="MeshInstance3D" parent="." unique_id=54769525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.115, 0)
+material_override = ExtResource("2_hstk3")
+mesh = SubResource("BoxMesh_e8n2t")
+
+[node name="Lamp" type="MeshInstance3D" parent="." unique_id=466249334]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78, 0.18, 0.78)
+mesh = SubResource("SphereMesh_2pcru")
+
+[node name="DockSlot" type="Marker3D" parent="." unique_id=1992916826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.135, 0)

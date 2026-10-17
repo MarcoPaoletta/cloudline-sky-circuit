@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://isqnm8o7cq1m"]
+
+[ext_resource type="Texture2D" uid="uid://rpxcifeyoxbn" path="res://assets/cloudline/paint/splat_0.png" id="1_ajeu2"]
+[ext_resource type="Texture2D" uid="uid://c5m7fxf0gymrp" path="res://assets/cloudline/paint/splat_orm.png" id="2_27y3y"]
+[ext_resource type="Script" uid="uid://c3r15gw6bsl3l" path="res://scripts/fx/paint_decal.gd" id="3_7sndm"]
+
+[node name="PaintDecal" type="Decal" unique_id=2086220780]
+visible = false
+size = Vector3(2.5, 0.9, 2.5)
+texture_albedo = ExtResource("1_ajeu2")
+texture_orm = ExtResource("2_27y3y")
+emission_energy = 1.2
+normal_fade = 0.2
+cull_mask = 524287
+script = ExtResource("3_7sndm")

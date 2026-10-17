@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://7xf53xx7hsoe"]
+
+[ext_resource type="Script" uid="uid://dutkltdmrpcax" path="res://scripts/mechanics/moving_platform.gd" id="1_m6na1"]
+[ext_resource type="PackedScene" uid="uid://b1okt30bo2d5h" path="res://assets/cloudline/platformer/Cubes/Cube_Grass_Single.gltf" id="2_uplw6"]
+[ext_resource type="Material" uid="uid://batfhuke340sw" path="res://resources/materials/metal_navy.tres" id="3_gybcj"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="4_xnb88"]
+[ext_resource type="PackedScene" uid="uid://bqttfignyhujj" path="res://assets/cloudline/platformer/Level and Mechanics/Arrow.gltf" id="5_16vo8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3k4vr"]
+size = Vector3(6, 0.8, 6)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ksm2v"]
+size = Vector3(5.2, 0.5, 5.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dnxm7"]
+size = Vector3(6.1, 0.12, 6.1)
+
+[node name="VerticalLift" type="AnimatableBody3D" unique_id=1568160975]
+collision_mask = 0
+script = ExtResource("1_m6na1")
+travel = Vector3(0, 10, 0)
+speed = 1.8
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1141849657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("BoxShape3D_3k4vr")
+
+[node name="Slab" parent="." unique_id=486558704 instance=ExtResource("2_uplw6")]
+transform = Transform3D(2.69058, 0, 0, 0, 0.4, 0, 0, 0, 2.69058, 0, -0.4, 0)
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=712534134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.05, 0)
+material_override = ExtResource("3_gybcj")
+mesh = SubResource("BoxMesh_ksm2v")
+
+[node name="Trim" type="MeshInstance3D" parent="." unique_id=1098586789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.82, 0)
+material_override = ExtResource("4_xnb88")
+mesh = SubResource("BoxMesh_dnxm7")
+
+[node name="Arrow" parent="." unique_id=38771064 instance=ExtResource("5_16vo8")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.03, 0)

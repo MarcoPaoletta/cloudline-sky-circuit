@@ -1,0 +1,135 @@
+{
+  "engine": "4.7.2-stable (gh)",
+  "models": 13,
+  "sounds": 6,
+  "failed": [],
+  "robot_animations": [
+    "RobotArmature|Robot_Dance",
+    "RobotArmature|Robot_Death",
+    "RobotArmature|Robot_Idle",
+    "RobotArmature|Robot_Jump",
+    "RobotArmature|Robot_No",
+    "RobotArmature|Robot_Punch",
+    "RobotArmature|Robot_Running",
+    "RobotArmature|Robot_Sitting",
+    "RobotArmature|Robot_Standing",
+    "RobotArmature|Robot_ThumbsUp",
+    "RobotArmature|Robot_WalkJump",
+    "RobotArmature|Robot_Walking",
+    "RobotArmature|Robot_Wave",
+    "RobotArmature|Robot_Yes"
+  ],
+  "checked": [
+    {
+      "path": "res://assets/cloudline/robot/Robot.fbx",
+      "type": "PackedScene",
+      "mesh_count": 14,
+      "animations": [
+        "RobotArmature|Robot_Dance",
+        "RobotArmature|Robot_Death",
+        "RobotArmature|Robot_Idle",
+        "RobotArmature|Robot_Jump",
+        "RobotArmature|Robot_No",
+        "RobotArmature|Robot_Punch",
+        "RobotArmature|Robot_Running",
+        "RobotArmature|Robot_Sitting",
+        "RobotArmature|Robot_Standing",
+        "RobotArmature|Robot_ThumbsUp",
+        "RobotArmature|Robot_WalkJump",
+        "RobotArmature|Robot_Walking",
+        "RobotArmature|Robot_Wave",
+        "RobotArmature|Robot_Yes"
+      ]
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Cubes/Cube_Grass_Single.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/RockPlatforms_Medium.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Cloud_1.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Cloud_2.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Cloud_3.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Powerups and Pickups/Coin.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Goal_Flag.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Level and Mechanics/Bridge_Small.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Bush.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Rock_1.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/platformer/Nature/Grass_1.gltf",
+      "type": "PackedScene",
+      "mesh_count": 1
+    },
+    {
+      "path": "res://assets/cloudline/audio/Jumping and Landing/sfx_movement_jump1.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.13936507936508
+    },
+    {
+      "path": "res://assets/cloudline/audio/Jumping and Landing/sfx_movement_jump10_landing.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.0724716553288
+    },
+    {
+      "path": "res://assets/cloudline/audio/Coins/sfx_coin_single1.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.41609977324263
+    },
+    {
+      "path": "res://assets/cloudline/audio/Positive Sounds/sfx_sounds_powerup1.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.83589569160998
+    },
+    {
+      "path": "res://assets/cloudline/audio/Footsteps/sfx_movement_footsteps1a.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.04861678004535
+    },
+    {
+      "path": "res://assets/cloudline/audio/Menu Sounds/sfx_menu_select1.wav",
+      "type": "AudioStreamWAV",
+      "duration_seconds": 0.35111111111111
+    }
+  ]
+}

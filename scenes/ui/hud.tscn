@@ -1,0 +1,189 @@
+[gd_scene format=3 uid="uid://cysavbjjk5j4i"]
+
+[ext_resource type="Script" uid="uid://cdtfugi6dcosq" path="res://scripts/ui/hud.gd" id="1_bo48s"]
+[ext_resource type="PackedScene" uid="uid://bn1bcxe2l1egk" path="res://scenes/ui/goal_marker.tscn" id="2_8qguk"]
+[ext_resource type="PackedScene" uid="uid://dpckd4c6e0lj1" path="res://scenes/ui/dialogue_panel.tscn" id="3_136eg"]
+[ext_resource type="PackedScene" uid="uid://bqbe0uhrhfjf" path="res://scenes/ui/console_strip.tscn" id="4_8qguk"]
+
+[node name="Hud" type="CanvasLayer" unique_id=842138425]
+layer = 10
+script = ExtResource("1_bo48s")
+
+[node name="Safe" type="Control" parent="." unique_id=1678786181]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopLeft" type="MarginContainer" parent="Safe" unique_id=1266716081]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 24.0
+offset_bottom = 20.0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Safe/TopLeft" unique_id=296214773]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"HudPanel"
+
+[node name="Row" type="HBoxContainer" parent="Safe/TopLeft/Panel" unique_id=2106639261]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Pips" type="HBoxContainer" parent="Safe/TopLeft/Panel/Row" unique_id=2088465864]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Pip1" type="PanelContainer" parent="Safe/TopLeft/Panel/Row/Pips" unique_id=1402866990]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_type_variation = &"PipPanel"
+
+[node name="Pip2" type="PanelContainer" parent="Safe/TopLeft/Panel/Row/Pips" unique_id=1637831071]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_type_variation = &"PipPanel"
+
+[node name="Pip3" type="PanelContainer" parent="Safe/TopLeft/Panel/Row/Pips" unique_id=1640187375]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+theme_type_variation = &"PipPanel"
+
+[node name="Gap" type="Control" parent="Safe/TopLeft/Panel/Row" unique_id=1247672692]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CoinIcon" type="Control" parent="Safe/TopLeft/Panel/Row" unique_id=1187324639]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Disc" type="Polygon2D" parent="Safe/TopLeft/Panel/Row/CoinIcon" unique_id=715460101]
+color = Color(1, 0.82353, 0.24706, 1)
+polygon = PackedVector2Array(34, 18, 33.59885, 21.56033, 32.4155, 24.94214, 30.5093, 27.97584, 27.97584, 30.5093, 24.94214, 32.4155, 21.56033, 33.59885, 18, 34, 14.43967, 33.59885, 11.05786, 32.4155, 8.02416, 30.5093, 5.4907, 27.97584, 3.5845, 24.94214, 2.40115, 21.56033, 2, 18, 2.40115, 14.43967, 3.5845, 11.05786, 5.4907, 8.02416, 8.02416, 5.4907, 11.05786, 3.5845, 14.43967, 2.40115, 18, 2, 21.56033, 2.40115, 24.94214, 3.5845, 27.97584, 5.4907, 30.5093, 8.02416, 32.4155, 11.05786, 33.59885, 14.43967)
+
+[node name="Rim" type="Line2D" parent="Safe/TopLeft/Panel/Row/CoinIcon" unique_id=511273825]
+points = PackedVector2Array(32.5, 18, 32.13645, 21.22655, 31.06405, 24.29131, 29.33656, 27.0406, 27.0406, 29.33656, 24.29131, 31.06405, 21.22655, 32.13645, 18, 32.5, 14.77345, 32.13645, 11.70869, 31.06405, 8.9594, 29.33656, 6.66344, 27.0406, 4.93595, 24.29131, 3.86355, 21.22655, 3.5, 18, 3.86355, 14.77345, 4.93595, 11.70869, 6.66344, 8.9594, 8.9594, 6.66344, 11.70869, 4.93595, 14.77345, 3.86355, 18, 3.5, 21.22655, 3.86355, 24.29131, 4.93595, 27.0406, 6.66344, 29.33656, 8.9594, 31.06405, 11.70869, 32.13645, 14.77345)
+closed = true
+width = 3.0
+default_color = Color(0.78824, 0.56078, 0, 1)
+
+[node name="Star" type="Polygon2D" parent="Safe/TopLeft/Panel/Row/CoinIcon" unique_id=566846342]
+color = Color(1, 0.95294, 0.6902, 1)
+polygon = PackedVector2Array(18, 9.5, 20.23358, 15.42574, 26.55951, 15.71885, 21.61401, 19.67426, 23.29007, 25.78115, 18, 22.3, 12.70993, 25.78115, 14.38599, 19.67426, 9.44049, 15.71885, 15.76642, 15.42574)
+
+[node name="CoinLabel" type="Label" parent="Safe/TopLeft/Panel/Row" unique_id=1176515082]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(56, 0)
+layout_mode = 2
+theme_type_variation = &"HudLabel"
+text = "0"
+vertical_alignment = 1
+
+[node name="Reticle" type="Control" parent="Safe" unique_id=728375051]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Ring" type="Line2D" parent="Safe/Reticle" unique_id=963668083]
+points = PackedVector2Array(11, 0, 10.62518, 2.84701, 9.52628, 5.5, 7.77817, 7.77817, 5.5, 9.52628, 2.84701, 10.62518, 0, 11, -2.84701, 10.62518, -5.5, 9.52628, -7.77817, 7.77817, -9.52628, 5.5, -10.62518, 2.84701, -11, 0, -10.62518, -2.84701, -9.52628, -5.5, -7.77817, -7.77817, -5.5, -9.52628, -2.84701, -10.62518, 0, -11, 2.84701, -10.62518, 5.5, -9.52628, 7.77817, -7.77817, 9.52628, -5.5, 10.62518, -2.84701)
+closed = true
+width = 3.0
+
+[node name="Dot" type="Polygon2D" parent="Safe/Reticle" unique_id=2055292758]
+polygon = PackedVector2Array(3, 0, 2.59808, 1.5, 1.5, 2.59808, 0, 3, -1.5, 2.59808, -2.59808, 1.5, -3, 0, -2.59808, -1.5, -1.5, -2.59808, 0, -3, 1.5, -2.59808, 2.59808, -1.5)
+
+[node name="ToolLabel" type="Label" parent="Safe/Reticle" unique_id=509072158]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = -26.0
+offset_right = 66.0
+offset_bottom = -3.0
+theme_type_variation = &"HudLabel"
+
+[node name="PromptBox" type="PanelContainer" parent="Safe" unique_id=664083334]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -280.0
+offset_top = -262.0
+offset_right = 280.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_type_variation = &"PromptPanel"
+
+[node name="Row" type="HBoxContainer" parent="Safe/PromptBox" unique_id=493437258]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Key" type="PanelContainer" parent="Safe/PromptBox/Row" unique_id=1480309679]
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"KeyCap"
+
+[node name="PromptKey" type="Label" parent="Safe/PromptBox/Row/Key" unique_id=1551021504]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"KeyLabel"
+text = "Q"
+horizontal_alignment = 1
+
+[node name="PromptText" type="Label" parent="Safe/PromptBox/Row" unique_id=1307441377]
+unique_name_in_owner = true
+layout_mode = 2
+vertical_alignment = 1
+
+[node name="Toast" type="Label" parent="Safe" unique_id=906280556]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 86.0
+offset_right = 500.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_type_variation = &"HeadingLabel"
+horizontal_alignment = 1
+
+[node name="GoalMarker" parent="Safe" unique_id=279777476 instance=ExtResource("2_8qguk")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Dialogue" parent="Safe" unique_id=1540740262 instance=ExtResource("3_136eg")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="ConsoleStrip" parent="Safe" unique_id=1130096532 instance=ExtResource("4_8qguk")]
+unique_name_in_owner = true
+layout_mode = 1

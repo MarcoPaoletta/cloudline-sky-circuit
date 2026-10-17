@@ -1,0 +1,38 @@
+[
+  {
+    "target": "res://assets/cloudline/platformer/Level and Mechanics/Bouncer.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Bouncer.gltf",
+    "animations": [
+      "Bouncer_Bounce",
+      "Bouncer_Idle"
+    ]
+  },
+  {
+    "target": "res://assets/cloudline/platformer/Level and Mechanics/Lever.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Lever.gltf",
+    "animations": [
+      "Lever_Off",
+      "Lever_On"
+    ]
+  },
+  {
+    "target": "res://assets/cloudline/platformer/Level and Mechanics/Arrow.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Arrow.gltf",
+    "animations": []
+  },
+  {
+    "target": "res://assets/cloudline/platformer/Level and Mechanics/Door.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Level and Mechanics/glTF/Door.gltf",
+    "animations": []
+  },
+  {
+    "target": "res://assets/cloudline/platformer/Cubes/Cube_Crate.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Cubes/glTF/Cube_Crate.gltf",
+    "animations": []
+  },
+  {
+    "target": "res://assets/cloudline/platformer/Powerups and Pickups/Gem_Blue.gltf",
+    "original_member": "Ultimate Platformer Pack - Dec 2021/Powerups and Pickups/glTF/Gem_Blue.gltf",
+    "animations": []
+  }
+]

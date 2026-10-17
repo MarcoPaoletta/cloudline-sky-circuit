@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://c8advp8e0angt"]
+
+[ext_resource type="Script" uid="uid://b4mxyoidvd7sr" path="res://scripts/mechanics/counterweight_island.gd" id="1_8jrua"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="2_1cvtm"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="3_6t2q6"]
+[ext_resource type="Material" uid="uid://cku1i1isuc81r" path="res://resources/materials/glow_green.tres" id="4_hbs3r"]
+[ext_resource type="PackedScene" uid="uid://b1okt30bo2d5h" path="res://assets/cloudline/platformer/Cubes/Cube_Grass_Single.gltf" id="5_daj4s"]
+[ext_resource type="PackedScene" uid="uid://c6soylxdlus4q" path="res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf" id="6_on1ad"]
+[ext_resource type="Material" uid="uid://batfhuke340sw" path="res://resources/materials/metal_navy.tres" id="7_4e3ms"]
+[ext_resource type="PackedScene" uid="uid://cot40tnudp4ei" path="res://assets/cloudline/platformer/Level and Mechanics/Fence_Middle.gltf" id="8_hqnfj"]
+[ext_resource type="PackedScene" uid="uid://du1enmiowu5ft" path="res://scenes/mechanics/cargo_tray.tscn" id="9_nfgk6"]
+[ext_resource type="PackedScene" uid="uid://c2oquprn7ix4s" path="res://scenes/mechanics/power_gate.tscn" id="10_1cvtm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_06rsg"]
+size = Vector3(8, 0.8, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_adfem"]
+size = Vector3(0.3, 1, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2oa10"]
+size = Vector3(0.3, 1, 12)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tdx83"]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 8.8
+radial_segments = 10
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s31ja"]
+size = Vector3(8, 3, 12)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nht1r"]
+size = Vector3(6, 3, 1.8)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7bj0l"]
+size = Vector3(0.4, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_io41u"]
+size = Vector3(0.4, 0.5, 0.5)
+
+[node name="CounterweightIsland" type="AnimatableBody3D" unique_id=1054046069]
+collision_mask = 0
+script = ExtResource("1_8jrua")
+target_tilt_deg = 2.2
+mat_open = ExtResource("2_1cvtm")
+mat_aligned = ExtResource("3_6t2q6")
+mat_latched = ExtResource("4_hbs3r")
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=689003148]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+shape = SubResource("BoxShape3D_06rsg")
+
+[node name="LipL" type="CollisionShape3D" parent="." unique_id=1948183215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.85, 0.5, 0)
+shape = SubResource("BoxShape3D_adfem")
+
+[node name="LipR" type="CollisionShape3D" parent="." unique_id=287047075]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85, 0.5, 0)
+shape = SubResource("BoxShape3D_2oa10")
+
+[node name="Slab" parent="." unique_id=486558704 instance=ExtResource("5_daj4s")]
+transform = Transform3D(3.58744, 0, 0, 0, 0.4, 0, 0, 0, 5.38117, 0, -0.4, 0)
+
+[node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("6_on1ad")]
+transform = Transform3D(0.92, 0, 0, 0, -1.1, 1.8358783e-07, 0, -9.616505e-08, -2.1, 0, -0.75, 0)
+
+[node name="Axle" type="MeshInstance3D" parent="." unique_id=211206352]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.9, 0)
+material_override = ExtResource("7_4e3ms")
+mesh = SubResource("CylinderMesh_tdx83")
+
+[node name="Fences" type="Node3D" parent="." unique_id=1440269505]
+
+[node name="Fence01" parent="Fences" unique_id=2078002111 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, -5)
+
+[node name="Fence02" parent="Fences" unique_id=536664635 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, -3)
+
+[node name="Fence03" parent="Fences" unique_id=364126491 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, -1)
+
+[node name="Fence04" parent="Fences" unique_id=1908189095 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, 1)
+
+[node name="Fence05" parent="Fences" unique_id=751955047 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, 3)
+
+[node name="Fence06" parent="Fences" unique_id=1771742264 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.85, 0, 5)
+
+[node name="Fence07" parent="Fences" unique_id=1072648305 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, -5)
+
+[node name="Fence08" parent="Fences" unique_id=1696642325 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, -3)
+
+[node name="Fence09" parent="Fences" unique_id=516640540 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, -1)
+
+[node name="Fence10" parent="Fences" unique_id=1538282961 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, 1)
+
+[node name="Fence11" parent="Fences" unique_id=755632141 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, 3)
+
+[node name="Fence12" parent="Fences" unique_id=871170130 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.85, 0, 5)
+
+[node name="ExitFence1" parent="Fences" unique_id=588763979 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.75, 0, -5.45)
+
+[node name="ExitFence2" parent="Fences" unique_id=1558496591 instance=ExtResource("8_hqnfj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75, 0, -5.45)
+
+[node name="RideArea" type="Area3D" parent="." unique_id=2051283584]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="Shape" type="CollisionShape3D" parent="RideArea" unique_id=463901690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_s31ja")
+
+[node name="ExitLatch" type="Area3D" parent="." unique_id=1717397864]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="Shape" type="CollisionShape3D" parent="ExitLatch" unique_id=1437181268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5.1)
+shape = SubResource("BoxShape3D_nht1r")
+
+[node name="Clamp" type="Node3D" parent="." unique_id=1416615561]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.95)
+
+[node name="ClampL" type="MeshInstance3D" parent="Clamp" unique_id=399073495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.85, 0.3, 0)
+material_override = ExtResource("2_1cvtm")
+mesh = SubResource("BoxMesh_7bj0l")
+
+[node name="ClampR" type="MeshInstance3D" parent="Clamp" unique_id=774370903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.85, 0.3, 0)
+material_override = ExtResource("2_1cvtm")
+mesh = SubResource("BoxMesh_io41u")
+
+[node name="Trays" type="Node3D" parent="." unique_id=115247614]
+
+[node name="TrayEntry" parent="Trays" unique_id=856257848 instance=ExtResource("9_nfgk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.2)
+
+[node name="ExitGate" parent="." unique_id=1125577276 instance=ExtResource("10_1cvtm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.45)
+channel = "balance_a"
