@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://jd3307imxjed"]
+
+[ext_resource type="Script" uid="uid://k8v0ykfnj5r8" path="res://scripts/arena/arena_director.gd" id="1_ey31x"]
+[ext_resource type="Environment" uid="uid://c1d5i8vn6eygy" path="res://resources/environments/sky_day.tres" id="2_edi2w"]
+[ext_resource type="PackedScene" uid="uid://cjlj4smxdb3j2" path="res://scenes/arena/arena_floor_64.tscn" id="3_mt5ck"]
+[ext_resource type="PackedScene" uid="uid://b7xelouscx2i7" path="res://scenes/enemies/yeti_boss.tscn" id="4_r2k8f"]
+[ext_resource type="PackedScene" uid="uid://bjteps33gw8pf" path="res://scenes/player/player.tscn" id="5_0pb2e"]
+[ext_resource type="PackedScene" uid="uid://dyipmuxtnm3xs" path="res://scenes/fx/paint_manager.tscn" id="6_1ridh"]
+[ext_resource type="PackedScene" uid="uid://cysavbjjk5j4i" path="res://scenes/ui/hud.tscn" id="7_i44es"]
+[ext_resource type="PackedScene" uid="uid://bxlxro8neihxa" path="res://scenes/arena/arena_hud.tscn" id="8_vqlm5"]
+
+[node name="Arena3" type="Node3D" unique_id=1844559913]
+script = ExtResource("1_ey31x")
+arena_number = 3
+arena_title = "Twin Paintstorm"
+arena_subtitle = "TWO SUMMONERS"
+wave_counts = PackedInt32Array(90, 90, 90)
+wave_starts = PackedFloat32Array(0, 15, 30)
+wave_durations = PackedFloat32Array(13, 13, 13)
+active_cap = 60
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=1309056390]
+environment = ExtResource("2_edi2w")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1639390938]
+transform = Transform3D(-0.70710677, -0.4353384, 0.55720776, 0, 0.7880108, 0.6156615, -0.70710677, 0.4353384, -0.55720776, 0, 0, 0)
+light_color = Color(1, 0.94118, 0.84706, 1)
+light_energy = 1.25
+light_angular_distance = 1.2
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_max_distance = 90.0
+
+[node name="Floor" parent="." unique_id=1545197508 instance=ExtResource("3_mt5ck")]
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1549228788]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.05, 14.4)
+
+[node name="Horde" type="Node3D" parent="." unique_id=1429194664]
+unique_name_in_owner = true
+
+[node name="Boss1" parent="." unique_id=1111847978 instance=ExtResource("4_r2k8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.05, -16)
+boss_name = "FROST"
+accent_color = Color(0.20784, 0.83137, 0.96078, 1)
+arena_radius = 29
+
+[node name="Boss2" parent="." unique_id=1137163551 instance=ExtResource("4_r2k8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.05, -16)
+boss_name = "EMBER"
+accent_color = Color(1, 0.41961, 0.35294, 1)
+paint_color_for_summons = 1
+first_summon_at = 4
+arena_radius = 29
+
+[node name="Player" parent="." unique_id=860313022 instance=ExtResource("5_0pb2e")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 14.4)
+
+[node name="PaintManager" parent="." unique_id=2113115834 instance=ExtResource("6_1ridh")]
+
+[node name="Hud" parent="." unique_id=842138425 instance=ExtResource("7_i44es")]
+unique_name_in_owner = true
+
+[node name="ArenaHud" parent="." unique_id=433408778 instance=ExtResource("8_vqlm5")]
+unique_name_in_owner = true

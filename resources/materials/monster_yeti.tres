@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cu3swadnxnbnv"]
+
+[ext_resource type="Texture2D" uid="uid://cg1l4qtfieun3" path="res://assets/cloudline/monsters/Textures/Yeti_Texture.png" id="1_0jev0"]
+
+[resource]
+albedo_texture = ExtResource("1_0jev0")
+roughness = 0.85

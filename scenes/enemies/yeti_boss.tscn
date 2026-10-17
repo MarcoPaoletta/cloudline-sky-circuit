@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://b7xelouscx2i7"]
+
+[ext_resource type="Script" uid="uid://bpavlbjo2s1on" path="res://scripts/enemies/yeti_boss.gd" id="1_ckd4r"]
+[ext_resource type="PackedScene" uid="uid://boxe6epvxpidr" path="res://assets/cloudline/monsters/FBX/Yeti.fbx" id="2_sobak"]
+[ext_resource type="Material" uid="uid://cu3swadnxnbnv" path="res://resources/materials/monster_yeti.tres" id="3_ces1t"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_3xr7e"]
+[ext_resource type="Material" uid="uid://b1dg8mlgovpc" path="res://resources/materials/glow_coral.tres" id="5_0l2oo"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="6_i8c1s"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="7_sobak"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4nial"]
+radius = 1.1
+height = 3.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_yydnb"]
+radius = 1.6
+
+[sub_resource type="TorusMesh" id="TorusMesh_71rxj"]
+inner_radius = 2.7
+outer_radius = 3.0
+rings = 36
+ring_segments = 6
+
+[sub_resource type="SphereMesh" id="SphereMesh_t12rp"]
+radial_segments = 4
+rings = 2
+
+[sub_resource type="TorusMesh" id="TorusMesh_ces1t"]
+inner_radius = 1.35
+outer_radius = 1.6
+rings = 32
+ring_segments = 6
+
+[node name="YetiBoss" type="CharacterBody3D" unique_id=1111847978]
+collision_layer = 4
+script = ExtResource("1_ckd4r")
+max_health = 5
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1527103353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_4nial")
+
+[node name="Model" type="Node3D" parent="." unique_id=905322491]
+
+[node name="Body" parent="Model" unique_id=847588670 instance=ExtResource("2_sobak")]
+transform = Transform3D(1.9, 0, 0, 0, 1.9, 0, 0, 0, 1.9, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Model/Body/MonsterArmature" parent_id_path=PackedInt32Array(847588670, 2091624563) index="0" unique_id=2118085932]
+bones/1/position = Vector3(-7.803066e-20, 0.0008982527, 0.005008285)
+bones/3/position = Vector3(0, 0, 0.0048319353)
+bones/5/rotation = Quaternion(1.9476896e-19, 3.5471487e-10, -0.0026400527, 0.99999654)
+bones/7/position = Vector3(-0.0036789842, 0.006980717, 0.004167141)
+bones/7/rotation = Quaternion(0, 0, 0, 1)
+bones/9/position = Vector3(0.0036789842, 0.006980717, 0.004167141)
+bones/9/rotation = Quaternion(0, 0, 0, 1)
+
+[node name="Sphere_035" parent="Model/Body/MonsterArmature/Skeleton3D" index="0" unique_id=353794621]
+material_override = ExtResource("3_ces1t")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1005601326]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_3xr7e")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=281748156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("SphereShape3D_yydnb")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=1224221047]
+visible = false
+
+[node name="StompRing" type="MeshInstance3D" parent="." unique_id=1399367739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+visible = false
+material_override = ExtResource("5_0l2oo")
+mesh = SubResource("TorusMesh_71rxj")
+
+[node name="SummonTell" type="MeshInstance3D" parent="." unique_id=1825685302]
+transform = Transform3D(0.5, 0, 0, 0, 0.8, 0, 0, 0, 0.5, 0, 4, 0)
+visible = false
+material_override = ExtResource("6_i8c1s")
+mesh = SubResource("SphereMesh_t12rp")
+
+[node name="AccentRing" type="MeshInstance3D" parent="." unique_id=945649572]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+material_override = ExtResource("7_sobak")
+mesh = SubResource("TorusMesh_ces1t")
+
+[editable path="Model/Body"]

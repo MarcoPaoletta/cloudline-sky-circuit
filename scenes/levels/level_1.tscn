@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://dnl51t73uks0e" path="res://scenes/world/prop_bush.tscn" id="29_ugk5q"]
 [ext_resource type="PackedScene" uid="uid://js28k6fqlov7" path="res://scenes/world/prop_rock.tscn" id="30_4u6u3"]
 [ext_resource type="PackedScene" uid="uid://d2e6aowcoerni" path="res://assets/cloudline/platformer/Nature/Cloud_1.gltf" id="31_i3rdk"]
+[ext_resource type="Script" uid="uid://c8h2x1d8p5537" path="res://scripts/fx/cloud_sea.gd" id="31_ytidy"]
+[ext_resource type="Material" uid="uid://ddo71i18hu4ch" path="res://resources/materials/cloud_white.tres" id="32_hvllt"]
 [ext_resource type="PackedScene" uid="uid://cmaggdjxx76h0" path="res://assets/cloudline/platformer/Nature/Cloud_2.gltf" id="32_yvv08"]
 [ext_resource type="PackedScene" uid="uid://ccxobh1k7meyj" path="res://assets/cloudline/platformer/Nature/Cloud_3.gltf" id="33_bccrp"]
 
@@ -831,240 +833,578 @@ transform = Transform3D(-0.8055495, 0, 0.59252846, 0, 1, 0, -0.59252846, 0, -0.8
 transform = Transform3D(-0.5845936, 0, 0.81132627, 0, 1, 0, -0.81132627, 0, -0.5845936, -12.32683, 12, -114.3973)
 
 [node name="Clouds" type="Node3D" parent="World/Dressing" unique_id=1980451887]
+script = ExtResource("31_ytidy")
+material = ExtResource("32_hvllt")
 
-[node name="Cloud01" parent="World/Dressing/Clouds" unique_id=124675236 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(3.4318602, 0, -5.3392186, 0, 5.15478, 0, 5.3392186, 0, 3.4318602, -18.47318, -9.82184, 31.80524)
+[node name="Puff001" parent="World/Dressing/Clouds" unique_id=267428228 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-4.590094, 0, -2.6291623, 0, 4.35628, 0, 2.6291623, 0, -4.590094, -62.85017, -6.56636, -150.21977)
 
-[node name="Cloud02" parent="World/Dressing/Clouds" unique_id=317133517 instance=ExtResource("32_yvv08")]
-transform = Transform3D(2.78888, 0, 2.9951136, 0, 3.98553, 0, -2.9951136, 0, 2.78888, 67.39462, -1.34906, -115.84481)
+[node name="Puff002" parent="World/Dressing/Clouds" unique_id=124675236 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-5.936231, 0, 3.0472856, 0, 5.48948, 0, -3.0472856, 0, -5.936231, 112.91122, -26.9059, -129.1496)
 
-[node name="Cloud03" parent="World/Dressing/Clouds" unique_id=1048342574 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(4.903434, 0, -0.23201028, 0, 5.3331, 0, 0.23201028, 0, 4.903434, 0.31594, -14.71499, -42.6466)
+[node name="Puff003" parent="World/Dressing/Clouds" unique_id=110507631 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-5.982119, 0, 4.539856, 0, 7.09126, 0, -4.539856, 0, -5.982119, 88.05564, -21.9634, -159.14536)
 
-[node name="Cloud04" parent="World/Dressing/Clouds" unique_id=267428228 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-0.8963003, 0, 4.265437, 0, 4.38711, 0, -4.265437, 0, -0.8963003, 19.16105, -17.9465, 75.99784)
+[node name="Puff004" parent="World/Dressing/Clouds" unique_id=1601170508 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-5.557178, 0, -2.654083, 0, 5.75919, 0, 2.654083, 0, -5.557178, 132.87653, 0.90486, -184.62772)
 
-[node name="Cloud05" parent="World/Dressing/Clouds" unique_id=185221294 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-3.1181762, 0, -6.6964455, 0, 7.39078, 0, 6.6964455, 0, -3.1181762, 25.68648, -23.06037, -83.29379)
+[node name="Puff005" parent="World/Dressing/Clouds" unique_id=212146377 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.0665493, 0, -1.2578739, 0, 3.80161, 0, 1.2578739, 0, -4.0665493, 8.07718, -32.45416, 25.06089)
 
-[node name="Cloud06" parent="World/Dressing/Clouds" unique_id=1821173809 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-7.6019053, 0, 4.438405, 0, 7.69612, 0, -4.438405, 0, -7.6019053, 26.11717, -21.5201, -196.0528)
+[node name="Puff006" parent="World/Dressing/Clouds" unique_id=317133517 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-7.5419545, 0, 1.6559064, 0, 7.67764, 0, -1.6559064, 0, -7.5419545, -141.16331, -22.58549, -180.3316)
 
-[node name="Cloud07" parent="World/Dressing/Clouds" unique_id=1636113824 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(2.1660078, 0, -6.510758, 0, 5.73763, 0, 6.510758, 0, 2.1660078, -81.68432, -12.23172, -93.64403)
+[node name="Puff007" parent="World/Dressing/Clouds" unique_id=961196072 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-1.7758014, 0, 5.4363856, 0, 4.69229, 0, -5.4363856, 0, -1.7758014, 117.03242, -21.05664, -80.67782)
 
-[node name="Cloud08" parent="World/Dressing/Clouds" unique_id=93474272 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-2.7844791, 0, 4.2139716, 0, 5.55387, 0, -4.2139716, 0, -2.7844791, -13.42996, -14.53167, -71.593)
+[node name="Puff008" parent="World/Dressing/Clouds" unique_id=723372666 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.7779944, 0, 2.135379, 0, 3.59986, 0, -2.135379, 0, -3.7779944, -11.46509, -27.26749, -86.65302)
 
-[node name="Cloud09" parent="World/Dressing/Clouds" unique_id=695411795 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-4.980692, 0, 2.7276778, 0, 5.63656, 0, -2.7276778, 0, -4.980692, 27.08325, 4.62279, -179.5539)
+[node name="Puff009" parent="World/Dressing/Clouds" unique_id=790177959 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-4.8173003, 0, -1.8402483, 0, 4.22553, 0, 1.8402483, 0, -4.8173003, 67.14228, -12.39733, -149.8451)
 
-[node name="Cloud10" parent="World/Dressing/Clouds" unique_id=1793608444 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(6.122714, 0, -6.3319917, 0, 9.32318, 0, 6.3319917, 0, 6.122714, -35.16581, -20.5605, -64.45258)
+[node name="Puff010" parent="World/Dressing/Clouds" unique_id=1011857108 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-6.1599092, 0, 1.7391404, 0, 6.04851, 0, -1.7391404, 0, -6.1599092, 76.72825, -17.75559, 70.0566)
 
-[node name="Cloud11" parent="World/Dressing/Clouds" unique_id=54749694 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-0.9418611, 0, -8.168499, 0, 7.74976, 0, 8.168499, 0, -0.9418611, 30.29986, -23.54116, -47.27674)
+[node name="Puff011" parent="World/Dressing/Clouds" unique_id=1503851297 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-2.8010154, 0, 7.125868, 0, 7.52484, 0, -7.125868, 0, -2.8010154, 91.99033, -12.93246, 111.74476)
 
-[node name="Cloud12" parent="World/Dressing/Clouds" unique_id=962858883 instance=ExtResource("33_bccrp")]
-transform = Transform3D(1.6915591, 0, 6.9794393, 0, 7.34205, 0, -6.9794393, 0, 1.6915591, -50.05214, -14.94331, 27.33048)
+[node name="Puff012" parent="World/Dressing/Clouds" unique_id=393212480 instance=ExtResource("33_bccrp")]
+transform = Transform3D(4.2620263, 0, -1.6673973, 0, 4.05829, 0, 1.6673973, 0, 4.2620263, 13.38387, -27.31539, 24.80827)
 
-[node name="Cloud13" parent="World/Dressing/Clouds" unique_id=1901360005 instance=ExtResource("33_bccrp")]
-transform = Transform3D(2.927304, 0, -3.5804174, 0, 4.89721, 0, 3.5804174, 0, 2.927304, -80.05948, -2.87375, 92.28502)
+[node name="Puff013" parent="World/Dressing/Clouds" unique_id=1758623074 instance=ExtResource("32_yvv08")]
+transform = Transform3D(0.05215187, 0, 3.4796693, 0, 2.89657, 0, -3.4796693, 0, 0.05215187, -53.36077, -26.59461, 1.60345)
 
-[node name="Cloud14" parent="World/Dressing/Clouds" unique_id=1187842401 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-1.5722451, 0, -8.722767, 0, 8.44856, 0, 8.722767, 0, -1.5722451, 37.57153, -13.04317, -140.68733)
+[node name="Puff014" parent="World/Dressing/Clouds" unique_id=891487471 instance=ExtResource("33_bccrp")]
+transform = Transform3D(4.4327426, 0, 5.15234, 0, 5.9095, 0, -5.15234, 0, 4.4327426, -42.71509, -27.09907, 87.56925)
 
-[node name="Cloud15" parent="World/Dressing/Clouds" unique_id=754713580 instance=ExtResource("33_bccrp")]
-transform = Transform3D(0.55566674, 0, -4.7327313, 0, 5.04109, 0, 4.7327313, 0, 0.55566674, 47.55467, -20.46514, -52.49457)
+[node name="Puff015" parent="World/Dressing/Clouds" unique_id=153884866 instance=ExtResource("33_bccrp")]
+transform = Transform3D(4.98896, 0, -1.3570392, 0, 5.27905, 0, 1.3570392, 0, 4.98896, -30.8435, -23.40405, -18.42755)
 
-[node name="Cloud16" parent="World/Dressing/Clouds" unique_id=1375190964 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-8.008345, 0, -0.37714046, 0, 8.35968, 0, 0.37714046, 0, -8.008345, 91.80231, -1.40018, -57.69097)
+[node name="Puff016" parent="World/Dressing/Clouds" unique_id=234784747 instance=ExtResource("32_yvv08")]
+transform = Transform3D(2.4469924, 0, 5.4052525, 0, 5.97947, 0, -5.4052525, 0, 2.4469924, -114.72373, -21.64955, -141.84814)
 
-[node name="Cloud17" parent="World/Dressing/Clouds" unique_id=532018419 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-3.1452115, 0, -7.841677, 0, 7.41257, 0, 7.841677, 0, -3.1452115, -67.17005, -22.8542, 75.88551)
+[node name="Puff017" parent="World/Dressing/Clouds" unique_id=1863144175 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-2.7171035, 0, -6.9253006, 0, 7.72398, 0, 6.9253006, 0, -2.7171035, -75.42078, -10.75473, -151.92679)
 
-[node name="Cloud18" parent="World/Dressing/Clouds" unique_id=731332332 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(1.0140439, 0, -8.136664, 0, 6.72133, 0, 8.136664, 0, 1.0140439, 52.22084, -12.9437, -131.56854)
+[node name="Puff018" parent="World/Dressing/Clouds" unique_id=1127016599 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.4325066, 0, 1.9518453, 0, 3.11713, 0, -1.9518453, 0, -2.4325066, -5.35257, -23.857, 3.80561)
 
-[node name="Cloud19" parent="World/Dressing/Clouds" unique_id=2132625026 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-7.2458344, 0, -4.2068567, 0, 7.39541, 0, 4.2068567, 0, -7.2458344, -47.20806, -21.20941, -79.22382)
+[node name="Puff019" parent="World/Dressing/Clouds" unique_id=1752601928 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.88796, 0, 1.9130453, 0, 5.49132, 0, -1.9130453, 0, -4.88796, -40.30635, -7.16558, -165.83276)
 
-[node name="Cloud20" parent="World/Dressing/Clouds" unique_id=685766131 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-4.4433026, 0, -5.9951096, 0, 6.91065, 0, 5.9951096, 0, -4.4433026, -45.02784, -20.62232, -96.86917)
+[node name="Puff020" parent="World/Dressing/Clouds" unique_id=35054147 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-4.7580447, 0, 5.4929214, 0, 5.99805, 0, -5.4929214, 0, -4.7580447, -127.02151, -26.31433, -1.76)
 
-[node name="Cloud21" parent="World/Dressing/Clouds" unique_id=1316705223 instance=ExtResource("33_bccrp")]
-transform = Transform3D(6.2904267, 0, -0.114031725, 0, 5.8488, 0, 0.114031725, 0, 6.2904267, -67.43623, -14.841, 63.93637)
+[node name="Puff021" parent="World/Dressing/Clouds" unique_id=718206598 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.478252, 0, -3.3526607, 0, 5.81163, 0, 3.3526607, 0, -4.478252, -152.34973, -7.89352, 88.52968)
 
-[node name="Cloud22" parent="World/Dressing/Clouds" unique_id=1852536529 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(5.765392, 0, -1.2409422, 0, 5.28067, 0, 1.2409422, 0, 5.765392, -82.50318, -21.59281, 24.31865)
+[node name="Puff022" parent="World/Dressing/Clouds" unique_id=1557827026 instance=ExtResource("32_yvv08")]
+transform = Transform3D(7.644989, 0, 4.578781, 0, 8.20693, 0, -4.578781, 0, 7.644989, -17.75456, -12.42955, -161.93333)
 
-[node name="Cloud23" parent="World/Dressing/Clouds" unique_id=971266439 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.9688303, 0, -7.3116207, 0, 8.17418, 0, 7.3116207, 0, 3.9688303, 50.61013, -20.8905, 61.98138)
+[node name="Puff023" parent="World/Dressing/Clouds" unique_id=951971588 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.3091388, 0, 7.9883723, 0, 7.72572, 0, -7.9883723, 0, 2.3091388, -129.3437, -20.46875, -86.93017)
 
-[node name="Cloud24" parent="World/Dressing/Clouds" unique_id=1223386923 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-3.132986, 0, -5.944823, 0, 5.8543, 0, 5.944823, 0, -3.132986, 19.99879, -25.91374, -70.49251)
+[node name="Puff024" parent="World/Dressing/Clouds" unique_id=484235454 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.3947415, 0, -6.7700176, 0, 7.57038, 0, 6.7700176, 0, -5.3947415, 125.60628, -5.15757, -80.62169)
 
-[node name="Cloud25" parent="World/Dressing/Clouds" unique_id=201372946 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.298283, 0, -7.2729034, 0, 8.58079, 0, 7.2729034, 0, 3.298283, -132.24457, -26.65356, -40.51188)
+[node name="Puff025" parent="World/Dressing/Clouds" unique_id=1375905914 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-8.452642, 0, -1.7555757, 0, 8.57247, 0, 1.7555757, 0, -8.452642, -132.69682, -11.33771, 78.99771)
 
-[node name="Cloud26" parent="World/Dressing/Clouds" unique_id=564585977 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.1999042, 0, -5.0222025, 0, 5.49584, 0, 5.0222025, 0, 3.1999042, 101.23259, -20.28629, -36.0302)
+[node name="Puff026" parent="World/Dressing/Clouds" unique_id=1140250180 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(1.9920259, 0, -4.3509903, 0, 4.7926, 0, 4.3509903, 0, 1.9920259, 73.71647, -30.65437, -91.21055)
 
-[node name="Cloud27" parent="World/Dressing/Clouds" unique_id=419820981 instance=ExtResource("33_bccrp")]
-transform = Transform3D(4.30058, 0, 0.1880539, 0, 3.62888, 0, -0.1880539, 0, 4.30058, -138.45934, -25.98251, -55.38938)
+[node name="Puff027" parent="World/Dressing/Clouds" unique_id=1488548056 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(1.60161, 0, -6.219336, 0, 6.72667, 0, 6.219336, 0, 1.60161, 61.96191, -11.36501, -125.17597)
 
-[node name="Cloud28" parent="World/Dressing/Clouds" unique_id=751665885 instance=ExtResource("33_bccrp")]
-transform = Transform3D(6.1951203, 0, 1.8141094, 0, 7.08066, 0, -1.8141094, 0, 6.1951203, -69.15229, -21.88379, 73.09772)
+[node name="Puff028" parent="World/Dressing/Clouds" unique_id=449657652 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.6082308, 0, -1.0482727, 0, 3.93405, 0, 1.0482727, 0, 3.6082308, -18.32798, -24.92291, -136.09717)
 
-[node name="Cloud29" parent="World/Dressing/Clouds" unique_id=2005905899 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-4.1643143, 0, 7.447582, 0, 7.16811, 0, -7.447582, 0, -4.1643143, -14.90487, -19.56173, 6.39695)
+[node name="Puff029" parent="World/Dressing/Clouds" unique_id=89464747 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.4180164, 0, -0.31770438, 0, 3.16041, 0, 0.31770438, 0, 3.4180164, -50.60923, -30.59731, -127.24743)
 
-[node name="Cloud30" parent="World/Dressing/Clouds" unique_id=120407025 instance=ExtResource("33_bccrp")]
-transform = Transform3D(0.08298915, 0, -5.8887153, 0, 4.93699, 0, 5.8887153, 0, 0.08298915, 1.84035, -15.64616, -96.86225)
+[node name="Puff030" parent="World/Dressing/Clouds" unique_id=802098088 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.396616, 0, -5.3959947, 0, 5.23596, 0, 5.3959947, 0, -3.396616, 23.07864, 2.73117, -199.37025)
 
-[node name="Cloud31" parent="World/Dressing/Clouds" unique_id=772504074 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(4.769284, 0, -5.0460396, 0, 7.40597, 0, 5.0460396, 0, 4.769284, 28.82593, -20.26476, -155.18674)
+[node name="Puff031" parent="World/Dressing/Clouds" unique_id=621031032 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.543572, 0, -5.208982, 0, 6.27954, 0, 5.208982, 0, -4.543572, 112.93314, -2.99494, 58.15995)
 
-[node name="Cloud32" parent="World/Dressing/Clouds" unique_id=623668349 instance=ExtResource("32_yvv08")]
-transform = Transform3D(5.161733, 0, -2.649102, 0, 4.97032, 0, 2.649102, 0, 5.161733, -125.71593, 1.69865, -35.66352)
+[node name="Puff032" parent="World/Dressing/Clouds" unique_id=2046496466 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-1.0805508, 0, -6.766911, 0, 7.10413, 0, 6.766911, 0, -1.0805508, -133.97504, -4.01431, 112.23456)
 
-[node name="Cloud33" parent="World/Dressing/Clouds" unique_id=370607700 instance=ExtResource("32_yvv08")]
-transform = Transform3D(2.3903983, 0, 6.830507, 0, 6.42411, 0, -6.830507, 0, 2.3903983, 4.11016, -18.65092, 24.06192)
+[node name="Puff033" parent="World/Dressing/Clouds" unique_id=1549825340 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.985837, 0, -7.6424685, 0, 7.21051, 0, 7.6424685, 0, 3.985837, -108.9989, -24.55857, -158.07735)
 
-[node name="Cloud34" parent="World/Dressing/Clouds" unique_id=1165045982 instance=ExtResource("33_bccrp")]
-transform = Transform3D(1.2364999, 0, 7.410772, 0, 7.35172, 0, -7.410772, 0, 1.2364999, -9.78384, -10.47975, -16.74664)
+[node name="Puff034" parent="World/Dressing/Clouds" unique_id=1452837526 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.1956036, 0, -6.8514357, 0, 5.7942, 0, 6.8514357, 0, 2.1956036, 134.09178, -17.38533, 16.89854)
 
-[node name="Cloud35" parent="World/Dressing/Clouds" unique_id=176752334 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.37493, 0, 5.2993917, 0, 5.5374, 0, -5.2993917, 0, 3.37493, -73.11444, -24.16153, -56.97864)
+[node name="Puff035" parent="World/Dressing/Clouds" unique_id=821933014 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(1.3466899, 0, 5.391352, 0, 5.59334, 0, -5.391352, 0, 1.3466899, 57.91102, -3.01814, -166.08522)
 
-[node name="Cloud36" parent="World/Dressing/Clouds" unique_id=1505596808 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.7050796, 0, 2.1276507, 0, 4.56473, 0, -2.1276507, 0, 3.7050796, 35.4964, -10.6747, -69.56113)
+[node name="Puff036" parent="World/Dressing/Clouds" unique_id=2055984795 instance=ExtResource("32_yvv08")]
+transform = Transform3D(2.1651652, 0, -3.703719, 0, 4.01597, 0, 3.703719, 0, 2.1651652, -84.44956, -30.39191, -103.321)
 
-[node name="Cloud37" parent="World/Dressing/Clouds" unique_id=1760542279 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-3.217651, 0, 5.7316527, 0, 6.41398, 0, -5.7316527, 0, -3.217651, -80.08352, -14.01049, -66.99204)
+[node name="Puff037" parent="World/Dressing/Clouds" unique_id=1767784865 instance=ExtResource("33_bccrp")]
+transform = Transform3D(6.6502023, 0, -3.7809758, 0, 6.92436, 0, 3.7809758, 0, 6.6502023, -141.72864, 2.31734, 44.17428)
 
-[node name="Cloud38" parent="World/Dressing/Clouds" unique_id=578550829 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-7.8548446, 0, 2.6724768, 0, 7.03148, 0, -2.6724768, 0, -7.8548446, 49.73258, 0.94013, 81.91141)
+[node name="Puff038" parent="World/Dressing/Clouds" unique_id=1213598072 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-2.360754, 0, -1.9171423, 0, 3.02329, 0, 1.9171423, 0, -2.360754, -9.50532, -26.1474, -24.49776)
 
-[node name="Cloud39" parent="World/Dressing/Clouds" unique_id=1065740309 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-4.2484384, 0, 5.902852, 0, 7.46191, 0, -5.902852, 0, -4.2484384, 42.66839, -17.65504, 26.98402)
+[node name="Puff039" parent="World/Dressing/Clouds" unique_id=878422237 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.435257, 0, 6.640449, 0, 7.02123, 0, -6.640449, 0, -3.435257, 72.81169, -24.90388, -150.56519)
 
-[node name="Cloud40" parent="World/Dressing/Clouds" unique_id=178964469 instance=ExtResource("33_bccrp")]
-transform = Transform3D(1.8019559, 0, 6.2651324, 0, 5.63252, 0, -6.2651324, 0, 1.8019559, -40.9298, -13.6089, -138.03659)
+[node name="Puff040" parent="World/Dressing/Clouds" unique_id=195723132 instance=ExtResource("33_bccrp")]
+transform = Transform3D(1.1655962, 0, 3.0160437, 0, 2.63269, 0, -3.0160437, 0, 1.1655962, -4.49539, -22.23591, -16.70418)
 
-[node name="Cloud41" parent="World/Dressing/Clouds" unique_id=761879576 instance=ExtResource("33_bccrp")]
-transform = Transform3D(4.4443693, 0, -2.996213, 0, 4.48723, 0, 2.996213, 0, 4.4443693, -114.71272, 0.14794, -82.17098)
+[node name="Puff041" parent="World/Dressing/Clouds" unique_id=205002282 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.8862035, 0, -3.3203084, 0, 4.65558, 0, 3.3203084, 0, -3.8862035, -147.34033, -13.72167, -167.74406)
 
-[node name="Cloud42" parent="World/Dressing/Clouds" unique_id=193694491 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-2.7409973, 0, 5.546914, 0, 5.01131, 0, -5.546914, 0, -2.7409973, 21.96339, -23.12316, -110.60871)
+[node name="Puff042" parent="World/Dressing/Clouds" unique_id=718896054 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.9904222, 0, -0.19451286, 0, 4.00251, 0, 0.19451286, 0, -3.9904222, -8.33406, -23.60903, -30.98671)
 
-[node name="Cloud43" parent="World/Dressing/Clouds" unique_id=1817180273 instance=ExtResource("32_yvv08")]
-transform = Transform3D(8.928574, 0, 1.0929582, 0, 7.36916, 0, -1.0929582, 0, 8.928574, -15.1293, -23.06042, -72.13184)
+[node name="Puff043" parent="World/Dressing/Clouds" unique_id=241884956 instance=ExtResource("33_bccrp")]
+transform = Transform3D(1.4796296, 0, 4.8191485, 0, 5.15808, 0, -4.8191485, 0, 1.4796296, -85.70326, -20.86035, -27.34081)
 
-[node name="Cloud44" parent="World/Dressing/Clouds" unique_id=855974688 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-2.6471732, 0, 3.3164876, 0, 4.16408, 0, -3.3164876, 0, -2.6471732, -12.76425, -24.46125, -104.03836)
+[node name="Puff044" parent="World/Dressing/Clouds" unique_id=1975668368 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.3119895, 0, 1.6385764, 0, 3.17842, 0, -1.6385764, 0, 3.3119895, -25.74153, -28.11453, -62.50977)
 
-[node name="Cloud45" parent="World/Dressing/Clouds" unique_id=673073388 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-4.510012, 0, -2.9962234, 0, 5.81485, 0, 2.9962234, 0, -4.510012, 40.11804, -14.63014, -132.25113)
+[node name="Puff045" parent="World/Dressing/Clouds" unique_id=42612811 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.2272, 0, 2.4887166, 0, 3.20908, 0, -2.4887166, 0, -2.2272, 40.84164, -20.5446, 58.69889)
 
-[node name="Cloud46" parent="World/Dressing/Clouds" unique_id=958650134 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(1.0501144, 0, -6.231255, 0, 5.32064, 0, 6.231255, 0, 1.0501144, -70.5291, 2.04625, -172.1555)
+[node name="Puff046" parent="World/Dressing/Clouds" unique_id=842269047 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-7.9611588, 0, 0.63859934, 0, 7.18458, 0, -0.63859934, 0, -7.9611588, -84.06765, -13.16151, -154.70598)
 
-[node name="Cloud47" parent="World/Dressing/Clouds" unique_id=513840679 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-3.496349, 0, -5.398004, 0, 5.52011, 0, 5.398004, 0, -3.496349, -101.5485, -25.66534, -89.52384)
+[node name="Puff047" parent="World/Dressing/Clouds" unique_id=2060481176 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.919916, 0, 3.1929424, 0, 6.05988, 0, -3.1929424, 0, -5.919916, 136.96144, -24.18722, 74.70674)
 
-[node name="Cloud48" parent="World/Dressing/Clouds" unique_id=815654540 instance=ExtResource("32_yvv08")]
-transform = Transform3D(3.6794908, 0, 6.0515423, 0, 6.81372, 0, -6.0515423, 0, 3.6794908, -80.55056, -7.53594, -174.6858)
+[node name="Puff048" parent="World/Dressing/Clouds" unique_id=1463107420 instance=ExtResource("32_yvv08")]
+transform = Transform3D(6.3109694, 0, 0.7201053, 0, 5.78097, 0, -0.7201053, 0, 6.3109694, -53.01556, -16.82571, -169.57597)
 
-[node name="Cloud49" parent="World/Dressing/Clouds" unique_id=398566974 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-2.9229064, 0, 3.536252, 0, 4.98864, 0, -3.536252, 0, -2.9229064, 120.94066, 4.17053, -30.40202)
+[node name="Puff049" parent="World/Dressing/Clouds" unique_id=1269849392 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.4848888, 0, 1.9219712, 0, 3.27628, 0, -1.9219712, 0, 2.4848888, -60.55063, -26.31607, 5.89593)
 
-[node name="Cloud50" parent="World/Dressing/Clouds" unique_id=2122720543 instance=ExtResource("33_bccrp")]
-transform = Transform3D(4.983225, 0, -5.430046, 0, 7.82089, 0, 5.430046, 0, 4.983225, 106.44002, 1.40497, -116.11687)
+[node name="Puff050" parent="World/Dressing/Clouds" unique_id=1924095645 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.5620255, 0, -4.929505, 0, 6.11185, 0, 4.929505, 0, 3.5620255, -80.33072, -1.95609, -186.9359)
 
-[node name="Cloud51" parent="World/Dressing/Clouds" unique_id=209290690 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-8.141835, 0, 3.5863602, 0, 7.65603, 0, -3.5863602, 0, -8.141835, -15.7676, -24.95737, 77.69526)
+[node name="Puff051" parent="World/Dressing/Clouds" unique_id=893190764 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.190524, 0, -6.802399, 0, 6.73654, 0, 6.802399, 0, -2.190524, 42.79209, -15.38588, 112.18052)
 
-[node name="Cloud52" parent="World/Dressing/Clouds" unique_id=734981157 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(4.5540705, 0, 3.0987139, 0, 4.64361, 0, -3.0987139, 0, 4.5540705, -40.33507, -21.89895, -141.89397)
+[node name="Puff052" parent="World/Dressing/Clouds" unique_id=2119766644 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(6.66383, 0, 0.70738477, 0, 5.81155, 0, -0.70738477, 0, 6.66383, -133.16135, -5.2246, -181.01625)
 
-[node name="Cloud53" parent="World/Dressing/Clouds" unique_id=1840000188 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-1.7947807, 0, 5.0161185, 0, 5.63453, 0, -5.0161185, 0, -1.7947807, -123.8357, -22.07486, -108.63934)
+[node name="Puff053" parent="World/Dressing/Clouds" unique_id=592391320 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.642944, 0, 1.6866895, 0, 5.98206, 0, -1.6866895, 0, -5.642944, -133.43022, -8.10561, -114.01788)
 
-[node name="Cloud54" parent="World/Dressing/Clouds" unique_id=71549931 instance=ExtResource("33_bccrp")]
-transform = Transform3D(6.0978074, 0, 3.8159478, 0, 5.87671, 0, -3.8159478, 0, 6.0978074, -36.11243, -15.85362, 18.02067)
+[node name="Puff054" parent="World/Dressing/Clouds" unique_id=1966363105 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.9027354, 0, -3.473913, 0, 2.9102, 0, 3.473913, 0, -0.9027354, -58.25447, -20.09996, -17.48884)
 
-[node name="Cloud55" parent="World/Dressing/Clouds" unique_id=1178105809 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.0686965, 0, -8.328676, 0, 9.24813, 0, 8.328676, 0, 3.0686965, -3.30939, -9.68511, -77.35085)
+[node name="Puff055" parent="World/Dressing/Clouds" unique_id=1639815583 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.6157327, 0, -1.1110182, 0, 5.47939, 0, 1.1110182, 0, -5.6157327, 121.43777, -20.57177, 119.84023)
 
-[node name="Cloud56" parent="World/Dressing/Clouds" unique_id=1081039517 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-1.4141334, 0, -4.022167, 0, 4.67688, 0, 4.022167, 0, -1.4141334, -7.80857, -9.7743, -102.99766)
+[node name="Puff056" parent="World/Dressing/Clouds" unique_id=126028365 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.4986985, 0, 0.8271714, 0, 3.76996, 0, -0.8271714, 0, 3.4986985, -98.23854, -23.91764, -52.92333)
 
-[node name="Cloud57" parent="World/Dressing/Clouds" unique_id=949477114 instance=ExtResource("32_yvv08")]
-transform = Transform3D(-5.4002895, 0, 6.6435432, 0, 7.95919, 0, -6.6435432, 0, -5.4002895, -18.58629, -21.8115, -22.08798)
+[node name="Puff057" parent="World/Dressing/Clouds" unique_id=833679158 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(5.5410743, 0, 4.3699994, 0, 7.29448, 0, -4.3699994, 0, 5.5410743, -154.46983, 5.20986, -33.13419)
 
-[node name="Cloud58" parent="World/Dressing/Clouds" unique_id=1667378363 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(3.582852, 0, 6.6558805, 0, 6.49685, 0, -6.6558805, 0, 3.582852, -50.73879, -8.03184, 106.29684)
+[node name="Puff058" parent="World/Dressing/Clouds" unique_id=818680998 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-1.7175008, 0, 4.5209002, 0, 5.04206, 0, -4.5209002, 0, -1.7175008, 85.67604, -26.57498, -57.3814)
 
-[node name="Cloud59" parent="World/Dressing/Clouds" unique_id=1313230585 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(4.1811395, 0, -5.160721, 0, 7.16422, 0, 5.160721, 0, 4.1811395, -30.37188, -22.45254, -32.63945)
+[node name="Puff059" parent="World/Dressing/Clouds" unique_id=1471937229 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-7.0439863, 0, 4.8066716, 0, 8.17803, 0, -4.8066716, 0, -7.0439863, -95.44566, -22.84952, -124.24314)
 
-[node name="Cloud60" parent="World/Dressing/Clouds" unique_id=1914809899 instance=ExtResource("32_yvv08")]
-transform = Transform3D(4.6024795, 0, 3.8070402, 0, 6.18957, 0, -3.8070402, 0, 4.6024795, -68.7301, -25.56495, 99.90872)
+[node name="Puff060" parent="World/Dressing/Clouds" unique_id=1197748170 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-4.7905183, 0, 2.227075, 0, 5.38836, 0, -2.227075, 0, -4.7905183, -55.73435, -25.32653, -182.05177)
 
-[node name="Cloud61" parent="World/Dressing/Clouds" unique_id=54525728 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-6.909812, 0, 4.7665796, 0, 8.16646, 0, -4.7665796, 0, -6.909812, 96.32962, -18.21708, -68.77243)
+[node name="Puff061" parent="World/Dressing/Clouds" unique_id=1876309134 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-2.475065, 0, -6.573233, 0, 6.67044, 0, 6.573233, 0, -2.475065, -143.37967, -16.28826, 19.52513)
 
-[node name="Cloud62" parent="World/Dressing/Clouds" unique_id=1066321101 instance=ExtResource("32_yvv08")]
-transform = Transform3D(0.7673902, 0, -8.429903, 0, 7.90465, 0, 8.429903, 0, 0.7673902, 124.20219, -27.59379, -44.16685)
+[node name="Puff062" parent="World/Dressing/Clouds" unique_id=687796086 instance=ExtResource("32_yvv08")]
+transform = Transform3D(4.940486, 0, -0.8583178, 0, 5.21731, 0, 0.8583178, 0, 4.940486, -146.42876, -20.31468, -138.83383)
 
-[node name="Cloud63" parent="World/Dressing/Clouds" unique_id=1137951537 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-6.9360857, 0, -4.389277, 0, 6.92655, 0, 4.389277, 0, -6.9360857, 4.08222, -22.36251, -38.02686)
+[node name="Puff063" parent="World/Dressing/Clouds" unique_id=837589953 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-1.8804071, 0, 3.1644752, 0, 3.11317, 0, -3.1644752, 0, -1.8804071, 4.12201, -19.515, -119.33266)
 
-[node name="Cloud64" parent="World/Dressing/Clouds" unique_id=1266535720 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(0.49365517, 0, -7.5220084, 0, 6.18111, 0, 7.5220084, 0, 0.49365517, -68.41256, -17.68735, 67.38461)
+[node name="Puff064" parent="World/Dressing/Clouds" unique_id=1842949819 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.4504395, 0, -5.4688244, 0, 4.93029, 0, 5.4688244, 0, 2.4504395, -134.83282, -6.38336, -107.95347)
 
-[node name="Cloud65" parent="World/Dressing/Clouds" unique_id=1931003983 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.1193068, 0, 6.6677327, 0, 6.55344, 0, -6.6677327, 0, 3.1193068, 5.38565, -19.18744, -150.07819)
+[node name="Puff065" parent="World/Dressing/Clouds" unique_id=1681700346 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.3237786, 0, -3.1748657, 0, 5.31964, 0, 3.1748657, 0, -5.3237786, -116.84046, -15.81677, -6.35576)
 
-[node name="Cloud66" parent="World/Dressing/Clouds" unique_id=802788360 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-5.369591, 0, -0.44682625, 0, 4.86713, 0, 0.44682625, 0, -5.369591, -45.47933, -24.30757, -40.47815)
+[node name="Puff066" parent="World/Dressing/Clouds" unique_id=1046136817 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.1061046, 0, 4.0616117, 0, 4.10568, 0, -4.0616117, 0, -2.1061046, -1.24314, -24.13684, 47.67841)
 
-[node name="Cloud67" parent="World/Dressing/Clouds" unique_id=841960142 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(5.391679, 0, -2.7558596, 0, 5.09328, 0, 2.7558596, 0, 5.391679, -27.26491, -19.98547, 11.83892)
+[node name="Puff067" parent="World/Dressing/Clouds" unique_id=1337861046 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-1.6514621, 0, -7.3906145, 0, 7.61994, 0, 7.3906145, 0, -1.6514621, 135.41873, -3.93039, -150.67715)
 
-[node name="Cloud68" parent="World/Dressing/Clouds" unique_id=575488057 instance=ExtResource("32_yvv08")]
-transform = Transform3D(3.7986574, 0, 5.0275826, 0, 5.29544, 0, -5.0275826, 0, 3.7986574, 79.58231, -23.24151, -12.89349)
+[node name="Puff068" parent="World/Dressing/Clouds" unique_id=1368295185 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.7373776, 0, -1.7152585, 0, 4.06374, 0, 1.7152585, 0, -3.7373776, -6.10564, -23.4842, -58.34925)
 
-[node name="Cloud69" parent="World/Dressing/Clouds" unique_id=1771193507 instance=ExtResource("32_yvv08")]
-transform = Transform3D(4.0331326, 0, -4.403709, 0, 5.40139, 0, 4.403709, 0, 4.0331326, 51.84493, -20.57302, -1.94851)
+[node name="Puff069" parent="World/Dressing/Clouds" unique_id=1063469756 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.8558044, 0, -7.677963, 0, 7.95204, 0, 7.677963, 0, -2.8558044, 83.87162, -5.28702, -194.69368)
 
-[node name="Cloud70" parent="World/Dressing/Clouds" unique_id=1878347536 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-0.3879212, 0, 4.156999, 0, 3.49013, 0, -4.156999, 0, -0.3879212, 54.87246, -9.25004, -99.73204)
+[node name="Puff070" parent="World/Dressing/Clouds" unique_id=1599521520 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-6.1446033, 0, 1.937501, 0, 5.76089, 0, -1.937501, 0, -6.1446033, -91.01778, -25.20864, -189.71703)
 
-[node name="Cloud71" parent="World/Dressing/Clouds" unique_id=1898213997 instance=ExtResource("33_bccrp")]
-transform = Transform3D(-4.9256544, 0, -0.42424107, 0, 4.01445, 0, 0.42424107, 0, -4.9256544, -83.31249, -6.95201, 58.2596)
+[node name="Puff071" parent="World/Dressing/Clouds" unique_id=1328070735 instance=ExtResource("32_yvv08")]
+transform = Transform3D(1.7649325, 0, -5.7117743, 0, 4.78754, 0, 5.7117743, 0, 1.7649325, -144.76591, -10.86802, -193.78258)
 
-[node name="Cloud72" parent="World/Dressing/Clouds" unique_id=369611905 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(-1.6207484, 0, 4.487177, 0, 3.88263, 0, -4.487177, 0, -1.6207484, 15.19246, -25.15395, 43.14814)
+[node name="Puff072" parent="World/Dressing/Clouds" unique_id=1374487604 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.3905606, 0, 0.7277164, 0, 4.39007, 0, -0.7277164, 0, -4.3905606, 64.47961, -25.972, -34.01955)
 
-[node name="Cloud73" parent="World/Dressing/Clouds" unique_id=943272976 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(5.052112, 0, -4.803388, 0, 6.89756, 0, 4.803388, 0, 5.052112, -51.0068, 5.0722, 89.63651)
+[node name="Puff073" parent="World/Dressing/Clouds" unique_id=1082905677 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(7.9326735, 0, -1.218885, 0, 7.90504, 0, 1.218885, 0, 7.9326735, 82.76563, -21.54772, 79.2241)
 
-[node name="Cloud74" parent="World/Dressing/Clouds" unique_id=2049306738 instance=ExtResource("33_bccrp")]
-transform = Transform3D(3.8952758, 0, -6.0814447, 0, 6.58403, 0, 6.0814447, 0, 3.8952758, -137.19254, -18.21392, -27.23306)
+[node name="Puff074" parent="World/Dressing/Clouds" unique_id=243034914 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-2.8103616, 0, -3.5198088, 0, 4.29804, 0, 3.5198088, 0, -2.8103616, -11.81537, -26.81485, -73.75504)
 
-[node name="Cloud75" parent="World/Dressing/Clouds" unique_id=960824823 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(3.0180366, 0, 7.933964, 0, 7.43475, 0, -7.933964, 0, 3.0180366, -66.23841, -19.94918, 65.2951)
+[node name="Puff075" parent="World/Dressing/Clouds" unique_id=770189450 instance=ExtResource("32_yvv08")]
+transform = Transform3D(5.330882, 0, 5.9286046, 0, 7.61638, 0, -5.9286046, 0, 5.330882, -136.75845, -20.85815, -151.34973)
 
-[node name="Cloud76" parent="World/Dressing/Clouds" unique_id=906241095 instance=ExtResource("33_bccrp")]
-transform = Transform3D(2.827167, 0, -6.731236, 0, 5.87317, 0, 6.731236, 0, 2.827167, -82.95141, -22.76079, -103.62383)
+[node name="Puff076" parent="World/Dressing/Clouds" unique_id=1222701152 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.8172842, 0, 3.1134582, 0, 3.11892, 0, -3.1134582, 0, -0.8172842, -15.27379, -19.41236, -39.68664)
 
-[node name="Cloud77" parent="World/Dressing/Clouds" unique_id=2051230441 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(7.6606307, 0, -3.1961212, 0, 8.46342, 0, 3.1961212, 0, 7.6606307, -20.10209, -17.78361, 47.26729)
+[node name="Puff077" parent="World/Dressing/Clouds" unique_id=1389600280 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.2299614, 0, -0.4467425, 0, 2.77099, 0, 0.4467425, 0, 3.2299614, -5.03929, -27.00491, -46.66126)
 
-[node name="Cloud78" parent="World/Dressing/Clouds" unique_id=1944645283 instance=ExtResource("31_i3rdk")]
-transform = Transform3D(6.7437906, 0, 2.4137979, 0, 5.82406, 0, -2.4137979, 0, 6.7437906, -0.37592, -17.23749, -76.96034)
+[node name="Puff078" parent="World/Dressing/Clouds" unique_id=11633773 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-6.2737794, 0, 5.402897, 0, 8.68108, 0, -5.402897, 0, -6.2737794, 120.8763, -13.47705, -194.22353)
+
+[node name="Puff079" parent="World/Dressing/Clouds" unique_id=178284077 instance=ExtResource("33_bccrp")]
+transform = Transform3D(5.1265807, 0, -1.5686741, 0, 4.99138, 0, 1.5686741, 0, 5.1265807, 114.96643, -27.31394, 107.0769)
+
+[node name="Puff080" parent="World/Dressing/Clouds" unique_id=1340855499 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-8.546698, 0, 0.11342586, 0, 7.61832, 0, -0.11342586, 0, -8.546698, -120.21848, -11.6852, 70.67161)
+
+[node name="Puff081" parent="World/Dressing/Clouds" unique_id=47869920 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.821688, 0, 8.335182, 0, 8.03153, 0, -8.335182, 0, -2.821688, 102.84357, -24.27365, -69.95343)
+
+[node name="Puff082" parent="World/Dressing/Clouds" unique_id=1286689850 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.403125, 0, 7.1075644, 0, 7.36712, 0, -7.1075644, 0, -4.403125, -117.78783, -18.62119, -86.49315)
+
+[node name="Puff083" parent="World/Dressing/Clouds" unique_id=1201609125 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.5058596, 0, 3.6304333, 0, 4.4032, 0, -3.6304333, 0, -3.5058596, -40.52213, -22.95332, 110.16074)
+
+[node name="Puff084" parent="World/Dressing/Clouds" unique_id=1705141022 instance=ExtResource("32_yvv08")]
+transform = Transform3D(3.924997, 0, -5.109265, 0, 6.37141, 0, 5.109265, 0, 3.924997, -42.13019, -8.78964, 129.60153)
+
+[node name="Puff085" parent="World/Dressing/Clouds" unique_id=15733049 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.74389124, 0, 7.5030637, 0, 6.50185, 0, -7.5030637, 0, -0.74389124, -75.80869, -6.16879, -182.96622)
+
+[node name="Puff086" parent="World/Dressing/Clouds" unique_id=821941964 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.472632, 0, -3.7399402, 0, 5.11883, 0, 3.7399402, 0, -3.472632, -6.7111, -28.39976, -137.34981)
+
+[node name="Puff087" parent="World/Dressing/Clouds" unique_id=1530001911 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-6.675258, 0, 4.1843014, 0, 8.14116, 0, -4.1843014, 0, -6.675258, 114.02717, -10.22779, 110.43077)
+
+[node name="Puff088" parent="World/Dressing/Clouds" unique_id=1550831038 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-6.8365417, 0, 1.2071567, 0, 5.7748, 0, -1.2071567, 0, -6.8365417, 24.47422, 1.30124, -154.27106)
+
+[node name="Puff089" parent="World/Dressing/Clouds" unique_id=81821962 instance=ExtResource("32_yvv08")]
+transform = Transform3D(0.36631876, 0, 5.1348, 0, 4.64106, 0, -5.1348, 0, 0.36631876, -56.90114, -22.91451, -101.73528)
+
+[node name="Puff090" parent="World/Dressing/Clouds" unique_id=542295075 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.6665032, 0, -2.4595568, 0, 3.76148, 0, 2.4595568, 0, 3.6665032, -15.04539, -32.20386, 20.72908)
+
+[node name="Puff091" parent="World/Dressing/Clouds" unique_id=499259245 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.9599714, 0, -1.5356247, 0, 4.70862, 0, 1.5356247, 0, -4.9599714, -10.87726, -20.40611, -127.39167)
+
+[node name="Puff092" parent="World/Dressing/Clouds" unique_id=1918822510 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.686138, 0, -2.6590312, 0, 5.42716, 0, 2.6590312, 0, -5.686138, -86.77431, -9.98853, -142.35062)
+
+[node name="Puff093" parent="World/Dressing/Clouds" unique_id=1185667179 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-0.84410906, 0, 6.6017847, 0, 5.67385, 0, -6.6017847, 0, -0.84410906, 106.17544, -15.13986, 47.38701)
+
+[node name="Puff094" parent="World/Dressing/Clouds" unique_id=1833444465 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.6024952, 0, -2.7583892, 0, 3.51111, 0, 2.7583892, 0, -2.6024952, 65.6333, -25.38579, -35.61185)
+
+[node name="Puff095" parent="World/Dressing/Clouds" unique_id=1059729829 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.452451, 0, 2.4892845, 0, 5.76274, 0, -2.4892845, 0, -5.452451, 98.8584, -20.24325, -128.73216)
+
+[node name="Puff096" parent="World/Dressing/Clouds" unique_id=1583252830 instance=ExtResource("32_yvv08")]
+transform = Transform3D(4.3676906, 0, -3.3574166, 0, 5.38436, 0, 3.3574166, 0, 4.3676906, -66.3952, 4.84945, 68.73186)
+
+[node name="Puff097" parent="World/Dressing/Clouds" unique_id=632318037 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.8027673, 0, -0.6700641, 0, 3.91489, 0, 0.6700641, 0, 3.8027673, -18.01952, -33.99732, -6.23176)
+
+[node name="Puff098" parent="World/Dressing/Clouds" unique_id=1163733640 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.2342286, 0, -6.3087406, 0, 5.86456, 0, 6.3087406, 0, 3.2342286, -85.46042, -24.44238, -164.01482)
+
+[node name="Puff099" parent="World/Dressing/Clouds" unique_id=1786429803 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.7604623, 0, 3.791389, 0, 4.27383, 0, -3.791389, 0, 3.7604623, 50.30111, 2.21593, 79.34781)
+
+[node name="Puff100" parent="World/Dressing/Clouds" unique_id=1643516386 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.7983937, 0, -6.6855464, 0, 7.63687, 0, 6.6855464, 0, -5.7983937, 10.81469, -4.25922, -187.59473)
+
+[node name="Puff101" parent="World/Dressing/Clouds" unique_id=248981068 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-0.48491564, 0, 7.0811663, 0, 6.01836, 0, -7.0811663, 0, -0.48491564, 49.57458, -27.46733, -162.99622)
+
+[node name="Puff102" parent="World/Dressing/Clouds" unique_id=221530875 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.5261874, 0, -7.085229, 0, 9.34253, 0, 7.085229, 0, -5.5261874, 77.14616, -10.65085, -199.61983)
+
+[node name="Puff103" parent="World/Dressing/Clouds" unique_id=1628654031 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-2.113093, 0, 5.6030116, 0, 5.84549, 0, -5.6030116, 0, -2.113093, 105.13221, -21.54835, -43.14961)
+
+[node name="Puff104" parent="World/Dressing/Clouds" unique_id=1829673079 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.939012, 0, 3.0579956, 0, 5.72455, 0, -3.0579956, 0, -5.939012, -153.46378, -5.71932, -35.55762)
+
+[node name="Puff105" parent="World/Dressing/Clouds" unique_id=23901526 instance=ExtResource("32_yvv08")]
+transform = Transform3D(1.4678568, 0, 4.3387575, 0, 4.44586, 0, -4.3387575, 0, 1.4678568, -48.93459, -23.56266, -37.32866)
+
+[node name="Puff106" parent="World/Dressing/Clouds" unique_id=750664707 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.478555, 0, -5.2668104, 0, 5.11031, 0, 5.2668104, 0, 2.478555, 79.11927, -11.82438, 43.91264)
+
+[node name="Puff107" parent="World/Dressing/Clouds" unique_id=1019151025 instance=ExtResource("33_bccrp")]
+transform = Transform3D(2.3715785, 0, 5.7065473, 0, 5.70971, 0, -5.7065473, 0, 2.3715785, -90.75736, -2.62305, -126.92387)
+
+[node name="Puff108" parent="World/Dressing/Clouds" unique_id=521007306 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(4.793422, 0, 1.703941, 0, 5.24234, 0, -1.703941, 0, 4.793422, -93.00276, -24.02059, -62.3804)
+
+[node name="Puff109" parent="World/Dressing/Clouds" unique_id=1195328501 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(6.2887564, 0, -4.6806207, 0, 7.0424, 0, 4.6806207, 0, 6.2887564, -152.91138, -15.04614, -3.27804)
+
+[node name="Puff110" parent="World/Dressing/Clouds" unique_id=1287716234 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.019139, 0, -7.138484, 0, 7.3971, 0, 7.138484, 0, -5.019139, 105.07509, 5.91107, 41.79884)
+
+[node name="Puff111" parent="World/Dressing/Clouds" unique_id=1488333278 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.2984796, 0, 1.6262622, 0, 4.80837, 0, -1.6262622, 0, -4.2984796, -2.56073, -29.32259, -45.68678)
+
+[node name="Puff112" parent="World/Dressing/Clouds" unique_id=1300980592 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(0.3694136, 0, -6.670509, 0, 6.28177, 0, 6.670509, 0, 0.3694136, -127.31271, -27.09253, -174.18015)
+
+[node name="Puff113" parent="World/Dressing/Clouds" unique_id=1378204909 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.7025313, 0, 0.79140043, 0, 3.87365, 0, -0.79140043, 0, -4.7025313, -45.96109, -29.36951, 53.68159)
+
+[node name="Puff114" parent="World/Dressing/Clouds" unique_id=947785748 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.4691863, 0, 3.432324, 0, 5.21448, 0, -3.432324, 0, -5.4691863, -48.18568, -23.05106, 103.43712)
+
+[node name="Puff115" parent="World/Dressing/Clouds" unique_id=185901483 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(4.7543125, 0, 1.9519604, 0, 5.14371, 0, -1.9519604, 0, 4.7543125, 83.54736, -28.53662, 53.00044)
+
+[node name="Puff116" parent="World/Dressing/Clouds" unique_id=1212976461 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.786229, 0, -4.3265486, 0, 6.70625, 0, 4.3265486, 0, -4.786229, -101.51756, -8.19781, -179.25893)
+
+[node name="Puff117" parent="World/Dressing/Clouds" unique_id=1879957134 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-2.9755197, 0, -2.0377274, 0, 3.53568, 0, 2.0377274, 0, -2.9755197, -81.34826, -29.25275, 36.4898)
+
+[node name="Puff118" parent="World/Dressing/Clouds" unique_id=1746506140 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(7.9997244, 0, -2.2275534, 0, 7.62976, 0, 2.2275534, 0, 7.9997244, 81.69751, -27.64804, 112.34095)
+
+[node name="Puff119" parent="World/Dressing/Clouds" unique_id=99383901 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-6.7181625, 0, 0.14604937, 0, 5.59874, 0, -0.14604937, 0, -6.7181625, 126.17317, -20.96231, -72.45012)
+
+[node name="Puff120" parent="World/Dressing/Clouds" unique_id=704400059 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.6480103, 0, 6.8586206, 0, 7.39411, 0, -6.8586206, 0, -3.6480103, -157.38844, -19.08067, 107.24856)
+
+[node name="Puff121" parent="World/Dressing/Clouds" unique_id=1198724675 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(1.7016771, 0, 2.6790843, 0, 2.84985, 0, -2.6790843, 0, 1.7016771, -64.13537, -22.26627, -80.58671)
+
+[node name="Puff122" parent="World/Dressing/Clouds" unique_id=456964297 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.122334, 0, -2.8063462, 0, 4.38734, 0, 2.8063462, 0, 3.122334, -37.67297, -26.77465, 14.35018)
+
+[node name="Puff123" parent="World/Dressing/Clouds" unique_id=1749680047 instance=ExtResource("32_yvv08")]
+transform = Transform3D(5.303248, 0, -0.9387345, 0, 5.6394, 0, 0.9387345, 0, 5.303248, 136.34715, -26.97303, -112.58587)
+
+[node name="Puff124" parent="World/Dressing/Clouds" unique_id=348103524 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(4.9023404, 0, -7.0233283, 0, 8.45366, 0, 7.0233283, 0, 4.9023404, -108.04244, -13.40674, -156.13272)
+
+[node name="Puff125" parent="World/Dressing/Clouds" unique_id=600422224 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-0.15737359, 0, 6.1731243, 0, 5.35332, 0, -6.1731243, 0, -0.15737359, 39.32757, 0.27136, -160.01564)
+
+[node name="Puff126" parent="World/Dressing/Clouds" unique_id=1163714225 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-3.1010714, 0, -1.6614616, 0, 3.59214, 0, 1.6614616, 0, -3.1010714, -81.89948, -31.21395, -54.99874)
+
+[node name="Puff127" parent="World/Dressing/Clouds" unique_id=1770895571 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.3217375, 0, 2.4307241, 0, 3.96139, 0, -2.4307241, 0, 3.3217375, -62.09862, -19.11327, -69.29703)
+
+[node name="Puff128" parent="World/Dressing/Clouds" unique_id=2107884213 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(7.326153, 0, -4.3715625, 0, 8.6178, 0, 4.3715625, 0, 7.326153, -20.82529, -29.83828, -187.78236)
+
+[node name="Puff129" parent="World/Dressing/Clouds" unique_id=1383314247 instance=ExtResource("33_bccrp")]
+transform = Transform3D(5.1287575, 0, 2.6179664, 0, 4.88614, 0, -2.6179664, 0, 5.1287575, -147.89143, -25.7082, -103.08644)
+
+[node name="Puff130" parent="World/Dressing/Clouds" unique_id=1029644205 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.703501, 0, 2.9019141, 0, 4.87638, 0, -2.9019141, 0, 3.703501, -6.1993, -24.95437, -141.33952)
+
+[node name="Puff131" parent="World/Dressing/Clouds" unique_id=1513440808 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.811159, 0, -0.0030233252, 0, 3.09101, 0, 0.0030233252, 0, 3.811159, 18.84412, -30.73532, 4.58283)
+
+[node name="Puff132" parent="World/Dressing/Clouds" unique_id=1596968318 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.7217274, 0, 5.955873, 0, 7.45165, 0, -5.955873, 0, -5.7217274, -148.5292, 2.90239, 41.63539)
+
+[node name="Puff133" parent="World/Dressing/Clouds" unique_id=300991032 instance=ExtResource("32_yvv08")]
+transform = Transform3D(5.61296, 0, 4.153311, 0, 5.69645, 0, -4.153311, 0, 5.61296, 26.30414, -28.8672, -174.28152)
+
+[node name="Puff134" parent="World/Dressing/Clouds" unique_id=820587496 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.42440304, 0, 3.1722765, 0, 2.8787, 0, -3.1722765, 0, -0.42440304, -41.41099, -24.41227, -18.45459)
+
+[node name="Puff135" parent="World/Dressing/Clouds" unique_id=372354253 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.2465322, 0, 4.0689845, 0, 4.9016, 0, -4.0689845, 0, -3.2465322, 136.47162, -14.95757, 20.37761)
+
+[node name="Puff136" parent="World/Dressing/Clouds" unique_id=790185464 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-5.3383064, 0, 3.629213, 0, 5.79465, 0, -3.629213, 0, -5.3383064, -35.06639, 5.87833, 85.2013)
+
+[node name="Puff137" parent="World/Dressing/Clouds" unique_id=194432032 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(4.0418515, 0, -3.6621447, 0, 4.91722, 0, 3.6621447, 0, 4.0418515, 122.59622, -24.36359, -56.7258)
+
+[node name="Puff138" parent="World/Dressing/Clouds" unique_id=1061950647 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.7413816, 0, 4.354964, 0, 7.21784, 0, -4.354964, 0, -5.7413816, -21.72813, -29.46596, -146.36029)
+
+[node name="Puff139" parent="World/Dressing/Clouds" unique_id=1515360504 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.636559, 0, -0.75379944, 0, 4.95215, 0, 0.75379944, 0, -5.636559, 11.85935, -3.45904, 105.98509)
+
+[node name="Puff140" parent="World/Dressing/Clouds" unique_id=1923524147 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(4.285398, 0, -7.0136604, 0, 7.19517, 0, 7.0136604, 0, 4.285398, 117.64994, -12.34165, -164.09836)
+
+[node name="Puff141" parent="World/Dressing/Clouds" unique_id=2053190917 instance=ExtResource("33_bccrp")]
+transform = Transform3D(6.125167, 0, -4.206643, 0, 6.66503, 0, 4.206643, 0, 6.125167, -146.9508, -18.67707, 101.22355)
+
+[node name="Puff142" parent="World/Dressing/Clouds" unique_id=110208784 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-6.1175375, 0, -5.374856, 0, 7.779, 0, 5.374856, 0, -6.1175375, 26.10289, -24.23006, 72.1034)
+
+[node name="Puff143" parent="World/Dressing/Clouds" unique_id=1884528264 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-1.958884, 0, 2.3920314, 0, 2.59436, 0, -2.3920314, 0, -1.958884, -101.16612, -25.51859, -43.92478)
+
+[node name="Puff144" parent="World/Dressing/Clouds" unique_id=946419613 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.7080288, 0, -5.095475, 0, 5.83167, 0, 5.095475, 0, -2.7080288, -115.15986, -0.63661, 120.32846)
+
+[node name="Puff145" parent="World/Dressing/Clouds" unique_id=1814738116 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-2.3724103, 0, -3.2237492, 0, 3.98069, 0, 3.2237492, 0, -2.3724103, 40.36893, -28.15245, -93.01308)
+
+[node name="Puff146" parent="World/Dressing/Clouds" unique_id=1818042511 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.7673879, 0, 0.55733407, 0, 3.46407, 0, -0.55733407, 0, 3.7673879, -67.53651, -28.16182, -117.74458)
+
+[node name="Puff147" parent="World/Dressing/Clouds" unique_id=1621314000 instance=ExtResource("32_yvv08")]
+transform = Transform3D(1.7372249, 0, -4.345452, 0, 4.7226, 0, 4.345452, 0, 1.7372249, 25.66756, -30.47124, -38.46447)
+
+[node name="Puff148" parent="World/Dressing/Clouds" unique_id=1955780605 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-3.5611224, 0, -5.3914, 0, 5.98374, 0, 5.3914, 0, -3.5611224, -39.8973, -17.0913, -177.85017)
+
+[node name="Puff149" parent="World/Dressing/Clouds" unique_id=1235565339 instance=ExtResource("33_bccrp")]
+transform = Transform3D(5.894838, 0, 2.0915687, 0, 5.80374, 0, -2.0915687, 0, 5.894838, -147.8045, 3.19654, -157.01057)
+
+[node name="Puff150" parent="World/Dressing/Clouds" unique_id=351102042 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.37064305, 0, -3.2787266, 0, 3.46139, 0, 3.2787266, 0, -0.37064305, -8.82278, -19.73698, -75.30533)
+
+[node name="Puff151" parent="World/Dressing/Clouds" unique_id=931220547 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-1.2591329, 0, -6.8527637, 0, 6.76914, 0, 6.8527637, 0, -1.2591329, 84.49683, 5.34221, -136.07658)
+
+[node name="Puff152" parent="World/Dressing/Clouds" unique_id=391385973 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-0.93971926, 0, 5.9349446, 0, 6.1539, 0, -5.9349446, 0, -0.93971926, -93.66197, -8.02399, 74.90191)
+
+[node name="Puff153" parent="World/Dressing/Clouds" unique_id=391725199 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-6.479349, 0, -5.7752934, 0, 8.22805, 0, 5.7752934, 0, -6.479349, 84.688, -11.92015, -152.62114)
+
+[node name="Puff154" parent="World/Dressing/Clouds" unique_id=2012768543 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-1.6623386, 0, -3.514288, 0, 4.0202, 0, 3.514288, 0, -1.6623386, -88.78025, -31.01587, -77.15191)
+
+[node name="Puff155" parent="World/Dressing/Clouds" unique_id=1863655082 instance=ExtResource("33_bccrp")]
+transform = Transform3D(3.4351027, 0, -4.244415, 0, 4.43456, 0, 4.244415, 0, 3.4351027, 108.62393, -1.7447, -144.31512)
+
+[node name="Puff156" parent="World/Dressing/Clouds" unique_id=18748761 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-7.560619, 0, -1.7250129, 0, 6.69255, 0, 1.7250129, 0, -7.560619, 129.84648, -11.22771, -50.49726)
+
+[node name="Puff157" parent="World/Dressing/Clouds" unique_id=1656835470 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.153052, 0, 5.0040636, 0, 6.14101, 0, -5.0040636, 0, -4.153052, 96.97982, -16.62722, 43.51463)
+
+[node name="Puff158" parent="World/Dressing/Clouds" unique_id=1411543169 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.6121902, 0, -0.4683623, 0, 4.05223, 0, 0.4683623, 0, -4.6121902, 69.39176, -31.34866, -54.04706)
+
+[node name="Puff159" parent="World/Dressing/Clouds" unique_id=1944851171 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-0.15768497, 0, -8.712413, 0, 8.56796, 0, 8.712413, 0, -0.15768497, -66.97827, 1.33068, 118.76589)
+
+[node name="Puff160" parent="World/Dressing/Clouds" unique_id=1074219314 instance=ExtResource("32_yvv08")]
+transform = Transform3D(4.5042562, 0, 4.920425, 0, 6.83008, 0, -4.920425, 0, 4.5042562, -93.50875, -7.47775, -103.97937)
+
+[node name="Puff161" parent="World/Dressing/Clouds" unique_id=1705208537 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-2.9741764, 0, -0.4345189, 0, 2.63284, 0, 0.4345189, 0, -2.9741764, -91.82211, -33.66566, 15.52578)
+
+[node name="Puff162" parent="World/Dressing/Clouds" unique_id=1206468329 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-3.2533243, 0, 0.5173338, 0, 3.1492, 0, -0.5173338, 0, -3.2533243, 0.23393, -29.48268, -63.63131)
+
+[node name="Puff163" parent="World/Dressing/Clouds" unique_id=939934322 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.4391563, 0, 4.41604, 0, 4.56689, 0, -4.41604, 0, 3.4391563, -119.57539, -21.23082, 109.075)
+
+[node name="Puff164" parent="World/Dressing/Clouds" unique_id=1183058523 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.7394557, 0, -1.9572598, 0, 4.92893, 0, 1.9572598, 0, -4.7394557, 39.64175, -21.82644, -110.97915)
+
+[node name="Puff165" parent="World/Dressing/Clouds" unique_id=1958030412 instance=ExtResource("33_bccrp")]
+transform = Transform3D(2.5739255, 0, 4.358465, 0, 4.67307, 0, -4.358465, 0, 2.5739255, -54.90019, -27.34369, 13.04935)
+
+[node name="Puff166" parent="World/Dressing/Clouds" unique_id=340644163 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(1.036065, 0, -5.648395, 0, 4.67792, 0, 5.648395, 0, 1.036065, -159.88013, -29.09189, -179.69559)
+
+[node name="Puff167" parent="World/Dressing/Clouds" unique_id=1689116156 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.4767275, 0, -4.3505063, 0, 5.17681, 0, 4.3505063, 0, -3.4767275, -156.29497, 3.87314, -18.19542)
+
+[node name="Puff168" parent="World/Dressing/Clouds" unique_id=423738095 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(3.9291713, 0, 1.2355976, 0, 3.60428, 0, -1.2355976, 0, 3.9291713, 34.27901, -24.80225, -62.96931)
+
+[node name="Puff169" parent="World/Dressing/Clouds" unique_id=1176750787 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.9061947, 0, 1.0880717, 0, 4.95653, 0, -1.0880717, 0, -4.9061947, 106.80573, -4.24565, 58.38148)
+
+[node name="Puff170" parent="World/Dressing/Clouds" unique_id=1317309022 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(2.309853, 0, 2.2600768, 0, 3.1056, 0, -2.2600768, 0, 2.309853, 62.52648, -30.61077, -50.67921)
+
+[node name="Puff171" parent="World/Dressing/Clouds" unique_id=1890288067 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-5.7107825, 0, -2.007006, 0, 5.24507, 0, 2.007006, 0, -5.7107825, 107.38218, 3.94262, 105.3088)
+
+[node name="Puff172" parent="World/Dressing/Clouds" unique_id=944510172 instance=ExtResource("33_bccrp")]
+transform = Transform3D(2.8202574, 0, -2.2110395, 0, 3.69884, 0, 2.2110395, 0, 2.8202574, -29.18418, -26.15133, 60.18851)
+
+[node name="Puff173" parent="World/Dressing/Clouds" unique_id=1191904175 instance=ExtResource("33_bccrp")]
+transform = Transform3D(4.6553335, 0, 7.2533956, 0, 7.33197, 0, -7.2533956, 0, 4.6553335, -134.37367, -23.8883, -32.54857)
+
+[node name="Puff174" parent="World/Dressing/Clouds" unique_id=1308597601 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-5.0453606, 0, -5.420072, 0, 7.60406, 0, 5.420072, 0, -5.0453606, 114.48752, -16.00654, -136.6608)
+
+[node name="Puff175" parent="World/Dressing/Clouds" unique_id=1005886932 instance=ExtResource("33_bccrp")]
+transform = Transform3D(2.5219781, 0, -3.1470218, 0, 3.92966, 0, 3.1470218, 0, 2.5219781, 47.85289, -19.3148, 19.52796)
+
+[node name="Puff176" parent="World/Dressing/Clouds" unique_id=1988416512 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-3.1610765, 0, -1.8783748, 0, 3.30159, 0, 1.8783748, 0, -3.1610765, -28.8358, -25.44489, 39.1257)
+
+[node name="Puff177" parent="World/Dressing/Clouds" unique_id=66392197 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-3.0581284, 0, 4.5082, 0, 5.62319, 0, -4.5082, 0, -3.0581284, 9.56137, -28.81511, -143.3898)
+
+[node name="Puff178" parent="World/Dressing/Clouds" unique_id=588639807 instance=ExtResource("33_bccrp")]
+transform = Transform3D(7.0754604, 0, 3.2122474, 0, 6.29925, 0, -3.2122474, 0, 7.0754604, -117.44752, -28.50062, -190.51823)
+
+[node name="Puff179" parent="World/Dressing/Clouds" unique_id=1214244996 instance=ExtResource("33_bccrp")]
+transform = Transform3D(5.3066387, 0, 2.3340294, 0, 5.92954, 0, -2.3340294, 0, 5.3066387, -145.99329, -2.57633, 82.64433)
+
+[node name="Puff180" parent="World/Dressing/Clouds" unique_id=2138321026 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(5.306067, 0, 1.1462255, 0, 4.61848, 0, -1.1462255, 0, 5.306067, 100.33768, 3.99573, 101.7549)
+
+[node name="Puff181" parent="World/Dressing/Clouds" unique_id=353375187 instance=ExtResource("33_bccrp")]
+transform = Transform3D(-5.2946706, 0, 0.7666045, 0, 5.12553, 0, -0.7666045, 0, -5.2946706, 124.77544, -2.8648, 100.66673)
+
+[node name="Puff182" parent="World/Dressing/Clouds" unique_id=988692060 instance=ExtResource("32_yvv08")]
+transform = Transform3D(6.1245556, 0, 0.8096463, 0, 5.59676, 0, -0.8096463, 0, 6.1245556, -120.20388, -6.73247, 61.34921)
+
+[node name="Puff183" parent="World/Dressing/Clouds" unique_id=710841392 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-3.05357, 0, -2.277969, 0, 3.78035, 0, 2.277969, 0, -3.05357, -82.98932, -23.26357, -106.74424)
+
+[node name="Puff184" parent="World/Dressing/Clouds" unique_id=1001519509 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(0.682785, 0, -4.6864424, 0, 4.30549, 0, 4.6864424, 0, 0.682785, -17.17517, -22.81518, -105.07591)
+
+[node name="Puff185" parent="World/Dressing/Clouds" unique_id=689344705 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-0.8032711, 0, 3.3823853, 0, 3.28051, 0, -3.3823853, 0, -0.8032711, -55.9655, -25.93179, 32.53763)
+
+[node name="Puff186" parent="World/Dressing/Clouds" unique_id=706508257 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.64341, 0, 0.26804066, 0, 3.72598, 0, -0.26804066, 0, -4.64341, -29.18275, -29.67498, -27.22661)
+
+[node name="Puff187" parent="World/Dressing/Clouds" unique_id=1598784121 instance=ExtResource("32_yvv08")]
+transform = Transform3D(-4.0695963, 0, -0.3883091, 0, 4.24875, 0, 0.3883091, 0, -4.0695963, -12.55477, -31.23221, 62.93473)
+
+[node name="Puff188" parent="World/Dressing/Clouds" unique_id=1191947306 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(6.747116, 0, 5.576221, 0, 8.09298, 0, -5.576221, 0, 6.747116, 13.40222, -0.65133, -147.56453)
+
+[node name="Puff189" parent="World/Dressing/Clouds" unique_id=504524502 instance=ExtResource("31_i3rdk")]
+transform = Transform3D(-4.797531, 0, 6.1356707, 0, 7.45359, 0, -6.1356707, 0, -4.797531, 30.9595, -1.63509, -173.30875)
+
+[node name="Puff190" parent="World/Dressing/Clouds" unique_id=195728226 instance=ExtResource("33_bccrp")]
+transform = Transform3D(0.8683503, 0, 3.0691023, 0, 2.57174, 0, -3.0691023, 0, 0.8683503, -39.61883, -20.64389, -69.78218)
 
 [node name="Player" parent="." unique_id=860313022 instance=ExtResource("5_dga24")]
 unique_name_in_owner = true

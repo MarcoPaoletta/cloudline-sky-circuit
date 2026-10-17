@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://bxlxro8neihxa"]
+
+[ext_resource type="Script" uid="uid://cpfih46lffkxk" path="res://scripts/arena/arena_hud.gd" id="1_dly7h"]
+
+[node name="ArenaHud" type="CanvasLayer" unique_id=433408778]
+layer = 11
+script = ExtResource("1_dly7h")
+
+[node name="Safe" type="Control" parent="." unique_id=381897314]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Top" type="VBoxContainer" parent="Safe" unique_id=521149859]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -340.0
+offset_top = 14.0
+offset_right = 340.0
+offset_bottom = 14.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="WaveLabel" type="Label" parent="Safe/Top" unique_id=674842477]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+horizontal_alignment = 1
+
+[node name="RemainingLabel" type="Label" parent="Safe/Top" unique_id=840525235]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+horizontal_alignment = 1
+
+[node name="BossBars" type="VBoxContainer" parent="Safe/Top" unique_id=1641735914]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BossBarTemplate" type="PanelContainer" parent="Safe/Top/BossBars" unique_id=234259314]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"HudPanel"
+
+[node name="Row" type="HBoxContainer" parent="Safe/Top/BossBars/BossBarTemplate" unique_id=1647624642]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Icon" type="Control" parent="Safe/Top/BossBars/BossBarTemplate/Row" unique_id=266609508]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Diamond" type="Polygon2D" parent="Safe/Top/BossBars/BossBarTemplate/Row/Icon" unique_id=1476747521]
+polygon = PackedVector2Array(17, 2, 30, 17, 17, 32, 4, 17)
+
+[node name="Name" type="Label" parent="Safe/Top/BossBars/BossBarTemplate/Row" unique_id=994546749]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_type_variation = &"HudLabel"
+text = "YETI"
+
+[node name="Health" type="ProgressBar" parent="Safe/Top/BossBars/BossBarTemplate/Row" unique_id=38645889]
+custom_minimum_size = Vector2(420, 28)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+max_value = 5.0
+value = 5.0
+show_percentage = false
+
+[node name="ChainLabel" type="Label" parent="Safe" unique_id=1110777539]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -110.0
+offset_right = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_type_variation = &"TitleLabel"
+text = "x2"
+horizontal_alignment = 1
+
+[node name="Banner" type="VBoxContainer" parent="Safe" unique_id=1202195153]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_top = 230.0
+offset_right = 600.0
+offset_bottom = 400.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="BannerTitle" type="Label" parent="Safe/Banner" unique_id=106349528]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"TitleLabel"
+horizontal_alignment = 1
+
+[node name="BannerSub" type="Label" parent="Safe/Banner" unique_id=684777324]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+horizontal_alignment = 1
+
+[node name="DefeatPanel" type="PanelContainer" parent="Safe" unique_id=34222966]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -170.0
+offset_right = 400.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="Safe/DefeatPanel" unique_id=1194301300]
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="Title" type="Label" parent="Safe/DefeatPanel/Box" unique_id=1845846812]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "DEFEATED"
+horizontal_alignment = 1
+
+[node name="Hint" type="Label" parent="Safe/DefeatPanel/Box" unique_id=1195140017]
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Same arena, fresh paint. Your flag is safe."
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="Safe/DefeatPanel/Box" unique_id=475685589]
+layout_mode = 2
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="Safe/DefeatPanel/Box/Buttons" unique_id=1685701333]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "Retry Arena"
+
+[node name="TitleButton" type="Button" parent="Safe/DefeatPanel/Box/Buttons" unique_id=1533629371]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Title"

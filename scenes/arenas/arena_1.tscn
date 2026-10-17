@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://lg3xm8gxedpu"]
+
+[ext_resource type="Script" uid="uid://k8v0ykfnj5r8" path="res://scripts/arena/arena_director.gd" id="1_bk8yx"]
+[ext_resource type="Environment" uid="uid://c1d5i8vn6eygy" path="res://resources/environments/sky_day.tres" id="2_ihlj5"]
+[ext_resource type="PackedScene" uid="uid://brkcagono8qgx" path="res://scenes/arena/arena_floor_48.tscn" id="3_nqvls"]
+[ext_resource type="PackedScene" uid="uid://bjteps33gw8pf" path="res://scenes/player/player.tscn" id="4_p3wkd"]
+[ext_resource type="PackedScene" uid="uid://dyipmuxtnm3xs" path="res://scenes/fx/paint_manager.tscn" id="5_xv0wr"]
+[ext_resource type="PackedScene" uid="uid://cysavbjjk5j4i" path="res://scenes/ui/hud.tscn" id="6_jbaip"]
+[ext_resource type="PackedScene" uid="uid://bxlxro8neihxa" path="res://scenes/arena/arena_hud.tscn" id="7_7261l"]
+
+[node name="Arena1" type="Node3D" unique_id=1594163526]
+script = ExtResource("1_bk8yx")
+wave_counts = PackedInt32Array(60, 60, 60)
+wave_starts = PackedFloat32Array(0, 11, 22)
+wave_durations = PackedFloat32Array(9, 9, 9)
+active_cap = 60
+
+[node name="Environment" type="WorldEnvironment" parent="." unique_id=1050596720]
+environment = ExtResource("2_ihlj5")
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1660630315]
+transform = Transform3D(-0.70710677, -0.4353384, 0.55720776, 0, 0.7880108, 0.6156615, -0.70710677, 0.4353384, -0.55720776, 0, 0, 0)
+light_color = Color(1, 0.94118, 0.84706, 1)
+light_energy = 1.25
+light_angular_distance = 1.2
+shadow_enabled = true
+directional_shadow_mode = 1
+directional_shadow_max_distance = 90.0
+
+[node name="Floor" parent="." unique_id=1426048658 instance=ExtResource("3_nqvls")]
+
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=915229798]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.05, 10.8)
+
+[node name="Horde" type="Node3D" parent="." unique_id=214682034]
+unique_name_in_owner = true
+
+[node name="Player" parent="." unique_id=860313022 instance=ExtResource("4_p3wkd")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 10.8)
+
+[node name="PaintManager" parent="." unique_id=2113115834 instance=ExtResource("5_xv0wr")]
+
+[node name="Hud" parent="." unique_id=842138425 instance=ExtResource("6_jbaip")]
+unique_name_in_owner = true
+
+[node name="ArenaHud" parent="." unique_id=433408778 instance=ExtResource("7_7261l")]
+unique_name_in_owner = true

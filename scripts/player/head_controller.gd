@@ -18,7 +18,7 @@ enum State { ATTACHED, GRABBING, ROLLING, SEATED, RETURNING, RECOVER }
 @export_group("Bowl")
 @export var hide_head_time: float = 0.08
 @export var release_delay: float = 0.30
-@export var recover_time: float = 0.15
+@export var recover_time: float = 0.1
 @export var launch_height: float = 0.55
 @export_group("Aim assist")
 @export var assist_range: float = 24.0
@@ -121,7 +121,7 @@ func _physics_process(delta: float) -> void:
 		State.ATTACHED:
 			if enabled:
 				_update_targeting()
-				if Input.is_action_just_pressed(&"head_attack"):
+				if Input.is_action_just_pressed(&"head_attack") or (Campaign.hold_to_bowl and Input.is_action_pressed(&"head_attack")):
 					_begin_bowl(false)
 				elif Input.is_action_just_pressed(&"head_deploy"):
 					_try_deploy()
@@ -337,6 +337,8 @@ func _begin_bowl(deploy: bool) -> void:
 		to2.y = 0.0
 		if to2.length() > 0.1:
 			_aim_dir = to2.normalized()
+	elif Campaign.aim_assist:
+		_aim_dir = _assisted_direction(neck_position(), fwd)
 	_player.face_yaw(atan2(_aim_dir.x, _aim_dir.z))
 	_player.play_action("Punch", 1.55)
 	_set_state(State.GRABBING)
@@ -399,6 +401,42 @@ func _release() -> void:
 	_player.camera_rig().punch(0.05)
 	head_launched.emit(_is_deploy)
 	_player.face_yaw(NAN)
+
+
+## Corridor aim assist (never touches gravity or teleports the ball): nudges the INITIAL roll direction toward
+## the densest line of enemies within +-assist_nudge_deg of where the camera points.
+@export var assist_nudge_deg: float = 22.0
+@export var assist_corridor_half_width: float = 1.4
+
+
+func _assisted_direction(origin: Vector3, fwd: Vector3) -> Vector3:
+	var enemies := get_tree().get_nodes_in_group(&"enemy")
+	if enemies.is_empty():
+		return fwd
+	var base := atan2(fwd.x, fwd.z)
+	var best_n := 0
+	var best_a := base
+	var steps := 11
+	for i in steps:
+		var off := deg_to_rad(lerpf(-assist_nudge_deg, assist_nudge_deg, float(i) / float(steps - 1)))
+		var a := base + off
+		var d := Vector3(sin(a), 0.0, cos(a))
+		var n := 0
+		for e in enemies:
+			if not (e is Node3D) or not e.has_method(&"is_targetable") or not e.is_targetable():
+				continue
+			var rel: Vector3 = (e as Node3D).global_position - origin
+			rel.y = 0.0
+			var along: float = rel.dot(d)
+			if along > 1.0 and along < 20.0 and (rel - d * along).length() < assist_corridor_half_width:
+				n += 1
+		# Prefer the direction nearest the camera when counts tie.
+		if n > best_n or (n == best_n and n > 0 and absf(off) < absf(best_a - base)):
+			best_n = n
+			best_a = a
+	if best_n >= 2:
+		return Vector3(sin(best_a), 0.0, cos(best_a))
+	return fwd
 
 
 # ---------------------------------------------------------------- recall and return

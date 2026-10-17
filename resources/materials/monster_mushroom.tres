@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bcex3dyc8vvhw"]
+
+[ext_resource type="Texture2D" uid="uid://18864scnb3hu" path="res://assets/cloudline/monsters/Textures/Mushroom_Texture.png" id="1_7fyet"]
+
+[resource]
+albedo_texture = ExtResource("1_7fyet")
+roughness = 0.85

@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cwiy8yvv3w1fw"]
+
+[ext_resource type="Script" uid="uid://do2lkbhfpmxwk" path="res://scripts/enemies/horde_enemy.gd" id="1_4bc3p"]
+[ext_resource type="PackedScene" uid="uid://bnvkij7nglj8g" path="res://assets/cloudline/monsters/FBX/Cyclops.fbx" id="2_31ydb"]
+[ext_resource type="Material" uid="uid://dinn0i17dcylg" path="res://resources/materials/monster_cyclops.tres" id="3_yb3j4"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_om1uq"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kuees"]
+height = 1.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jgq1o"]
+radius = 0.8
+
+[node name="CyclopsHorde" type="CharacterBody3D" unique_id=1749613149]
+collision_layer = 4
+script = ExtResource("1_4bc3p")
+move_speed = 1.7
+paint_color_id = 3
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=193605634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_kuees")
+
+[node name="Model" type="Node3D" parent="." unique_id=982366860]
+
+[node name="Body" parent="Model" unique_id=1257365019 instance=ExtResource("2_31ydb")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="Cyclops" parent="Model/Body/MonsterArmature/Skeleton3D" parent_id_path=PackedInt32Array(1257365019, 376951499) index="0" unique_id=334200270]
+material_override = ExtResource("3_yb3j4")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=2039801227]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_om1uq")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=2017730356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("SphereShape3D_jgq1o")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=57729429]
+visible = false
+
+[editable path="Model/Body"]

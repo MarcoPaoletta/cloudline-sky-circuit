@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bblejxtvdie0p"]
+
+[ext_resource type="Script" uid="uid://do2lkbhfpmxwk" path="res://scripts/enemies/horde_enemy.gd" id="1_civch"]
+[ext_resource type="PackedScene" uid="uid://bkgrnod24f67w" path="res://assets/cloudline/monsters/FBX/Mushroom.fbx" id="2_2sbpj"]
+[ext_resource type="Material" uid="uid://bcex3dyc8vvhw" path="res://resources/materials/monster_mushroom.tres" id="3_qg8du"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_oo5fn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8xnye"]
+radius = 0.55
+height = 1.4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m7yfd"]
+radius = 0.8
+
+[node name="MushroomHorde" type="CharacterBody3D" unique_id=488949337]
+collision_layer = 4
+script = ExtResource("1_civch")
+hop = true
+paint_color_id = 1
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1396153010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_8xnye")
+
+[node name="Model" type="Node3D" parent="." unique_id=2134073411]
+
+[node name="Body" parent="Model" unique_id=70489519 instance=ExtResource("2_2sbpj")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="Mushroom" parent="Model/Body/MonsterArmature/Skeleton3D" parent_id_path=PackedInt32Array(70489519, 1589654872) index="0" unique_id=862084005]
+material_override = ExtResource("3_qg8du")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1282668211]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_oo5fn")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=2012461972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("SphereShape3D_m7yfd")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=1056871709]
+visible = false
+
+[editable path="Model/Body"]

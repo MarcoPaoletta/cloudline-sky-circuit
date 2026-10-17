@@ -29,6 +29,8 @@ var mouse_sensitivity: float = 1.0
 var invert_y: bool = false
 var aim_assist: bool = true
 var hold_to_aim: bool = true
+## Comfort: holding the bowl button repeats the throw on each reattachment (each roll keeps its full gesture).
+var hold_to_bowl: bool = true
 var text_scale: float = 1.0
 var instant_text: bool = false
 var reduced_motion: bool = false
@@ -58,6 +60,8 @@ var seen_dialogue: Dictionary = {}
 ## Ids collected during THIS run (a fresh run restores every pickup; records keep the union).
 var run_collected: Dictionary = {}
 var debug_unlocked: bool = false
+## Set by Retry Arena so the retried arena says its line (never restarts the platform world).
+var arena_retry_pending: bool = false
 
 
 func _ready() -> void:
@@ -224,7 +228,7 @@ func save_game() -> void:
 		"version": 1,
 		"settings": {
 			"mouse_sensitivity": mouse_sensitivity, "invert_y": invert_y, "aim_assist": aim_assist,
-			"hold_to_aim": hold_to_aim, "text_scale": text_scale, "instant_text": instant_text,
+			"hold_to_aim": hold_to_aim, "hold_to_bowl": hold_to_bowl, "text_scale": text_scale, "instant_text": instant_text,
 			"reduced_motion": reduced_motion, "reduced_flash": reduced_flash, "shake_scale": shake_scale,
 			"no_recoil": no_recoil, "vol_master": vol_master, "vol_sfx": vol_sfx, "vol_ui": vol_ui,
 			"vol_ambience": vol_ambience,
@@ -257,6 +261,7 @@ func load_game() -> void:
 	invert_y = bool(s.get("invert_y", invert_y))
 	aim_assist = bool(s.get("aim_assist", aim_assist))
 	hold_to_aim = bool(s.get("hold_to_aim", hold_to_aim))
+	hold_to_bowl = bool(s.get("hold_to_bowl", hold_to_bowl))
 	text_scale = float(s.get("text_scale", text_scale))
 	instant_text = bool(s.get("instant_text", instant_text))
 	reduced_motion = bool(s.get("reduced_motion", reduced_motion))

@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://eeo3posff1a4"]
+
+[ext_resource type="Texture2D" uid="uid://x0ediqoyeq22" path="res://assets/cloudline/monsters/Textures/Cactus_Texture.png" id="1_010pl"]
+
+[resource]
+albedo_texture = ExtResource("1_010pl")
+roughness = 0.85

@@ -150,6 +150,15 @@ func restore_health() -> void:
 	health_changed.emit(health, max_health)
 
 
+## Restores health pips (arena regen / chain reward). Returns true when something was restored.
+func heal(amount: int = 1) -> bool:
+	if mode == Mode.DEAD or health >= max_health:
+		return false
+	health = mini(health + amount, max_health)
+	health_changed.emit(health, max_health)
+	return true
+
+
 func revive() -> void:
 	mode = Mode.EXPLORE
 	input_enabled = true
