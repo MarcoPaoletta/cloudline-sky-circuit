@@ -17,4 +17,4 @@ shape = SubResource("BoxShape3D_kod80")
 transform = Transform3D(3.58744, 0, 0, 0, 0.4, 0, 0, 0, 3.58744, 0, -0.4, 0)
 
 [node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("2_f8aeo")]
-transform = Transform3D(0.93225, 0, 0, 0, -1.10193, 1.1656341e-07, 0, -9.6333785e-08, -1.33333, 0, -0.75, 0)
+transform = Transform3D(0.93225, 0, 0, 0, -2.14876, 2.0132724e-07, 0, -3.2445377e-07, -1.33333, 0, -0.75, 0)

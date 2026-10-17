@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dykv5ukpwiim1"]
 
-[ext_resource type="Material" uid="uid://ccg5d3e6pojiy" path="res://resources/materials/dirt_orange.tres" id="1_h6t1h"]
+[ext_resource type="Material" uid="uid://bqq5nufh7blxd" path="res://resources/materials/toon/dirt_1.tres" id="1_hcufk"]
 [ext_resource type="PackedScene" uid="uid://c6soylxdlus4q" path="res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf" id="2_hcufk"]
-[ext_resource type="Material" uid="uid://b026675djlu3t" path="res://resources/materials/grass_lime.tres" id="3_hcufk"]
+[ext_resource type="Material" uid="uid://dmtocgxb0hbd7" path="res://resources/materials/toon/grass.tres" id="3_l3fro"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_l3fro"]
 height = 0.8
@@ -31,14 +31,14 @@ shape = SubResource("CylinderShape3D_l3fro")
 
 [node name="Top" type="MeshInstance3D" parent="." unique_id=1489893217]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48, 0)
-material_override = ExtResource("1_h6t1h")
+material_override = ExtResource("1_hcufk")
 mesh = SubResource("CylinderMesh_l3fro")
-surface_material_override/0 = ExtResource("1_h6t1h")
+surface_material_override/0 = ExtResource("1_hcufk")
 
 [node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("2_hcufk")]
-transform = Transform3D(1.39837, 0, 0, 0, -1.65289, 1.7484555e-07, 0, -1.4450023e-07, -2, 0, -0.75, 0)
+transform = Transform3D(1.39837, 0, 0, 0, -3.22314, 3.019916e-07, 0, -4.866806e-07, -2, 0, -0.75, 0)
 
 [node name="Grass" type="MeshInstance3D" parent="." unique_id=1133864539]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.08, 0)
-material_override = ExtResource("3_hcufk")
+material_override = ExtResource("3_l3fro")
 mesh = SubResource("CylinderMesh_fvf54")

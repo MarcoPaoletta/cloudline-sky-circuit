@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://uemp4fu5d30w"]
+
+[ext_resource type="Texture2D" uid="uid://6b4x5q5qpgib" path="res://resources/textures/sky_glow.tres" id="1_w5k21"]
+
+[resource]
+render_priority = -20
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.95, 0.81700003, 0.551, 0.95)
+albedo_texture = ExtResource("1_w5k21")

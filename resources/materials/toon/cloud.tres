@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://vilcabmgioau"]
+
+[ext_resource type="Shader" uid="uid://bgoem0kaemgky" path="res://resources/shaders/toon_cloud.gdshader" id="1_7m7nl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_7m7nl")
+shader_parameter/color_top = Color(1, 1, 0.99, 1)
+shader_parameter/color_mid = Color(1, 0.97, 0.97, 1)
+shader_parameter/color_bottom = Color(0.9, 0.84, 0.97, 1)
+shader_parameter/sun_color = Color(1, 0.86, 0.68, 1)
+shader_parameter/sun_dir = Vector3(-0.55, 0.43, -0.72)
+shader_parameter/h_min = -0.3
+shader_parameter/h_max = 2.6
+shader_parameter/height_weight = 0.55
+shader_parameter/sun_wrap = 0.35
+shader_parameter/rim_strength = 0.35
+shader_parameter/contrast = 1.0
+shader_parameter/tint_variation = 0.09

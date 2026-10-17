@@ -39,7 +39,30 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Dirt_1": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/dirt_1.tres",
+"use_external/path": "uid://bqq5nufh7blxd"
+},
+"Dirt_2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/dirt_2.tres",
+"use_external/path": "uid://imu82374u46f"
+},
+"Dirt_3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/dirt_3.tres",
+"use_external/path": "uid://b0skc4advl6ga"
+},
+"Green_Light": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/grass.tres",
+"use_external/path": "uid://dmtocgxb0hbd7"
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

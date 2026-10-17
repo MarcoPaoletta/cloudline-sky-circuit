@@ -24,6 +24,12 @@ signal respawn_finished
 @export var recovery_fade_in: float = 0.3
 @export_group("Flag")
 @export var capture_celebration: float = 1.2
+@export_group("Guidance")
+## Seconds on safe ground with no route progress before the robot points at the beam again.
+@export var lost_hint_after: float = 20.0
+@export var lost_hint_cooldown: float = 45.0
+## Getting this much closer to the flag counts as progress.
+@export var progress_distance: float = 4.0
 
 @onready var _player: Player = %Player
 @onready var _spawn: Marker3D = %Spawn
@@ -33,6 +39,10 @@ var _checkpoint_id: StringName = &""
 var _respawning: bool = false
 var _captured: bool = false
 var _first_fall_done: bool = false
+var _since_progress: float = 0.0
+var _best_goal_dist: float = INF
+var _lost_cooldown: float = 0.0
+var _seen_windup: Dictionary = {}
 
 
 func _ready() -> void:
@@ -47,12 +57,51 @@ func _ready() -> void:
 			cp.activated.connect(_on_checkpoint_activated)
 	_player.teleport_to(_spawn.global_transform)
 	_player.camera_rig().set_capture(true)
+	for e in get_tree().get_nodes_in_group(&"enemy"):
+		if e.has_signal(&"windup_started"):
+			e.windup_started.connect(_on_enemy_windup)
+	Campaign.coins_changed.connect(func(_t: int) -> void: _since_progress = 0.0)
+	Campaign.progress_changed.connect(func() -> void: _since_progress = 0.0)
 	level_ready.emit()
+	var intro := StringName("level%d_intro" % level_number)
+	if DialogueData.has_line(intro):
+		_say(intro)
 
 
 func _process(delta: float) -> void:
-	if not _captured:
-		Campaign.run_time += delta
+	if _captured:
+		return
+	Campaign.run_time += delta
+	if _respawning:
+		return
+	_lost_cooldown = maxf(_lost_cooldown - delta, 0.0)
+	var goal := get_tree().get_first_node_in_group(&"goal_target") as Node3D
+	if goal != null:
+		var d := Vector2(_player.global_position.x - goal.global_position.x, _player.global_position.z - goal.global_position.z).length()
+		d += absf(_player.global_position.y - goal.global_position.y) * 0.5
+		if d < _best_goal_dist - progress_distance:
+			_best_goal_dist = d
+			_since_progress = 0.0
+	_since_progress += delta
+	if _since_progress >= lost_hint_after and _lost_cooldown <= 0.0 and _player.mode == Player.Mode.EXPLORE and _player.is_on_floor():
+		var hud := get_tree().get_first_node_in_group(&"hud")
+		if hud != null and not hud.dialogue().is_open():
+			_say(&"lost_hint")
+			_lost_cooldown = lost_hint_cooldown
+			_since_progress = 0.0
+
+
+func _say(id: StringName) -> void:
+	get_tree().call_group(&"dialogue_panel", "say", id)
+
+
+## First wind-up of each enemy kind teaches the matching line (never repeated in a run).
+func _on_enemy_windup(enemy: Node) -> void:
+	var key: StringName = &"bee_hint" if enemy.is_in_group(&"bee") or enemy is BeeEnemy else &"combat_hint"
+	if _seen_windup.has(key):
+		return
+	_seen_windup[key] = true
+	_say(key)
 
 
 func get_player() -> Player:
@@ -106,6 +155,9 @@ func respawn() -> void:
 	_player.set_mode(Player.Mode.EXPLORE)
 	await ScreenTransition.fade_in(recovery_fade_in)
 	_respawning = false
+	_since_progress = 0.0
+	if not _first_fall_done:
+		_say(&"fall_return")
 	_first_fall_done = true
 	respawn_finished.emit()
 
@@ -116,6 +168,15 @@ func capture_flag() -> void:
 		return
 	_captured = true
 	_player.set_input_enabled(false)
+	_player.set_mode(Player.Mode.LOCKED)
+	var head := _player.get_node_or_null("HeadController")
+	if head != null and head.has_method(&"reset_to_attached"):
+		head.reset_to_attached()
+	var arm := _player.get_node_or_null("FetchArm")
+	if arm != null and arm.has_method(&"cancel_now"):
+		arm.cancel_now()
+	_player.play_action("ThumbsUp", 1.0, capture_celebration)
+	_say(&"final_capture" if level_number >= Campaign.LEVEL_COUNT else &"flag_capture")
 	var first := Campaign.capture_flag(level_number, Campaign.run_time)
 	flag_captured.emit(first)
 	if arena_scene == "":

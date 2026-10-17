@@ -39,7 +39,25 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"materials": {
+"Black": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/robot_eye.tres",
+"use_external/path": "uid://b3esyakaa7oua"
+},
+"Grey": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/robot_silver.tres",
+"use_external/path": "uid://bbl1hw2p1aioh"
+},
+"Main": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://resources/materials/toon/robot_yellow.tres",
+"use_external/path": "uid://ckhmo2a3b33dm"
+}
+}
+}
 fbx/importer=0
 fbx/allow_geometry_helper_nodes=false
 fbx/embedded_image_handling=1

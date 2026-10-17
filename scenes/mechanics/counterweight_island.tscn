@@ -62,7 +62,7 @@ shape = SubResource("BoxShape3D_2oa10")
 transform = Transform3D(3.58744, 0, 0, 0, 0.4, 0, 0, 0, 5.38117, 0, -0.4, 0)
 
 [node name="Rock" parent="." unique_id=1913037909 instance=ExtResource("6_on1ad")]
-transform = Transform3D(0.92, 0, 0, 0, -1.1, 1.8358783e-07, 0, -9.616505e-08, -2.1, 0, -0.75, 0)
+transform = Transform3D(0.92, 0, 0, 0, -2.145, 3.1709118e-07, 0, -3.2388598e-07, -2.1, 0, -0.75, 0)
 
 [node name="Axle" type="MeshInstance3D" parent="." unique_id=211206352]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, -0.9, 0)

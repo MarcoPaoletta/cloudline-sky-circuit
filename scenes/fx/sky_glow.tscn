@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dcy0n0ejc3jud"]
+
+[ext_resource type="Script" uid="uid://dmqw1ku48b5en" path="res://scripts/fx/sky_glow.gd" id="1_v5q1w"]
+[ext_resource type="Material" uid="uid://uemp4fu5d30w" path="res://resources/materials/sky_glow_mat.tres" id="2_ebrss"]
+[ext_resource type="Material" uid="uid://mvopbbogyxsx" path="res://resources/materials/sun_disc_mat.tres" id="3_dt21n"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ghdjs"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_cikai"]
+
+[node name="SkyGlow" type="Node3D" unique_id=449401204]
+script = ExtResource("1_v5q1w")
+
+[node name="Glow" type="MeshInstance3D" parent="." unique_id=1362345476]
+material_override = ExtResource("2_ebrss")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_ghdjs")
+
+[node name="Disc" type="MeshInstance3D" parent="." unique_id=278572272]
+material_override = ExtResource("3_dt21n")
+cast_shadow = 0
+mesh = SubResource("QuadMesh_cikai")

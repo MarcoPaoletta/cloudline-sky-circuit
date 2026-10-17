@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b2c87qpdjk1g8"]
+
+[ext_resource type="PackedScene" uid="uid://b3ubdtnr8ytyp" path="res://assets/cloudline/platformer/Nature/Grass_1.gltf" id="1_i5q2n"]
+
+[node name="PropGrass" type="Node3D" unique_id=1309056170]
+
+[node name="Model" parent="." unique_id=1560651881 instance=ExtResource("1_i5q2n")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, 0, -1.09112, 0)

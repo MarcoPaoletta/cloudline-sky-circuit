@@ -21,12 +21,13 @@
 [ext_resource type="PackedScene" uid="uid://by3t1lq5qpkn7" path="res://scenes/enemies/bee_enemy.tscn" id="19_kvaa7"]
 [ext_resource type="PackedScene" uid="uid://4iudmt8bnvt3" path="res://scenes/enemies/crab_enemy.tscn" id="20_wpbet"]
 [ext_resource type="Script" uid="uid://c8h2x1d8p5537" path="res://scripts/fx/cloud_sea.gd" id="21_x820k"]
-[ext_resource type="Material" uid="uid://ddo71i18hu4ch" path="res://resources/materials/cloud_white.tres" id="22_u8ss3"]
+[ext_resource type="Material" uid="uid://vilcabmgioau" path="res://resources/materials/toon/cloud.tres" id="22_uq7ri"]
 [ext_resource type="PackedScene" uid="uid://ccxobh1k7meyj" path="res://assets/cloudline/platformer/Nature/Cloud_3.gltf" id="23_dksua"]
 [ext_resource type="PackedScene" uid="uid://d2e6aowcoerni" path="res://assets/cloudline/platformer/Nature/Cloud_1.gltf" id="24_dufxj"]
 [ext_resource type="PackedScene" uid="uid://cmaggdjxx76h0" path="res://assets/cloudline/platformer/Nature/Cloud_2.gltf" id="25_mj62m"]
 [ext_resource type="PackedScene" uid="uid://bu1ddd063unjf" path="res://scenes/ui/title_robot.tscn" id="26_le3e3"]
 [ext_resource type="PackedScene" uid="uid://dxsmm6ddnqrc1" path="res://scenes/ui/settings_panel.tscn" id="27_ivfjy"]
+[ext_resource type="PackedScene" uid="uid://dcy0n0ejc3jud" path="res://scenes/fx/sky_glow.tscn" id="28_a1a6k"]
 
 [node name="TitleScreen" type="Node3D" unique_id=1331402700]
 script = ExtResource("1_uq7ri")
@@ -35,11 +36,13 @@ script = ExtResource("1_uq7ri")
 environment = ExtResource("2_a1a6k")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=588485578]
-transform = Transform3D(-0.70710677, -0.4055798, 0.579228, 0, 0.81915206, 0.57357645, -0.70710677, 0.4055798, -0.579228, 0, 0, 0)
+transform = Transform3D(-0.79863536, 0.18597108, -0.57236016, 0, 0.95105654, 0.309017, 0.601815, 0.24679194, -0.7595475, 0, 0, 0)
 light_color = Color(1, 0.94118, 0.84706, 1)
-light_energy = 1.25
+light_energy = 1.2
 light_angular_distance = 1.2
 shadow_enabled = true
+shadow_opacity = 0.62
+shadow_blur = 1.6
 directional_shadow_mode = 1
 directional_shadow_max_distance = 140.0
 
@@ -542,433 +545,1303 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 3.2, -16)
 [node name="Crab" parent="World/Creatures" unique_id=1645236635 instance=ExtResource("20_wpbet")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, -16)
 
-[node name="Clouds" type="Node3D" parent="World" unique_id=255905663]
-script = ExtResource("21_x820k")
-material = ExtResource("22_u8ss3")
-
-[node name="Puff001" parent="World/Clouds" unique_id=267428228 instance=ExtResource("23_dksua")]
-transform = Transform3D(-4.939632, 0, -5.7947497, 0, 6.51733, 0, 5.7947497, 0, -4.939632, -54.00604, -6.95236, 43.41778)
-
-[node name="Puff002" parent="World/Clouds" unique_id=124675236 instance=ExtResource("24_dufxj")]
-transform = Transform3D(3.941622, 0, -2.682325, 0, 3.8585, 0, 2.682325, 0, 3.941622, -76.15549, -18.67402, -68.73692)
-
-[node name="Puff003" parent="World/Clouds" unique_id=574831657 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-4.617337, 0, 7.7554073, 0, 8.13605, 0, -7.7554073, 0, -4.617337, -82.76617, -27.92876, 28.32737)
-
-[node name="Puff004" parent="World/Clouds" unique_id=317133517 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-4.2015495, 0, 6.569449, 0, 7.93791, 0, -6.569449, 0, -4.2015495, 126.37841, -5.95919, -0.0561)
-
-[node name="Puff005" parent="World/Clouds" unique_id=1166393763 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.6441051, 0, 5.57171, 0, 5.29773, 0, -5.57171, 0, -1.6441051, -0.93638, -21.24139, -98.5392)
-
-[node name="Puff006" parent="World/Clouds" unique_id=1075723511 instance=ExtResource("23_dksua")]
-transform = Transform3D(0.042935308, 0, -4.4210415, 0, 3.92308, 0, 4.4210415, 0, 0.042935308, -41.80338, -24.85977, 9.22049)
-
-[node name="Puff007" parent="World/Clouds" unique_id=458264896 instance=ExtResource("24_dufxj")]
-transform = Transform3D(1.8155947, 0, -4.453294, 0, 4.58701, 0, 4.453294, 0, 1.8155947, 58.2556, -22.33779, -58.00999)
-
-[node name="Puff008" parent="World/Clouds" unique_id=1580974946 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-7.3937097, 0, 4.713753, 0, 7.35213, 0, -4.713753, 0, -7.3937097, 118.24498, -2.00278, -46.98227)
-
-[node name="Puff009" parent="World/Clouds" unique_id=1022995999 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.5348338, 0, 3.9702785, 0, 3.86598, 0, -3.9702785, 0, -0.5348338, 46.29206, -28.55323, 11.42057)
-
-[node name="Puff010" parent="World/Clouds" unique_id=35839661 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.9852524, 0, 0.48783988, 0, 3.27634, 0, -0.48783988, 0, 3.9852524, 67.13156, -32.44233, -10.40355)
-
-[node name="Puff011" parent="World/Clouds" unique_id=2025105309 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-5.087281, 0, -3.9123776, 0, 5.21229, 0, 3.9123776, 0, -5.087281, 107.54162, 0.88603, -137.44795)
-
-[node name="Puff012" parent="World/Clouds" unique_id=867521445 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.2498122, 0, 5.957044, 0, 5.88712, 0, -5.957044, 0, -1.2498122, -42.83635, -27.3572, 21.31652)
-
-[node name="Puff013" parent="World/Clouds" unique_id=2058675607 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-7.811891, 0, 1.8068687, 0, 8.19889, 0, -1.8068687, 0, -7.811891, 123.92657, 3.25618, -39.46785)
-
-[node name="Puff014" parent="World/Clouds" unique_id=1208425379 instance=ExtResource("23_dksua")]
-transform = Transform3D(-6.9191127, 0, 0.5979252, 0, 5.76498, 0, -0.5979252, 0, -6.9191127, -108.0097, -28.13817, 0.84578)
-
-[node name="Puff015" parent="World/Clouds" unique_id=557654957 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.1859713, 0, 6.7083545, 0, 8.48462, 0, -6.7083545, 0, -5.1859713, -91.69454, -17.72585, -25.12485)
-
-[node name="Puff016" parent="World/Clouds" unique_id=83535507 instance=ExtResource("25_mj62m")]
-transform = Transform3D(8.057918, 0, -4.663946, 0, 7.61901, 0, 4.663946, 0, 8.057918, 135.11797, -25.53226, 38.81993)
-
-[node name="Puff017" parent="World/Clouds" unique_id=844678676 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-8.606325, 0, 2.3353117, 0, 7.71562, 0, -2.3353117, 0, -8.606325, 148.29085, -4.38746, 21.91926)
-
-[node name="Puff018" parent="World/Clouds" unique_id=2099060798 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-6.792844, 0, -1.4829899, 0, 6.77368, 0, 1.4829899, 0, -6.792844, -131.60072, -22.33082, 45.45526)
-
-[node name="Puff019" parent="World/Clouds" unique_id=1712501975 instance=ExtResource("25_mj62m")]
-transform = Transform3D(3.483193, 0, -1.5882803, 0, 3.61659, 0, 1.5882803, 0, 3.483193, -77.62852, -31.70579, -103.63376)
-
-[node name="Puff020" parent="World/Clouds" unique_id=1281840944 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.2499702, 0, 5.479825, 0, 5.649, 0, -5.479825, 0, 3.2499702, -83.95719, 2.6322, -111.5882)
-
-[node name="Puff021" parent="World/Clouds" unique_id=40086250 instance=ExtResource("23_dksua")]
-transform = Transform3D(2.7950249, 0, 2.594476, 0, 3.79302, 0, -2.594476, 0, 2.7950249, 29.05382, -33.09539, -29.49127)
-
-[node name="Puff022" parent="World/Clouds" unique_id=1415001058 instance=ExtResource("23_dksua")]
-transform = Transform3D(0.6057348, 0, 8.60654, 0, 8.53314, 0, -8.60654, 0, 0.6057348, 137.9098, 0.64371, 44.5447)
-
-[node name="Puff023" parent="World/Clouds" unique_id=1042228334 instance=ExtResource("25_mj62m")]
-transform = Transform3D(8.0997505, 0, 0.7331114, 0, 7.32072, 0, -0.7331114, 0, 8.0997505, 136.33586, 7.61414, -158.40514)
-
-[node name="Puff024" parent="World/Clouds" unique_id=310328399 instance=ExtResource("24_dufxj")]
-transform = Transform3D(0.26742566, 0, -6.6084213, 0, 5.80043, 0, 6.6084213, 0, 0.26742566, -76.08524, -13.57821, 30.70723)
-
-[node name="Puff025" parent="World/Clouds" unique_id=2105354831 instance=ExtResource("24_dufxj")]
-transform = Transform3D(3.8649294, 0, 1.0740072, 0, 3.72665, 0, -1.0740072, 0, 3.8649294, 33.06799, -30.82708, -13.4068)
-
-[node name="Puff026" parent="World/Clouds" unique_id=361565054 instance=ExtResource("25_mj62m")]
-transform = Transform3D(1.4913174, 0, -5.4600906, 0, 4.9998, 0, 5.4600906, 0, 1.4913174, -87.39775, -19.13932, -53.75578)
-
-[node name="Puff027" parent="World/Clouds" unique_id=2123214639 instance=ExtResource("23_dksua")]
-transform = Transform3D(-1.1302934, 0, -5.3774548, 0, 5.70893, 0, 5.3774548, 0, -1.1302934, -113.04121, -0.07339, -83.18911)
-
-[node name="Puff028" parent="World/Clouds" unique_id=545825754 instance=ExtResource("25_mj62m")]
-transform = Transform3D(6.8151345, 0, -0.17995103, 0, 7.13603, 0, 0.17995103, 0, 6.8151345, -51.809, -8.10599, 23.35336)
-
-[node name="Puff029" parent="World/Clouds" unique_id=1748237597 instance=ExtResource("24_dufxj")]
-transform = Transform3D(8.319851, 0, 1.4191613, 0, 8.72111, 0, -1.4191613, 0, 8.319851, -129.94826, -13.04819, 26.44955)
-
-[node name="Puff030" parent="World/Clouds" unique_id=2122251385 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-6.990247, 0, -3.1179144, 0, 6.8008, 0, 3.1179144, 0, -6.990247, -85.809, -24.44525, 15.16234)
-
-[node name="Puff031" parent="World/Clouds" unique_id=1128760046 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.057259, 0, -1.9634373, 0, 5.39225, 0, 1.9634373, 0, -5.057259, -3.30622, -32.93476, -14.31977)
-
-[node name="Puff032" parent="World/Clouds" unique_id=1717422939 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.0648258, 0, 2.621221, 0, 3.76684, 0, -2.621221, 0, 3.0648258, -29.77837, -29.18639, -22.1027)
-
-[node name="Puff033" parent="World/Clouds" unique_id=218272064 instance=ExtResource("24_dufxj")]
-transform = Transform3D(5.460775, 0, 4.8588214, 0, 6.44553, 0, -4.8588214, 0, 5.460775, -120.13368, -16.91498, -108.92128)
-
-[node name="Puff034" parent="World/Clouds" unique_id=228374172 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-5.796326, 0, -0.5189407, 0, 4.68996, 0, 0.5189407, 0, -5.796326, -43.86129, -31.8055, -79.57312)
-
-[node name="Puff035" parent="World/Clouds" unique_id=1295785067 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-1.7677602, 0, 5.3785233, 0, 4.6061, 0, -5.3785233, 0, -1.7677602, -101.32074, -24.88616, -68.74297)
-
-[node name="Puff036" parent="World/Clouds" unique_id=1492494459 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-5.508959, 0, 1.3965944, 0, 5.80924, 0, -1.3965944, 0, -5.508959, -54.22982, -28.42514, -83.25402)
-
-[node name="Puff037" parent="World/Clouds" unique_id=109283221 instance=ExtResource("23_dksua")]
-transform = Transform3D(-4.67561, 0, -4.0589504, 0, 5.54111, 0, 4.0589504, 0, -4.67561, 145.58743, -25.44687, -162.29718)
-
-[node name="Puff038" parent="World/Clouds" unique_id=1322508333 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-0.8276269, 0, 4.7614264, 0, 4.08859, 0, -4.7614264, 0, -0.8276269, 42.06661, -33.3599, -128.46872)
-
-[node name="Puff039" parent="World/Clouds" unique_id=812577613 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-4.3926096, 0, -4.617702, 0, 5.6016, 0, 4.617702, 0, -4.3926096, -135.06973, -28.25025, -136.07988)
-
-[node name="Puff040" parent="World/Clouds" unique_id=1523293977 instance=ExtResource("23_dksua")]
-transform = Transform3D(7.429065, 0, -5.001122, 0, 8.27784, 0, 5.001122, 0, 7.429065, 142.26834, -6.00305, -39.27121)
-
-[node name="Puff041" parent="World/Clouds" unique_id=1056048085 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-5.429897, 0, -1.4400171, 0, 4.9896, 0, 1.4400171, 0, -5.429897, -51.78265, -28.04456, -28.23256)
-
-[node name="Puff042" parent="World/Clouds" unique_id=1197407753 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.7071776, 0, -1.3499912, 0, 5.58081, 0, 1.3499912, 0, -5.7071776, -43.22089, -20.3922, 27.4986)
-
-[node name="Puff043" parent="World/Clouds" unique_id=1281200802 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-0.99416655, 0, 8.602524, 0, 7.5261, 0, -8.602524, 0, -0.99416655, -92.83742, -29.43628, -24.76246)
-
-[node name="Puff044" parent="World/Clouds" unique_id=1380987530 instance=ExtResource("24_dufxj")]
-transform = Transform3D(4.2423463, 0, 4.026603, 0, 5.83551, 0, -4.026603, 0, 4.2423463, -5.00493, -22.28738, 19.22772)
-
-[node name="Puff045" parent="World/Clouds" unique_id=77422453 instance=ExtResource("23_dksua")]
-transform = Transform3D(2.7314074, 0, -2.5420346, 0, 3.44096, 0, 2.5420346, 0, 2.7314074, 4.63256, -33.30117, -30.8385)
-
-[node name="Puff046" parent="World/Clouds" unique_id=103509503 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-1.2573652, 0, 5.0220704, 0, 4.55034, 0, -5.0220704, 0, -1.2573652, -76.48607, -33.92593, -15.72042)
-
-[node name="Puff047" parent="World/Clouds" unique_id=151932595 instance=ExtResource("23_dksua")]
-transform = Transform3D(-6.2429285, 0, -0.5801883, 0, 5.37842, 0, 0.5801883, 0, -6.2429285, -100.68746, -18.31028, -100.91317)
-
-[node name="Puff048" parent="World/Clouds" unique_id=358483245 instance=ExtResource("23_dksua")]
-transform = Transform3D(5.755024, 0, -3.5250719, 0, 5.92871, 0, 3.5250719, 0, 5.755024, 40.76823, -7.69054, 39.84926)
-
-[node name="Puff049" parent="World/Clouds" unique_id=583780351 instance=ExtResource("23_dksua")]
-transform = Transform3D(-2.8227384, 0, 3.4278934, 0, 3.94086, 0, -3.4278934, 0, -2.8227384, -66.52877, -23.9551, -0.9649)
-
-[node name="Puff050" parent="World/Clouds" unique_id=348863105 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-2.3831835, 0, 5.593312, 0, 5.0397, 0, -5.593312, 0, -2.3831835, -131.39993, -25.40786, -90.37364)
-
-[node name="Puff051" parent="World/Clouds" unique_id=1770749853 instance=ExtResource("25_mj62m")]
-transform = Transform3D(5.2422934, 0, -3.1766865, 0, 5.26066, 0, 3.1766865, 0, 5.2422934, -128.61765, 0.66489, -121.36355)
-
-[node name="Puff052" parent="World/Clouds" unique_id=2011892286 instance=ExtResource("25_mj62m")]
-transform = Transform3D(5.5880313, 0, -0.23426487, 0, 4.65023, 0, 0.23426487, 0, 5.5880313, 92.84867, -2.02964, -102.602)
-
-[node name="Puff053" parent="World/Clouds" unique_id=131449357 instance=ExtResource("23_dksua")]
-transform = Transform3D(-4.740053, 0, -2.4471776, 0, 4.98249, 0, 2.4471776, 0, -4.740053, 103.74078, -5.1375, 14.02302)
-
-[node name="Puff054" parent="World/Clouds" unique_id=1144852261 instance=ExtResource("24_dufxj")]
-transform = Transform3D(2.0588284, 0, 3.140705, 0, 3.75637, 0, -3.140705, 0, 2.0588284, 45.0845, -25.71418, -96.45741)
-
-[node name="Puff055" parent="World/Clouds" unique_id=1066225092 instance=ExtResource("25_mj62m")]
-transform = Transform3D(1.5674162, 0, -6.410828, 0, 5.77918, 0, 6.410828, 0, 1.5674162, -33.92339, 1.6168, 45.26153)
-
-[node name="Puff056" parent="World/Clouds" unique_id=669798099 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-3.7407212, 0, -3.940968, 0, 4.54039, 0, 3.940968, 0, -3.7407212, 29.38955, -19.46562, 19.75013)
-
-[node name="Puff057" parent="World/Clouds" unique_id=129589491 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-2.7024775, 0, -5.511584, 0, 6.32738, 0, 5.511584, 0, -2.7024775, 149.63905, -4.07135, -35.83896)
-
-[node name="Puff058" parent="World/Clouds" unique_id=854740676 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-7.1748567, 0, 0.42681196, 0, 5.81148, 0, -0.42681196, 0, -7.1748567, 78.3441, 0.22964, 43.21794)
-
-[node name="Puff059" parent="World/Clouds" unique_id=1059342108 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.910627, 0, -3.8770616, 0, 3.50416, 0, 3.8770616, 0, -1.910627, 34.61383, -32.70853, -125.7724)
-
-[node name="Puff060" parent="World/Clouds" unique_id=1355226283 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.862539, 0, 5.2530417, 0, 5.88351, 0, -5.2530417, 0, 3.862539, -55.99498, -7.65345, 45.79111)
-
-[node name="Puff061" parent="World/Clouds" unique_id=2012145661 instance=ExtResource("23_dksua")]
-transform = Transform3D(1.8849546, 0, 8.190477, 0, 7.21084, 0, -8.190477, 0, 1.8849546, -18.89517, -6.03653, -151.99393)
-
-[node name="Puff062" parent="World/Clouds" unique_id=161525599 instance=ExtResource("23_dksua")]
-transform = Transform3D(4.003991, 0, 3.2454753, 0, 4.22417, 0, -3.2454753, 0, 4.003991, -40.90882, -29.33663, -131.95656)
-
-[node name="Puff063" parent="World/Clouds" unique_id=1126787695 instance=ExtResource("24_dufxj")]
-transform = Transform3D(5.6293225, 0, 1.5835059, 0, 4.7578, 0, -1.5835059, 0, 5.6293225, -108.52551, -13.99469, -11.47844)
-
-[node name="Puff064" parent="World/Clouds" unique_id=1337584956 instance=ExtResource("23_dksua")]
-transform = Transform3D(-2.4025574, 0, -7.0593915, 0, 6.09455, 0, 7.0593915, 0, -2.4025574, 104.72543, -28.43011, -59.23709)
-
-[node name="Puff065" parent="World/Clouds" unique_id=2141790590 instance=ExtResource("24_dufxj")]
-transform = Transform3D(1.5083975, 0, -7.010317, 0, 6.63922, 0, 7.010317, 0, 1.5083975, -105.76064, -1.46446, -58.24346)
-
-[node name="Puff066" parent="World/Clouds" unique_id=398366600 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.5113373, 0, 1.2387251, 0, 4.71061, 0, -1.2387251, 0, -5.5113373, -47.33416, -20.39558, -78.09493)
-
-[node name="Puff067" parent="World/Clouds" unique_id=126155833 instance=ExtResource("23_dksua")]
-transform = Transform3D(-1.5249891, 0, 9.35975, 0, 9.23003, 0, -9.35975, 0, -1.5249891, 59.81848, 2.72225, 43.89046)
-
-[node name="Puff068" parent="World/Clouds" unique_id=182672858 instance=ExtResource("23_dksua")]
-transform = Transform3D(-8.923577, 0, -2.5964427, 0, 7.66983, 0, 2.5964427, 0, -8.923577, 88.76481, -23.89938, -6.24008)
-
-[node name="Puff069" parent="World/Clouds" unique_id=1676132887 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.2034075, 0, 4.9541864, 0, 4.26638, 0, -4.9541864, 0, -1.2034075, -16.36913, -25.22015, -80.27067)
-
-[node name="Puff070" parent="World/Clouds" unique_id=1204165613 instance=ExtResource("23_dksua")]
-transform = Transform3D(8.57154, 0, 2.1111567, 0, 7.16473, 0, -2.1111567, 0, 8.57154, -139.99994, -9.52289, -11.36401)
-
-[node name="Puff071" parent="World/Clouds" unique_id=580266572 instance=ExtResource("25_mj62m")]
-transform = Transform3D(0.35364255, 0, -8.126199, 0, 6.98496, 0, 8.126199, 0, 0.35364255, -106.17163, -4.396, 8.84065)
-
-[node name="Puff072" parent="World/Clouds" unique_id=1409184436 instance=ExtResource("23_dksua")]
-transform = Transform3D(-4.840989, 0, 4.221467, 0, 6.08669, 0, -4.221467, 0, -4.840989, 144.93161, -10.85384, -20.28244)
-
-[node name="Puff073" parent="World/Clouds" unique_id=2062496025 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-3.2962089, 0, 4.5559688, 0, 5.02006, 0, -4.5559688, 0, -3.2962089, -125.23209, 1.63977, -56.9039)
-
-[node name="Puff074" parent="World/Clouds" unique_id=1971529352 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-0.12013579, 0, 6.739949, 0, 6.21934, 0, -6.739949, 0, -0.12013579, -17.90757, -12.11379, 34.33036)
-
-[node name="Puff075" parent="World/Clouds" unique_id=687541481 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.8769782, 0, -0.2797776, 0, 3.9009, 0, 0.2797776, 0, 3.8769782, 17.9152, -30.71426, -60.34066)
-
-[node name="Puff076" parent="World/Clouds" unique_id=1054927321 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-2.2142124, 0, -7.20243, 0, 6.55924, 0, 7.20243, 0, -2.2142124, 136.29253, -19.07607, -102.98387)
-
-[node name="Puff077" parent="World/Clouds" unique_id=1441664827 instance=ExtResource("23_dksua")]
-transform = Transform3D(-6.746934, 0, -2.7881098, 0, 7.63758, 0, 2.7881098, 0, -6.746934, -22.82381, -14.6693, -158.0365)
-
-[node name="Puff078" parent="World/Clouds" unique_id=251018739 instance=ExtResource("23_dksua")]
-transform = Transform3D(2.5167103, 0, 3.6685135, 0, 3.7122, 0, -3.6685135, 0, 2.5167103, 5.76707, -26.55403, 6.1035)
-
-[node name="Puff079" parent="World/Clouds" unique_id=1047490161 instance=ExtResource("24_dufxj")]
-transform = Transform3D(8.21941, 0, 4.070424, 0, 8.76692, 0, -4.070424, 0, 8.21941, -136.09698, -4.5306, 8.92723)
-
-[node name="Puff080" parent="World/Clouds" unique_id=1544276068 instance=ExtResource("25_mj62m")]
-transform = Transform3D(3.2716153, 0, 3.0590663, 0, 4.23504, 0, -3.0590663, 0, 3.2716153, -58.00444, -28.35213, -69.20443)
-
-[node name="Puff081" parent="World/Clouds" unique_id=645423627 instance=ExtResource("25_mj62m")]
-transform = Transform3D(7.5892587, 0, -2.4246876, 0, 7.87441, 0, 2.4246876, 0, 7.5892587, 89.2314, -22.07889, -7.58908)
-
-[node name="Puff082" parent="World/Clouds" unique_id=1320832906 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.817962, 0, 0.024417097, 0, 3.61724, 0, -0.024417097, 0, 3.817962, -1.6454, -21.39556, -30.32436)
-
-[node name="Puff083" parent="World/Clouds" unique_id=1300461320 instance=ExtResource("24_dufxj")]
-transform = Transform3D(0.50269145, 0, 5.838971, 0, 4.80687, 0, -5.838971, 0, 0.50269145, 63.47828, -19.60067, -140.9198)
-
-[node name="Puff084" parent="World/Clouds" unique_id=1057102769 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-4.4102063, 0, -0.7224627, 0, 4.09155, 0, 0.7224627, 0, -4.4102063, -40.03228, -26.29319, 6.02266)
-
-[node name="Puff085" parent="World/Clouds" unique_id=1960204464 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.821549, 0, -4.6203074, 0, 4.10818, 0, 4.6203074, 0, -0.821549, 20.74552, -32.58714, -65.0577)
-
-[node name="Puff086" parent="World/Clouds" unique_id=674171429 instance=ExtResource("24_dufxj")]
-transform = Transform3D(2.4767406, 0, 2.821227, 0, 3.47144, 0, -2.821227, 0, 2.4767406, 81.89916, -21.48912, -27.31266)
-
-[node name="Puff087" parent="World/Clouds" unique_id=959808947 instance=ExtResource("23_dksua")]
-transform = Transform3D(8.60662, 0, 1.1077814, 0, 7.00322, 0, -1.1077814, 0, 8.60662, -129.16225, -15.97675, -10.86069)
-
-[node name="Puff088" parent="World/Clouds" unique_id=1275806059 instance=ExtResource("24_dufxj")]
-transform = Transform3D(5.2430387, 0, -0.40229544, 0, 5.40148, 0, 0.40229544, 0, 5.2430387, -50.48558, -27.34909, -127.73783)
-
-[node name="Puff089" parent="World/Clouds" unique_id=1636287757 instance=ExtResource("23_dksua")]
-transform = Transform3D(4.1054034, 0, -7.4947467, 0, 8.58266, 0, 7.4947467, 0, 4.1054034, 108.00833, -22.6928, -24.81213)
-
-[node name="Puff090" parent="World/Clouds" unique_id=1206379531 instance=ExtResource("23_dksua")]
-transform = Transform3D(5.6622453, 0, -5.789617, 0, 7.1146, 0, 5.789617, 0, 5.6622453, -125.27416, -0.4792, -77.72477)
-
-[node name="Puff091" parent="World/Clouds" unique_id=1777517966 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-2.002876, 0, -5.038046, 0, 4.99897, 0, 5.038046, 0, -2.002876, 8.83176, -21.58924, 19.29041)
-
-[node name="Puff092" parent="World/Clouds" unique_id=158686086 instance=ExtResource("23_dksua")]
-transform = Transform3D(-0.9364128, 0, -8.176061, 0, 7.05785, 0, 8.176061, 0, -0.9364128, -84.69596, -26.63723, -145.1425)
-
-[node name="Puff093" parent="World/Clouds" unique_id=317966867 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-7.1811304, 0, 0.79561317, 0, 7.42666, 0, -0.79561317, 0, -7.1811304, 45.21593, -29.50487, -156.91011)
-
-[node name="Puff094" parent="World/Clouds" unique_id=765235533 instance=ExtResource("24_dufxj")]
-transform = Transform3D(5.906452, 0, -1.8670235, 0, 5.5881, 0, 1.8670235, 0, 5.906452, -149.6289, -23.42543, -169.0962)
-
-[node name="Puff095" parent="World/Clouds" unique_id=299715144 instance=ExtResource("25_mj62m")]
-transform = Transform3D(0.52000165, 0, -7.4643893, 0, 7.7021, 0, 7.4643893, 0, 0.52000165, 134.34023, -27.85464, 35.1201)
-
-[node name="Puff096" parent="World/Clouds" unique_id=1409398663 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-6.6230655, 0, 1.6860182, 0, 6.90336, 0, -1.6860182, 0, -6.6230655, 87.96948, -1.73306, 0.25054)
-
-[node name="Puff097" parent="World/Clouds" unique_id=673510272 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-7.0281963, 0, -1.6909431, 0, 7.26231, 0, 1.6909431, 0, -7.0281963, -112.82436, -8.91311, -67.92492)
-
-[node name="Puff098" parent="World/Clouds" unique_id=97393973 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.2769306, 0, -8.003134, 0, 7.01761, 0, 8.003134, 0, 3.2769306, -129.45, -20.28484, -128.84892)
-
-[node name="Puff099" parent="World/Clouds" unique_id=435325712 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.1300282, 0, -0.6328066, 0, 4.19737, 0, 0.6328066, 0, -5.1300282, 28.30922, -27.83553, -160.50719)
-
-[node name="Puff100" parent="World/Clouds" unique_id=1535675564 instance=ExtResource("23_dksua")]
-transform = Transform3D(-5.3622212, 0, 1.1311017, 0, 4.7274, 0, -1.1311017, 0, -5.3622212, -6.37162, -22.80814, -133.76302)
-
-[node name="Puff101" parent="World/Clouds" unique_id=612131557 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-5.982447, 0, -7.135352, 0, 8.79778, 0, 7.135352, 0, -5.982447, -143.72847, -0.17696, -164.62337)
-
-[node name="Puff102" parent="World/Clouds" unique_id=1300784711 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-4.414301, 0, -2.5080237, 0, 4.69659, 0, 2.5080237, 0, -4.414301, -80.74125, -5.77327, 25.75167)
-
-[node name="Puff103" parent="World/Clouds" unique_id=634421734 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.6565216, 0, 4.9511347, 0, 5.24028, 0, -4.9511347, 0, -1.6565216, -0.03778, 7.90481, 42.20784)
-
-[node name="Puff104" parent="World/Clouds" unique_id=593281554 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-7.283629, 0, 5.926633, 0, 9.63911, 0, -5.926633, 0, -7.283629, 133.8287, -18.69453, -119.90266)
-
-[node name="Puff105" parent="World/Clouds" unique_id=1632137211 instance=ExtResource("24_dufxj")]
-transform = Transform3D(0.08739419, 0, 5.78622, 0, 5.62592, 0, -5.78622, 0, 0.08739419, -132.95898, -16.39449, -79.53362)
-
-[node name="Puff106" parent="World/Clouds" unique_id=461594746 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-4.2610083, 0, -3.3731825, 0, 5.61851, 0, 3.3731825, 0, -4.2610083, 3.28225, -27.26772, 14.54158)
-
-[node name="Puff107" parent="World/Clouds" unique_id=315072239 instance=ExtResource("23_dksua")]
-transform = Transform3D(6.454995, 0, -2.2552943, 0, 6.64102, 0, 2.2552943, 0, 6.454995, 131.16684, -22.74059, -31.99792)
-
-[node name="Puff108" parent="World/Clouds" unique_id=665643457 instance=ExtResource("23_dksua")]
-transform = Transform3D(-9.008487, 0, 0.72695076, 0, 9.35857, 0, -0.72695076, 0, -9.008487, 115.40815, -6.68287, -15.29788)
-
-[node name="Puff109" parent="World/Clouds" unique_id=428005774 instance=ExtResource("23_dksua")]
-transform = Transform3D(-4.3186326, 0, 0.35329503, 0, 3.75841, 0, -0.35329503, 0, -4.3186326, -27.18918, -26.30862, 2.34222)
-
-[node name="Puff110" parent="World/Clouds" unique_id=1459742486 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-4.0493817, 0, -4.825357, 0, 5.73376, 0, 4.825357, 0, -4.0493817, 127.40525, -0.19262, 4.45515)
-
-[node name="Puff111" parent="World/Clouds" unique_id=229196003 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.99103034, 0, 6.505639, 0, 6.06046, 0, -6.505639, 0, -0.99103034, 143.89748, -11.02429, -30.25711)
-
-[node name="Puff112" parent="World/Clouds" unique_id=1103618092 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-1.7788389, 0, 5.056154, 0, 4.6046, 0, -5.056154, 0, -1.7788389, -70.85506, -19.3927, -45.39938)
-
-[node name="Puff113" parent="World/Clouds" unique_id=1936995213 instance=ExtResource("24_dufxj")]
-transform = Transform3D(3.3917227, 0, -1.4091666, 0, 3.43189, 0, 1.4091666, 0, 3.3917227, -6.64806, -29.1532, -74.93551)
-
-[node name="Puff114" parent="World/Clouds" unique_id=345553948 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-4.3123307, 0, -6.3389344, 0, 8.00721, 0, 6.3389344, 0, -4.3123307, 133.98988, -13.56453, -95.73317)
-
-[node name="Puff115" parent="World/Clouds" unique_id=252990026 instance=ExtResource("25_mj62m")]
-transform = Transform3D(0.8352608, 0, 6.6744494, 0, 6.55748, 0, -6.6744494, 0, 0.8352608, 145.77881, -19.00849, -112.48295)
-
-[node name="Puff116" parent="World/Clouds" unique_id=635627057 instance=ExtResource("23_dksua")]
-transform = Transform3D(0.049121503, 0, -5.654437, 0, 5.39953, 0, 5.654437, 0, 0.049121503, -66.05425, -26.75051, -41.86933)
-
-[node name="Puff117" parent="World/Clouds" unique_id=1983474687 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-6.459585, 0, 3.452961, 0, 6.70196, 0, -3.452961, 0, -6.459585, -101.33267, -27.51375, -34.17972)
-
-[node name="Puff118" parent="World/Clouds" unique_id=228223399 instance=ExtResource("24_dufxj")]
-transform = Transform3D(4.045303, 0, 0.7238275, 0, 3.32738, 0, -0.7238275, 0, 4.045303, 4.82212, -29.20553, 7.16603)
-
-[node name="Puff119" parent="World/Clouds" unique_id=143562906 instance=ExtResource("25_mj62m")]
-transform = Transform3D(4.9393735, 0, 5.8085237, 0, 7.82723, 0, -5.8085237, 0, 4.9393735, 121.32049, -24.41343, -92.95225)
-
-[node name="Puff120" parent="World/Clouds" unique_id=1915747213 instance=ExtResource("25_mj62m")]
-transform = Transform3D(3.2029996, 0, -6.437328, 0, 6.24581, 0, 6.437328, 0, 3.2029996, -50.2758, -3.26678, -161.30019)
-
-[node name="Puff121" parent="World/Clouds" unique_id=1152892087 instance=ExtResource("25_mj62m")]
-transform = Transform3D(0.28617197, 0, -5.0953703, 0, 4.37613, 0, 5.0953703, 0, 0.28617197, 142.54259, 4.98292, -13.21654)
-
-[node name="Puff122" parent="World/Clouds" unique_id=1153069590 instance=ExtResource("23_dksua")]
-transform = Transform3D(9.369753, 0, 1.0692862, 0, 9.4633, 0, -1.0692862, 0, 9.369753, 107.13535, -9.38814, -66.57375)
-
-[node name="Puff123" parent="World/Clouds" unique_id=646926003 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-2.9138105, 0, -3.984182, 0, 4.68216, 0, 3.984182, 0, -2.9138105, 12.58503, -26.45329, 26.37049)
-
-[node name="Puff124" parent="World/Clouds" unique_id=1399232598 instance=ExtResource("23_dksua")]
-transform = Transform3D(3.3912172, 0, -2.9709256, 0, 4.44533, 0, 2.9709256, 0, 3.3912172, 63.94555, -24.98261, 1.17056)
-
-[node name="Puff125" parent="World/Clouds" unique_id=1849896098 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-7.686117, 0, -1.2235079, 0, 6.43075, 0, 1.2235079, 0, -7.686117, 71.05249, -26.10479, -150.46207)
-
-[node name="Puff126" parent="World/Clouds" unique_id=942815619 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-5.5567813, 0, 3.2951553, 0, 6.34916, 0, -3.2951553, 0, -5.5567813, 43.33423, -29.05565, 46.48116)
-
-[node name="Puff127" parent="World/Clouds" unique_id=377921725 instance=ExtResource("24_dufxj")]
-transform = Transform3D(7.228261, 0, 6.062222, 0, 9.00501, 0, -6.062222, 0, 7.228261, -130.70113, -12.97597, -127.02659)
-
-[node name="Puff128" parent="World/Clouds" unique_id=302742418 instance=ExtResource("23_dksua")]
-transform = Transform3D(5.3583436, 0, -5.5139785, 0, 7.33826, 0, 5.5139785, 0, 5.3583436, 74.25661, -11.90169, -145.45247)
-
-[node name="Puff129" parent="World/Clouds" unique_id=1902662674 instance=ExtResource("23_dksua")]
-transform = Transform3D(-6.1668224, 0, -5.413603, 0, 7.66072, 0, 5.413603, 0, -6.1668224, -59.22008, -16.65596, -134.43555)
-
-[node name="Puff130" parent="World/Clouds" unique_id=252294017 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.68229717, 0, 5.452093, 0, 5.70331, 0, -5.452093, 0, -0.68229717, -73.36978, -13.10894, 28.86224)
-
-[node name="Puff131" parent="World/Clouds" unique_id=858603786 instance=ExtResource("24_dufxj")]
-transform = Transform3D(1.3391783, 0, -4.481081, 0, 4.47343, 0, 4.481081, 0, 1.3391783, -50.88077, -31.70387, -4.59891)
-
-[node name="Puff132" parent="World/Clouds" unique_id=833731354 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-1.052195, 0, 6.4906273, 0, 6.78037, 0, -6.4906273, 0, -1.052195, 80.62785, -2.22944, -146.95226)
-
-[node name="Puff133" parent="World/Clouds" unique_id=2026908846 instance=ExtResource("25_mj62m")]
-transform = Transform3D(4.5003257, 0, 1.7550832, 0, 4.74058, 0, -1.7550832, 0, 4.5003257, 61.01781, -28.43414, -98.12742)
-
-[node name="Puff134" parent="World/Clouds" unique_id=1558191220 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.59890854, 0, 5.2180023, 0, 5.39373, 0, -5.2180023, 0, -0.59890854, 44.83533, -18.68211, -4.70028)
-
-[node name="Puff135" parent="World/Clouds" unique_id=195752367 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-0.5642694, 0, 4.898306, 0, 4.5884, 0, -4.898306, 0, -0.5642694, -46.30276, -26.51852, 2.62043)
-
-[node name="Puff136" parent="World/Clouds" unique_id=1117931549 instance=ExtResource("24_dufxj")]
-transform = Transform3D(7.002039, 0, -1.5269624, 0, 6.73311, 0, 1.5269624, 0, 7.002039, -22.58849, 1.8326, -165.8583)
-
-[node name="Puff137" parent="World/Clouds" unique_id=227274640 instance=ExtResource("23_dksua")]
-transform = Transform3D(4.9044538, 0, 3.381451, 0, 5.49245, 0, -3.381451, 0, 4.9044538, -87.86561, -31.89468, -65.08653)
-
-[node name="Puff138" parent="World/Clouds" unique_id=1215112469 instance=ExtResource("25_mj62m")]
-transform = Transform3D(-0.2392447, 0, 7.9275107, 0, 7.95862, 0, -7.9275107, 0, -0.2392447, -124.58462, -3.3642, -34.00368)
-
-[node name="Puff139" parent="World/Clouds" unique_id=2036181076 instance=ExtResource("24_dufxj")]
-transform = Transform3D(-1.6989548, 0, 8.676192, 0, 8.50135, 0, -8.676192, 0, -1.6989548, -135.96513, -15.70116, -141.3715)
-
-[node name="Puff140" parent="World/Clouds" unique_id=1503115842 instance=ExtResource("25_mj62m")]
-transform = Transform3D(2.6756544, 0, -2.6703248, 0, 3.66789, 0, 2.6703248, 0, 2.6756544, 87.00539, -33.23729, -68.38552)
-
 [node name="Robot" parent="World" unique_id=948776452 instance=ExtResource("26_le3e3")]
 unique_name_in_owner = true
 transform = Transform3D(0.9975641, 0, -0.06975647, 0, 1, 0, 0.06975647, 0, 0.9975641, -3.3, 0, 4.5)
+
+[node name="Clouds" type="Node3D" parent="World" unique_id=1715495565]
+script = ExtResource("21_x820k")
+material = ExtResource("22_uq7ri")
+
+[node name="Puff001" parent="World/Clouds" unique_id=124675236 instance=ExtResource("24_dufxj")]
+transform = Transform3D(14.799372, 0, -1.5469323, 0, 8.08138, 0, 1.5469323, 0, 14.799372, -84.77525, -26.10176, -114.791)
+
+[node name="Puff002" parent="World/Clouds" unique_id=317133517 instance=ExtResource("25_mj62m")]
+transform = Transform3D(3.5678666, 0, -8.692699, 0, 5.40309, 0, 8.692699, 0, 3.5678666, -79.75504, -29.1602, -99.78188)
+
+[node name="Puff003" parent="World/Clouds" unique_id=463569126 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.1120906, 0, 10.692965, 0, 6.79103, 0, -10.692965, 0, 7.1120906, -87.48492, -26.29023, -96.70075)
+
+[node name="Puff004" parent="World/Clouds" unique_id=536606908 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-9.064758, 0, -5.1897798, 0, 5.11147, 0, 5.1897798, 0, -9.064758, -84.35305, -35.12806, -79.24634)
+
+[node name="Puff005" parent="World/Clouds" unique_id=491652534 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-11.646523, 0, -4.6440244, 0, 5.66286, 0, 4.6440244, 0, -11.646523, -86.35618, -26.36354, -72.76743)
+
+[node name="Puff006" parent="World/Clouds" unique_id=1927388473 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.507718, 0, 5.6489606, 0, 4.8648, 0, -5.6489606, 0, 9.507718, -86.1246, -36.66084, -63.57957)
+
+[node name="Puff007" parent="World/Clouds" unique_id=1010484360 instance=ExtResource("25_mj62m")]
+transform = Transform3D(1.3443719, 0, -9.654933, 0, 5.35671, 0, 9.654933, 0, 1.3443719, -78.50708, -33.96759, -44.01214)
+
+[node name="Puff008" parent="World/Clouds" unique_id=1342574076 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.8243537, 0, 10.530129, 0, 5.76291, 0, -10.530129, 0, 4.8243537, -86.54846, -34.83955, -40.21046)
+
+[node name="Puff009" parent="World/Clouds" unique_id=1865253728 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-2.993248, 0, -10.3240795, 0, 4.93103, 0, 10.3240795, 0, -2.993248, -85.03565, -30.21291, -31.32696)
+
+[node name="Puff010" parent="World/Clouds" unique_id=2045000682 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.139527, 0, -4.032232, 0, 5.52361, 0, 4.032232, 0, -10.139527, -87.33798, -29.54544, -17.7978)
+
+[node name="Puff011" parent="World/Clouds" unique_id=267428228 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.696932, 0, 5.065348, 0, 5.53965, 0, -5.065348, 0, -8.696932, -83.06139, -36.19455, -3.42176)
+
+[node name="Puff012" parent="World/Clouds" unique_id=364520327 instance=ExtResource("25_mj62m")]
+transform = Transform3D(10.017932, 0, -6.6594477, 0, 6.29646, 0, 6.6594477, 0, 10.017932, -87.0805, -28.59214, 5.12624)
+
+[node name="Puff013" parent="World/Clouds" unique_id=1233667311 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.04749, 0, 10.535252, 0, 6.1048, 0, -10.535252, 0, -8.04749, -83.23926, -27.13732, 16.49823)
+
+[node name="Puff014" parent="World/Clouds" unique_id=59113520 instance=ExtResource("24_dufxj")]
+transform = Transform3D(13.620586, 0, -3.1688137, 0, 8.02976, 0, 3.1688137, 0, 13.620586, -81.75115, -34.43527, 30.73351)
+
+[node name="Puff015" parent="World/Clouds" unique_id=331645149 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.455078, 0, -12.113387, 0, 5.51524, 0, 12.113387, 0, 4.455078, -87.6829, -31.6604, 37.54914)
+
+[node name="Puff016" parent="World/Clouds" unique_id=1667870320 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.727033, 0, 4.2491226, 0, 4.26867, 0, -4.2491226, 0, 8.727033, -71.76606, -29.68715, -115.94879)
+
+[node name="Puff017" parent="World/Clouds" unique_id=1625917268 instance=ExtResource("23_dksua")]
+transform = Transform3D(-5.8694572, 0, 9.623359, 0, 6.44129, 0, -9.623359, 0, -5.8694572, -68.0415, -31.99658, -99.94514)
+
+[node name="Puff018" parent="World/Clouds" unique_id=1001188786 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.4980936, 0, -10.536103, 0, 5.99837, 0, 10.536103, 0, -6.4980936, -75.551, -28.54101, -92.59707)
+
+[node name="Puff019" parent="World/Clouds" unique_id=917241871 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.2042863, 0, 9.664977, 0, 5.74925, 0, -9.664977, 0, -3.2042863, -74.0394, -36.38288, -82.75447)
+
+[node name="Puff020" parent="World/Clouds" unique_id=1638541815 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.6394267, 0, -12.406123, 0, 7.72072, 0, 12.406123, 0, -6.6394267, -71.45666, -31.82708, -73.05996)
+
+[node name="Puff021" parent="World/Clouds" unique_id=2119621751 instance=ExtResource("23_dksua")]
+transform = Transform3D(7.8180614, 0, -7.98975, 0, 4.86211, 0, 7.98975, 0, 7.8180614, -71.88456, -30.89437, -55.36148)
+
+[node name="Puff022" parent="World/Clouds" unique_id=232536909 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.129455, 0, 5.8815584, 0, 5.74534, 0, -5.8815584, 0, 8.129455, -70.34797, -34.06333, -48.83863)
+
+[node name="Puff023" parent="World/Clouds" unique_id=1011374334 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.728293, 0, -0.41143018, 0, 5.22692, 0, 0.41143018, 0, -9.728293, -76.70786, -26.77249, -38.43812)
+
+[node name="Puff024" parent="World/Clouds" unique_id=142396142 instance=ExtResource("24_dufxj")]
+transform = Transform3D(11.356261, 0, 5.7946277, 0, 7.0683, 0, -5.7946277, 0, 11.356261, -70.82221, -36.91842, -24.5494)
+
+[node name="Puff025" parent="World/Clouds" unique_id=1397355757 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.846198, 0, 6.227042, 0, 5.5186, 0, -6.227042, 0, -7.846198, -71.25128, -31.72351, -16.84264)
+
+[node name="Puff026" parent="World/Clouds" unique_id=485525338 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.2570233, 0, -9.615263, 0, 5.25819, 0, 9.615263, 0, -3.2570233, -75.8119, -33.57054, -3.73211)
+
+[node name="Puff027" parent="World/Clouds" unique_id=1866070831 instance=ExtResource("23_dksua")]
+transform = Transform3D(-13.879724, 0, 1.4886757, 0, 7.32035, 0, -1.4886757, 0, -13.879724, -69.39384, -29.71203, 7.41026)
+
+[node name="Puff028" parent="World/Clouds" unique_id=559722201 instance=ExtResource("24_dufxj")]
+transform = Transform3D(11.021191, 0, 6.3293695, 0, 6.68921, 0, -6.3293695, 0, 11.021191, -76.62205, -29.85179, 15.97137)
+
+[node name="Puff029" parent="World/Clouds" unique_id=2014644168 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-5.975186, 0, 9.413825, 0, 5.47463, 0, -9.413825, 0, -5.975186, -74.29983, -27.26172, 34.35074)
+
+[node name="Puff030" parent="World/Clouds" unique_id=1965649178 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-8.369255, 0, 3.6632154, 0, 4.46255, 0, -3.6632154, 0, -8.369255, -72.1136, -29.05066, 43.14582)
+
+[node name="Puff031" parent="World/Clouds" unique_id=1274746353 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-8.13572, 0, 11.786008, 0, 7.46621, 0, -11.786008, 0, -8.13572, -58.15753, -32.90245, -113.10732)
+
+[node name="Puff032" parent="World/Clouds" unique_id=1304477378 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.9402516, 0, 8.388585, 0, 4.70374, 0, -8.388585, 0, 2.9402516, -61.67494, -31.9834, -105.3201)
+
+[node name="Puff033" parent="World/Clouds" unique_id=1124133928 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.76376, 0, 14.104504, 0, 7.68223, 0, -14.104504, 0, 2.76376, -57.31436, -26.92702, -98.03064)
+
+[node name="Puff034" parent="World/Clouds" unique_id=1641483471 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.58453, 0, 7.4713373, 0, 4.50108, 0, -7.4713373, 0, 5.58453, -61.10136, -36.65195, -85.99073)
+
+[node name="Puff035" parent="World/Clouds" unique_id=849385659 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-3.6365013, 0, -10.7765875, 0, 6.03889, 0, 10.7765875, 0, -3.6365013, -61.08664, -27.719, -76.12346)
+
+[node name="Puff036" parent="World/Clouds" unique_id=748432422 instance=ExtResource("23_dksua")]
+transform = Transform3D(-12.474064, 0, 0.9583078, 0, 5.91993, 0, -0.9583078, 0, -12.474064, -58.59344, -35.13961, -63.77494)
+
+[node name="Puff037" parent="World/Clouds" unique_id=1299298271 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.856624, 0, -4.186703, 0, 3.55389, 0, 4.186703, 0, 6.856624, -58.87727, -31.76509, -44.16425)
+
+[node name="Puff038" parent="World/Clouds" unique_id=903700074 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.7357187, 0, -8.708863, 0, 5.69328, 0, 8.708863, 0, 4.7357187, -65.08718, -27.30016, -33.91987)
+
+[node name="Puff039" parent="World/Clouds" unique_id=1875239379 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-11.855465, 0, 1.1904114, 0, 5.74707, 0, -1.1904114, 0, -11.855465, -59.07513, -35.04732, -24.07819)
+
+[node name="Puff040" parent="World/Clouds" unique_id=99210505 instance=ExtResource("25_mj62m")]
+transform = Transform3D(7.36503, 0, 6.4676614, 0, 5.59829, 0, -6.4676614, 0, 7.36503, -62.36076, -26.22148, -11.23117)
+
+[node name="Puff041" parent="World/Clouds" unique_id=374774430 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.2601376, 0, 11.768387, 0, 5.27811, 0, -11.768387, 0, 3.2601376, -55.71074, -36.09915, -7.22399)
+
+[node name="Puff042" parent="World/Clouds" unique_id=1266334518 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-11.803368, 0, -7.3100863, 0, 6.62255, 0, 7.3100863, 0, -11.803368, -59.28566, -31.39425, 8.44896)
+
+[node name="Puff043" parent="World/Clouds" unique_id=638766345 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.28542, 0, 12.055298, 0, 7.34204, 0, -12.055298, 0, 5.28542, -65.05317, -35.2572, 16.14091)
+
+[node name="Puff044" parent="World/Clouds" unique_id=264766207 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.633516, 0, 10.247963, 0, 5.68873, 0, -10.247963, 0, -6.633516, -59.19003, -29.52339, 31.40327)
+
+[node name="Puff045" parent="World/Clouds" unique_id=2026310480 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.2333503, 0, 9.730346, 0, 4.88019, 0, -9.730346, 0, -2.2333503, -59.91101, -28.75701, 43.85059)
+
+[node name="Puff046" parent="World/Clouds" unique_id=545853094 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-10.420213, 0, 4.7195106, 0, 6.62752, 0, -4.7195106, 0, -10.420213, -51.23017, -34.7382, -118.95634)
+
+[node name="Puff047" parent="World/Clouds" unique_id=309742543 instance=ExtResource("25_mj62m")]
+transform = Transform3D(10.663342, 0, 8.700327, 0, 5.86911, 0, -8.700327, 0, 10.663342, -53.77959, -32.27889, -100.85479)
+
+[node name="Puff048" parent="World/Clouds" unique_id=1984057181 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.523877, 0, -8.22333, 0, 5.82202, 0, 8.22333, 0, 8.523877, -46.96311, -29.84549, -94.64291)
+
+[node name="Puff049" parent="World/Clouds" unique_id=449090249 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-1.0004413, 0, -11.962549, 0, 5.30532, 0, 11.962549, 0, -1.0004413, -44.98793, -37.48752, -79.38604)
+
+[node name="Puff050" parent="World/Clouds" unique_id=1088362023 instance=ExtResource("23_dksua")]
+transform = Transform3D(10.603522, 0, -5.3982434, 0, 6.70379, 0, 5.3982434, 0, 10.603522, -48.97208, -32.58511, -73.244)
+
+[node name="Puff051" parent="World/Clouds" unique_id=1905945238 instance=ExtResource("23_dksua")]
+transform = Transform3D(-9.599659, 0, 1.8254006, 0, 5.59114, 0, -1.8254006, 0, -9.599659, -46.78416, -36.81439, -56.63969)
+
+[node name="Puff052" parent="World/Clouds" unique_id=360919468 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-0.020796813, 0, 12.228493, 0, 5.26395, 0, -12.228493, 0, -0.020796813, -47.94481, -29.37115, -53.21863)
+
+[node name="Puff053" parent="World/Clouds" unique_id=566508787 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-1.5854973, 0, -9.542582, 0, 5.25774, 0, 9.542582, 0, -1.5854973, -54.44944, -32.46819, -33.99753)
+
+[node name="Puff054" parent="World/Clouds" unique_id=1920160528 instance=ExtResource("24_dufxj")]
+transform = Transform3D(13.572089, 0, 4.752197, 0, 6.94223, 0, -4.752197, 0, 13.572089, -50.21313, -27.0965, -23.92249)
+
+[node name="Puff055" parent="World/Clouds" unique_id=1307305828 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.434003, 0, -8.011679, 0, 5.43108, 0, 8.011679, 0, 9.434003, -47.83785, -28.30739, -14.98408)
+
+[node name="Puff056" parent="World/Clouds" unique_id=172032773 instance=ExtResource("23_dksua")]
+transform = Transform3D(10.418491, 0, -0.82418066, 0, 5.27046, 0, 0.82418066, 0, 10.418491, -52.22479, -36.22318, -8.41878)
+
+[node name="Puff057" parent="World/Clouds" unique_id=813445676 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.22858, 0, 6.851429, 0, 4.75335, 0, -6.851429, 0, 8.22858, -46.69778, -32.75539, 6.94737)
+
+[node name="Puff058" parent="World/Clouds" unique_id=436961022 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-3.1446776, 0, 11.47708, 0, 6.51389, 0, -11.47708, 0, -3.1446776, -46.20682, -30.65803, 21.1219)
+
+[node name="Puff059" parent="World/Clouds" unique_id=1796172336 instance=ExtResource("23_dksua")]
+transform = Transform3D(7.8760858, 0, -9.32851, 0, 5.97955, 0, 9.32851, 0, 7.8760858, -51.69027, -31.49245, 33.62514)
+
+[node name="Puff060" parent="World/Clouds" unique_id=779044612 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.277505, 0, 8.667627, 0, 5.98264, 0, -8.667627, 0, -10.277505, -48.67311, -29.99773, 36.63559)
+
+[node name="Puff061" parent="World/Clouds" unique_id=399288428 instance=ExtResource("24_dufxj")]
+transform = Transform3D(12.302325, 0, 6.836613, 0, 6.90913, 0, -6.836613, 0, 12.302325, -37.33618, -27.98494, -118.56714)
+
+[node name="Puff062" parent="World/Clouds" unique_id=530973353 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-11.839738, 0, 0.15096556, 0, 6.18508, 0, -0.15096556, 0, -11.839738, -35.08827, -28.12205, -100.93378)
+
+[node name="Puff063" parent="World/Clouds" unique_id=2026026381 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.5678137, 0, -12.473353, 0, 7.0739, 0, 12.473353, 0, -0.5678137, -38.85713, -30.3313, -94.36523)
+
+[node name="Puff064" parent="World/Clouds" unique_id=988891541 instance=ExtResource("24_dufxj")]
+transform = Transform3D(1.9229635, 0, 9.036001, 0, 3.97462, 0, -9.036001, 0, 1.9229635, -37.50023, -26.4763, -86.72158)
+
+[node name="Puff065" parent="World/Clouds" unique_id=1389616815 instance=ExtResource("23_dksua")]
+transform = Transform3D(1.1209924, 0, -10.512753, 0, 4.79946, 0, 10.512753, 0, 1.1209924, -35.10738, -34.05335, -67.59723)
+
+[node name="Puff066" parent="World/Clouds" unique_id=1037467667 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.7637086, 0, -14.229202, 0, 8.31873, 0, 14.229202, 0, 3.7637086, -37.91301, -28.06171, -58.62465)
+
+[node name="Puff067" parent="World/Clouds" unique_id=21923017 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.158834, 0, -8.476086, 0, 5.49244, 0, 8.476086, 0, 5.158834, -34.0296, -29.05892, -53.52946)
+
+[node name="Puff068" parent="World/Clouds" unique_id=1434268025 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.745011, 0, 9.91961, 0, 5.05915, 0, -9.91961, 0, -4.745011, -34.6059, -37.32345, -33.53884)
+
+[node name="Puff069" parent="World/Clouds" unique_id=1921809208 instance=ExtResource("25_mj62m")]
+transform = Transform3D(6.4241376, 0, 10.681174, 0, 5.28257, 0, -10.681174, 0, 6.4241376, -37.78893, -26.35922, -29.51445)
+
+[node name="Puff070" parent="World/Clouds" unique_id=597739811 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.4694562, 0, 11.241917, 0, 6.71379, 0, -11.241917, 0, -3.4694562, -37.7549, -37.06553, -11.47564)
+
+[node name="Puff071" parent="World/Clouds" unique_id=947304606 instance=ExtResource("23_dksua")]
+transform = Transform3D(1.6650982, 0, 11.204996, 0, 4.87233, 0, -11.204996, 0, 1.6650982, -42.70762, -37.17547, -3.37596)
+
+[node name="Puff072" parent="World/Clouds" unique_id=247519405 instance=ExtResource("23_dksua")]
+transform = Transform3D(-10.949259, 0, 0.18663703, 0, 6.03767, 0, -0.18663703, 0, -10.949259, -36.77278, -31.37084, 7.24905)
+
+[node name="Puff073" parent="World/Clouds" unique_id=149770789 instance=ExtResource("23_dksua")]
+transform = Transform3D(-12.595346, 0, -3.898975, 0, 7.00917, 0, 3.898975, 0, -12.595346, -40.9284, -35.55611, 17.77045)
+
+[node name="Puff074" parent="World/Clouds" unique_id=2046128267 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.62192, 0, 0.5328495, 0, 4.91402, 0, -0.5328495, 0, 8.62192, -42.95262, -26.86732, 26.63908)
+
+[node name="Puff075" parent="World/Clouds" unique_id=1900602077 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.0286617, 0, 11.97127, 0, 6.09563, 0, -11.97127, 0, 4.0286617, -43.17764, -28.43432, 42.9669)
+
+[node name="Puff076" parent="World/Clouds" unique_id=279532043 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.1293955, 0, 3.4214077, 0, 4.4264, 0, -3.4214077, 0, 8.1293955, -23.70827, -28.95777, -119.4755)
+
+[node name="Puff077" parent="World/Clouds" unique_id=732849093 instance=ExtResource("23_dksua")]
+transform = Transform3D(13.531855, 0, -5.9726076, 0, 7.94505, 0, 5.9726076, 0, 13.531855, -30.74584, -36.52811, -99.95718)
+
+[node name="Puff078" parent="World/Clouds" unique_id=1715807522 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.41181, 0, 0.9391995, 0, 4.56718, 0, -0.9391995, 0, 8.41181, -30.22063, -32.6421, -94.36906)
+
+[node name="Puff079" parent="World/Clouds" unique_id=1252083057 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.5108163, 0, -13.829878, 0, 7.7553, 0, 13.829878, 0, -2.5108163, -25.56143, -37.13138, -78.66056)
+
+[node name="Puff080" parent="World/Clouds" unique_id=756887543 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.028576, 0, 10.481632, 0, 6.44503, 0, -10.481632, 0, -4.028576, -29.0165, -28.46311, -68.19975)
+
+[node name="Puff081" parent="World/Clouds" unique_id=441880294 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.7137733, 0, -7.1151605, 0, 5.11656, 0, 7.1151605, 0, 7.7137733, -31.33977, -26.96037, -64.11545)
+
+[node name="Puff082" parent="World/Clouds" unique_id=911904889 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.1676073, 0, 8.592517, 0, 4.97262, 0, -8.592517, 0, 5.1676073, -24.58618, -28.00747, -48.2561)
+
+[node name="Puff083" parent="World/Clouds" unique_id=615086159 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.6140335, 0, 14.1730385, 0, 6.62982, 0, -14.1730385, 0, -3.6140335, -28.42375, -27.95285, -41.52635)
+
+[node name="Puff084" parent="World/Clouds" unique_id=682474296 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.6226816, 0, 9.48862, 0, 6.50808, 0, -9.48862, 0, -6.6226816, -24.2083, -27.09088, -24.63436)
+
+[node name="Puff085" parent="World/Clouds" unique_id=1109001540 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.2887907, 0, 10.403189, 0, 5.87647, 0, -10.403189, 0, -2.2887907, -24.13553, -28.63961, -12.04429)
+
+[node name="Puff086" parent="World/Clouds" unique_id=1404074942 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.665207, 0, -3.7436683, 0, 3.68023, 0, 3.7436683, 0, 7.665207, -25.93123, -33.22972, -7.59974)
+
+[node name="Puff087" parent="World/Clouds" unique_id=1763776055 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-12.631226, 0, 2.6270907, 0, 6.39749, 0, -2.6270907, 0, -12.631226, -23.85694, -30.36904, 4.32058)
+
+[node name="Puff088" parent="World/Clouds" unique_id=859034431 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.344181, 0, 5.2436123, 0, 4.95553, 0, -5.2436123, 0, 8.344181, -26.04855, -33.92191, 23.22318)
+
+[node name="Puff089" parent="World/Clouds" unique_id=885904570 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.081508, 0, -7.1134567, 0, 4.60702, 0, 7.1134567, 0, -6.081508, -30.66756, -34.69507, 32.29467)
+
+[node name="Puff090" parent="World/Clouds" unique_id=2038140311 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.1403468, 0, 8.807883, 0, 5.07641, 0, -8.807883, 0, -2.1403468, -23.83027, -28.18072, 39.4549)
+
+[node name="Puff091" parent="World/Clouds" unique_id=163266394 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.936324, 0, -1.9223917, 0, 4.4792, 0, 1.9223917, 0, 9.936324, -16.4209, -32.26008, -113.11022)
+
+[node name="Puff092" parent="World/Clouds" unique_id=747871452 instance=ExtResource("25_mj62m")]
+transform = Transform3D(3.703084, 0, -12.242882, 0, 5.4526, 0, 12.242882, 0, 3.703084, -14.41048, -34.80744, -109.65014)
+
+[node name="Puff093" parent="World/Clouds" unique_id=783373216 instance=ExtResource("24_dufxj")]
+transform = Transform3D(14.323354, 0, 0.10385004, 0, 6.50373, 0, -0.10385004, 0, 14.323354, -16.27608, -30.86357, -97.97814)
+
+[node name="Puff094" parent="World/Clouds" unique_id=493038888 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.3630104, 0, -13.446411, 0, 8.0077, 0, 13.446411, 0, -6.3630104, -11.50117, -34.45899, -79.82921)
+
+[node name="Puff095" parent="World/Clouds" unique_id=1027923958 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.2877545, 0, -13.787622, 0, 6.20117, 0, 13.787622, 0, -1.2877545, -18.15701, -36.97595, -67.41184)
+
+[node name="Puff096" parent="World/Clouds" unique_id=1642885239 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-8.476026, 0, -4.6117363, 0, 4.95011, 0, 4.6117363, 0, -8.476026, -18.54302, -26.38109, -58.55878)
+
+[node name="Puff097" parent="World/Clouds" unique_id=628245124 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.7683806, 0, -7.3990808, 0, 4.10352, 0, 7.3990808, 0, 5.7683806, -12.44799, -33.73985, -52.43247)
+
+[node name="Puff098" parent="World/Clouds" unique_id=278623872 instance=ExtResource("23_dksua")]
+transform = Transform3D(8.204121, 0, -8.922367, 0, 6.36361, 0, 8.922367, 0, 8.204121, -11.11119, -37.58023, -33.29794)
+
+[node name="Puff099" parent="World/Clouds" unique_id=674610470 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.124368, 0, -7.673421, 0, 4.38046, 0, 7.673421, 0, 4.124368, -10.82974, -32.97091, -29.95907)
+
+[node name="Puff100" parent="World/Clouds" unique_id=129152594 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.228655, 0, -9.902899, 0, 7.25822, 0, 9.902899, 0, -9.228655, -14.8598, -34.78231, -10.35519)
+
+[node name="Puff101" parent="World/Clouds" unique_id=1662555286 instance=ExtResource("24_dufxj")]
+transform = Transform3D(13.277619, 0, -1.9084263, 0, 6.13284, 0, 1.9084263, 0, 13.277619, -11.76967, -33.37698, -0.36466)
+
+[node name="Puff102" parent="World/Clouds" unique_id=130219259 instance=ExtResource("25_mj62m")]
+transform = Transform3D(7.918835, 0, -10.403273, 0, 6.98749, 0, 10.403273, 0, 7.918835, -19.32139, -34.66876, 4.59117)
+
+[node name="Puff103" parent="World/Clouds" unique_id=252249317 instance=ExtResource("23_dksua")]
+transform = Transform3D(-12.631355, 0, 4.9552126, 0, 6.53049, 0, -4.9552126, 0, -12.631355, -16.85324, -30.03192, 17.98554)
+
+[node name="Puff104" parent="World/Clouds" unique_id=271106570 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.015023, 0, -5.0239778, 0, 5.40526, 0, 5.0239778, 0, -10.015023, -16.37108, -28.66871, 27.77304)
+
+[node name="Puff105" parent="World/Clouds" unique_id=1347842678 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.105852, 0, 6.703722, 0, 4.63264, 0, -6.703722, 0, -8.105852, -11.97643, -26.40836, 38.10344)
+
+[node name="Puff106" parent="World/Clouds" unique_id=1625272448 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-3.8619723, 0, -11.343893, 0, 5.41516, 0, 11.343893, 0, -3.8619723, -6.11543, -32.4222, -111.98466)
+
+[node name="Puff107" parent="World/Clouds" unique_id=1741955679 instance=ExtResource("23_dksua")]
+transform = Transform3D(-4.675925, 0, -10.464219, 0, 6.06741, 0, 10.464219, 0, -4.675925, -6.65244, -32.2024, -105.76673)
+
+[node name="Puff108" parent="World/Clouds" unique_id=1572923798 instance=ExtResource("23_dksua")]
+transform = Transform3D(10.149505, 0, 2.5339935, 0, 5.82392, 0, -2.5339935, 0, 10.149505, -4.94419, -33.1684, -88.94628)
+
+[node name="Puff109" parent="World/Clouds" unique_id=194017476 instance=ExtResource("24_dufxj")]
+transform = Transform3D(1.1211413, 0, 10.662378, 0, 4.62104, 0, -10.662378, 0, 1.1211413, -2.32228, -27.37504, -85.98493)
+
+[node name="Puff110" parent="World/Clouds" unique_id=1448825601 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.7559255, 0, 12.507678, 0, 5.38967, 0, -12.507678, 0, 0.7559255, -4.34466, -27.38061, -69.9808)
+
+[node name="Puff111" parent="World/Clouds" unique_id=811698971 instance=ExtResource("23_dksua")]
+transform = Transform3D(-10.799724, 0, 4.1229677, 0, 5.49914, 0, -4.1229677, 0, -10.799724, -0.2894, -30.71597, -62.5935)
+
+[node name="Puff112" parent="World/Clouds" unique_id=1597264144 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.637726, 0, -8.263774, 0, 6.04216, 0, 8.263774, 0, 8.637726, -1.73284, -33.76493, -45.32596)
+
+[node name="Puff113" parent="World/Clouds" unique_id=1703982712 instance=ExtResource("23_dksua")]
+transform = Transform3D(4.991835, 0, -6.5541162, 0, 3.93672, 0, 6.5541162, 0, 4.991835, -7.8003, -26.96455, -37.43221)
+
+[node name="Puff114" parent="World/Clouds" unique_id=392259886 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.163205, 0, -5.5940113, 0, 4.33889, 0, 5.5940113, 0, -7.163205, -8.36525, -29.15957, -22.9062)
+
+[node name="Puff115" parent="World/Clouds" unique_id=1544112472 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.8601046, 0, -10.522963, 0, 5.86747, 0, 10.522963, 0, -6.8601046, -2.00385, -27.46727, -15.91784)
+
+[node name="Puff116" parent="World/Clouds" unique_id=881160236 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.5944223, 0, 9.919572, 0, 6.44648, 0, -9.919572, 0, 6.5944223, 0.06759, -37.67752, -8.90719)
+
+[node name="Puff117" parent="World/Clouds" unique_id=1713330550 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-10.435318, 0, 0.18679869, 0, 4.78183, 0, -0.18679869, 0, -10.435318, -2.22467, -30.91219, 8.18354)
+
+[node name="Puff118" parent="World/Clouds" unique_id=106915016 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.018217, 0, 9.037752, 0, 6.52502, 0, -9.037752, 0, -8.018217, -2.18164, -34.75169, 17.7202)
+
+[node name="Puff119" parent="World/Clouds" unique_id=1318759510 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.000469, 0, -8.766324, 0, 4.80376, 0, 8.766324, 0, 6.000469, -1.37488, -29.74252, 28.81441)
+
+[node name="Puff120" parent="World/Clouds" unique_id=2053924566 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.105962, 0, -2.0150247, 0, 4.63161, 0, 2.0150247, 0, -8.105962, -4.10338, -33.09497, 42.82558)
+
+[node name="Puff121" parent="World/Clouds" unique_id=1609221149 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-0.4237848, 0, 13.439, 0, 7.08047, 0, -13.439, 0, -0.4237848, 11.48059, -27.31269, -116.64472)
+
+[node name="Puff122" parent="World/Clouds" unique_id=834020008 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.3397028, 0, -11.578816, 0, 6.34896, 0, 11.578816, 0, -2.3397028, 2.93773, -36.62694, -109.79401)
+
+[node name="Puff123" parent="World/Clouds" unique_id=1755817441 instance=ExtResource("25_mj62m")]
+transform = Transform3D(9.352853, 0, 10.95838, 0, 7.30114, 0, -10.95838, 0, 9.352853, 7.65863, -27.08646, -94.74463)
+
+[node name="Puff124" parent="World/Clouds" unique_id=1378296043 instance=ExtResource("23_dksua")]
+transform = Transform3D(-5.848366, 0, -11.453678, 0, 6.85418, 0, 11.453678, 0, -5.848366, 1.75523, -35.06858, -83.71199)
+
+[node name="Puff125" parent="World/Clouds" unique_id=1419955278 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-2.5050924, 0, 9.970792, 0, 5.35317, 0, -9.970792, 0, -2.5050924, 3.00135, -28.73828, -72.39031)
+
+[node name="Puff126" parent="World/Clouds" unique_id=986174401 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-4.118165, 0, -13.331091, 0, 7.07614, 0, 13.331091, 0, -4.118165, 3.53023, -36.26923, -64.08844)
+
+[node name="Puff127" parent="World/Clouds" unique_id=1446371287 instance=ExtResource("23_dksua")]
+transform = Transform3D(-10.410572, 0, 5.69986, 0, 5.28174, 0, -5.69986, 0, -10.410572, 5.45742, -35.11493, -51.60479)
+
+[node name="Puff128" parent="World/Clouds" unique_id=704237215 instance=ExtResource("23_dksua")]
+transform = Transform3D(12.270444, 0, 2.3364043, 0, 6.85049, 0, -2.3364043, 0, 12.270444, 10.30189, -31.22692, -37.35725)
+
+[node name="Puff129" parent="World/Clouds" unique_id=1667797555 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.523072, 0, 10.170999, 0, 5.84517, 0, -10.170999, 0, 5.523072, 9.2967, -33.74147, -21.67744)
+
+[node name="Puff130" parent="World/Clouds" unique_id=1977517825 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.2450945, 0, 12.639151, 0, 6.31923, 0, -12.639151, 0, 3.2450945, 6.55634, -28.06547, -18.1047)
+
+[node name="Puff131" parent="World/Clouds" unique_id=1488989776 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.0929747, 0, 8.357471, 0, 4.05245, 0, -8.357471, 0, 4.0929747, 6.09021, -31.9301, -5.55321)
+
+[node name="Puff132" parent="World/Clouds" unique_id=343147128 instance=ExtResource("24_dufxj")]
+transform = Transform3D(11.101237, 0, 2.818518, 0, 6.26672, 0, -2.818518, 0, 11.101237, 2.16567, -31.95771, 4.89359)
+
+[node name="Puff133" parent="World/Clouds" unique_id=1066105881 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.012221, 0, 0.2337458, 0, 5.65918, 0, -0.2337458, 0, -10.012221, 9.45452, -34.11194, 16.55132)
+
+[node name="Puff134" parent="World/Clouds" unique_id=138409263 instance=ExtResource("23_dksua")]
+transform = Transform3D(9.046472, 0, -5.877839, 0, 6.09648, 0, 5.877839, 0, 9.046472, 11.44021, -31.63439, 31.37689)
+
+[node name="Puff135" parent="World/Clouds" unique_id=463557994 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-14.198935, 0, 1.4904863, 0, 7.48909, 0, -1.4904863, 0, -14.198935, 7.15169, -33.88335, 37.307)
+
+[node name="Puff136" parent="World/Clouds" unique_id=1030932391 instance=ExtResource("23_dksua")]
+transform = Transform3D(-9.34769, 0, -0.0008477091, 0, 5.4146, 0, 0.0008477091, 0, -9.34769, 20.62935, -34.00108, -119.46106)
+
+[node name="Puff137" parent="World/Clouds" unique_id=935200099 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.0972826, 0, 10.703093, 0, 5.92033, 0, -10.703093, 0, -2.0972826, 20.88935, -31.43627, -105.95104)
+
+[node name="Puff138" parent="World/Clouds" unique_id=121078602 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.682908, 0, 12.967613, 0, 6.60673, 0, -12.967613, 0, -6.682908, 20.02848, -28.96688, -90.09811)
+
+[node name="Puff139" parent="World/Clouds" unique_id=1604897567 instance=ExtResource("23_dksua")]
+transform = Transform3D(-4.1021304, 0, -13.818948, 0, 8.28642, 0, 13.818948, 0, -4.1021304, 14.9686, -35.69122, -87.08718)
+
+[node name="Puff140" parent="World/Clouds" unique_id=267134531 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.145612, 0, 7.221773, 0, 4.64933, 0, -7.221773, 0, 4.145612, 14.3642, -29.81291, -76.17901)
+
+[node name="Puff141" parent="World/Clouds" unique_id=467750631 instance=ExtResource("24_dufxj")]
+transform = Transform3D(10.7872, 0, -4.7965207, 0, 5.22118, 0, 4.7965207, 0, 10.7872, 21.8593, -26.00022, -61.89013)
+
+[node name="Puff142" parent="World/Clouds" unique_id=233601342 instance=ExtResource("23_dksua")]
+transform = Transform3D(-10.981025, 0, 1.259593, 0, 5.48247, 0, -1.259593, 0, -10.981025, 16.25261, -26.4346, -52.87476)
+
+[node name="Puff143" parent="World/Clouds" unique_id=622344192 instance=ExtResource("24_dufxj")]
+transform = Transform3D(14.224428, 0, 1.4547153, 0, 7.01499, 0, -1.4547153, 0, 14.224428, 18.14566, -33.02878, -33.08103)
+
+[node name="Puff144" parent="World/Clouds" unique_id=1400229703 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-10.772382, 0, 8.534707, 0, 7.31149, 0, -8.534707, 0, -10.772382, 16.68672, -28.08325, -22.79637)
+
+[node name="Puff145" parent="World/Clouds" unique_id=1423938033 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.7619915, 0, -0.9206875, 0, 4.26314, 0, 0.9206875, 0, 8.7619915, 16.9563, -35.8725, -14.85877)
+
+[node name="Puff146" parent="World/Clouds" unique_id=1250632824 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.604509, 0, 0.22565241, 0, 4.78783, 0, -0.22565241, 0, -9.604509, 18.73474, -32.02778, -3.86919)
+
+[node name="Puff147" parent="World/Clouds" unique_id=1801298167 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.6559615, 0, -8.804602, 0, 5.12363, 0, 8.804602, 0, -3.6559615, 21.94679, -32.70471, 5.59278)
+
+[node name="Puff148" parent="World/Clouds" unique_id=2143093703 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.085347, 0, 12.584602, 0, 8.3993, 0, -12.584602, 0, -8.085347, 14.01668, -26.59224, 16.73093)
+
+[node name="Puff149" parent="World/Clouds" unique_id=184437898 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-9.058629, 0, -5.3788767, 0, 4.98677, 0, 5.3788767, 0, -9.058629, 14.19534, -31.48853, 26.68694)
+
+[node name="Puff150" parent="World/Clouds" unique_id=353308839 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.3182166, 0, 13.367443, 0, 6.63445, 0, -13.367443, 0, -2.3182166, 15.4738, -28.21917, 35.81556)
+
+[node name="Puff151" parent="World/Clouds" unique_id=3568544 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-13.106993, 0, -6.389159, 0, 7.39607, 0, 6.389159, 0, -13.106993, 27.01065, -33.84013, -113.23134)
+
+[node name="Puff152" parent="World/Clouds" unique_id=127263317 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.971073, 0, 8.6841755, 0, 5.64774, 0, -8.6841755, 0, -5.971073, 25.61115, -26.76587, -104.02231)
+
+[node name="Puff153" parent="World/Clouds" unique_id=2005577660 instance=ExtResource("23_dksua")]
+transform = Transform3D(9.864385, 0, -8.966019, 0, 6.20095, 0, 8.966019, 0, 9.864385, 31.7734, -37.48781, -93.97014)
+
+[node name="Puff154" parent="World/Clouds" unique_id=1096924903 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.443834, 0, -6.8042183, 0, 4.54764, 0, 6.8042183, 0, 4.443834, 24.62925, -29.30083, -81.89727)
+
+[node name="Puff155" parent="World/Clouds" unique_id=1376993702 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.1638834, 0, 13.839555, 0, 7.93614, 0, -13.839555, 0, 2.1638834, 30.8735, -27.96144, -68.46841)
+
+[node name="Puff156" parent="World/Clouds" unique_id=1273779027 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.1146936, 0, -11.197073, 0, 5.47588, 0, 11.197073, 0, -3.1146936, 32.05514, -32.36817, -59.0121)
+
+[node name="Puff157" parent="World/Clouds" unique_id=1001704200 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.802805, 0, 8.574758, 0, 6.03963, 0, -8.574758, 0, 9.802805, 32.54407, -29.95958, -45.63242)
+
+[node name="Puff158" parent="World/Clouds" unique_id=1939281372 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-4.6940665, 0, 13.006513, 0, 6.43171, 0, -13.006513, 0, -4.6940665, 25.64802, -35.49277, -33.32765)
+
+[node name="Puff159" parent="World/Clouds" unique_id=1094509839 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.8668613, 0, 12.966927, 0, 7.11225, 0, -12.966927, 0, 0.8668613, 32.73678, -33.8673, -29.72702)
+
+[node name="Puff160" parent="World/Clouds" unique_id=426404048 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-11.551264, 0, 3.0678449, 0, 5.03026, 0, -3.0678449, 0, -11.551264, 30.51186, -36.07548, -13.21717)
+
+[node name="Puff161" parent="World/Clouds" unique_id=1819678283 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.9205879, 0, 12.42758, 0, 6.86175, 0, -12.42758, 0, -0.9205879, 31.14921, -34.09556, -8.65054)
+
+[node name="Puff162" parent="World/Clouds" unique_id=428998434 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-12.297347, 0, -8.021125, 0, 7.69994, 0, 8.021125, 0, -12.297347, 32.97486, -29.46463, 7.26918)
+
+[node name="Puff163" parent="World/Clouds" unique_id=1630371759 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-13.024174, 0, 7.4272223, 0, 6.3685, 0, -7.4272223, 0, -13.024174, 26.20469, -35.01507, 19.10785)
+
+[node name="Puff164" parent="World/Clouds" unique_id=2107461001 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.2347097, 0, -6.209807, 0, 3.98549, 0, 6.209807, 0, -6.2347097, 27.57095, -35.04381, 32.20402)
+
+[node name="Puff165" parent="World/Clouds" unique_id=1209245406 instance=ExtResource("23_dksua")]
+transform = Transform3D(13.979248, 0, -1.2884454, 0, 5.93389, 0, 1.2884454, 0, 13.979248, 33.20739, -36.63146, 36.43898)
+
+[node name="Puff166" parent="World/Clouds" unique_id=1995836767 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.0941315, 0, 7.156752, 0, 3.61673, 0, -7.156752, 0, 4.0941315, 40.15212, -27.12445, -112.99669)
+
+[node name="Puff167" parent="World/Clouds" unique_id=1242812081 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-12.167236, 0, -7.8336744, 0, 7.60602, 0, 7.8336744, 0, -12.167236, 38.02646, -31.7534, -107.48459)
+
+[node name="Puff168" parent="World/Clouds" unique_id=492072403 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.02483, 0, 1.2529197, 0, 4.28842, 0, -1.2529197, 0, -8.02483, 41.19777, -33.77832, -92.04632)
+
+[node name="Puff169" parent="World/Clouds" unique_id=1244257056 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.260964, 0, -5.6637907, 0, 5.68068, 0, 5.6637907, 0, 8.260964, 40.71481, -30.14936, -83.29052)
+
+[node name="Puff170" parent="World/Clouds" unique_id=178318339 instance=ExtResource("23_dksua")]
+transform = Transform3D(7.379791, 0, -5.1617146, 0, 5.1964, 0, 5.1617146, 0, 7.379791, 38.92332, -32.65417, -70.7476)
+
+[node name="Puff171" parent="World/Clouds" unique_id=984325008 instance=ExtResource("23_dksua")]
+transform = Transform3D(-12.510204, 0, 5.5466433, 0, 7.18788, 0, -5.5466433, 0, -12.510204, 36.19576, -30.17492, -57.56042)
+
+[node name="Puff172" parent="World/Clouds" unique_id=1261848048 instance=ExtResource("25_mj62m")]
+transform = Transform3D(7.957461, 0, 6.8147864, 0, 5.81243, 0, -6.8147864, 0, 7.957461, 38.34321, -34.41651, -49.42598)
+
+[node name="Puff173" parent="World/Clouds" unique_id=1428535966 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.866141, 0, -12.785927, 0, 7.39747, 0, 12.785927, 0, 0.866141, 40.87395, -26.87993, -32.79194)
+
+[node name="Puff174" parent="World/Clouds" unique_id=1851568462 instance=ExtResource("24_dufxj")]
+transform = Transform3D(0.7935317, 0, 10.045527, 0, 5.57749, 0, -10.045527, 0, 0.7935317, 42.79603, -37.43542, -21.88607)
+
+[node name="Puff175" parent="World/Clouds" unique_id=305807118 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-1.3358481, 0, 9.5907345, 0, 5.12485, 0, -9.5907345, 0, -1.3358481, 38.56357, -33.91567, -15.66176)
+
+[node name="Puff176" parent="World/Clouds" unique_id=1921591559 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.1714897, 0, 9.409152, 0, 6.43792, 0, -9.409152, 0, 6.1714897, 37.68728, -30.06566, -5.26562)
+
+[node name="Puff177" parent="World/Clouds" unique_id=435598492 instance=ExtResource("25_mj62m")]
+transform = Transform3D(5.420998, 0, -11.527663, 0, 5.63561, 0, 11.527663, 0, 5.420998, 39.71014, -35.30692, 8.91239)
+
+[node name="Puff178" parent="World/Clouds" unique_id=493877817 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.947949, 0, 10.660583, 0, 5.49902, 0, -10.660583, 0, 2.947949, 42.92419, -34.91161, 13.89367)
+
+[node name="Puff179" parent="World/Clouds" unique_id=141565093 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.7998986, 0, 5.481263, 0, 5.44087, 0, -5.481263, 0, 7.7998986, 40.4604, -31.9299, 31.63425)
+
+[node name="Puff180" parent="World/Clouds" unique_id=1167280166 instance=ExtResource("25_mj62m")]
+transform = Transform3D(9.754551, 0, 7.458317, 0, 6.12509, 0, -7.458317, 0, 9.754551, 40.88123, -30.72607, 38.64868)
+
+[node name="Puff181" parent="World/Clouds" unique_id=1886780403 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.281365, 0, -7.8492227, 0, 3.48393, 0, 7.8492227, 0, 2.281365, 51.61595, -30.86035, -119.17391)
+
+[node name="Puff182" parent="World/Clouds" unique_id=849636339 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.396556, 0, 0.37686718, 0, 5.08278, 0, -0.37686718, 0, -9.396556, 50.40581, -34.20615, -100.26706)
+
+[node name="Puff183" parent="World/Clouds" unique_id=325670530 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.6408997, 0, -11.107533, 0, 6.41098, 0, 11.107533, 0, 5.6408997, 52.03746, -34.26897, -92.07135)
+
+[node name="Puff184" parent="World/Clouds" unique_id=1164167070 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.338526, 0, 7.8305807, 0, 4.56696, 0, -7.8305807, 0, -4.338526, 47.37355, -36.55568, -78.7442)
+
+[node name="Puff185" parent="World/Clouds" unique_id=777530020 instance=ExtResource("23_dksua")]
+transform = Transform3D(-11.830761, 0, -4.0734825, 0, 5.8083, 0, 4.0734825, 0, -11.830761, 52.54605, -27.61992, -75.72684)
+
+[node name="Puff186" parent="World/Clouds" unique_id=1222428477 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.128638, 0, -12.898322, 0, 8.01261, 0, 12.898322, 0, -7.128638, 52.89016, -31.35131, -59.23427)
+
+[node name="Puff187" parent="World/Clouds" unique_id=725993054 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.3557675, 0, 10.133579, 0, 5.44252, 0, -10.133579, 0, 2.3557675, 56.33102, -31.99864, -51.6387)
+
+[node name="Puff188" parent="World/Clouds" unique_id=713275804 instance=ExtResource("25_mj62m")]
+transform = Transform3D(7.523827, 0, -4.379082, 0, 4.6021, 0, 4.379082, 0, 7.523827, 48.52068, -37.82338, -33.6839)
+
+[node name="Puff189" parent="World/Clouds" unique_id=1496348986 instance=ExtResource("23_dksua")]
+transform = Transform3D(-10.792507, 0, -7.4737186, 0, 6.89781, 0, 7.4737186, 0, -10.792507, 49.73279, -36.88622, -22.09029)
+
+[node name="Puff190" parent="World/Clouds" unique_id=1628181007 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-12.231304, 0, -2.1064885, 0, 6.13161, 0, 2.1064885, 0, -12.231304, 51.35293, -35.62389, -12.87195)
+
+[node name="Puff191" parent="World/Clouds" unique_id=1530312065 instance=ExtResource("23_dksua")]
+transform = Transform3D(8.540161, 0, 2.947883, 0, 3.79597, 0, -2.947883, 0, 8.540161, 54.82711, -27.70669, 0.66533)
+
+[node name="Puff192" parent="World/Clouds" unique_id=1648331222 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.25649184, 0, -14.105518, 0, 7.50897, 0, 14.105518, 0, -0.25649184, 52.39199, -35.08187, 6.0497)
+
+[node name="Puff193" parent="World/Clouds" unique_id=1125096672 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.0520651, 0, -8.080518, 0, 3.62264, 0, 8.080518, 0, -2.0520651, 48.68841, -28.6932, 14.53735)
+
+[node name="Puff194" parent="World/Clouds" unique_id=874430931 instance=ExtResource("23_dksua")]
+transform = Transform3D(1.4381441, 0, 14.830232, 0, 7.39924, 0, -14.830232, 0, 1.4381441, 53.3558, -32.48314, 30.10882)
+
+[node name="Puff195" parent="World/Clouds" unique_id=930519113 instance=ExtResource("25_mj62m")]
+transform = Transform3D(1.7795252, 0, 10.846055, 0, 6.09602, 0, -10.846055, 0, 1.7795252, 48.34636, -35.54644, 44.96836)
+
+[node name="Puff196" parent="World/Clouds" unique_id=1752533840 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.5445266, 0, 6.653329, 0, 4.39819, 0, -6.653329, 0, -6.5445266, 59.45872, -37.08474, -111.05444)
+
+[node name="Puff197" parent="World/Clouds" unique_id=1442662799 instance=ExtResource("23_dksua")]
+transform = Transform3D(-5.3774843, 0, 11.733868, 0, 7.20882, 0, -11.733868, 0, -5.3774843, 64.81569, -33.19301, -104.90977)
+
+[node name="Puff198" parent="World/Clouds" unique_id=1214245629 instance=ExtResource("23_dksua")]
+transform = Transform3D(9.438786, 0, 1.5895807, 0, 5.04376, 0, -1.5895807, 0, 9.438786, 66.48949, -35.02828, -97.21785)
+
+[node name="Puff199" parent="World/Clouds" unique_id=1375227015 instance=ExtResource("25_mj62m")]
+transform = Transform3D(0.30331707, 0, 11.233606, 0, 4.85947, 0, -11.233606, 0, 0.30331707, 58.87383, -27.28626, -86.93359)
+
+[node name="Puff200" parent="World/Clouds" unique_id=1767941441 instance=ExtResource("25_mj62m")]
+transform = Transform3D(9.288917, 0, 8.364705, 0, 6.70725, 0, -8.364705, 0, 9.288917, 63.25668, -29.9939, -69.87101)
+
+[node name="Puff201" parent="World/Clouds" unique_id=2009351321 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.8012857, 0, -2.3383968, 0, 3.47373, 0, 2.3383968, 0, 7.8012857, 66.52451, -31.1006, -59.6476)
+
+[node name="Puff202" parent="World/Clouds" unique_id=904094154 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-11.067738, 0, -4.7041116, 0, 6.50622, 0, 4.7041116, 0, -11.067738, 59.37254, -33.7782, -44.57712)
+
+[node name="Puff203" parent="World/Clouds" unique_id=1114807994 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.3857408, 0, 13.031041, 0, 7.45325, 0, -13.031041, 0, 5.3857408, 62.22315, -29.30451, -38.30563)
+
+[node name="Puff204" parent="World/Clouds" unique_id=1539698767 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.792392, 0, -10.787078, 0, 6.20346, 0, 10.787078, 0, -5.792392, 57.89014, -31.63669, -29.67673)
+
+[node name="Puff205" parent="World/Clouds" unique_id=694705385 instance=ExtResource("25_mj62m")]
+transform = Transform3D(11.404379, 0, 3.209707, 0, 6.84451, 0, -3.209707, 0, 11.404379, 63.26605, -34.13724, -11.60191)
+
+[node name="Puff206" parent="World/Clouds" unique_id=2048440146 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.149396, 0, -11.661928, 0, 6.65086, 0, 11.661928, 0, -2.149396, 64.21627, -33.15923, -7.08368)
+
+[node name="Puff207" parent="World/Clouds" unique_id=1838822017 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.7426306, 0, -10.135563, 0, 4.97661, 0, 10.135563, 0, -1.7426306, 65.78453, -36.21081, 10.62556)
+
+[node name="Puff208" parent="World/Clouds" unique_id=1233928233 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.087243, 0, -0.27790236, 0, 5.70005, 0, 0.27790236, 0, -10.087243, 64.95827, -32.18729, 22.20746)
+
+[node name="Puff209" parent="World/Clouds" unique_id=459825618 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-12.012235, 0, 6.7375298, 0, 5.9463, 0, -6.7375298, 0, -12.012235, 65.52732, -27.7399, 30.4775)
+
+[node name="Puff210" parent="World/Clouds" unique_id=596719775 instance=ExtResource("24_dufxj")]
+transform = Transform3D(6.1637053, 0, -12.871693, 0, 7.64046, 0, 12.871693, 0, 6.1637053, 63.91539, -26.27925, 39.06025)
+
+[node name="Puff211" parent="World/Clouds" unique_id=1683934357 instance=ExtResource("25_mj62m")]
+transform = Transform3D(9.332443, 0, -2.820863, 0, 5.02404, 0, 2.820863, 0, 9.332443, 72.9872, -26.50584, -120.3628)
+
+[node name="Puff212" parent="World/Clouds" unique_id=347007823 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-12.146236, 0, 4.5650067, 0, 6.00488, 0, -4.5650067, 0, -12.146236, 73.24223, -30.02758, -102.94093)
+
+[node name="Puff213" parent="World/Clouds" unique_id=248620176 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.6688758, 0, -9.12836, 0, 4.55702, 0, 9.12836, 0, -1.6688758, 73.42724, -33.29831, -95.4615)
+
+[node name="Puff214" parent="World/Clouds" unique_id=1362808328 instance=ExtResource("25_mj62m")]
+transform = Transform3D(6.3937902, 0, 13.510428, 0, 8.04237, 0, -13.510428, 0, 6.3937902, 77.70797, -34.73099, -87.24874)
+
+[node name="Puff215" parent="World/Clouds" unique_id=1120243830 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.423675, 0, 6.623837, 0, 4.19945, 0, -6.623837, 0, -6.423675, 75.14125, -37.25826, -68.35131)
+
+[node name="Puff216" parent="World/Clouds" unique_id=1338820097 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.174247, 0, 9.241964, 0, 4.92129, 0, -9.241964, 0, -4.174247, 68.94206, -35.90136, -58.35706)
+
+[node name="Puff217" parent="World/Clouds" unique_id=2108649064 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-8.273576, 0, 7.7968564, 0, 5.47141, 0, -7.7968564, 0, -8.273576, 75.82798, -26.58563, -50.70646)
+
+[node name="Puff218" parent="World/Clouds" unique_id=1727242955 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-13.354743, 0, 1.1270933, 0, 6.3114, 0, -1.1270933, 0, -13.354743, 74.30776, -27.4699, -39.05903)
+
+[node name="Puff219" parent="World/Clouds" unique_id=38460009 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.3824983, 0, -5.0271807, 0, 4.5682, 0, 5.0271807, 0, -7.3824983, 76.57538, -32.09043, -26.09025)
+
+[node name="Puff220" parent="World/Clouds" unique_id=408018075 instance=ExtResource("23_dksua")]
+transform = Transform3D(-9.877177, 0, -8.923263, 0, 6.25226, 0, 8.923263, 0, -9.877177, 73.00348, -36.25088, -13.96797)
+
+[node name="Puff221" parent="World/Clouds" unique_id=1585905723 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.5710244, 0, 5.2565355, 0, 4.37724, 0, -5.2565355, 0, 6.5710244, 77.26939, -32.9552, -7.05997)
+
+[node name="Puff222" parent="World/Clouds" unique_id=1449483278 instance=ExtResource("24_dufxj")]
+transform = Transform3D(0.4760595, 0, -8.872988, 0, 4.79104, 0, 8.872988, 0, 0.4760595, 73.45186, -26.26362, 4.83035)
+
+[node name="Puff223" parent="World/Clouds" unique_id=290696771 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-8.898366, 0, 0.902935, 0, 3.80173, 0, -0.902935, 0, -8.898366, 75.82448, -32.35743, 16.97394)
+
+[node name="Puff224" parent="World/Clouds" unique_id=640453567 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.3074665, 0, 6.6154227, 0, 4.6079, 0, -6.6154227, 0, -8.3074665, 73.66144, -36.6778, 26.91613)
+
+[node name="Puff225" parent="World/Clouds" unique_id=14917229 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.670581, 0, -11.760813, 0, 6.96386, 0, 11.760813, 0, 5.670581, 75.16934, -34.76317, 38.33772)
+
+[node name="Puff226" parent="World/Clouds" unique_id=185403478 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.2961683, 0, 5.5025206, 0, 3.62809, 0, -5.5025206, 0, 5.2961683, 73.66161, -16.71314, -107.94448)
+
+[node name="Puff227" parent="World/Clouds" unique_id=1078393210 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.0940933, 0, -9.573204, 0, 5.4496, 0, 9.573204, 0, 5.0940933, 79.61295, -15.65873, -110.43639)
+
+[node name="Puff228" parent="World/Clouds" unique_id=1040772504 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.475615, 0, 3.504351, 0, 3.0261, 0, -3.504351, 0, -4.475615, 74.06796, -17.94191, -102.37658)
+
+[node name="Puff229" parent="World/Clouds" unique_id=1435744948 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.5837374, 0, 0.041296158, 0, 2.98119, 0, -0.041296158, 0, -5.5837374, 81.70727, -17.60161, -107.65799)
+
+[node name="Puff230" parent="World/Clouds" unique_id=559822514 instance=ExtResource("25_mj62m")]
+transform = Transform3D(6.876813, 0, 2.3729725, 0, 4.02752, 0, -2.3729725, 0, 6.876813, 60.29712, 6.54887, -51.99091)
+
+[node name="Puff231" parent="World/Clouds" unique_id=265076505 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.8502803, 0, 5.7310762, 0, 4.61925, 0, -5.7310762, 0, 5.8502803, -66.56115, -10.60987, -94.46758)
+
+[node name="Puff232" parent="World/Clouds" unique_id=1383575989 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-2.3046594, 0, -9.365472, 0, 5.2112, 0, 9.365472, 0, -2.3046594, -68.52756, -11.60703, -101.72858)
+
+[node name="Puff233" parent="World/Clouds" unique_id=1113914303 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.5931635, 0, 6.405539, 0, 4.6646, 0, -6.405539, 0, 8.5931635, 71.79253, -6.37869, -104.34415)
+
+[node name="Puff234" parent="World/Clouds" unique_id=1901661379 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.2810154, 0, 7.1643996, 0, 3.83488, 0, -7.1643996, 0, 4.2810154, 71.11633, -7.8911, -99.11682)
+
+[node name="Puff235" parent="World/Clouds" unique_id=1936993312 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.769821, 0, 1.5410744, 0, 3.11547, 0, -1.5410744, 0, 5.769821, 66.53116, -5.8901, -96.52283)
+
+[node name="Puff236" parent="World/Clouds" unique_id=1294100386 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-1.3327062, 0, -4.9240675, 0, 2.53077, 0, 4.9240675, 0, -1.3327062, -57.73967, 7.62537, 46.63912)
+
+[node name="Puff237" parent="World/Clouds" unique_id=692545534 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.022154136, 0, 9.419564, 0, 4.13376, 0, -9.419564, 0, -0.022154136, -62.25649, 5.29147, 44.98358)
+
+[node name="Puff238" parent="World/Clouds" unique_id=1127357214 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.858723, 0, -7.801651, 0, 4.93162, 0, 7.801651, 0, -6.858723, -65.84508, 6.8539, 42.04998)
+
+[node name="Puff239" parent="World/Clouds" unique_id=1012313397 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-1.8757287, 0, 6.105976, 0, 2.84999, 0, -6.105976, 0, -1.8757287, -56.28693, 5.40947, 37.31954)
+
+[node name="Puff240" parent="World/Clouds" unique_id=1324485077 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.2477794, 0, -3.5409713, 0, 3.53932, 0, 3.5409713, 0, -6.2477794, 69.87952, -0.95283, -111.33167)
+
+[node name="Puff241" parent="World/Clouds" unique_id=1714068847 instance=ExtResource("23_dksua")]
+transform = Transform3D(1.7496674, 0, 8.19225, 0, 4.436, 0, -8.19225, 0, 1.7496674, 66.70164, -2.3113, -110.52314)
+
+[node name="Puff242" parent="World/Clouds" unique_id=1184028124 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.337649, 0, -4.5494223, 0, 5.0024, 0, 4.5494223, 0, -9.337649, 61.54948, -3.36572, -101.97804)
+
+[node name="Puff243" parent="World/Clouds" unique_id=33954086 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.5436432, 0, 6.6957164, 0, 3.37023, 0, -6.6957164, 0, 3.5436432, -58.11567, 5.14667, 30.63414)
+
+[node name="Puff244" parent="World/Clouds" unique_id=111200182 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.689614, 0, -6.455598, 0, 3.37458, 0, 6.455598, 0, -3.689614, 69.35554, -6.18757, -97.40637)
+
+[node name="Puff245" parent="World/Clouds" unique_id=1089882397 instance=ExtResource("23_dksua")]
+transform = Transform3D(2.911415, 0, 10.582298, 0, 5.55971, 0, -10.582298, 0, 2.911415, 71.1622, -7.97906, -106.49978)
+
+[node name="Puff246" parent="World/Clouds" unique_id=94151100 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.4106417, 0, -7.3755836, 0, 3.89754, 0, 7.3755836, 0, 3.4106417, 72.21758, -6.39365, -107.29947)
+
+[node name="Puff247" parent="World/Clouds" unique_id=173352866 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.7410659, 0, 6.9436364, 0, 3.2142, 0, -6.9436364, 0, 0.7410659, 72.63114, -7.88341, -108.43923)
+
+[node name="Puff248" parent="World/Clouds" unique_id=1834168882 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.1114402, 0, -7.347257, 0, 4.36083, 0, 7.347257, 0, 2.1114402, 76.45877, -8.62114, -90.46143)
+
+[node name="Puff249" parent="World/Clouds" unique_id=153642643 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-9.93213, 0, 2.5997205, 0, 4.3402, 0, -2.5997205, 0, -9.93213, 73.16474, -10.1008, -85.71847)
+
+[node name="Puff250" parent="World/Clouds" unique_id=600513217 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-2.2612355, 0, -6.769639, 0, 3.48888, 0, 6.769639, 0, -2.2612355, 82.88054, -8.37671, -91.6835)
+
+[node name="Puff251" parent="World/Clouds" unique_id=2096810830 instance=ExtResource("25_mj62m")]
+transform = Transform3D(2.5197618, 0, -5.0537424, 0, 2.56584, 0, 5.0537424, 0, 2.5197618, 73.42453, -0.91019, -99.29711)
+
+[node name="Puff252" parent="World/Clouds" unique_id=443156967 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.866904, 0, -0.8837726, 0, 4.17271, 0, 0.8837726, 0, 7.866904, 63.40458, -0.47827, -94.48953)
+
+[node name="Puff253" parent="World/Clouds" unique_id=215710761 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.14057834, 0, -6.0867267, 0, 2.88071, 0, 6.0867267, 0, -0.14057834, 71.18657, 0.4506, -98.79584)
+
+[node name="Puff254" parent="World/Clouds" unique_id=66753707 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-1.646184, 0, -6.703295, 0, 3.11981, 0, 6.703295, 0, -1.646184, -63.90738, -13.06208, -100.86921)
+
+[node name="Puff255" parent="World/Clouds" unique_id=688100573 instance=ExtResource("23_dksua")]
+transform = Transform3D(7.066105, 0, 5.2348557, 0, 3.88391, 0, -5.2348557, 0, 7.066105, -67.29095, -11.68216, -99.15932)
+
+[node name="Puff256" parent="World/Clouds" unique_id=1263948132 instance=ExtResource("23_dksua")]
+transform = Transform3D(4.5972495, 0, 6.559264, 0, 4.30282, 0, -6.559264, 0, 4.5972495, -66.76268, -12.49259, -97.29733)
+
+[node name="Puff257" parent="World/Clouds" unique_id=50540286 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.345079, 0, 2.7224462, 0, 3.80619, 0, -2.7224462, 0, -8.345079, -79.06868, -13.7242, -78.8515)
+
+[node name="Puff258" parent="World/Clouds" unique_id=506095269 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.0262122, 0, -7.2313423, 0, 3.56452, 0, 7.2313423, 0, -2.0262122, -76.44277, -12.42886, -83.31658)
+
+[node name="Puff259" parent="World/Clouds" unique_id=133099902 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.3751457, 0, 9.759469, 0, 5.10314, 0, -9.759469, 0, 2.3751457, -81.38098, -11.73153, -86.08414)
+
+[node name="Puff260" parent="World/Clouds" unique_id=2079957196 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.8355927, 0, 0.22580679, 0, 2.47711, 0, -0.22580679, 0, 5.8355927, 51.49814, -23.28823, -102.36161)
+
+[node name="Puff261" parent="World/Clouds" unique_id=1386929469 instance=ExtResource("25_mj62m")]
+transform = Transform3D(3.9031897, 0, 3.1528425, 0, 2.21354, 0, -3.1528425, 0, 3.9031897, 49.7274, -20.71711, -109.62134)
+
+[node name="Puff262" parent="World/Clouds" unique_id=1089074105 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.20444371, 0, 5.721278, 0, 2.94707, 0, -5.721278, 0, -0.20444371, 57.60381, -23.69653, -105.66874)
+
+[node name="Puff263" parent="World/Clouds" unique_id=257691381 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.73635, 0, 3.5468032, 0, 3.57741, 0, -3.5468032, 0, -6.73635, -60.90389, -21.17501, -103.49581)
+
+[node name="Puff264" parent="World/Clouds" unique_id=1071345117 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.119753025, 0, -7.513816, 0, 4.27013, 0, 7.513816, 0, -0.119753025, -69.46612, -19.03866, -111.91989)
+
+[node name="Puff265" parent="World/Clouds" unique_id=1743688789 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.365011, 0, 0.4463911, 0, 2.67076, 0, -0.4463911, 0, 5.365011, -59.45027, -22.75763, -106.29818)
+
+[node name="Puff266" parent="World/Clouds" unique_id=611528234 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-10.29599, 0, 3.8560312, 0, 5.36171, 0, -3.8560312, 0, -10.29599, -74.32626, -16.93706, 42.50248)
+
+[node name="Puff267" parent="World/Clouds" unique_id=1170472058 instance=ExtResource("24_dufxj")]
+transform = Transform3D(3.6963634, 0, -3.5002306, 0, 2.82201, 0, 3.5002306, 0, 3.6963634, -76.28578, -2.61056, -113.66679)
+
+[node name="Puff268" parent="World/Clouds" unique_id=797643090 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-6.14741, 0, -0.48305586, 0, 3.54183, 0, 0.48305586, 0, -6.14741, -71.85931, -3.48659, -105.50429)
+
+[node name="Puff269" parent="World/Clouds" unique_id=1937748595 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.4953144, 0, -7.2010455, 0, 3.23696, 0, 7.2010455, 0, -0.4953144, -67.67923, -3.62858, -115.39671)
+
+[node name="Puff270" parent="World/Clouds" unique_id=1213356714 instance=ExtResource("25_mj62m")]
+transform = Transform3D(1.0807936, 0, -10.462283, 0, 5.91232, 0, 10.462283, 0, 1.0807936, 68.68123, 6.97336, 9.05567)
+
+[node name="Puff271" parent="World/Clouds" unique_id=1203832252 instance=ExtResource("23_dksua")]
+transform = Transform3D(-5.316589, 0, 0.5335051, 0, 2.28617, 0, -0.5335051, 0, -5.316589, 57.40014, 5.47673, -86.35141)
+
+[node name="Puff272" parent="World/Clouds" unique_id=1189597198 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.8900146, 0, 8.566489, 0, 6.24266, 0, -8.566489, 0, 6.8900146, -67.7551, 6.77044, -50.9971)
+
+[node name="Puff273" parent="World/Clouds" unique_id=210461533 instance=ExtResource("24_dufxj")]
+transform = Transform3D(1.2656333, 0, -7.984311, 0, 3.56879, 0, 7.984311, 0, 1.2656333, -65.97769, 6.16613, -50.57195)
+
+[node name="Puff274" parent="World/Clouds" unique_id=1045275877 instance=ExtResource("23_dksua")]
+transform = Transform3D(-0.24750867, 0, -9.002998, 0, 4.28227, 0, 9.002998, 0, -0.24750867, -67.76944, 5.85242, -53.22429)
+
+[node name="Puff275" parent="World/Clouds" unique_id=2129269315 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.8403013, 0, 4.5025983, 0, 2.73747, 0, -4.5025983, 0, -3.8403013, 73.95458, -5.98699, -106.87148)
+
+[node name="Puff276" parent="World/Clouds" unique_id=1136191405 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.1332629, 0, 6.17943, 0, 3.52831, 0, -6.17943, 0, 2.1332629, 75.25083, -6.36315, -109.33643)
+
+[node name="Puff277" parent="World/Clouds" unique_id=660158487 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.379777, 0, -0.33733293, 0, 4.3097, 0, 0.33733293, 0, -9.379777, 78.79428, -8.2644, -102.80676)
+
+[node name="Puff278" parent="World/Clouds" unique_id=340351234 instance=ExtResource("23_dksua")]
+transform = Transform3D(2.2128003, 0, 10.568489, 0, 5.25451, 0, -10.568489, 0, 2.2128003, 77.0458, -5.7325, -107.26521)
+
+[node name="Puff279" parent="World/Clouds" unique_id=692153630 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.0253396, 0, -0.9668868, 0, 2.69282, 0, 0.9668868, 0, 5.0253396, 71.64036, 1.52955, -108.62594)
+
+[node name="Puff280" parent="World/Clouds" unique_id=1706878372 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.0168908, 0, 5.499284, 0, 2.92983, 0, -5.499284, 0, -3.0168908, 70.18578, 1.07272, -111.49789)
+
+[node name="Puff281" parent="World/Clouds" unique_id=1360283338 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.7709036, 0, 1.329594, 0, 3.36635, 0, -1.329594, 0, 5.7709036, 70.33509, 2.81602, -107.75616)
+
+[node name="Puff282" parent="World/Clouds" unique_id=1566492075 instance=ExtResource("23_dksua")]
+transform = Transform3D(2.8176167, 0, 5.6983294, 0, 3.04838, 0, -5.6983294, 0, 2.8176167, -77.16293, 6.81728, 4.36939)
+
+[node name="Puff283" parent="World/Clouds" unique_id=1673341369 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.28696004, 0, 10.372151, 0, 5.12793, 0, -10.372151, 0, -0.28696004, -54.09888, -1.13426, -108.55875)
+
+[node name="Puff284" parent="World/Clouds" unique_id=902426396 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.909469, 0, 3.9370859, 0, 4.21942, 0, -3.9370859, 0, 8.909469, -58.61072, -1.07606, -110.03772)
+
+[node name="Puff285" parent="World/Clouds" unique_id=1927428906 instance=ExtResource("25_mj62m")]
+transform = Transform3D(5.0879807, 0, 0.36211187, 0, 2.65517, 0, -0.36211187, 0, 5.0879807, 30.16134, 6.08033, -61.13893)
+
+[node name="Puff286" parent="World/Clouds" unique_id=943293696 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.149603, 0, -5.655446, 0, 3.99903, 0, 5.655446, 0, -6.149603, 31.0442, 6.78405, -67.97191)
+
+[node name="Puff287" parent="World/Clouds" unique_id=827548953 instance=ExtResource("23_dksua")]
+transform = Transform3D(-3.0797145, 0, 10.4433975, 0, 5.56565, 0, -10.4433975, 0, -3.0797145, -71.90024, -18.50829, -99.43992)
+
+[node name="Puff288" parent="World/Clouds" unique_id=1789301850 instance=ExtResource("24_dufxj")]
+transform = Transform3D(10.085368, 0, 0.8939619, 0, 4.74509, 0, -0.8939619, 0, 10.085368, -70.23646, -18.48906, -92.49955)
+
+[node name="Puff289" parent="World/Clouds" unique_id=1268502170 instance=ExtResource("23_dksua")]
+transform = Transform3D(8.026552, 0, 7.160388, 0, 5.08871, 0, -7.160388, 0, 8.026552, -49.25144, -14.62444, -105.71724)
+
+[node name="Puff290" parent="World/Clouds" unique_id=742230425 instance=ExtResource("23_dksua")]
+transform = Transform3D(4.594154, 0, -4.5930862, 0, 3.15098, 0, 4.5930862, 0, 4.594154, -53.24041, -13.92867, -105.83155)
+
+[node name="Puff291" parent="World/Clouds" unique_id=426080146 instance=ExtResource("24_dufxj")]
+transform = Transform3D(1.5987055, 0, -7.6523347, 0, 3.59858, 0, 7.6523347, 0, 1.5987055, -74.29872, -9.02862, -80.90803)
+
+[node name="Puff292" parent="World/Clouds" unique_id=202555595 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.954867, 0, 3.4915032, 0, 3.86842, 0, -3.4915032, 0, -6.954867, -76.25589, -9.33714, -85.50969)
+
+[node name="Puff293" parent="World/Clouds" unique_id=1176697388 instance=ExtResource("23_dksua")]
+transform = Transform3D(2.960391, 0, 8.3660555, 0, 4.12265, 0, -8.3660555, 0, 2.960391, -78.58983, -9.34804, -92.2292)
+
+[node name="Puff294" parent="World/Clouds" unique_id=252536475 instance=ExtResource("25_mj62m")]
+transform = Transform3D(1.7721604, 0, -7.6902504, 0, 4.02035, 0, 7.6902504, 0, 1.7721604, -48.60417, 5.65968, -29.19105)
+
+[node name="Puff295" parent="World/Clouds" unique_id=1973199637 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.058085, 0, -1.5689716, 0, 3.1589, 0, 1.5689716, 0, -6.058085, -53.11998, 5.21186, -25.55093)
+
+[node name="Puff296" parent="World/Clouds" unique_id=1871484834 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-3.8105297, 0, 6.671447, 0, 4.45496, 0, -6.671447, 0, -3.8105297, -78.75022, -2.07825, -85.97876)
+
+[node name="Puff297" parent="World/Clouds" unique_id=1522207807 instance=ExtResource("25_mj62m")]
+transform = Transform3D(5.1672697, 0, 3.235029, 0, 2.65456, 0, -3.235029, 0, 5.1672697, -77.8177, -4.30071, -87.75228)
+
+[node name="Puff298" parent="World/Clouds" unique_id=1231788699 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.38771, 0, 6.8584504, 0, 5.83284, 0, -6.8584504, 0, 8.38771, -70.9643, -3.14163, -86.0009)
+
+[node name="Puff299" parent="World/Clouds" unique_id=2063987520 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.451292, 0, -0.34264585, 0, 3.10822, 0, 0.34264585, 0, -5.451292, 77.29821, -24.64005, -93.74989)
+
+[node name="Puff300" parent="World/Clouds" unique_id=876788094 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.7416315, 0, 3.3543441, 0, 4.58984, 0, -3.3543441, 0, 7.7416315, 83.44047, -23.84183, -93.1234)
+
+[node name="Puff301" parent="World/Clouds" unique_id=691914704 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.037603, 0, 2.4828377, 0, 3.28564, 0, -2.4828377, 0, -7.037603, 83.80959, -24.58717, -86.79965)
+
+[node name="Puff302" parent="World/Clouds" unique_id=1479118045 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.8428361, 0, -5.512603, 0, 3.17552, 0, 5.512603, 0, 2.8428361, 73.92833, 5.18609, -97.57605)
+
+[node name="Puff303" parent="World/Clouds" unique_id=992856861 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-4.2463303, 0, -3.785437, 0, 3.13528, 0, 3.785437, 0, -4.2463303, 66.48195, 5.78323, -100.99234)
+
+[node name="Puff304" parent="World/Clouds" unique_id=340681897 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-0.8100667, 0, 5.076393, 0, 2.37998, 0, -5.076393, 0, -0.8100667, 73.51787, 3.04733, -96.47028)
+
+[node name="Puff305" parent="World/Clouds" unique_id=1552924717 instance=ExtResource("23_dksua")]
+transform = Transform3D(-3.4626935, 0, 5.9628983, 0, 3.90943, 0, -5.9628983, 0, -3.4626935, -67.62824, -12.68582, -112.01848)
+
+[node name="Puff306" parent="World/Clouds" unique_id=1551236184 instance=ExtResource("23_dksua")]
+transform = Transform3D(-5.515202, 0, -9.2627, 0, 5.16936, 0, 9.2627, 0, -5.515202, -75.15615, -11.22778, -106.43368)
+
+[node name="Puff307" parent="World/Clouds" unique_id=119462956 instance=ExtResource("24_dufxj")]
+transform = Transform3D(6.402256, 0, 5.6920834, 0, 4.85125, 0, -5.6920834, 0, 6.402256, -75.23389, -11.16051, -108.0031)
+
+[node name="Puff308" parent="World/Clouds" unique_id=2064889747 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.218819, 0, -5.11398, 0, 3.07693, 0, 5.11398, 0, -2.218819, -45.79157, 5.60805, -93.00644)
+
+[node name="Puff309" parent="World/Clouds" unique_id=610595081 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.321568, 0, 3.308884, 0, 3.14061, 0, -3.308884, 0, -6.321568, -53.47214, 6.9262, -98.90763)
+
+[node name="Puff310" parent="World/Clouds" unique_id=384970235 instance=ExtResource("23_dksua")]
+transform = Transform3D(4.8038764, 0, -6.3080626, 0, 3.4266, 0, 6.3080626, 0, 4.8038764, -51.00564, 7.23663, -89.98528)
+
+[node name="Puff311" parent="World/Clouds" unique_id=1203144776 instance=ExtResource("25_mj62m")]
+transform = Transform3D(7.89223, 0, -5.5960355, 0, 4.47404, 0, 5.5960355, 0, 7.89223, 47.28838, 5.24804, 6.25609)
+
+[node name="Puff312" parent="World/Clouds" unique_id=1868315720 instance=ExtResource("23_dksua")]
+transform = Transform3D(-3.2365942, 0, 3.8208528, 0, 2.80549, 0, -3.8208528, 0, -3.2365942, 41.61382, 5.39014, -2.29301)
+
+[node name="Puff313" parent="World/Clouds" unique_id=1577400258 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.40435144, 0, -6.4905367, 0, 2.7462, 0, 6.4905367, 0, 0.40435144, 37.67784, 6.05697, 5.34838)
+
+[node name="Puff314" parent="World/Clouds" unique_id=309645245 instance=ExtResource("25_mj62m")]
+transform = Transform3D(5.0055513, 0, -7.897276, 0, 4.63326, 0, 7.897276, 0, 5.0055513, 69.71042, -7.39169, -93.87852)
+
+[node name="Puff315" parent="World/Clouds" unique_id=1782052384 instance=ExtResource("25_mj62m")]
+transform = Transform3D(4.5249033, 0, 9.797367, 0, 5.2989, 0, -9.797367, 0, 4.5249033, 63.5829, -7.81861, -91.95467)
+
+[node name="Puff316" parent="World/Clouds" unique_id=277483743 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.19829163, 0, 6.92072, 0, 3.67888, 0, -6.92072, 0, 0.19829163, 58.90321, -8.09361, -101.87561)
+
+[node name="Puff317" parent="World/Clouds" unique_id=751528288 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.740069, 0, -2.0787258, 0, 4.08949, 0, 2.0787258, 0, 8.740069, 63.1145, -7.04741, -99.80443)
+
+[node name="Puff318" parent="World/Clouds" unique_id=1277093080 instance=ExtResource("24_dufxj")]
+transform = Transform3D(7.2788005, 0, 3.8575983, 0, 4.63005, 0, -3.8575983, 0, 7.2788005, 54.28843, -13.97568, -108.63848)
+
+[node name="Puff319" parent="World/Clouds" unique_id=516747458 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-6.9343133, 0, 2.3418117, 0, 4.23311, 0, -2.3418117, 0, -6.9343133, 57.18466, -13.23825, -112.55734)
+
+[node name="Puff320" parent="World/Clouds" unique_id=1150349127 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-3.5779703, 0, -4.149577, 0, 2.73865, 0, 4.149577, 0, -3.5779703, 58.7762, -14.79478, -113.36103)
+
+[node name="Puff321" parent="World/Clouds" unique_id=761214924 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.94697803, 0, 7.674113, 0, 3.9024, 0, -7.674113, 0, -0.94697803, 54.31298, -14.80962, -105.13584)
+
+[node name="Puff322" parent="World/Clouds" unique_id=1576617104 instance=ExtResource("23_dksua")]
+transform = Transform3D(-6.254341, 0, -1.617997, 0, 3.4931, 0, 1.617997, 0, -6.254341, 74.22762, -22.11591, -93.13973)
+
+[node name="Puff323" parent="World/Clouds" unique_id=1644912651 instance=ExtResource("23_dksua")]
+transform = Transform3D(-4.193124, 0, -9.133048, 0, 4.73047, 0, 9.133048, 0, -4.193124, 75.31733, -21.92865, -93.68672)
+
+[node name="Puff324" parent="World/Clouds" unique_id=1886114619 instance=ExtResource("23_dksua")]
+transform = Transform3D(8.168727, 0, 5.514032, 0, 4.92374, 0, -5.514032, 0, 8.168727, 73.07866, -19.8564, -89.8402)
+
+[node name="Puff325" parent="World/Clouds" unique_id=279568625 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.395943, 0, 5.4383745, 0, 5.32022, 0, -5.4383745, 0, -7.395943, 81.79447, -20.96301, -93.37505)
+
+[node name="Puff326" parent="World/Clouds" unique_id=607131323 instance=ExtResource("25_mj62m")]
+transform = Transform3D(0.67776895, 0, -9.420972, 0, 4.94558, 0, 9.420972, 0, 0.67776895, -65.33088, 2.11131, -97.06075)
+
+[node name="Puff327" parent="World/Clouds" unique_id=2129855800 instance=ExtResource("23_dksua")]
+transform = Transform3D(0.9024757, 0, 5.59166, 0, 3.13628, 0, -5.59166, 0, 0.9024757, -74.02497, -0.74579, -106.26236)
+
+[node name="Puff328" parent="World/Clouds" unique_id=2056366804 instance=ExtResource("23_dksua")]
+transform = Transform3D(6.0956154, 0, 5.4689198, 0, 4.62263, 0, -5.4689198, 0, 6.0956154, -67.69067, 1.81107, -103.93134)
+
+[node name="Puff329" parent="World/Clouds" unique_id=1800076282 instance=ExtResource("23_dksua")]
+transform = Transform3D(-7.60871, 0, 4.5858064, 0, 3.8079, 0, -4.5858064, 0, -7.60871, 6.49155, 7.55146, -90.72091)
+
+[node name="Puff330" parent="World/Clouds" unique_id=1941806357 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.730879, 0, -2.7006173, 0, 5.7422, 0, 2.7006173, 0, 9.730879, 9.57608, 6.84633, -96.20954)
+
+[node name="Puff331" parent="World/Clouds" unique_id=1308976132 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.5689363, 0, -8.020144, 0, 4.60671, 0, 8.020144, 0, -4.5689363, 0.14456, 6.01628, -89.71303)
+
+[node name="Puff332" parent="World/Clouds" unique_id=811342401 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-2.4789917, 0, -5.6350045, 0, 2.72577, 0, 5.6350045, 0, -2.4789917, 49.98968, 7.01541, -4.85082)
+
+[node name="Puff333" parent="World/Clouds" unique_id=1696753250 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-9.215579, 0, -5.157989, 0, 5.17327, 0, 5.157989, 0, -9.215579, 45.92041, 7.21484, -5.99609)
+
+[node name="Puff334" parent="World/Clouds" unique_id=1342329768 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.834831, 0, -2.7118652, 0, 3.96316, 0, 2.7118652, 0, -8.834831, 74.49036, 4.6776, -96.07498)
+
+[node name="Puff335" parent="World/Clouds" unique_id=653189683 instance=ExtResource("23_dksua")]
+transform = Transform3D(4.241449, 0, 4.238444, 0, 2.56128, 0, -4.238444, 0, 4.241449, 74.60874, 5.26617, -97.30581)
+
+[node name="Puff336" parent="World/Clouds" unique_id=1116278579 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.4032674, 0, 9.696133, 0, 5.87117, 0, -9.696133, 0, -4.4032674, 63.46852, 6.90103, -98.48456)
+
+[node name="Puff337" parent="World/Clouds" unique_id=549328074 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.5705271, 0, 6.3296795, 0, 3.00892, 0, -6.3296795, 0, -1.5705271, 70.62978, 4.36436, -89.88441)
+
+[node name="Puff338" parent="World/Clouds" unique_id=1898922078 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.2765126, 0, 5.6872783, 0, 4.16395, 0, -5.6872783, 0, -5.2765126, -35.94806, 7.60431, -19.16934)
+
+[node name="Puff339" parent="World/Clouds" unique_id=759649172 instance=ExtResource("24_dufxj")]
+transform = Transform3D(4.802468, 0, -7.856903, 0, 4.26068, 0, 7.856903, 0, 4.802468, 68.81282, -0.83596, -95.701)
+
+[node name="Puff340" parent="World/Clouds" unique_id=850581811 instance=ExtResource("23_dksua")]
+transform = Transform3D(3.3013425, 0, 7.262443, 0, 4.05387, 0, -7.262443, 0, 3.3013425, 70.54204, -1.5297, -96.45101)
+
+[node name="Puff341" parent="World/Clouds" unique_id=1134329173 instance=ExtResource("25_mj62m")]
+transform = Transform3D(3.4193754, 0, 9.483174, 0, 4.70681, 0, -9.483174, 0, 3.4193754, 68.82739, -2.19963, -93.61336)
+
+[node name="Puff342" parent="World/Clouds" unique_id=497758723 instance=ExtResource("25_mj62m")]
+transform = Transform3D(3.8094828, 0, 6.561616, 0, 3.50102, 0, -6.561616, 0, 3.8094828, 70.22761, -3.03234, -88.9762)
+
+[node name="Puff343" parent="World/Clouds" unique_id=1895099826 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.0741787, 0, 4.9410477, 0, 3.89301, 0, -4.9410477, 0, 5.0741787, 82.29064, 6.69396, -70.3313)
+
+[node name="Puff344" parent="World/Clouds" unique_id=27658310 instance=ExtResource("23_dksua")]
+transform = Transform3D(5.453561, 0, -7.785815, 0, 4.06819, 0, 7.785815, 0, 5.453561, 31.12139, 6.67174, -55.98801)
+
+[node name="Puff345" parent="World/Clouds" unique_id=1555792922 instance=ExtResource("25_mj62m")]
+transform = Transform3D(10.34086, 0, -0.8393686, 0, 5.87314, 0, 0.8393686, 0, 10.34086, 30.74563, 6.27739, -53.57755)
+
+[node name="Puff346" parent="World/Clouds" unique_id=167846608 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-4.786584, 0, 4.1074815, 0, 3.01665, 0, -4.1074815, 0, -4.786584, 29.96822, 5.18333, -50.70503)
+
+[node name="Puff347" parent="World/Clouds" unique_id=1697694211 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-0.13033025, 0, 10.35646, 0, 5.30973, 0, -10.35646, 0, -0.13033025, -57.60589, -0.34104, -104.55663)
+
+[node name="Puff348" parent="World/Clouds" unique_id=783542482 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.821978, 0, 5.619248, 0, 5.99459, 0, -5.619248, 0, 8.821978, -64.54259, -3.15465, -99.87482)
+
+[node name="Puff349" parent="World/Clouds" unique_id=144964618 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-4.9405317, 0, -2.5733364, 0, 2.92192, 0, 2.5733364, 0, -4.9405317, 62.50471, -23.48116, -107.31159)
+
+[node name="Puff350" parent="World/Clouds" unique_id=841995965 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.386878, 0, 0.38083124, 0, 4.84042, 0, -0.38083124, 0, 8.386878, 60.71341, -21.37482, -112.93686)
+
+[node name="Puff351" parent="World/Clouds" unique_id=1114831361 instance=ExtResource("24_dufxj")]
+transform = Transform3D(8.291948, 0, -6.951718, 0, 5.09489, 0, 6.951718, 0, 8.291948, 58.17683, -23.66585, -113.79982)
+
+[node name="Puff352" parent="World/Clouds" unique_id=2000303786 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.8909037, 0, 8.547247, 0, 4.0468, 0, -8.547247, 0, -1.8909037, 62.16619, -22.5762, -103.75956)
+
+[node name="Puff353" parent="World/Clouds" unique_id=2048106790 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-1.3517646, 0, -5.284572, 0, 2.50785, 0, 5.284572, 0, -1.3517646, -77.3622, 2.93395, -103.21294)
+
+[node name="Puff354" parent="World/Clouds" unique_id=46024122 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-4.182532, 0, 4.435743, 0, 2.7536, 0, -4.435743, 0, -4.182532, -69.37255, 2.54468, -106.84367)
+
+[node name="Puff355" parent="World/Clouds" unique_id=1401134141 instance=ExtResource("23_dksua")]
+transform = Transform3D(-2.7191489, 0, 6.0899744, 0, 3.43233, 0, -6.0899744, 0, -2.7191489, -79.40357, 3.94747, -108.95031)
+
+[node name="Puff356" parent="World/Clouds" unique_id=1924389646 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.9025135, 0, 4.58335, 0, 5.26212, 0, -4.58335, 0, -7.9025135, -72.66611, 3.19138, -107.82318)
+
+[node name="Puff357" parent="World/Clouds" unique_id=1419582106 instance=ExtResource("23_dksua")]
+transform = Transform3D(-9.32472, 0, -4.9946394, 0, 4.63902, 0, 4.9946394, 0, -9.32472, -49.03608, -15.59925, -113.81793)
+
+[node name="Puff358" parent="World/Clouds" unique_id=839648607 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-5.79457, 0, 1.4099518, 0, 2.79492, 0, -1.4099518, 0, -5.79457, -50.71404, 6.8414, -92.94073)
+
+[node name="Puff359" parent="World/Clouds" unique_id=611775020 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.019401, 0, -5.1172843, 0, 4.01342, 0, 5.1172843, 0, -7.019401, -53.06934, 5.40733, -83.12688)
+
+[node name="Puff360" parent="World/Clouds" unique_id=1921085955 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-7.0715337, 0, -4.0095506, 0, 3.97578, 0, 4.0095506, 0, -7.0715337, -49.7071, 5.46055, -89.30833)
+
+[node name="Puff361" parent="World/Clouds" unique_id=99902040 instance=ExtResource("23_dksua")]
+transform = Transform3D(-15.571292, 0, -17.674501, 0, 11.47328, 0, 17.674501, 0, -15.571292, -177.23401, -61.39505, 157.22313)
+
+[node name="Puff362" parent="World/Clouds" unique_id=1667401036 instance=ExtResource("25_mj62m")]
+transform = Transform3D(15.741544, 0, 16.071194, 0, 10.34312, 0, -16.071194, 0, 15.741544, 457.2616, -65.33847, 90.55474)
+
+[node name="Puff363" parent="World/Clouds" unique_id=777479368 instance=ExtResource("23_dksua")]
+transform = Transform3D(-1.1997471, 0, 26.22316, 0, 11.92829, 0, -26.22316, 0, -1.1997471, -188.8663, -28.42847, 101.15014)
+
+[node name="Puff364" parent="World/Clouds" unique_id=1519761317 instance=ExtResource("23_dksua")]
+transform = Transform3D(-19.003933, 0, 24.258623, 0, 13.99683, 0, -24.258623, 0, -19.003933, 154.30927, -48.53232, -12.64302)
+
+[node name="Puff365" parent="World/Clouds" unique_id=599735800 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-16.955023, 0, 24.48941, 0, 17.18872, 0, -24.48941, 0, -16.955023, -429.05746, -36.05006, 26.63838)
+
+[node name="Puff366" parent="World/Clouds" unique_id=1093400275 instance=ExtResource("23_dksua")]
+transform = Transform3D(-30.265692, 0, 1.0435922, 0, 15.50121, 0, -1.0435922, 0, -30.265692, -375.0384, -26.27355, 187.7858)
+
+[node name="Puff367" parent="World/Clouds" unique_id=37393606 instance=ExtResource("24_dufxj")]
+transform = Transform3D(9.701064, 0, -20.122387, 0, 12.94201, 0, 20.122387, 0, 9.701064, -159.31386, -14.90372, -382.0515)
+
+[node name="Puff368" parent="World/Clouds" unique_id=52522509 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-13.401837, 0, 37.37814, 0, 16.84839, 0, -37.37814, 0, -13.401837, -52.11808, -22.88235, 222.33208)
+
+[node name="Puff369" parent="World/Clouds" unique_id=237838539 instance=ExtResource("24_dufxj")]
+transform = Transform3D(35.037086, 0, 19.559761, 0, 20.55458, 0, -19.559761, 0, 35.037086, 109.91131, -45.91572, -219.8776)
+
+[node name="Puff370" parent="World/Clouds" unique_id=1905669314 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-9.071597, 0, 22.639416, 0, 10.46815, 0, -22.639416, 0, -9.071597, 282.10052, -61.15083, 176.47955)
+
+[node name="Puff371" parent="World/Clouds" unique_id=1545263656 instance=ExtResource("24_dufxj")]
+transform = Transform3D(36.534126, 0, 15.330236, 0, 20.97764, 0, -15.330236, 0, 36.534126, -211.37933, -34.73971, -12.76904)
+
+[node name="Puff372" parent="World/Clouds" unique_id=1230328679 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-30.566893, 0, -16.188154, 0, 17.81681, 0, 16.188154, 0, -30.566893, -225.04778, -30.90767, -48.66157)
+
+[node name="Puff373" parent="World/Clouds" unique_id=667130128 instance=ExtResource("23_dksua")]
+transform = Transform3D(2.1709962, 0, -30.27138, 0, 14.56602, 0, 30.27138, 0, 2.1709962, 360.67624, -67.8528, -134.011)
+
+[node name="Puff374" parent="World/Clouds" unique_id=74038306 instance=ExtResource("23_dksua")]
+transform = Transform3D(18.475945, 0, -34.041725, 0, 22.20674, 0, 34.041725, 0, 18.475945, 202.16231, -40.87544, -123.81097)
+
+[node name="Puff375" parent="World/Clouds" unique_id=1269262172 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.312283, 0, 29.837969, 0, 15.70293, 0, -29.837969, 0, 2.312283, 399.0953, -35.60111, -110.84569)
+
+[node name="Puff376" parent="World/Clouds" unique_id=1122464289 instance=ExtResource("23_dksua")]
+transform = Transform3D(16.017353, 0, 20.337166, 0, 10.96234, 0, -20.337166, 0, 16.017353, 401.33887, -36.62072, -109.34873)
+
+[node name="Puff377" parent="World/Clouds" unique_id=1655426626 instance=ExtResource("24_dufxj")]
+transform = Transform3D(2.8320029, 0, -25.068632, 0, 12.25035, 0, 25.068632, 0, 2.8320029, -19.22207, -63.37898, -279.68335)
+
+[node name="Puff378" parent="World/Clouds" unique_id=1531755374 instance=ExtResource("23_dksua")]
+transform = Transform3D(-8.908091, 0, -28.97502, 0, 13.12199, 0, 28.97502, 0, -8.908091, 140.92014, -16.04136, 264.61893)
+
+[node name="Puff379" parent="World/Clouds" unique_id=2097774545 instance=ExtResource("24_dufxj")]
+transform = Transform3D(29.905647, 0, -6.3239207, 0, 15.07277, 0, 6.3239207, 0, 29.905647, 37.54922, -41.22266, 242.78362)
+
+[node name="Puff380" parent="World/Clouds" unique_id=1240170977 instance=ExtResource("24_dufxj")]
+transform = Transform3D(18.181763, 0, -28.703651, 0, 17.62059, 0, 28.703651, 0, 18.181763, 236.04034, -59.74242, -224.98589)
+
+[node name="Puff381" parent="World/Clouds" unique_id=139973359 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-28.013344, 0, 15.819237, 0, 15.45947, 0, -15.819237, 0, -28.013344, 69.78303, -36.31071, -309.19336)
+
+[node name="Puff382" parent="World/Clouds" unique_id=1244679938 instance=ExtResource("24_dufxj")]
+transform = Transform3D(11.576592, 0, 18.658352, 0, 10.28583, 0, -18.658352, 0, 11.576592, 312.82736, -63.66716, 356.56128)
+
+[node name="Puff383" parent="World/Clouds" unique_id=1491696219 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-35.31319, 0, -0.8126194, 0, 15.81708, 0, 0.8126194, 0, -35.31319, 289.07574, -56.41329, -9.12035)
+
+[node name="Puff384" parent="World/Clouds" unique_id=527956485 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-3.862515, 0, 21.179619, 0, 11.81512, 0, -21.179619, 0, -3.862515, -177.82562, -17.36508, -448.26697)
+
+[node name="Puff385" parent="World/Clouds" unique_id=2011185378 instance=ExtResource("25_mj62m")]
+transform = Transform3D(20.62326, 0, -14.902665, 0, 10.81173, 0, 14.902665, 0, 20.62326, -429.49988, -47.61069, -137.8951)
+
+[node name="Puff386" parent="World/Clouds" unique_id=1528718507 instance=ExtResource("25_mj62m")]
+transform = Transform3D(19.990728, 0, -6.229299, 0, 9.85977, 0, 6.229299, 0, 19.990728, -240.1095, -64.38504, 67.47897)
+
+[node name="Puff387" parent="World/Clouds" unique_id=1138676076 instance=ExtResource("24_dufxj")]
+transform = Transform3D(21.279518, 0, -23.887459, 0, 17.81975, 0, 23.887459, 0, 21.279518, -58.31118, -30.61861, -227.89359)
+
+[node name="Puff388" parent="World/Clouds" unique_id=1822557681 instance=ExtResource("24_dufxj")]
+transform = Transform3D(26.291552, 0, -9.218108, 0, 13.47758, 0, 9.218108, 0, 26.291552, 234.66354, -27.03084, 221.86592)
+
+[node name="Puff389" parent="World/Clouds" unique_id=660702734 instance=ExtResource("25_mj62m")]
+transform = Transform3D(34.214348, 0, -17.180962, 0, 19.83103, 0, 17.180962, 0, 34.214348, 107.49104, -59.33575, -174.93906)
+
+[node name="Puff390" parent="World/Clouds" unique_id=520556423 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-28.686867, 0, -2.591018, 0, 13.1972, 0, 2.591018, 0, -28.686867, 182.88033, -17.77726, 62.19156)
+
+[node name="Puff391" parent="World/Clouds" unique_id=805881813 instance=ExtResource("23_dksua")]
+transform = Transform3D(22.668535, 0, -30.03418, 0, 21.2651, 0, 30.03418, 0, 22.668535, 296.90222, -22.44009, 225.05225)
+
+[node name="Puff392" parent="World/Clouds" unique_id=992800454 instance=ExtResource("23_dksua")]
+transform = Transform3D(-29.176105, 0, -22.358038, 0, 17.5697, 0, 22.358038, 0, -29.176105, -180.54749, -30.95736, 10.42393)
+
+[node name="Puff393" parent="World/Clouds" unique_id=735630022 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-32.43758, 0, -24.254808, 0, 20.20962, 0, 24.254808, 0, -32.43758, -394.53845, -68.64436, -260.41718)
+
+[node name="Puff394" parent="World/Clouds" unique_id=1848070006 instance=ExtResource("23_dksua")]
+transform = Transform3D(15.137763, 0, 22.081324, 0, 13.10144, 0, -22.081324, 0, 15.137763, -204.78674, -55.31156, 385.02347)
+
+[node name="Puff395" parent="World/Clouds" unique_id=1623683207 instance=ExtResource("25_mj62m")]
+transform = Transform3D(5.652516, 0, 30.523144, 0, 16.62031, 0, -30.523144, 0, 5.652516, -499.916, -16.06455, -21.7077)
+
+[node name="Puff396" parent="World/Clouds" unique_id=334897586 instance=ExtResource("23_dksua")]
+transform = Transform3D(-30.248564, 0, -22.976456, 0, 21.98012, 0, 22.976456, 0, -30.248564, 477.02472, -53.58657, -120.70142)
+
+[node name="Puff397" parent="World/Clouds" unique_id=1443253576 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-29.243898, 0, 27.623482, 0, 17.93882, 0, -27.623482, 0, -29.243898, 178.26212, -65.36695, 128.25813)
+
+[node name="Puff398" parent="World/Clouds" unique_id=2079320636 instance=ExtResource("23_dksua")]
+transform = Transform3D(-26.661526, 0, -21.46907, 0, 16.19869, 0, 21.46907, 0, -26.661526, -56.70801, -42.04435, -291.78522)
+
+[node name="Puff399" parent="World/Clouds" unique_id=1035517145 instance=ExtResource("24_dufxj")]
+transform = Transform3D(5.306599, 0, -21.494064, 0, 11.41468, 0, 21.494064, 0, 5.306599, 74.02508, -17.95025, -300.2897)
+
+[node name="Puff400" parent="World/Clouds" unique_id=1188238584 instance=ExtResource("25_mj62m")]
+transform = Transform3D(34.911915, 0, -21.339087, 0, 18.58063, 0, 21.339087, 0, 34.911915, 135.98534, -43.78386, -289.90033)
+
+[node name="Puff401" parent="World/Clouds" unique_id=508054056 instance=ExtResource("24_dufxj")]
+transform = Transform3D(33.07806, 0, 12.700106, 0, 15.00816, 0, -12.700106, 0, 33.07806, -96.93514, -31.13156, 44.91913)
+
+[node name="Puff402" parent="World/Clouds" unique_id=2068236648 instance=ExtResource("24_dufxj")]
+transform = Transform3D(26.984436, 0, 17.36773, 0, 16.43044, 0, -17.36773, 0, 26.984436, 82.53658, -39.3048, 164.88757)
+
+[node name="Puff403" parent="World/Clouds" unique_id=1611187460 instance=ExtResource("25_mj62m")]
+transform = Transform3D(11.446069, 0, -24.170952, 0, 15.13344, 0, 24.170952, 0, 11.446069, -219.60788, -24.4211, 227.37025)
+
+[node name="Puff404" parent="World/Clouds" unique_id=1703062152 instance=ExtResource("25_mj62m")]
+transform = Transform3D(6.285858, 0, 29.159416, 0, 12.72638, 0, -29.159416, 0, 6.285858, 318.03088, -39.47217, 329.95193)
+
+[node name="Puff405" parent="World/Clouds" unique_id=140035567 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-23.743757, 0, -23.238483, 0, 19.08107, 0, 23.238483, 0, -23.743757, 202.00864, -24.08225, -41.97546)
+
+[node name="Puff406" parent="World/Clouds" unique_id=634154926 instance=ExtResource("23_dksua")]
+transform = Transform3D(8.1404085, 0, 28.919464, 0, 16.48411, 0, -28.919464, 0, 8.1404085, -347.3972, -39.56137, -170.75946)
+
+[node name="Puff407" parent="World/Clouds" unique_id=1937602079 instance=ExtResource("24_dufxj")]
+transform = Transform3D(35.8397, 0, 6.370019, 0, 20.04705, 0, -6.370019, 0, 35.8397, 185.22894, -57.26614, 149.96265)
+
+[node name="Puff408" parent="World/Clouds" unique_id=411380642 instance=ExtResource("24_dufxj")]
+transform = Transform3D(19.301126, 0, 16.210558, 0, 12.82085, 0, -16.210558, 0, 19.301126, -154.46214, -45.58534, -92.57365)
+
+[node name="Puff409" parent="World/Clouds" unique_id=2111649212 instance=ExtResource("25_mj62m")]
+transform = Transform3D(33.203735, 0, -15.068369, 0, 19.25501, 0, 15.068369, 0, 33.203735, 53.18205, -54.53686, 284.12247)
+
+[node name="Puff410" parent="World/Clouds" unique_id=184063726 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-37.15373, 0, -17.46218, 0, 21.56421, 0, 17.46218, 0, -37.15373, 361.3563, -51.907, 274.2981)
+
+[node name="Puff411" parent="World/Clouds" unique_id=1933067250 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-28.13229, 0, -0.7155934, 0, 15.68555, 0, 0.7155934, 0, -28.13229, -228.37749, -24.77815, -318.01962)
+
+[node name="Puff412" parent="World/Clouds" unique_id=1576432196 instance=ExtResource("25_mj62m")]
+transform = Transform3D(17.972172, 0, -30.4673, 0, 16.81184, 0, 30.4673, 0, 17.972172, 186.78708, -64.29959, 135.40306)
+
+[node name="Puff413" parent="World/Clouds" unique_id=1463222262 instance=ExtResource("23_dksua")]
+transform = Transform3D(1.4422836, 0, -20.969267, 0, 10.10036, 0, 20.969267, 0, 1.4422836, 172.83833, -38.31464, -218.81673)
+
+[node name="Puff414" parent="World/Clouds" unique_id=914938919 instance=ExtResource("23_dksua")]
+transform = Transform3D(26.876286, 0, -14.036743, 0, 17.41784, 0, 14.036743, 0, 26.876286, 336.8623, -68.40926, -245.3699)
+
+[node name="Puff415" parent="World/Clouds" unique_id=1025056322 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-20.616402, 0, -6.94898, 0, 10.40258, 0, 6.94898, 0, -20.616402, 103.36953, -31.76377, -402.66888)
+
+[node name="Puff416" parent="World/Clouds" unique_id=293103491 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-22.68198, 0, -3.38274, 0, 11.31708, 0, 3.38274, 0, -22.68198, -272.74854, -38.10797, 123.17705)
+
+[node name="Puff417" parent="World/Clouds" unique_id=1294025946 instance=ExtResource("23_dksua")]
+transform = Transform3D(12.44232, 0, -19.5197, 0, 12.94963, 0, 19.5197, 0, 12.44232, 34.28261, -18.90323, -456.65683)
+
+[node name="Puff418" parent="World/Clouds" unique_id=403066479 instance=ExtResource("25_mj62m")]
+transform = Transform3D(8.132856, 0, 30.48634, 0, 17.14663, 0, -30.48634, 0, 8.132856, -256.49417, -46.38723, -264.62372)
+
+[node name="Puff419" parent="World/Clouds" unique_id=503749112 instance=ExtResource("24_dufxj")]
+transform = Transform3D(33.3993, 0, 7.0880423, 0, 14.51036, 0, -7.0880423, 0, 33.3993, 59.34769, -26.41197, -163.23254)
+
+[node name="Puff420" parent="World/Clouds" unique_id=219277384 instance=ExtResource("23_dksua")]
+transform = Transform3D(12.386398, 0, -32.588226, 0, 17.23132, 0, 32.588226, 0, 12.386398, -49.15417, -50.86032, 252.94444)
+
+[node name="Puff421" parent="World/Clouds" unique_id=21915071 instance=ExtResource("24_dufxj")]
+transform = Transform3D(6.926557, 0, 19.772604, 0, 10.71196, 0, -19.772604, 0, 6.926557, 404.15634, -53.77277, -118.32656)
+
+[node name="Puff422" parent="World/Clouds" unique_id=1413897332 instance=ExtResource("25_mj62m")]
+transform = Transform3D(23.622435, 0, 15.918535, 0, 14.49084, 0, -15.918535, 0, 23.622435, -181.2604, -55.20754, 4.19136)
+
+[node name="Puff423" parent="World/Clouds" unique_id=1676668583 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-18.376694, 0, -25.308155, 0, 16.21266, 0, 25.308155, 0, -18.376694, 255.50865, -43.06769, 198.21945)
+
+[node name="Puff424" parent="World/Clouds" unique_id=745083045 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-18.99558, 0, -27.15934, 0, 17.15933, 0, 27.15934, 0, -18.99558, -191.13602, -61.73292, -495.7073)
+
+[node name="Puff425" parent="World/Clouds" unique_id=698090658 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-16.011683, 0, -27.095106, 0, 17.39623, 0, 27.095106, 0, -16.011683, 306.46396, -53.36263, 165.2282)
+
+[node name="Puff426" parent="World/Clouds" unique_id=170195174 instance=ExtResource("23_dksua")]
+transform = Transform3D(-9.655364, 0, 20.655209, 0, 13.08439, 0, -20.655209, 0, -9.655364, 392.794, -32.25441, 21.29418)
+
+[node name="Puff427" parent="World/Clouds" unique_id=518490521 instance=ExtResource("25_mj62m")]
+transform = Transform3D(-1.1727217, 0, 33.31164, 0, 15.3764, 0, -33.31164, 0, -1.1727217, -276.13214, -35.57174, 386.573)
+
+[node name="Puff428" parent="World/Clouds" unique_id=2026618468 instance=ExtResource("24_dufxj")]
+transform = Transform3D(30.101698, 0, 3.094896, 0, 14.82649, 0, -3.094896, 0, 30.101698, 136.18169, -69.64343, 132.99706)
+
+[node name="Puff429" parent="World/Clouds" unique_id=315109137 instance=ExtResource("25_mj62m")]
+transform = Transform3D(17.748522, 0, -28.579227, 0, 17.43926, 0, 28.579227, 0, 17.748522, 224.1741, -16.78151, -149.64806)
+
+[node name="Puff430" parent="World/Clouds" unique_id=1051969046 instance=ExtResource("24_dufxj")]
+transform = Transform3D(-15.5645075, 0, -31.06069, 0, 16.17632, 0, 31.06069, 0, -15.5645075, 3.32471, -37.51679, 261.98117)
 
 [node name="CameraPoses" type="Node3D" parent="." unique_id=138513631]
 unique_name_in_owner = true
@@ -1367,3 +2240,5 @@ text = "Main menu"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Replay a world"
+
+[node name="SkyGlow" parent="." unique_id=449401204 instance=ExtResource("28_a1a6k")]

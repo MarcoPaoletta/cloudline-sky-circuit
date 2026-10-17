@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b0skc4advl6ga"]
+
+[ext_resource type="Shader" uid="uid://dtcdajgopg28v" path="res://resources/shaders/toon_surface.gdshader" id="1_kyyah"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_kyyah")
+shader_parameter/color_a = Color(0.99, 0.78, 0.5, 1)
+shader_parameter/color_b = Color(0.95, 0.72, 0.44, 1)
+shader_parameter/patch_scale = 0.28
+shader_parameter/patch_mix = 0.3
+shader_parameter/top_only_patches = false
+shader_parameter/top_gain = 1.0
+shader_parameter/shade_tint = Color(0.9, 0.72, 0.62, 1)
+shader_parameter/shade_amount = 0.55
+shader_parameter/band_center = 0.46
+shader_parameter/band_soft = 0.2
+shader_parameter/sun_gain = 0.95
+shader_parameter/rim_strength = 0.15
+shader_parameter/rim_power = 3.0
+shader_parameter/rim_color = Color(1, 0.95, 0.8, 1)
+shader_parameter/flat_faces = 1.0
+shader_parameter/gradient_height = 0.0
+shader_parameter/gradient_top_y = 0.0

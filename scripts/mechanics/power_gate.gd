@@ -5,6 +5,7 @@ extends AnimatableBody3D
 ## in the doorway.
 
 signal opened_changed(is_open: bool)
+signal latched_changed
 
 @export var channel: StringName = &"gate_a"
 @export var rise: float = 3.5
@@ -17,6 +18,9 @@ signal opened_changed(is_open: bool)
 var powered: bool = false
 var is_open: bool = false
 var progress: float = 0.0
+## Optional: a `LatchArea` child (Area3D) beyond the door holds it open once the player has passed, so the
+## head can be recalled for a fight without trapping anyone (GDD 5: safe latch before recall).
+var latched: bool = false
 var _leaf_rest: Vector3
 var _tween: Tween
 
@@ -26,6 +30,11 @@ func _ready() -> void:
 	add_to_group("power_" + String(channel))
 	if _leaf:
 		_leaf_rest = _leaf.position
+	var latch := get_node_or_null("LatchArea") as Area3D
+	if latch != null:
+		latch.body_entered.connect(_on_latch_entered)
+		# Only relay doors reset with the head; a balance island's exit gate follows its latched island.
+		add_to_group(&"resettable")
 
 
 func set_powered(on: bool) -> void:
@@ -37,8 +46,26 @@ func set_powered(on: bool) -> void:
 		var a := get_node_or_null("/root/Audio")
 		if a:
 			a.play_sfx(&"bridge_rise", -4.0)
-	elif not on and is_open:
+	elif not on and is_open and not latched:
 		_try_close()
+
+
+func _on_latch_entered(body: Node3D) -> void:
+	if latched or not is_open or not (body is Player):
+		return
+	latched = true
+	latched_changed.emit()
+	var a := get_node_or_null("/root/Audio")
+	if a:
+		a.play_sfx(&"latch", -2.0)
+
+
+## A latched door is a safe shortcut and stays open; an unlatched one follows the (reset) head.
+func reset_to_checkpoint() -> void:
+	if not latched:
+		powered = false
+		if is_open:
+			_try_close()
 
 
 func _try_close() -> void:

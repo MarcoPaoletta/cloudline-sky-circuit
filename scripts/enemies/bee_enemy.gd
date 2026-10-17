@@ -53,6 +53,7 @@ func _physics_process(delta: float) -> void:
 			if p and _can_notice(p):
 				state = State.WINDUP
 				_t = 0.0
+				windup_started.emit(self)
 				var a := get_node_or_null("/root/Audio")
 				if a:
 					a.play_sfx(&"enemy_windup", -6.0)

@@ -5,6 +5,8 @@ extends CharacterBody3D
 ## Concrete enemies (Crab, Bee, horde monsters, bosses) override the virtual hooks.
 
 signal defeated(enemy: EnemyBase)
+## Emitted when the enemy starts an attack wind-up (drives the first-wind-up guidance lines).
+signal windup_started(enemy: EnemyBase)
 
 @export_group("Enemy")
 @export var max_health: int = 1

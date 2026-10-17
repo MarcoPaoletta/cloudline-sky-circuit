@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cysavbjjk5j4i" path="res://scenes/ui/hud.tscn" id="7_i44es"]
 [ext_resource type="PackedScene" uid="uid://bxlxro8neihxa" path="res://scenes/arena/arena_hud.tscn" id="8_vqlm5"]
 [ext_resource type="PackedScene" uid="uid://ci74g456a105s" path="res://scenes/ui/pause_menu.tscn" id="9_edi2w"]
+[ext_resource type="PackedScene" uid="uid://dcy0n0ejc3jud" path="res://scenes/fx/sky_glow.tscn" id="10_mt5ck"]
 
 [node name="Arena3" type="Node3D" unique_id=1844559913]
 script = ExtResource("1_ey31x")
@@ -24,11 +25,13 @@ active_cap = 60
 environment = ExtResource("2_edi2w")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1639390938]
-transform = Transform3D(-0.70710677, -0.4353384, 0.55720776, 0, 0.7880108, 0.6156615, -0.70710677, 0.4353384, -0.55720776, 0, 0, 0)
+transform = Transform3D(-0.79863536, 0.18597108, -0.57236016, 0, 0.95105654, 0.309017, 0.601815, 0.24679194, -0.7595475, 0, 0, 0)
 light_color = Color(1, 0.94118, 0.84706, 1)
-light_energy = 1.25
+light_energy = 1.2
 light_angular_distance = 1.2
 shadow_enabled = true
+shadow_opacity = 0.62
+shadow_blur = 1.6
 directional_shadow_mode = 1
 directional_shadow_max_distance = 90.0
 
@@ -69,3 +72,5 @@ unique_name_in_owner = true
 
 [node name="PauseMenu" parent="." unique_id=744659784 instance=ExtResource("9_edi2w")]
 arena_mode = true
+
+[node name="SkyGlow" parent="." unique_id=449401204 instance=ExtResource("10_mt5ck")]

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cva4ukhaheit7"]
+
+[ext_resource type="PackedScene" uid="uid://vyrorppth0sr" path="res://assets/cloudline/platformer/Level and Mechanics/Bridge_Modular_Center.gltf" id="1_4xoqi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3fgri"]
+size = Vector3(3, 0.4, 2.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5sgc"]
+size = Vector3(3, 0.9, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tbh73"]
+size = Vector3(3, 0.9, 0.2)
+
+[node name="BridgeFlat" type="StaticBody3D" unique_id=1536300579]
+
+[node name="Deck" type="CollisionShape3D" parent="." unique_id=365260838]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+shape = SubResource("BoxShape3D_3fgri")
+
+[node name="RailL" type="CollisionShape3D" parent="." unique_id=1886209250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 1.1)
+shape = SubResource("BoxShape3D_g5sgc")
+
+[node name="RailR" type="CollisionShape3D" parent="." unique_id=1733644812]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, -1.1)
+shape = SubResource("BoxShape3D_tbh73")
+
+[node name="Piece" parent="." unique_id=105691469 instance=ExtResource("1_4xoqi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.93, 0)

@@ -132,6 +132,7 @@ func _do_chase(delta: float, p: Player) -> void:
 		_t = 0.0
 		velocity.x = 0.0
 		velocity.z = 0.0
+		windup_started.emit(self)
 		play_anim("Bite_InPlace", 0.45, 0.15)
 		var a := get_node_or_null("/root/Audio")
 		if a:

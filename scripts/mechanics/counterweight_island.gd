@@ -39,6 +39,13 @@ var _hold: float = 0.0
 func _ready() -> void:
 	sync_to_physics = true
 	add_to_group(&"resettable")
+	# One island, one channel: the exit gate listens on THIS island's channel, so several balance islands
+	# in a world never open each other's gates.
+	var gate := get_node_or_null("ExitGate")
+	if gate != null and gate.get("channel") != null and gate.channel != channel:
+		gate.remove_from_group("power_" + String(gate.channel))
+		gate.channel = channel
+		gate.add_to_group("power_" + String(channel))
 	_refresh_clamp()
 
 

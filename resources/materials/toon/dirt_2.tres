@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://imu82374u46f"]
+
+[ext_resource type="Shader" uid="uid://dtcdajgopg28v" path="res://resources/shaders/toon_surface.gdshader" id="1_qkn5w"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qkn5w")
+shader_parameter/color_a = Color(0.88, 0.6, 0.33, 1)
+shader_parameter/color_b = Color(0.84, 0.54, 0.28, 1)
+shader_parameter/patch_scale = 0.28
+shader_parameter/patch_mix = 0.3
+shader_parameter/top_only_patches = false
+shader_parameter/top_gain = 1.0
+shader_parameter/shade_tint = Color(0.88, 0.66, 0.58, 1)
+shader_parameter/shade_amount = 0.55
+shader_parameter/band_center = 0.46
+shader_parameter/band_soft = 0.2
+shader_parameter/sun_gain = 0.95
+shader_parameter/rim_strength = 0.12
+shader_parameter/rim_power = 3.0
+shader_parameter/rim_color = Color(1, 0.95, 0.8, 1)
+shader_parameter/flat_faces = 1.0
+shader_parameter/gradient_height = 0.0
+shader_parameter/gradient_top_y = 0.0
