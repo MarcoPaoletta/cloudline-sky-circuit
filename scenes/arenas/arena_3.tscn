@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dyipmuxtnm3xs" path="res://scenes/fx/paint_manager.tscn" id="6_1ridh"]
 [ext_resource type="PackedScene" uid="uid://cysavbjjk5j4i" path="res://scenes/ui/hud.tscn" id="7_i44es"]
 [ext_resource type="PackedScene" uid="uid://bxlxro8neihxa" path="res://scenes/arena/arena_hud.tscn" id="8_vqlm5"]
+[ext_resource type="PackedScene" uid="uid://ci74g456a105s" path="res://scenes/ui/pause_menu.tscn" id="9_edi2w"]
 
 [node name="Arena3" type="Node3D" unique_id=1844559913]
 script = ExtResource("1_ey31x")
@@ -65,3 +66,6 @@ unique_name_in_owner = true
 
 [node name="ArenaHud" parent="." unique_id=433408778 instance=ExtResource("8_vqlm5")]
 unique_name_in_owner = true
+
+[node name="PauseMenu" parent="." unique_id=744659784 instance=ExtResource("9_edi2w")]
+arena_mode = true

@@ -202,7 +202,7 @@ func _update_targeting() -> void:
 		if not best_sol.is_empty():
 			_show_arc(origin, best_sol["v"], best_sol["T"])
 		if hud:
-			hud.set_prompt(_prompt_owner, "Q", "Send head to the socket")
+			hud.set_prompt(_prompt_owner, Campaign.key_text(&"head_deploy"), "Send head to the socket")
 	else:
 		_hide_arc()
 		if hud and state == State.ATTACHED:
@@ -256,7 +256,7 @@ func _find_enemy(origin: Vector3, fwd: Vector3) -> Node:
 func _hide_prompt_if_needed() -> void:
 	var hud := _hud()
 	if hud:
-		hud.set_prompt(_prompt_owner, "Q", "Recall your head")
+		hud.set_prompt(_prompt_owner, Campaign.key_text(&"head_deploy"), "Recall your head")
 
 
 # ---------------------------------------------------------------- lob solver
@@ -483,7 +483,7 @@ func _on_head_seated(receiver: Node) -> void:
 	_say(&"relay_done")
 	var hud := _hud()
 	if hud:
-		hud.set_prompt(_prompt_owner, "Q", "Recall your head")
+		hud.set_prompt(_prompt_owner, Campaign.key_text(&"head_deploy"), "Recall your head")
 
 
 func _on_enemy_hit(enemy: Node, chain: int) -> void:

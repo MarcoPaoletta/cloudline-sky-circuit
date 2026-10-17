@@ -52,6 +52,13 @@ mouse_filter = 2
 color = Color(0.03922, 0.0902, 0.14902, 1)
 polygon = PackedVector2Array(3, 17, 19, 3, 19, 11, 31, 11, 31, 23, 19, 23, 19, 31)
 
+[node name="Text" type="Label" parent="Panel/Row/KeyLeft" unique_id=18710997]
+visible = false
+layout_mode = 2
+theme_type_variation = &"KeyLabel"
+text = "A"
+horizontal_alignment = 1
+
 [node name="KeyRight" type="PanelContainer" parent="Panel/Row" unique_id=1710522389]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(70, 58)
@@ -69,6 +76,13 @@ mouse_filter = 2
 [node name="Arrow" type="Polygon2D" parent="Panel/Row/KeyRight/Slot" unique_id=958221021]
 color = Color(0.03922, 0.0902, 0.14902, 1)
 polygon = PackedVector2Array(31, 17, 15, 3, 15, 11, 3, 11, 3, 23, 15, 23, 15, 31)
+
+[node name="Text" type="Label" parent="Panel/Row/KeyRight" unique_id=1433194415]
+visible = false
+layout_mode = 2
+theme_type_variation = &"KeyLabel"
+text = "A"
+horizontal_alignment = 1
 
 [node name="MoveLabel" type="Label" parent="Panel/Row" unique_id=391192841]
 layout_mode = 2

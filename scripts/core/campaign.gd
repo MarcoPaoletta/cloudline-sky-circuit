@@ -23,6 +23,18 @@ const ARENA_SCENES := {
 }
 const LEVEL_NAMES := {1: "Sunrise Junction", 2: "Cargo Gardens", 3: "Crown Circuit"}
 const ARENA_NAMES := {1: "Opening Burst", 2: "The Summoner", 3: "Twin Paintstorm"}
+const TITLE_SCENE := "res://scenes/ui/title_screen.tscn"
+## Actions the player may remap (keyboard / mouse). Pause, mute and the debug panel stay fixed.
+const REBINDABLE: Array[StringName] = [
+	&"move_forward", &"move_back", &"move_left", &"move_right", &"jump", &"head_deploy", &"head_attack",
+	&"aim_assist", &"fetch", &"interact", &"console_left", &"console_right",
+]
+const ACTION_LABELS := {
+	&"move_forward": "Move forward", &"move_back": "Move back", &"move_left": "Move left", &"move_right": "Move right",
+	&"jump": "Jump", &"head_deploy": "Send / recall head", &"head_attack": "Bowl head", &"aim_assist": "Aim assist (hold)",
+	&"fetch": "Fetch arm", &"interact": "Interact / dialogue", &"console_left": "Console: step left",
+	&"console_right": "Console: step right",
+}
 
 # --- Settings (persisted) ---
 var mouse_sensitivity: float = 1.0
@@ -41,6 +53,8 @@ var vol_master: float = 0.9
 var vol_sfx: float = 1.0
 var vol_ui: float = 1.0
 var vol_ambience: float = 1.0
+## action name -> {"t": "key" | "mouse", "c": physical keycode | button index}. Only overrides are stored.
+var bindings: Dictionary = {}
 
 # --- Progress (persisted) ---
 ## level -> {flag: bool, arena: bool, best_time: float, coins: Array[String], gems: Array[String]}
@@ -62,12 +76,15 @@ var run_collected: Dictionary = {}
 var debug_unlocked: bool = false
 ## Set by Retry Arena so the retried arena says its line (never restarts the platform world).
 var arena_retry_pending: bool = false
+## One-shot hint for the title screen: which panel to open first ("complete" after the final results).
+var title_view: StringName = &""
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_game()
 	apply_audio_settings()
+	apply_bindings()
 
 
 func _level(n: int) -> Dictionary:
@@ -119,6 +136,16 @@ func has_save() -> bool:
 	return FileAccess.file_exists(SAVE_PATH)
 
 
+## True once any flag was captured, any arena cleared or an arena is waiting (the title shows Continue / Worlds).
+func has_progress() -> bool:
+	if pending_arena > 0 or campaign_complete:
+		return true
+	for n in levels:
+		if bool(levels[n]["flag"]) or bool(levels[n]["arena"]):
+			return true
+	return false
+
+
 ## Where "Continue" should go: the pending arena, or the first level whose flag is not captured.
 func continue_target() -> Dictionary:
 	if pending_arena > 0:
@@ -166,6 +193,12 @@ func add_gem(level: int, id: String) -> bool:
 	run_gems += 1
 	progress_changed.emit()
 	return true
+
+
+## Debug / reward grant: raises the run total with normal HUD feedback but records no collectible id.
+func grant_coins(amount: int) -> void:
+	run_coins += amount
+	coins_changed.emit(run_coins)
 
 
 ## Banks the flag result. Returns true when this was the first capture (reward is not repeatable).
@@ -221,6 +254,120 @@ func notify_settings_changed() -> void:
 	save_game()
 
 
+# ---------------- Key bindings ----------------
+
+func apply_bindings() -> void:
+	for a in bindings:
+		var rec: Variant = bindings[a]
+		if rec is Dictionary:
+			_apply_binding(StringName(a), rec)
+	_sync_console_exit()
+
+
+## Console exit always follows the Interact key (plus Escape), so the console strip never lies.
+func _sync_console_exit() -> void:
+	var ie := primary_event(&"interact")
+	if ie == null or not InputMap.has_action(&"console_exit"):
+		return
+	for ev in InputMap.action_get_events(&"console_exit"):
+		if ev is InputEventKey or ev is InputEventMouseButton:
+			InputMap.action_erase_event(&"console_exit", ev)
+	InputMap.action_add_event(&"console_exit", ie.duplicate())
+	var esc := InputEventKey.new()
+	esc.physical_keycode = KEY_ESCAPE
+	InputMap.action_add_event(&"console_exit", esc)
+
+
+func _apply_binding(action: StringName, rec: Dictionary) -> void:
+	if not InputMap.has_action(action):
+		return
+	for ev in InputMap.action_get_events(action):
+		if ev is InputEventKey or ev is InputEventMouseButton:
+			InputMap.action_erase_event(action, ev)
+	var ne: InputEvent
+	if String(rec.get("t", "key")) == "mouse":
+		var m := InputEventMouseButton.new()
+		m.button_index = int(rec.get("c", 1)) as MouseButton
+		ne = m
+	else:
+		var k := InputEventKey.new()
+		k.physical_keycode = int(rec.get("c", 0)) as Key
+		ne = k
+	InputMap.action_add_event(action, ne)
+
+
+func _record_of(ev: InputEvent) -> Dictionary:
+	if ev is InputEventKey:
+		return {"t": "key", "c": int((ev as InputEventKey).physical_keycode)}
+	if ev is InputEventMouseButton:
+		return {"t": "mouse", "c": int((ev as InputEventMouseButton).button_index)}
+	return {}
+
+
+## The keyboard / mouse event currently bound to the action (null when none).
+func primary_event(action: StringName) -> InputEvent:
+	if not InputMap.has_action(action):
+		return null
+	for ev in InputMap.action_get_events(action):
+		if ev is InputEventKey or ev is InputEventMouseButton:
+			return ev
+	return null
+
+
+## Short readable name of the action's key, for prompts, dialogue and the controls list.
+func key_text(action: StringName) -> String:
+	var ev := primary_event(action)
+	if ev is InputEventKey:
+		var code: Key = (ev as InputEventKey).physical_keycode
+		var kc := DisplayServer.keyboard_get_keycode_from_physical(code)
+		var t := OS.get_keycode_string(kc if kc != KEY_NONE else code)
+		return t if t != "" else "?"
+	if ev is InputEventMouseButton:
+		match (ev as InputEventMouseButton).button_index:
+			MOUSE_BUTTON_LEFT:
+				return "LMB"
+			MOUSE_BUTTON_RIGHT:
+				return "RMB"
+			MOUSE_BUTTON_MIDDLE:
+				return "MMB"
+		return "Mouse %d" % (ev as InputEventMouseButton).button_index
+	return "-"
+
+
+## Rebinds an action to a key / mouse button. A key already used by another rebindable action is swapped so
+## no two actions ever share one key. Returns the other action that was swapped, or &"".
+func set_binding(action: StringName, event: InputEvent) -> StringName:
+	var rec := _record_of(event)
+	if rec.is_empty() or not REBINDABLE.has(action):
+		return &""
+	var swapped: StringName = &""
+	var old := primary_event(action)
+	for other in REBINDABLE:
+		if other == action:
+			continue
+		var oe := primary_event(other)
+		if oe != null and _record_of(oe) == rec:
+			swapped = other
+			if old != null:
+				var old_rec := _record_of(old)
+				bindings[String(other)] = old_rec
+				_apply_binding(other, old_rec)
+			break
+	bindings[String(action)] = rec
+	_apply_binding(action, rec)
+	_sync_console_exit()
+	save_game()
+	settings_changed.emit()
+	return swapped
+
+
+func reset_bindings() -> void:
+	bindings.clear()
+	InputMap.load_from_project_settings()
+	save_game()
+	settings_changed.emit()
+
+
 # ---------------- Save / load ----------------
 
 func save_game() -> void:
@@ -233,6 +380,7 @@ func save_game() -> void:
 			"no_recoil": no_recoil, "vol_master": vol_master, "vol_sfx": vol_sfx, "vol_ui": vol_ui,
 			"vol_ambience": vol_ambience,
 		},
+		"bindings": bindings,
 		"levels": levels,
 		"pending_arena": pending_arena,
 		"campaign_complete": campaign_complete,
@@ -272,6 +420,12 @@ func load_game() -> void:
 	vol_sfx = float(s.get("vol_sfx", vol_sfx))
 	vol_ui = float(s.get("vol_ui", vol_ui))
 	vol_ambience = float(s.get("vol_ambience", vol_ambience))
+	bindings.clear()
+	var bd: Variant = data.get("bindings", {})
+	if bd is Dictionary:
+		for a in bd:
+			if bd[a] is Dictionary and REBINDABLE.has(StringName(a)):
+				bindings[String(a)] = {"t": String(bd[a].get("t", "key")), "c": int(bd[a].get("c", 0))}
 	levels.clear()
 	var lv: Dictionary = data.get("levels", {})
 	for key in lv:

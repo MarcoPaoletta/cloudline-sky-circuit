@@ -1,0 +1,187 @@
+[gd_scene format=3 uid="uid://cxykvlrntjdk5"]
+
+[ext_resource type="Script" uid="uid://5gcyyf0d4iqw" path="res://scripts/core/debug_panel.gd" id="1_suag4"]
+
+[node name="DebugPanel" type="CanvasLayer" unique_id=1451316936]
+layer = 128
+visible = false
+script = ExtResource("1_suag4")
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=823264736]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(640, 0)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -680.0
+offset_top = 30.0
+offset_right = -40.0
+offset_bottom = 30.0
+grow_horizontal = 0
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="Panel" unique_id=878234518]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Box" unique_id=1622226045]
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "Dev panel (F1)"
+
+[node name="CoinsRow" type="HBoxContainer" parent="Panel/Box" unique_id=257340005]
+layout_mode = 2
+
+[node name="Coins100" type="Button" parent="Panel/Box/CoinsRow" unique_id=636782320]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+100 coins"
+
+[node name="Coins1000" type="Button" parent="Panel/Box/CoinsRow" unique_id=730849063]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+1000 coins"
+
+[node name="GotoLabel" type="Label" parent="Panel/Box" unique_id=1462062579]
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Go to world / arena"
+
+[node name="GotoRow" type="HBoxContainer" parent="Panel/Box" unique_id=1640645484]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="W1" type="Button" parent="Panel/Box/GotoRow" unique_id=79739774]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W1"
+
+[node name="W2" type="Button" parent="Panel/Box/GotoRow" unique_id=1567449874]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W2"
+
+[node name="W3" type="Button" parent="Panel/Box/GotoRow" unique_id=1530510346]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W3"
+
+[node name="A1" type="Button" parent="Panel/Box/GotoRow" unique_id=696569584]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A1"
+
+[node name="A2" type="Button" parent="Panel/Box/GotoRow" unique_id=591129948]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A2"
+
+[node name="A3" type="Button" parent="Panel/Box/GotoRow" unique_id=187838018]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "A3"
+
+[node name="PlayerRow" type="HBoxContainer" parent="Panel/Box" unique_id=1380594460]
+layout_mode = 2
+
+[node name="CheckpointButton" type="Button" parent="Panel/Box/PlayerRow" unique_id=352088605]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Next checkpoint"
+
+[node name="ResetPuzzleButton" type="Button" parent="Panel/Box/PlayerRow" unique_id=488381244]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset puzzle"
+
+[node name="PartsRow" type="HBoxContainer" parent="Panel/Box" unique_id=858180408]
+layout_mode = 2
+
+[node name="ReturnPartsButton" type="Button" parent="Panel/Box/PartsRow" unique_id=1861240057]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Return parts"
+
+[node name="InvulnButton" type="Button" parent="Panel/Box/PartsRow" unique_id=1580337113]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Invulnerable"
+
+[node name="UnlockButton" type="Button" parent="Panel/Box" unique_id=1238926819]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Unlock all progression"
+
+[node name="SpeedLabel" type="Label" parent="Panel/Box" unique_id=175567149]
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Local test speed"
+
+[node name="SpeedRow" type="HBoxContainer" parent="Panel/Box" unique_id=346265762]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Speed1" type="Button" parent="Panel/Box/SpeedRow" unique_id=1467770580]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "1x"
+
+[node name="Speed2" type="Button" parent="Panel/Box/SpeedRow" unique_id=894776223]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "2x"
+
+[node name="Speed4" type="Button" parent="Panel/Box/SpeedRow" unique_id=866522760]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "4x"
+
+[node name="EraseButton" type="Button" parent="Panel/Box" unique_id=1809319209]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Erase save / start over..."
+
+[node name="ConfirmRow" type="HBoxContainer" parent="Panel/Box" unique_id=1308493728]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="EraseYes" type="Button" parent="Panel/Box/ConfirmRow" unique_id=1889185540]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes, erase it all"
+
+[node name="EraseNo" type="Button" parent="Panel/Box/ConfirmRow" unique_id=1117008311]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PrimaryButton"
+text = "Cancel"
+
+[node name="Status" type="Label" parent="Panel/Box" unique_id=1122158859]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+autowrap_mode = 3
+
+[node name="CloseButton" type="Button" parent="Panel/Box" unique_id=925521786]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close"

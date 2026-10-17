@@ -28,7 +28,6 @@ enum State { STOWED, HELD, ROLLING, SEATED, RETURNING }
 @export var seat_time: float = 0.22
 
 @onready var _collision: CollisionShape3D = $Collision
-@onready var _visual: Node3D = $Visual
 @onready var _hit_area: Area3D = $HitArea
 @onready var _trail: GPUParticles3D = $Trail
 

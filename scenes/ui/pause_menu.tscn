@@ -1,0 +1,370 @@
+[gd_scene format=3 uid="uid://ci74g456a105s"]
+
+[ext_resource type="Script" uid="uid://bq8wmdoy7u8os" path="res://scripts/ui/pause_menu.gd" id="1_0lmf7"]
+[ext_resource type="PackedScene" uid="uid://dxsmm6ddnqrc1" path="res://scenes/ui/settings_panel.tscn" id="2_f6eus"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=744659784]
+layer = 20
+visible = false
+script = ExtResource("1_0lmf7")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=41343814]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.02, 0.05, 0.1, 0.62)
+
+[node name="MainPanel" type="PanelContainer" parent="." unique_id=178812898]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -400.0
+offset_right = 330.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="MainPanel" unique_id=2100536740]
+layout_mode = 2
+alignment = 1
+
+[node name="Heading" type="Label" parent="MainPanel/Box" unique_id=130511983]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="MainPanel/Box" unique_id=935992093]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "Resume"
+
+[node name="ControlsButton" type="Button" parent="MainPanel/Box" unique_id=880619759]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Controls"
+
+[node name="HintsButton" type="Button" parent="MainPanel/Box" unique_id=98411496]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Hint log"
+
+[node name="RestartCheckpointButton" type="Button" parent="MainPanel/Box" unique_id=122940985]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Restart from checkpoint"
+
+[node name="RestartLevelButton" type="Button" parent="MainPanel/Box" unique_id=1308252601]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Restart world"
+
+[node name="SettingsButton" type="Button" parent="MainPanel/Box" unique_id=1298874230]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Settings"
+
+[node name="TitleButton" type="Button" parent="MainPanel/Box" unique_id=1582404932]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(560, 66)
+layout_mode = 2
+text = "Return to title"
+
+[node name="Note" type="Label" parent="MainPanel/Box" unique_id=1526957463]
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "M mutes. Esc resumes."
+horizontal_alignment = 1
+
+[node name="ControlsPanel" type="PanelContainer" parent="." unique_id=1924476574]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -440.0
+offset_right = 540.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="ControlsPanel" unique_id=1951502649]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="ControlsPanel/Box" unique_id=931446118]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="ControlRows" type="VBoxContainer" parent="ControlsPanel/Box" unique_id=1713707199]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Row_move" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=128589637]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_move" unique_id=936315670]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Move"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_move" unique_id=150844111]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_look" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1164731729]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_look" unique_id=2036651164]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Look around"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_look" unique_id=1128530221]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_jump" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1571856153]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_jump" unique_id=2045750695]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Jump"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_jump" unique_id=2055332886]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_head_deploy" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1287385712]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_head_deploy" unique_id=1375060034]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Send / recall head"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_head_deploy" unique_id=1108978262]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_head_attack" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1023658030]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_head_attack" unique_id=241295688]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Bowl head"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_head_attack" unique_id=1618448657]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_aim_assist" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1872720510]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_aim_assist" unique_id=1298584037]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Aim assist (hold)"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_aim_assist" unique_id=977431606]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_fetch" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=61947418]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_fetch" unique_id=1225191035]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Fetch arm"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_fetch" unique_id=412646356]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_interact" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1422123642]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_interact" unique_id=1617631663]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Interact / dialogue"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_interact" unique_id=1475949961]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_console_step" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1582374140]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_console_step" unique_id=171872423]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Console: step left / right"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_console_step" unique_id=542741433]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_console_exit" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1651452070]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_console_exit" unique_id=1218736521]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Console: exit"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_console_exit" unique_id=1051841033]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_reset_local" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=734745657]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_reset_local" unique_id=560432413]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Reset nearby puzzle"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_reset_local" unique_id=583600417]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_objective_help" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1604207720]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_objective_help" unique_id=913819222]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Show goal distance"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_objective_help" unique_id=1371356225]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_pause" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=708945467]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_pause" unique_id=1181665844]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Pause"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_pause" unique_id=82631472]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="Row_toggle_mute" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1593603802]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_toggle_mute" unique_id=1217352878]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Mute / unmute"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_toggle_mute" unique_id=1535064828]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
+[node name="ControlsBackButton" type="Button" parent="ControlsPanel/Box" unique_id=597217721]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "Back"
+
+[node name="HintPanel" type="PanelContainer" parent="." unique_id=287314020]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -540.0
+offset_top = -400.0
+offset_right = 540.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="HintPanel" unique_id=1784330285]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HintPanel/Box" unique_id=1520750257]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Hint log"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="HintPanel/Box" unique_id=1885035793]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="HintText" type="Label" parent="HintPanel/Box/Scroll" unique_id=2107020191]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(980, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="HintsBackButton" type="Button" parent="HintPanel/Box" unique_id=347343607]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "Back"
+
+[node name="Settings" parent="." unique_id=759789730 instance=ExtResource("2_f6eus")]
+unique_name_in_owner = true
+visible = false

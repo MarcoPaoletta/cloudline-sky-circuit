@@ -5,8 +5,8 @@ extends Control
 @onready var _panel: PanelContainer = %Panel
 @onready var _left: Control = %KeyLeft
 @onready var _right: Control = %KeyRight
-@onready var _exit: Control = %KeyExit
 @onready var _message: Label = %Message
+@onready var _exit_label: Label = %KeyExit.get_node("Label")
 
 var _tween: Tween
 var _msg_tween: Tween
@@ -20,7 +20,25 @@ func _ready() -> void:
 	_message.modulate.a = 0.0
 
 
+## Key caps always show the player's real keys: arrow glyphs while Left/Right are unchanged, text once remapped.
+func _refresh_keys() -> void:
+	_exit_label.text = Campaign.key_text(&"interact")
+	for pair in [[_left, &"console_left", "Left"], [_right, &"console_right", "Right"]]:
+		var cap: Control = pair[0]
+		var txt := cap.get_node_or_null("Text") as Label
+		var slot := cap.get_node_or_null("Slot") as Control
+		var k: String = Campaign.key_text(pair[1])
+		var remapped: bool = k != pair[2]
+		if txt != null:
+			txt.visible = remapped
+			txt.text = k
+		if slot != null:
+			slot.visible = not remapped
+
+
 func show_strip(on: bool) -> void:
+	if on:
+		_refresh_keys()
 	shown = on
 	if _tween and _tween.is_valid():
 		_tween.kill()

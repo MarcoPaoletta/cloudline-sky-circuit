@@ -165,7 +165,7 @@ func _set_candidate(n: Node) -> void:
 			n.set_highlight(true)
 		var heavy: bool = n.fetch_kind() == &"heavy"
 		if hud:
-			hud.set_prompt(&"fetch", "F", "Pull the crate" if heavy else "Fetch")
+			hud.set_prompt(&"fetch", Campaign.key_text(&"fetch"), "Pull the crate" if heavy else "Fetch")
 		get_tree().call_group(&"dialogue_panel", "say", &"cargo_hint" if heavy else &"fetch_hint")
 	elif hud:
 		hud.clear_prompt(&"fetch")

@@ -131,9 +131,25 @@ func _enqueue(entry: Dictionary) -> void:
 		_queue.pop_back()
 
 
+## Replaces {action} tokens with the player's current key names; {action:click} reads "click" for the left
+## mouse button. Prompts and the hint log therefore always match remapped controls.
+static func localize(text: String) -> String:
+	var out := text
+	for action in [&"head_deploy", &"head_attack", &"fetch", &"interact", &"console_left", &"console_right", &"jump", &"aim_assist"]:
+		var k: String = Campaign.key_text(action)
+		var click: String = "click" if k == "LMB" else ("right-click" if k == "RMB" else "press " + k)
+		out = out.replace("{%s:click}" % action, click)
+		out = out.replace("{%s}" % action, k)
+	return out
+
+
 func _start(entry: Dictionary) -> void:
+	entry["text"] = localize(entry["text"])
 	_current = entry
 	Campaign.mark_dialogue(entry["id"], entry["text"])
+	var key_label := _key_hint.get_node_or_null("Label") as Label
+	if key_label != null:
+		key_label.text = Campaign.key_text(&"interact")
 	var size_px := int(round(base_font_size * Campaign.text_scale))
 	_text.add_theme_font_size_override("font_size", size_px)
 	_text.text = entry["text"]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bu1ddd063unjf"]
+
+[ext_resource type="Script" uid="uid://cmlar65588rvr" path="res://scripts/ui/title_robot.gd" id="1_l1r53"]
+[ext_resource type="PackedScene" uid="uid://kplrt8jl3pwn" path="res://assets/cloudline/robot/Robot.fbx" id="2_0auxm"]
+
+[node name="TitleRobot" type="Node3D" unique_id=948776452]
+script = ExtResource("1_l1r53")
+
+[node name="Robot" parent="." unique_id=891737305 instance=ExtResource("2_0auxm")]
+transform = Transform3D(0.345, 0, 0, 0, 0.345, 0, 0, 0, 0.345, 0, 0, 0)

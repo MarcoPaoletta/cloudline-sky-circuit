@@ -22,11 +22,11 @@ outer_radius = 1.6
 rings = 28
 ring_segments = 6
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_7n3kh"]
-top_radius = 0.32
-bottom_radius = 0.38
+[sub_resource type="CylinderMesh" id="CylinderMesh_n8h5s"]
+top_radius = 0.45
+bottom_radius = 0.62
 height = 42.0
-radial_segments = 10
+radial_segments = 12
 cap_top = false
 cap_bottom = false
 
@@ -55,4 +55,4 @@ mesh = SubResource("TorusMesh_5ep75")
 [node name="Beam" type="MeshInstance3D" parent="." unique_id=1350838343]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21, 0)
 material_override = ExtResource("5_pqi0v")
-mesh = SubResource("CylinderMesh_7n3kh")
+mesh = SubResource("CylinderMesh_n8h5s")

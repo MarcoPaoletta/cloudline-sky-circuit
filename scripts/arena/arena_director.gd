@@ -109,6 +109,11 @@ func _ready() -> void:
 	counts_changed.emit(0, _total_unreleased())
 
 
+## True once the arena is decided (victory or defeat): the pause menu stays closed behind the results.
+func is_over() -> bool:
+	return phase == Phase.VICTORY or phase == Phase.DEFEAT
+
+
 func total_planned() -> int:
 	var t := 0
 	for c in wave_counts:
@@ -266,7 +271,7 @@ func _spawn_summon_now() -> void:
 	if Vector2(pos.x, pos.z).length() > 22.0:
 		pos = Vector3(pos.x, 0.1, pos.z) * (22.0 / maxf(Vector2(pos.x, pos.z).length(), 0.1))
 	var face := (_player.global_position - pos)
-	var e := _spawn_enemy(pos, face)
+	_spawn_enemy(pos, face)
 	get_tree().call_group(&"paint_manager", "enemy_splash", pos, 3, 0.55, Vector3.ZERO)
 
 

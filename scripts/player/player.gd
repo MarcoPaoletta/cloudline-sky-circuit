@@ -47,6 +47,8 @@ var mode: int = Mode.EXPLORE
 var health: int = 3
 var move_input: Vector2 = Vector2.ZERO
 var input_enabled: bool = true
+## Dev panel (F1) only: ignore all damage.
+var debug_invulnerable: bool = false
 
 var _gravity: float = 20.0
 var _coyote: float = 0.0
@@ -169,7 +171,7 @@ func revive() -> void:
 
 ## Returns true when damage was accepted. One accepted contact removes one pip.
 func take_damage(amount: int = 1, from_pos: Vector3 = Vector3.INF) -> bool:
-	if _invuln > 0.0 or mode == Mode.DEAD or mode == Mode.CONSOLE:
+	if debug_invulnerable or _invuln > 0.0 or mode == Mode.DEAD or mode == Mode.CONSOLE:
 		return false
 	health = maxi(health - amount, 0)
 	_invuln = invulnerable_time

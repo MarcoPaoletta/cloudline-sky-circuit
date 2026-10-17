@@ -1,0 +1,561 @@
+[gd_scene format=3 uid="uid://dxsmm6ddnqrc1"]
+
+[ext_resource type="Script" uid="uid://btdtjeeuyggyb" path="res://scripts/ui/settings_panel.gd" id="1_dbor5"]
+
+[node name="SettingsPanel" type="Control" unique_id=759789730]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbor5")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=2122110071]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.02, 0.05, 0.1, 0.55)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=2133624322]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -450.0
+offset_right = 600.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ScreenPanel"
+
+[node name="Box" type="VBoxContainer" parent="Panel" unique_id=1559883567]
+layout_mode = 2
+
+[node name="Heading" type="Label" parent="Panel/Box" unique_id=155981145]
+layout_mode = 2
+theme_type_variation = &"HeadingLabel"
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Box" unique_id=2119664596]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="List" type="VBoxContainer" parent="Panel/Box/Scroll" unique_id=1513763264]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AudioHead" type="Label" parent="Panel/Box/Scroll/List" unique_id=142057793]
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "Audio"
+
+[node name="AudioNote" type="Label" parent="Panel/Box/Scroll/List" unique_id=1610990644]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "The game starts muted every time. Press M on any screen to turn sound on or off."
+autowrap_mode = 3
+
+[node name="MasterRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=1242550700]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/MasterRow" unique_id=902587388]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Master volume"
+
+[node name="MasterSlider" type="HSlider" parent="Panel/Box/Scroll/List/MasterRow" unique_id=33046286]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="MasterValue" type="Label" parent="Panel/Box/Scroll/List/MasterRow" unique_id=394281778]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="SfxRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=749773030]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/SfxRow" unique_id=267452079]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Effects"
+
+[node name="SfxSlider" type="HSlider" parent="Panel/Box/Scroll/List/SfxRow" unique_id=194814575]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="SfxValue" type="Label" parent="Panel/Box/Scroll/List/SfxRow" unique_id=1112034990]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="UiRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=350032461]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/UiRow" unique_id=1783687759]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Interface"
+
+[node name="UiSlider" type="HSlider" parent="Panel/Box/Scroll/List/UiRow" unique_id=608181861]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="UiValue" type="Label" parent="Panel/Box/Scroll/List/UiRow" unique_id=1753042453]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="AmbienceRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=110365780]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/AmbienceRow" unique_id=587776932]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Ambience"
+
+[node name="AmbienceSlider" type="HSlider" parent="Panel/Box/Scroll/List/AmbienceRow" unique_id=257557427]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="AmbienceValue" type="Label" parent="Panel/Box/Scroll/List/AmbienceRow" unique_id=1450929418]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="AimHead" type="Label" parent="Panel/Box/Scroll/List" unique_id=1899302803]
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "Camera and aiming"
+
+[node name="SensitivityRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=359220217]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/SensitivityRow" unique_id=518165567]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Mouse sensitivity"
+
+[node name="SensitivitySlider" type="HSlider" parent="Panel/Box/Scroll/List/SensitivityRow" unique_id=517700790]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.25
+max_value = 2.5
+step = 0.05
+value = 0.25
+
+[node name="SensitivityValue" type="Label" parent="Panel/Box/Scroll/List/SensitivityRow" unique_id=296638479]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="InvertYRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=90147024]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/InvertYRow" unique_id=1089157432]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Invert vertical look"
+
+[node name="InvertYToggle" type="Button" parent="Panel/Box/Scroll/List/InvertYRow" unique_id=449840010]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="AimAssistRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=1355368800]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/AimAssistRow" unique_id=728412287]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Aim assist"
+
+[node name="AimAssistToggle" type="Button" parent="Panel/Box/Scroll/List/AimAssistRow" unique_id=1991977221]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="HoldAimRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=1160215706]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/HoldAimRow" unique_id=912965922]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Hold to aim (off: toggle)"
+
+[node name="HoldAimToggle" type="Button" parent="Panel/Box/Scroll/List/HoldAimRow" unique_id=1240875028]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="HoldBowlRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=1330061491]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/HoldBowlRow" unique_id=1326603076]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Keep bowling while held"
+
+[node name="HoldBowlToggle" type="Button" parent="Panel/Box/Scroll/List/HoldBowlRow" unique_id=884938991]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="ComfortHead" type="Label" parent="Panel/Box/Scroll/List" unique_id=1990046007]
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "Comfort and text"
+
+[node name="TextScaleRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=1837714016]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/TextScaleRow" unique_id=1875042090]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Text size"
+
+[node name="TextScaleSlider" type="HSlider" parent="Panel/Box/Scroll/List/TextScaleRow" unique_id=1039674356]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.8
+max_value = 1.5
+step = 0.05
+value = 0.8
+
+[node name="TextScaleValue" type="Label" parent="Panel/Box/Scroll/List/TextScaleRow" unique_id=1117332794]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="InstantTextRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=150446146]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/InstantTextRow" unique_id=1102702542]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Show dialogue instantly"
+
+[node name="InstantTextToggle" type="Button" parent="Panel/Box/Scroll/List/InstantTextRow" unique_id=455642625]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="ReducedMotionRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=541715602]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/ReducedMotionRow" unique_id=748015458]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Reduced camera motion"
+
+[node name="ReducedMotionToggle" type="Button" parent="Panel/Box/Scroll/List/ReducedMotionRow" unique_id=1507555705]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="ReducedFlashRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=566174629]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/ReducedFlashRow" unique_id=495187529]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Reduced flashes"
+
+[node name="ReducedFlashToggle" type="Button" parent="Panel/Box/Scroll/List/ReducedFlashRow" unique_id=1350301499]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="ShakeRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=312879829]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/ShakeRow" unique_id=77587502]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Camera shake"
+
+[node name="ShakeSlider" type="HSlider" parent="Panel/Box/Scroll/List/ShakeRow" unique_id=1737587546]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(380, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.05
+
+[node name="ShakeValue" type="Label" parent="Panel/Box/Scroll/List/ShakeRow" unique_id=97006578]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="NoRecoilRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=2092846613]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/NoRecoilRow" unique_id=2010279055]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "No hit recoil"
+
+[node name="NoRecoilToggle" type="Button" parent="Panel/Box/Scroll/List/NoRecoilRow" unique_id=1535051308]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
+[node name="KeysSectionHead" type="Label" parent="Panel/Box/Scroll/List" unique_id=721007128]
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "Keys"
+
+[node name="KeysNote" type="Label" parent="Panel/Box/Scroll/List" unique_id=1975647068]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_type_variation = &"HintLabel"
+text = "Click a key, then press the new one. Esc cancels. Keys swap if two actions would clash."
+autowrap_mode = 3
+
+[node name="Keys" type="VBoxContainer" parent="Panel/Box/Scroll/List" unique_id=868245225]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Row_move_forward" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=1152346812]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_move_forward" unique_id=1118573869]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "move_forward"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_move_forward" unique_id=2036916609]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_move_back" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=555163518]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_move_back" unique_id=1752429853]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "move_back"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_move_back" unique_id=173913761]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_move_left" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=1163460892]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_move_left" unique_id=1691654717]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "move_left"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_move_left" unique_id=1925748962]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_move_right" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=872030494]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_move_right" unique_id=2003436875]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "move_right"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_move_right" unique_id=1602637398]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_jump" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=11875974]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_jump" unique_id=849758928]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "jump"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_jump" unique_id=12244042]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_head_deploy" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=807104422]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_head_deploy" unique_id=1674279194]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "head_deploy"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_head_deploy" unique_id=184463198]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_head_attack" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=701659995]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_head_attack" unique_id=1890779394]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "head_attack"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_head_attack" unique_id=1207778766]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_aim_assist" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=691588248]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_aim_assist" unique_id=2146872867]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "aim_assist"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_aim_assist" unique_id=109297286]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_fetch" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=1609877964]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_fetch" unique_id=747761630]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "fetch"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_fetch" unique_id=1475124628]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_interact" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=655423064]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_interact" unique_id=1246586917]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "interact"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_interact" unique_id=1102967805]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_console_left" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=1561516751]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_console_left" unique_id=1980174426]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "console_left"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_console_left" unique_id=1417176088]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Row_console_right" type="HBoxContainer" parent="Panel/Box/Scroll/List/Keys" unique_id=376962136]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/Keys/Row_console_right" unique_id=1423846096]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "console_right"
+
+[node name="Bind" type="Button" parent="Panel/Box/Scroll/List/Keys/Row_console_right" unique_id=53059799]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+text = "-"
+
+[node name="Buttons" type="HBoxContainer" parent="Panel/Box" unique_id=1259920193]
+layout_mode = 2
+alignment = 1
+
+[node name="ResetKeysButton" type="Button" parent="Panel/Box/Buttons" unique_id=2092066933]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset keys"
+
+[node name="BackButton" type="Button" parent="Panel/Box/Buttons" unique_id=945181427]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "Back"

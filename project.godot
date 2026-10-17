@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Cloudline: The Sky Circuit"
 config/description="A little yellow robot takes itself apart to reconnect a broken sky."
+run/main_scene="res://scenes/ui/title_screen.tscn"
 config/features=PackedStringArray("4.7", "Mobile")
 boot_splash/bg_color=Color(0.52157, 0.81961, 0.99216, 1)
 config/icon="res://icon.svg"
@@ -21,6 +22,7 @@ config/icon="res://icon.svg"
 Audio="*res://scenes/core/audio.tscn"
 Campaign="*res://scripts/core/campaign.gd"
 ScreenTransition="*res://scenes/core/screen_transition.tscn"
+DebugPanel="*res://scenes/core/debug_panel.tscn"
 
 [display]
 
@@ -211,7 +213,7 @@ project/editorState=[{
 "column": 0,
 "current": true,
 "line": 0,
-"path": "gdscript://-9223371928457180228.gd",
+"path": "gdscript://-9223371585279228018.gd",
 "transient": true,
 "type": "file"
 }]

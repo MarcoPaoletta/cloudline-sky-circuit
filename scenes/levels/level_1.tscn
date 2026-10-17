@@ -38,6 +38,7 @@
 [ext_resource type="Material" uid="uid://ddo71i18hu4ch" path="res://resources/materials/cloud_white.tres" id="32_hvllt"]
 [ext_resource type="PackedScene" uid="uid://cmaggdjxx76h0" path="res://assets/cloudline/platformer/Nature/Cloud_2.gltf" id="32_yvv08"]
 [ext_resource type="PackedScene" uid="uid://ccxobh1k7meyj" path="res://assets/cloudline/platformer/Nature/Cloud_3.gltf" id="33_bccrp"]
+[ext_resource type="PackedScene" uid="uid://ci74g456a105s" path="res://scenes/ui/pause_menu.tscn" id="39_hvllt"]
 
 [node name="Level1" type="Node3D" unique_id=135687879]
 script = ExtResource("1_6761a")
@@ -1414,3 +1415,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 55)
 
 [node name="Hud" parent="." unique_id=842138425 instance=ExtResource("6_sk5k4")]
 unique_name_in_owner = true
+
+[node name="PauseMenu" parent="." unique_id=744659784 instance=ExtResource("39_hvllt")]
