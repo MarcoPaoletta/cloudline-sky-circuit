@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://dh54y2dccsu1d"]
+
+[ext_resource type="Script" uid="uid://blr3t512lnxnh" path="res://scripts/enemies/crab_enemy.gd" id="1_ohxrl"]
+[ext_resource type="PackedScene" uid="uid://dy4l8jn5uxm6v" path="res://assets/cloudline/monsters/FBX/Cactus.fbx" id="2_tvhfc"]
+[ext_resource type="Material" uid="uid://eeo3posff1a4" path="res://resources/materials/monster_cactus.tres" id="3_ohxrl"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_jygng"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="5_jygng"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="6_5pwwr"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_s3ca6"]
+height = 1.4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rvjj2"]
+radius = 0.8
+
+[sub_resource type="TorusMesh" id="TorusMesh_rc3mi"]
+inner_radius = 0.95
+outer_radius = 1.09
+rings = 16
+ring_segments = 6
+
+[sub_resource type="SphereMesh" id="SphereMesh_50ydw"]
+radial_segments = 4
+rings = 2
+
+[node name="CactusHorde" type="CharacterBody3D" unique_id=1133406321]
+collision_layer = 4
+script = ExtResource("1_ohxrl")
+patrol_speed = 1.3
+chase_speed = 2
+clip_walk = "MonsterArmature|Walk"
+clip_idle = "MonsterArmature|Idle"
+clip_windup = "MonsterArmature|Bite_InPlace"
+clip_bite = "MonsterArmature|Bite_Front"
+paint_color_id = 2
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=2014118253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_s3ca6")
+
+[node name="Model" type="Node3D" parent="." unique_id=476928142]
+
+[node name="Body" parent="Model" unique_id=127519698 instance=ExtResource("2_tvhfc")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 0, 0, 0)
+
+[node name="Cactus_001" parent="Model/Body/MonsterArmature/Skeleton3D" parent_id_path=PackedInt32Array(127519698, 1533232866) index="0" unique_id=630121470]
+material_override = ExtResource("3_ohxrl")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=746064358]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_jygng")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=1098233314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("SphereShape3D_rvjj2")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=2046366805]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="TargetRing" unique_id=849976589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = ExtResource("5_jygng")
+mesh = SubResource("TorusMesh_rc3mi")
+
+[node name="WarnMark" type="Node3D" parent="." unique_id=1476904056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+visible = false
+
+[node name="Diamond" type="MeshInstance3D" parent="WarnMark" unique_id=1294044485]
+transform = Transform3D(0.3, 0, 0, 0, 0.45, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("6_5pwwr")
+mesh = SubResource("SphereMesh_50ydw")
+
+[editable path="Model/Body"]

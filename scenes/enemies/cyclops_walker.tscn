@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://d77gdl6lxpfu"]
+
+[ext_resource type="Script" uid="uid://blr3t512lnxnh" path="res://scripts/enemies/crab_enemy.gd" id="1_pc8n8"]
+[ext_resource type="PackedScene" uid="uid://bnvkij7nglj8g" path="res://assets/cloudline/monsters/FBX/Cyclops.fbx" id="2_bxnyx"]
+[ext_resource type="Material" uid="uid://dinn0i17dcylg" path="res://resources/materials/monster_cyclops.tres" id="3_pc8n8"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_oqumu"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="5_oqumu"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="6_8ln4c"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kuees"]
+height = 1.5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_jgq1o"]
+radius = 0.8
+
+[sub_resource type="TorusMesh" id="TorusMesh_h2gmb"]
+inner_radius = 0.95
+outer_radius = 1.09
+rings = 16
+ring_segments = 6
+
+[sub_resource type="SphereMesh" id="SphereMesh_0o7sb"]
+radial_segments = 4
+rings = 2
+
+[node name="CyclopsHorde" type="CharacterBody3D" unique_id=1749613149]
+collision_layer = 4
+script = ExtResource("1_pc8n8")
+patrol_speed = 1.2
+chase_speed = 1.8
+clip_walk = "MonsterArmature|Walk"
+clip_idle = "MonsterArmature|Idle"
+clip_windup = "MonsterArmature|Bite_InPlace"
+clip_bite = "MonsterArmature|Bite_Front"
+paint_color_id = 3
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=193605634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_kuees")
+
+[node name="Model" type="Node3D" parent="." unique_id=982366860]
+
+[node name="Body" parent="Model" unique_id=1257365019 instance=ExtResource("2_bxnyx")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="Cyclops" parent="Model/Body/MonsterArmature/Skeleton3D" parent_id_path=PackedInt32Array(1257365019, 376951499) index="0" unique_id=334200270]
+material_override = ExtResource("3_pc8n8")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=2039801227]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_oqumu")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=2017730356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("SphereShape3D_jgq1o")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=57729429]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="TargetRing" unique_id=1309656464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = ExtResource("5_oqumu")
+mesh = SubResource("TorusMesh_h2gmb")
+
+[node name="WarnMark" type="Node3D" parent="." unique_id=2122632673]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3, 0)
+visible = false
+
+[node name="Diamond" type="MeshInstance3D" parent="WarnMark" unique_id=13811327]
+transform = Transform3D(0.3, 0, 0, 0, 0.45, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("6_8ln4c")
+mesh = SubResource("SphereMesh_0o7sb")
+
+[editable path="Model/Body"]

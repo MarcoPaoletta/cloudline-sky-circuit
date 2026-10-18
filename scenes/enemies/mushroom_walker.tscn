@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://d08gtjwafheqg"]
+
+[ext_resource type="Script" uid="uid://blr3t512lnxnh" path="res://scripts/enemies/crab_enemy.gd" id="1_fmmq8"]
+[ext_resource type="PackedScene" uid="uid://bkgrnod24f67w" path="res://assets/cloudline/monsters/FBX/Mushroom.fbx" id="2_6c0of"]
+[ext_resource type="Material" uid="uid://bcex3dyc8vvhw" path="res://resources/materials/monster_mushroom.tres" id="3_fmmq8"]
+[ext_resource type="Script" uid="uid://bxptyrxa46yxp" path="res://scripts/enemies/enemy_hurtbox.gd" id="4_k1pkh"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="5_k1pkh"]
+[ext_resource type="Material" uid="uid://ck4w88raukq8c" path="res://resources/materials/glow_amber.tres" id="6_xjvuh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8xnye"]
+radius = 0.55
+height = 1.4
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_m7yfd"]
+radius = 0.8
+
+[sub_resource type="TorusMesh" id="TorusMesh_1tr4q"]
+inner_radius = 0.95
+outer_radius = 1.09
+rings = 16
+ring_segments = 6
+
+[sub_resource type="SphereMesh" id="SphereMesh_meqwt"]
+radial_segments = 4
+rings = 2
+
+[node name="MushroomHorde" type="CharacterBody3D" unique_id=488949337]
+collision_layer = 4
+script = ExtResource("1_fmmq8")
+patrol_speed = 1.5
+chase_speed = 2.2
+clip_walk = "MonsterArmature|Idle"
+clip_idle = "MonsterArmature|Idle"
+clip_windup = "MonsterArmature|Idle"
+clip_bite = "MonsterArmature|Idle"
+hop = true
+paint_color_id = 1
+
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1396153010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CapsuleShape3D_8xnye")
+
+[node name="Model" type="Node3D" parent="." unique_id=2134073411]
+
+[node name="Body" parent="Model" unique_id=70489519 instance=ExtResource("2_6c0of")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
+
+[node name="Mushroom" parent="Model/Body/MonsterArmature/Skeleton3D" parent_id_path=PackedInt32Array(70489519, 1589654872) index="0" unique_id=862084005]
+material_override = ExtResource("3_fmmq8")
+
+[node name="Hurtbox" type="Area3D" parent="." unique_id=1282668211]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+script = ExtResource("4_k1pkh")
+
+[node name="Shape" type="CollisionShape3D" parent="Hurtbox" unique_id=2012461972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("SphereShape3D_m7yfd")
+
+[node name="TargetRing" type="Node3D" parent="." unique_id=1056871709]
+visible = false
+
+[node name="Ring" type="MeshInstance3D" parent="TargetRing" unique_id=1721900688]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.08, 0)
+material_override = ExtResource("5_k1pkh")
+mesh = SubResource("TorusMesh_1tr4q")
+
+[node name="WarnMark" type="Node3D" parent="." unique_id=898644088]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+visible = false
+
+[node name="Diamond" type="MeshInstance3D" parent="WarnMark" unique_id=372222019]
+transform = Transform3D(0.3, 0, 0, 0, 0.45, 0, 0, 0, 0.3, 0, 0, 0)
+material_override = ExtResource("6_xjvuh")
+mesh = SubResource("SphereMesh_meqwt")
+
+[editable path="Model/Body"]

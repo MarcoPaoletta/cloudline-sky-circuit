@@ -3,6 +3,8 @@ extends EnemyBase
 ## Readable ground guard (GDD 11): patrols a short authored strip at 1.6 m/s, detects within 5 m with line of
 ## sight, moves toward the player only while a tested floor exists at the projected next step, winds up for
 ## 0.65 s (warn mark + slowed claw), bites within 1.2 m, recovers 0.9 s. One head hit defeats it.
+## v2: the same ground behaviour drives the platform monsters (alien, cactus, cyclops, mushroom walkers); their
+## clip names are exported, and `hop` gives the Idle-only mushroom a bouncing walk.
 
 enum State { PATROL, CHASE, WINDUP, BITE, RECOVER, DEAD }
 
@@ -17,6 +19,13 @@ enum State { PATROL, CHASE, WINDUP, BITE, RECOVER, DEAD }
 @export var recover_time: float = 0.9
 @export var edge_probe: float = 0.9
 @export var attack_clear_zones: bool = true
+@export_group("Clips")
+@export var clip_walk: String = "Walk"
+@export var clip_idle: String = "Idle"
+@export var clip_windup: String = "Bite_InPlace"
+@export var clip_bite: String = "Bite_Front"
+## Bouncing locomotion for a model without a walk clip (the mushroom).
+@export var hop: bool = false
 
 @onready var _warn: Node3D = $WarnMark
 
@@ -25,12 +34,13 @@ var _t: float = 0.0
 var _dir_sign: float = 1.0
 var _blocked_cooldown: float = 0.0
 var _bite_done: bool = false
+var _hop_phase: float = 0.0
 
 
 func _setup() -> void:
-	set_loop(["Walk", "Idle"])
+	set_loop([clip_walk, clip_idle])
 	_warn.visible = false
-	play_anim("Walk", 1.0, 0.0)
+	play_anim(clip_walk, 1.0, 0.0)
 
 
 func _physics_process(delta: float) -> void:
@@ -66,15 +76,19 @@ func _physics_process(delta: float) -> void:
 			if _t >= 0.55:
 				state = State.RECOVER
 				_t = 0.0
-				play_anim("Idle", 1.0, 0.2)
+				play_anim(clip_idle, 1.0, 0.2)
 		State.RECOVER:
 			_t += delta
 			velocity.x = 0.0
 			velocity.z = 0.0
 			if _t >= recover_time:
 				state = State.PATROL
-				play_anim("Walk", 1.0, 0.3)
+				play_anim(clip_walk, 1.0, 0.3)
 	move_and_slide()
+	if hop:
+		var moving := Vector2(velocity.x, velocity.z).length() > 0.2
+		_hop_phase += delta * (8.0 if moving else 3.0)
+		_model.position.y = absf(sin(_hop_phase)) * (0.22 if moving else 0.05)
 
 
 func _local_x() -> Vector3:
@@ -97,7 +111,7 @@ func _do_patrol(delta: float, p: Player) -> void:
 	face_toward(dir, delta)
 	if p and _can_notice(p):
 		state = State.CHASE
-		play_anim("Walk", 1.4, 0.2)
+		play_anim(clip_walk, 1.4, 0.2)
 
 
 func _can_notice(p: Player) -> bool:
@@ -122,7 +136,7 @@ func _near_safe_zone(p: Player) -> bool:
 func _do_chase(delta: float, p: Player) -> void:
 	if p == null or not _can_notice(p):
 		state = State.PATROL
-		play_anim("Walk", 1.0, 0.3)
+		play_anim(clip_walk, 1.0, 0.3)
 		return
 	var to := p.global_position - global_position
 	to.y = 0.0
@@ -135,7 +149,7 @@ func _do_chase(delta: float, p: Player) -> void:
 		velocity.x = 0.0
 		velocity.z = 0.0
 		windup_started.emit(self)
-		play_anim("Bite_InPlace", 0.45, 0.15)
+		play_anim(clip_windup, 0.45, 0.15)
 		var a := get_node_or_null("/root/Audio")
 		if a:
 			a.play_sfx(&"enemy_windup", -6.0)
@@ -156,7 +170,7 @@ func _begin_bite() -> void:
 	_t = 0.0
 	_bite_done = false
 	_warn.visible = false
-	play_anim("Bite_Front", 1.2, 0.05)
+	play_anim(clip_bite, 1.2, 0.05)
 
 
 func _strike(p: Player) -> void:
@@ -177,10 +191,11 @@ func _on_hit(head: Node) -> void:
 func _play_defeat() -> void:
 	state = State.DEAD
 	_warn.visible = false
+	_model.position.y = 0.0
 	knockback_fall(_last_hit_dir)
 
 
 func _on_revive() -> void:
 	state = State.PATROL
 	_warn.visible = false
-	play_anim("Walk", 1.0, 0.0)
+	play_anim(clip_walk, 1.0, 0.0)

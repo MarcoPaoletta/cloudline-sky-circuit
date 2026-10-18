@@ -42,7 +42,7 @@ Final refresh: GDD §22 follows the second skill update at 1f54afc. All 21 monst
 | Bright toon look matched to the concepts | Toon materials through glTF import remaps, tapered faceted rocks, cloud sea, sunrise glow; see the comparison images in `docs/evidence/` |
 | Music: title, worlds and arenas each have their own track (v2) | Three original seamless loops on a Music bus with crossfades (`Audio.play_music`), Music volume in Settings |
 | Relaxing sound effects (v2) | 51 soft one-shots in `assets/cloudline/audio/soft/`, preferred over the pack sounds |
-| 5 to 20 enemies on every platform by its size (v2) | 278 / 481 / 680 crabs and bees per world; far ones sleep, crabs never clip through each other |
+| 5 to 20 enemies on every platform by its size (v2) | 278 / 481 / 680 per world, six kinds (bees, crabs, alien, cactus, cyclops, mushroom); far ones sleep, crabs never clip through each other |
 | At least 3 head sockets per world (v2) | Each world has 3, each powering a bridge or door; new ones open coin pockets |
 | Hit feedback: white flash, falling back instead of squashing (v2) | 0.07 s white overlay plus hit stop; bowled-over knock-back fall |
 | Paint visible on arena floors (v2) | Flat splat quads on flat ground (Mobile decal limit), 16 s arena hold |

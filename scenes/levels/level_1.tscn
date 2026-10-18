@@ -40,8 +40,12 @@
 [ext_resource type="PackedScene" uid="uid://cmaggdjxx76h0" path="res://assets/cloudline/platformer/Nature/Cloud_2.gltf" id="32_yvv08"]
 [ext_resource type="PackedScene" uid="uid://ccxobh1k7meyj" path="res://assets/cloudline/platformer/Nature/Cloud_3.gltf" id="33_bccrp"]
 [ext_resource type="PackedScene" uid="uid://b2c87qpdjk1g8" path="res://scenes/world/prop_grass.tscn" id="36_dp4fg"]
+[ext_resource type="PackedScene" uid="uid://d77gdl6lxpfu" path="res://scenes/enemies/cyclops_walker.tscn" id="38_wtkl1"]
 [ext_resource type="PackedScene" uid="uid://ci74g456a105s" path="res://scenes/ui/pause_menu.tscn" id="39_hvllt"]
+[ext_resource type="PackedScene" uid="uid://d08gtjwafheqg" path="res://scenes/enemies/mushroom_walker.tscn" id="39_ovy75"]
+[ext_resource type="PackedScene" uid="uid://dxa4yhacf6jkb" path="res://scenes/enemies/alien_walker.tscn" id="40_wk6bc"]
 [ext_resource type="PackedScene" uid="uid://dcy0n0ejc3jud" path="res://scenes/fx/sky_glow.tscn" id="41_svqqs"]
+[ext_resource type="PackedScene" uid="uid://dh54y2dccsu1d" path="res://scenes/enemies/cactus_walker.tscn" id="41_ugk5q"]
 
 [node name="Level1" type="Node3D" unique_id=135687879]
 script = ExtResource("1_6761a")
@@ -4032,1514 +4036,1511 @@ transform = Transform3D(-0.7880108, 0, 0.61566144, 0, 1, 0, -0.61566144, 0, -0.7
 [node name="PK2_tuft3" parent="World/Dressing/Tufts" unique_id=1776984394 instance=ExtResource("36_dp4fg")]
 transform = Transform3D(-0.8386706, 0, -0.544639, 0, 1, 0, 0.544639, 0, -0.8386706, -5.9, 6, -99.6)
 
-[node name="Crowd" type="Node3D" parent="World" unique_id=689646080]
+[node name="Crowd" type="Node3D" parent="World" unique_id=1368088213]
 
-[node name="A1_B01" parent="World/Crowd" unique_id=1490670506 instance=ExtResource("8_iav0o")]
+[node name="A1_B01" parent="World/Crowd" unique_id=1317413877 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 0.9, 51.92)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA1_1"
 
-[node name="A1_C02" parent="World/Crowd" unique_id=1760880128 instance=ExtResource("7_excbq")]
+[node name="A1_Y02" parent="World/Crowd" unique_id=1749613149 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 2.6, 0.05, 51.16)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xA1_2"
 
-[node name="A1_C03" parent="World/Crowd" unique_id=741500408 instance=ExtResource("7_excbq")]
+[node name="A1_C03" parent="World/Crowd" unique_id=750155303 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 4.77, 0.05, 53.55)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xA1_3"
 
-[node name="A1_B04" parent="World/Crowd" unique_id=1587049895 instance=ExtResource("8_iav0o")]
+[node name="A1_B04" parent="World/Crowd" unique_id=77367610 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54, 0.9, 48.64)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA1_4"
 
-[node name="A1_C05" parent="World/Crowd" unique_id=1969955711 instance=ExtResource("7_excbq")]
+[node name="A1_Y05" parent="World/Crowd" unique_id=2098543073 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 4.42, 0.05, 49.52)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xA1_5"
 
-[node name="A1_C06" parent="World/Crowd" unique_id=909863550 instance=ExtResource("7_excbq")]
+[node name="A1_M06" parent="World/Crowd" unique_id=488949337 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 2.9, 0.05, 47.81)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xA1_6"
 
-[node name="A1_B07" parent="World/Crowd" unique_id=994085645 instance=ExtResource("8_iav0o")]
+[node name="A1_B07" parent="World/Crowd" unique_id=1036622910 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64, 0.9, 51.14)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA1_7"
 
-[node name="A1_C08" parent="World/Crowd" unique_id=2094218020 instance=ExtResource("7_excbq")]
+[node name="A1_C08" parent="World/Crowd" unique_id=1006749860 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -5.03, 0.05, 52.27)
 patrol_half_length = 1.785
 reward_coin_id = "xA1_8"
 
-[node name="A1_C09" parent="World/Crowd" unique_id=1572328748 instance=ExtResource("7_excbq")]
+[node name="A1_M09" parent="World/Crowd" unique_id=2097884286 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -2.95, 0.05, 47.09)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xA1_9"
 
-[node name="A1_B10" parent="World/Crowd" unique_id=631782571 instance=ExtResource("8_iav0o")]
+[node name="A1_B10" parent="World/Crowd" unique_id=2015001014 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.05, 0.9, 49.42)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xA1_10"
 
-[node name="A1_C11" parent="World/Crowd" unique_id=1663496882 instance=ExtResource("7_excbq")]
+[node name="A1_Y11" parent="World/Crowd" unique_id=1575869715 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -4.43, 0.05, 50.84)
 patrol_half_length = 1.785
-paint_color_id = 3
 reward_coin_id = "xA1_11"
 
-[node name="A2_B01" parent="World/Crowd" unique_id=1725365927 instance=ExtResource("8_iav0o")]
+[node name="A2_B01" parent="World/Crowd" unique_id=765295027 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7, 0.9, 48.23)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xA2_1"
 
-[node name="A2_C02" parent="World/Crowd" unique_id=1398260674 instance=ExtResource("7_excbq")]
+[node name="A2_A02" parent="World/Crowd" unique_id=938433483 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -14.18, 0.05, 47.84)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xA2_2"
 
-[node name="A2_C03" parent="World/Crowd" unique_id=393020302 instance=ExtResource("7_excbq")]
+[node name="A2_A03" parent="World/Crowd" unique_id=133154837 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -16.01, 0.05, 50.74)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xA2_3"
 
-[node name="A2_C04" parent="World/Crowd" unique_id=1059795870 instance=ExtResource("7_excbq")]
+[node name="A2_T04" parent="World/Crowd" unique_id=1133406321 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -18.2, 0.05, 50.33)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA2_4"
 
-[node name="A2_B05" parent="World/Crowd" unique_id=2144610842 instance=ExtResource("8_iav0o")]
+[node name="A2_B05" parent="World/Crowd" unique_id=179486641 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.23, 0.9, 50.22)
 loop_radius = 0.9
 reward_coin_id = "xA2_5"
 
-[node name="A2_C06" parent="World/Crowd" unique_id=1932487482 instance=ExtResource("7_excbq")]
+[node name="A2_A06" parent="World/Crowd" unique_id=1158047828 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -18.19, 0.05, 52.31)
 patrol_half_length = 1.085
-paint_color_id = 0
 reward_coin_id = "xA2_6"
 
-[node name="A2_C07" parent="World/Crowd" unique_id=254841119 instance=ExtResource("7_excbq")]
+[node name="A2_T07" parent="World/Crowd" unique_id=790072559 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -14.22, 0.05, 52.62)
 patrol_half_length = 1.085
-paint_color_id = 2
 reward_coin_id = "xA2_7"
 
-[node name="A2_B08" parent="World/Crowd" unique_id=1160679341 instance=ExtResource("8_iav0o")]
+[node name="A2_B08" parent="World/Crowd" unique_id=2029218925 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7, 0.9, 52.33)
 loop_radius = 0.9
 reward_coin_id = "xA2_8"
 
-[node name="A2_C09" parent="World/Crowd" unique_id=1307026459 instance=ExtResource("7_excbq")]
+[node name="A2_T09" parent="World/Crowd" unique_id=2011536707 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -17.61, 0.05, 48.69)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xA2_9"
 
-[node name="A3_B01" parent="World/Crowd" unique_id=141595392 instance=ExtResource("8_iav0o")]
+[node name="A3_B01" parent="World/Crowd" unique_id=1759504126 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.22, 0.9, 49.94)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xA3_1"
 
-[node name="A3_C02" parent="World/Crowd" unique_id=1193261366 instance=ExtResource("7_excbq")]
+[node name="A3_C02" parent="World/Crowd" unique_id=469473259 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 15.98, 0.05, 49.01)
 patrol_half_length = 1.085
 reward_coin_id = "xA3_2"
 
-[node name="A3_C03" parent="World/Crowd" unique_id=574927453 instance=ExtResource("7_excbq")]
+[node name="A3_Y03" parent="World/Crowd" unique_id=1972798491 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 16.29, 0.05, 52.79)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xA3_3"
 
-[node name="A3_C04" parent="World/Crowd" unique_id=1057171129 instance=ExtResource("7_excbq")]
+[node name="A3_Y04" parent="World/Crowd" unique_id=10245233 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 18.52, 0.05, 51.68)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA3_4"
 
-[node name="A3_B05" parent="World/Crowd" unique_id=75134700 instance=ExtResource("8_iav0o")]
+[node name="A3_B05" parent="World/Crowd" unique_id=654135979 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.15, 0.9, 51.14)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xA3_5"
 
-[node name="A3_C06" parent="World/Crowd" unique_id=1662583437 instance=ExtResource("7_excbq")]
+[node name="A3_M06" parent="World/Crowd" unique_id=2109991075 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 13.79, 0.05, 49.3)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xA3_6"
 
-[node name="A3_C07" parent="World/Crowd" unique_id=1215341459 instance=ExtResource("7_excbq")]
+[node name="A3_Y07" parent="World/Crowd" unique_id=41565573 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 17.78, 0.05, 47.6)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xA3_7"
 
-[node name="A3_B08" parent="World/Crowd" unique_id=2053030962 instance=ExtResource("8_iav0o")]
+[node name="A3_B08" parent="World/Crowd" unique_id=1674148245 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.33, 0.9, 46.96)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA3_8"
 
-[node name="A3_C09" parent="World/Crowd" unique_id=908077973 instance=ExtResource("7_excbq")]
+[node name="A3_T09" parent="World/Crowd" unique_id=1671202571 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 14.44, 0.05, 47.7)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA3_9"
 
-[node name="A3_C10" parent="World/Crowd" unique_id=877662013 instance=ExtResource("7_excbq")]
+[node name="A3_Y10" parent="World/Crowd" unique_id=1108943023 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 13.47, 0.05, 52.24)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xA3_10"
 
-[node name="A4_B01" parent="World/Crowd" unique_id=1927096179 instance=ExtResource("8_iav0o")]
+[node name="A4_B01" parent="World/Crowd" unique_id=958108448 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92, 0.9, 37.75)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA4_1"
 
-[node name="A4_C02" parent="World/Crowd" unique_id=2079920142 instance=ExtResource("7_excbq")]
+[node name="A4_C02" parent="World/Crowd" unique_id=1716085368 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -2.34, 0.05, 34.43)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xA4_2"
 
-[node name="A4_C03" parent="World/Crowd" unique_id=974716929 instance=ExtResource("7_excbq")]
+[node name="A4_T03" parent="World/Crowd" unique_id=942008716 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.35, 0.05, 36.92)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA4_3"
 
-[node name="A4_C04" parent="World/Crowd" unique_id=455399974 instance=ExtResource("7_excbq")]
+[node name="A4_M04" parent="World/Crowd" unique_id=371789365 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.97, 0.05, 37.84)
 patrol_half_length = 1.085
 reward_coin_id = "xA4_4"
 
-[node name="A4_B05" parent="World/Crowd" unique_id=166007648 instance=ExtResource("8_iav0o")]
+[node name="A4_B05" parent="World/Crowd" unique_id=1318005582 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.72, 0.9, 34.22)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xA4_5"
 
-[node name="A4_C06" parent="World/Crowd" unique_id=361464810 instance=ExtResource("7_excbq")]
+[node name="A4_M06" parent="World/Crowd" unique_id=766207992 instance=ExtResource("39_ovy75")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -1.39, 0.05, 38.43)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA4_6"
 
-[node name="A4_C07" parent="World/Crowd" unique_id=133266802 instance=ExtResource("7_excbq")]
+[node name="A4_C07" parent="World/Crowd" unique_id=458537092 instance=ExtResource("7_excbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67, 0.05, 36.68)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA4_7"
 
-[node name="A4_B08" parent="World/Crowd" unique_id=579947986 instance=ExtResource("8_iav0o")]
+[node name="A4_B08" parent="World/Crowd" unique_id=576720807 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37, 0.9, 36.88)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xA4_8"
 
-[node name="A4_C09" parent="World/Crowd" unique_id=612948428 instance=ExtResource("7_excbq")]
+[node name="A4_M09" parent="World/Crowd" unique_id=244635446 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 1.44, 0.05, 35.32)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xA4_9"
 
-[node name="A4_C10" parent="World/Crowd" unique_id=1306591617 instance=ExtResource("7_excbq")]
+[node name="A4_T10" parent="World/Crowd" unique_id=2128661161 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -0.67, 0.05, 33.05)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xA4_10"
 
-[node name="P4_B01" parent="World/Crowd" unique_id=1893781479 instance=ExtResource("8_iav0o")]
+[node name="P4_B01" parent="World/Crowd" unique_id=1005760209 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.58, 0.9, 35.99)
 loop_radius = 0.5
 reward_coin_id = "xP4_1"
 
-[node name="P4_C02" parent="World/Crowd" unique_id=1135796333 instance=ExtResource("7_excbq")]
+[node name="P4_A02" parent="World/Crowd" unique_id=1916773247 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 11.93, 0.05, 36.24)
 patrol_half_length = 0.8575
+paint_color_id = 1
 reward_coin_id = "xP4_2"
 
-[node name="P4_C03" parent="World/Crowd" unique_id=346018500 instance=ExtResource("7_excbq")]
+[node name="P4_C03" parent="World/Crowd" unique_id=372845889 instance=ExtResource("7_excbq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 10.43, 0.05, 35.53)
 patrol_half_length = 0.8575
 reward_coin_id = "xP4_3"
 
-[node name="P4_C04" parent="World/Crowd" unique_id=1301014432 instance=ExtResource("7_excbq")]
+[node name="P4_M04" parent="World/Crowd" unique_id=708626894 instance=ExtResource("39_ovy75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.61, 0.05, 34.92)
 patrol_half_length = 0.8575
 paint_color_id = 0
 reward_coin_id = "xP4_4"
 
-[node name="P4_B05" parent="World/Crowd" unique_id=1300021830 instance=ExtResource("8_iav0o")]
+[node name="P4_B05" parent="World/Crowd" unique_id=1044427503 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.05, 0.9, 33.84)
 loop_radius = 0.5
 paint_color_id = 0
 reward_coin_id = "xP4_5"
 
-[node name="P4_C06" parent="World/Crowd" unique_id=1387655884 instance=ExtResource("7_excbq")]
+[node name="P4_C06" parent="World/Crowd" unique_id=1497094892 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 10.1, 0.05, 37.75)
 patrol_half_length = 0.8575
 reward_coin_id = "xP4_6"
 
-[node name="P4_C07" parent="World/Crowd" unique_id=1456775603 instance=ExtResource("7_excbq")]
+[node name="P4_T07" parent="World/Crowd" unique_id=375514121 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 8.38, 0.05, 34.81)
 patrol_half_length = 0.8575
+paint_color_id = 1
 reward_coin_id = "xP4_7"
 
-[node name="D1_B01" parent="World/Crowd" unique_id=1547214619 instance=ExtResource("8_iav0o")]
+[node name="D1_B01" parent="World/Crowd" unique_id=828824120 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02, 0.9, 19.04)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD1_1"
 
-[node name="D1_C02" parent="World/Crowd" unique_id=1850933190 instance=ExtResource("7_excbq")]
+[node name="D1_C02" parent="World/Crowd" unique_id=156845870 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -0.24, 0.05, 23.72)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xD1_2"
 
-[node name="D1_C03" parent="World/Crowd" unique_id=395685788 instance=ExtResource("7_excbq")]
+[node name="D1_T03" parent="World/Crowd" unique_id=488710185 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -0.41, 0.05, 18.36)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD1_3"
 
-[node name="D1_B04" parent="World/Crowd" unique_id=185597627 instance=ExtResource("8_iav0o")]
+[node name="D1_B04" parent="World/Crowd" unique_id=1605609385 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22, 0.9, 22.21)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD1_4"
 
-[node name="D1_C05" parent="World/Crowd" unique_id=2101798858 instance=ExtResource("7_excbq")]
+[node name="D1_A05" parent="World/Crowd" unique_id=981130154 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -0.91, 0.05, 21.8)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xD1_5"
 
-[node name="D1_C06" parent="World/Crowd" unique_id=420367145 instance=ExtResource("7_excbq")]
+[node name="D1_A06" parent="World/Crowd" unique_id=419587390 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 1.27, 0.05, 21.21)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD1_6"
 
-[node name="D1_B07" parent="World/Crowd" unique_id=1753018657 instance=ExtResource("8_iav0o")]
+[node name="D1_B07" parent="World/Crowd" unique_id=1029853718 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19, 0.9, 16.38)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD1_7"
 
-[node name="D1_C08" parent="World/Crowd" unique_id=896229503 instance=ExtResource("7_excbq")]
+[node name="D1_C08" parent="World/Crowd" unique_id=2030061383 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 0.67, 0.05, 19.65)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xD1_8"
 
-[node name="D1_C09" parent="World/Crowd" unique_id=281928842 instance=ExtResource("7_excbq")]
+[node name="D1_C09" parent="World/Crowd" unique_id=446439105 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -1.75, 0.05, 17.29)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD1_9"
 
-[node name="D1_B10" parent="World/Crowd" unique_id=537090541 instance=ExtResource("8_iav0o")]
+[node name="D1_B10" parent="World/Crowd" unique_id=1343572857 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0.9, 18.2)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xD1_10"
 
-[node name="D1_C11" parent="World/Crowd" unique_id=496106674 instance=ExtResource("7_excbq")]
+[node name="D1_M11" parent="World/Crowd" unique_id=330505958 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 3.15, 0.05, 23.75)
 patrol_half_length = 1.785
 reward_coin_id = "xD1_11"
 
-[node name="D1_C12" parent="World/Crowd" unique_id=2032571531 instance=ExtResource("7_excbq")]
+[node name="D1_T12" parent="World/Crowd" unique_id=182309012 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 4.73, 0.05, 21.91)
 patrol_half_length = 1.785
-paint_color_id = 2
 reward_coin_id = "xD1_12"
 
-[node name="D1_B13" parent="World/Crowd" unique_id=987758029 instance=ExtResource("8_iav0o")]
+[node name="D1_B13" parent="World/Crowd" unique_id=1415336347 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.09, 0.9, 14.95)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xD1_13"
 
-[node name="D1_C14" parent="World/Crowd" unique_id=936690289 instance=ExtResource("7_excbq")]
+[node name="D1_C14" parent="World/Crowd" unique_id=2091660041 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 4.34, 0.05, 19.15)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD1_14"
 
-[node name="D1_C15" parent="World/Crowd" unique_id=1511352266 instance=ExtResource("7_excbq")]
+[node name="D1_T15" parent="World/Crowd" unique_id=811552158 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -2.68, 0.05, 20.53)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xD1_15"
 
-[node name="P5_B01" parent="World/Crowd" unique_id=712227367 instance=ExtResource("8_iav0o")]
+[node name="P5_B01" parent="World/Crowd" unique_id=939272840 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.96, 0.9, 20.95)
 loop_radius = 0.5
 reward_coin_id = "xP5_1"
 
-[node name="P5_C02" parent="World/Crowd" unique_id=920173334 instance=ExtResource("7_excbq")]
+[node name="P5_Y02" parent="World/Crowd" unique_id=1520246689 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -10.83, 0.05, 19.12)
 patrol_half_length = 0.5075
-paint_color_id = 3
 reward_coin_id = "xP5_2"
 
-[node name="P5_C03" parent="World/Crowd" unique_id=743635672 instance=ExtResource("7_excbq")]
+[node name="P5_C03" parent="World/Crowd" unique_id=2012674418 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -10.76, 0.05, 20.9)
 patrol_half_length = 0.5075
 paint_color_id = 2
 reward_coin_id = "xP5_3"
 
-[node name="P5_B04" parent="World/Crowd" unique_id=2102934284 instance=ExtResource("8_iav0o")]
+[node name="P5_B04" parent="World/Crowd" unique_id=1845718003 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.84, 0.9, 20.36)
 loop_radius = 0.5
 paint_color_id = 3
 reward_coin_id = "xP5_4"
 
-[node name="P5_B05" parent="World/Crowd" unique_id=732040490 instance=ExtResource("8_iav0o")]
+[node name="P5_B05" parent="World/Crowd" unique_id=203270490 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.53, 1.1, 19.77)
 loop_radius = 0.4
 paint_color_id = 0
 reward_coin_id = "xP5_5"
 
-[node name="D2_B01" parent="World/Crowd" unique_id=78011748 instance=ExtResource("8_iav0o")]
+[node name="D2_B01" parent="World/Crowd" unique_id=1160841510 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.58, 0.9, 17.31)
 loop_radius = 0.9
 reward_coin_id = "xD2_1"
 
-[node name="D2_C02" parent="World/Crowd" unique_id=125538226 instance=ExtResource("7_excbq")]
+[node name="D2_M02" parent="World/Crowd" unique_id=637403521 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 15, 0.05, 19.14)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xD2_2"
 
-[node name="D2_C03" parent="World/Crowd" unique_id=1127837447 instance=ExtResource("7_excbq")]
+[node name="D2_M03" parent="World/Crowd" unique_id=2018963468 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 20.78, 0.05, 21.42)
 patrol_half_length = 1.785
 reward_coin_id = "xD2_3"
 
-[node name="D2_C04" parent="World/Crowd" unique_id=1957620493 instance=ExtResource("7_excbq")]
+[node name="D2_T04" parent="World/Crowd" unique_id=1638171677 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 18.36, 0.05, 18.73)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xD2_4"
 
-[node name="D2_B05" parent="World/Crowd" unique_id=1360620603 instance=ExtResource("8_iav0o")]
+[node name="D2_B05" parent="World/Crowd" unique_id=487991033 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.46, 0.9, 21.97)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD2_5"
 
-[node name="D2_C06" parent="World/Crowd" unique_id=1836398971 instance=ExtResource("7_excbq")]
+[node name="D2_M06" parent="World/Crowd" unique_id=1518165353 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 13.83, 0.05, 17.31)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD2_6"
 
-[node name="D2_C07" parent="World/Crowd" unique_id=694962170 instance=ExtResource("7_excbq")]
+[node name="D2_C07" parent="World/Crowd" unique_id=905146980 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 21.73, 0.05, 23.94)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xD2_7"
 
-[node name="D2_B08" parent="World/Crowd" unique_id=582445946 instance=ExtResource("8_iav0o")]
+[node name="D2_B08" parent="World/Crowd" unique_id=725420026 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.89, 0.9, 23.57)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xD2_8"
 
-[node name="D2_C09" parent="World/Crowd" unique_id=1092765337 instance=ExtResource("7_excbq")]
+[node name="D2_C09" parent="World/Crowd" unique_id=1944127939 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 17.91, 0.05, 21.27)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xD2_9"
 
-[node name="D2_C10" parent="World/Crowd" unique_id=281816339 instance=ExtResource("7_excbq")]
+[node name="D2_A10" parent="World/Crowd" unique_id=1813428404 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 20.7, 0.05, 18.05)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xD2_10"
 
-[node name="D2_C11" parent="World/Crowd" unique_id=1313340923 instance=ExtResource("7_excbq")]
+[node name="D2_C11" parent="World/Crowd" unique_id=2088572714 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 14.61, 0.05, 15.51)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xD2_11"
 
-[node name="D2_B12" parent="World/Crowd" unique_id=634122229 instance=ExtResource("8_iav0o")]
+[node name="D2_B12" parent="World/Crowd" unique_id=400362492 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.24, 0.9, 20.28)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xD2_12"
 
-[node name="D2_C13" parent="World/Crowd" unique_id=952344212 instance=ExtResource("7_excbq")]
+[node name="D2_M13" parent="World/Crowd" unique_id=1232927910 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 15.33, 0.05, 24.79)
 patrol_half_length = 1.785
 reward_coin_id = "xD2_13"
 
-[node name="D2_C14" parent="World/Crowd" unique_id=972287692 instance=ExtResource("7_excbq")]
+[node name="D2_C14" parent="World/Crowd" unique_id=1249730239 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 19.57, 0.05, 23.94)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xD2_14"
 
-[node name="D3_B01" parent="World/Crowd" unique_id=834282766 instance=ExtResource("8_iav0o")]
+[node name="D3_B01" parent="World/Crowd" unique_id=152435135 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.99, 0.9, 4.64)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD3_1"
 
-[node name="D3_C02" parent="World/Crowd" unique_id=972289693 instance=ExtResource("7_excbq")]
+[node name="D3_A02" parent="World/Crowd" unique_id=1559341016 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 20.45, 0.05, 1.81)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xD3_2"
 
-[node name="D3_C03" parent="World/Crowd" unique_id=1485523491 instance=ExtResource("7_excbq")]
+[node name="D3_M03" parent="World/Crowd" unique_id=1556361813 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 15.4, 0.05, 5.55)
 patrol_half_length = 1.085
 reward_coin_id = "xD3_3"
 
-[node name="D3_C04" parent="World/Crowd" unique_id=978910531 instance=ExtResource("7_excbq")]
+[node name="D3_C04" parent="World/Crowd" unique_id=1796486849 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 19.07, 0.05, 5.07)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xD3_4"
 
-[node name="D3_B05" parent="World/Crowd" unique_id=2002768191 instance=ExtResource("8_iav0o")]
+[node name="D3_B05" parent="World/Crowd" unique_id=633911737 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.92, 0.9, 4.95)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xD3_5"
 
-[node name="D3_C06" parent="World/Crowd" unique_id=1719443936 instance=ExtResource("7_excbq")]
+[node name="D3_C06" parent="World/Crowd" unique_id=397156216 instance=ExtResource("7_excbq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.22, 0.05, 1.04)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xD3_6"
 
-[node name="D3_C07" parent="World/Crowd" unique_id=62199273 instance=ExtResource("7_excbq")]
+[node name="D3_T07" parent="World/Crowd" unique_id=698406372 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15.89, 0.05, 3.19)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xD3_7"
 
-[node name="D3_B08" parent="World/Crowd" unique_id=1151598247 instance=ExtResource("8_iav0o")]
+[node name="D3_B08" parent="World/Crowd" unique_id=2038104988 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.28, 0.9, 3.58)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD3_8"
 
-[node name="D3_C09" parent="World/Crowd" unique_id=92777622 instance=ExtResource("7_excbq")]
+[node name="D3_A09" parent="World/Crowd" unique_id=997129486 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 17.18, 0.05, 5.86)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xD3_9"
 
-[node name="D3_C10" parent="World/Crowd" unique_id=1240858123 instance=ExtResource("7_excbq")]
+[node name="D3_C10" parent="World/Crowd" unique_id=714658334 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 18.79, 0.05, 6.68)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xD3_10"
 
-[node name="D5_B01" parent="World/Crowd" unique_id=1110620703 instance=ExtResource("8_iav0o")]
+[node name="D5_B01" parent="World/Crowd" unique_id=553566905 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.51, 0.9, -20.84)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD5_1"
 
-[node name="D5_C02" parent="World/Crowd" unique_id=455036953 instance=ExtResource("7_excbq")]
+[node name="D5_Y02" parent="World/Crowd" unique_id=190548457 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 18.94, 0.05, -17.39)
 patrol_half_length = 1.085
-paint_color_id = 3
 reward_coin_id = "xD5_2"
 
-[node name="D5_C03" parent="World/Crowd" unique_id=1976246609 instance=ExtResource("7_excbq")]
+[node name="D5_M03" parent="World/Crowd" unique_id=1549248021 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 17.37, 0.05, -22.86)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xD5_3"
 
-[node name="D5_B04" parent="World/Crowd" unique_id=1698832357 instance=ExtResource("8_iav0o")]
+[node name="D5_B04" parent="World/Crowd" unique_id=321361158 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.29, 0.9, -18.54)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xD5_4"
 
-[node name="D5_C05" parent="World/Crowd" unique_id=1921786990 instance=ExtResource("7_excbq")]
+[node name="D5_C05" parent="World/Crowd" unique_id=1561822636 instance=ExtResource("7_excbq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 16.37, 0.05, -19.7)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xD5_5"
 
-[node name="D5_C06" parent="World/Crowd" unique_id=2111311252 instance=ExtResource("7_excbq")]
+[node name="D5_C06" parent="World/Crowd" unique_id=1630679873 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 20.63, 0.05, -18.46)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xD5_6"
 
-[node name="D5_B07" parent="World/Crowd" unique_id=1243743838 instance=ExtResource("8_iav0o")]
+[node name="D5_B07" parent="World/Crowd" unique_id=75576871 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.44, 0.9, -18.31)
 loop_radius = 0.9
 reward_coin_id = "xD5_7"
 
-[node name="D5_C08" parent="World/Crowd" unique_id=338491883 instance=ExtResource("7_excbq")]
+[node name="D5_C08" parent="World/Crowd" unique_id=584734253 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 17.59, 0.05, -18.44)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xD5_8"
 
-[node name="D5_C09" parent="World/Crowd" unique_id=1284354679 instance=ExtResource("7_excbq")]
+[node name="D5_A09" parent="World/Crowd" unique_id=1899673013 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 19.73, 0.05, -20.19)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xD5_9"
 
-[node name="D6_B01" parent="World/Crowd" unique_id=1012677567 instance=ExtResource("8_iav0o")]
+[node name="D6_B01" parent="World/Crowd" unique_id=240532807 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.76, 0.9, -35.29)
 loop_radius = 0.9
 reward_coin_id = "xD6_1"
 
-[node name="D6_C02" parent="World/Crowd" unique_id=947701356 instance=ExtResource("7_excbq")]
+[node name="D6_T02" parent="World/Crowd" unique_id=1354837730 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 17.9, 0.05, -36.96)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xD6_2"
 
-[node name="D6_C03" parent="World/Crowd" unique_id=1688276534 instance=ExtResource("7_excbq")]
+[node name="D6_C03" parent="World/Crowd" unique_id=335991058 instance=ExtResource("7_excbq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 19.69, 0.05, -36.08)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xD6_3"
 
-[node name="D6_C04" parent="World/Crowd" unique_id=128419355 instance=ExtResource("7_excbq")]
+[node name="D6_M04" parent="World/Crowd" unique_id=432254275 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 20.48, 0.05, -32.92)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xD6_4"
 
-[node name="D6_B05" parent="World/Crowd" unique_id=1514808862 instance=ExtResource("8_iav0o")]
+[node name="D6_B05" parent="World/Crowd" unique_id=1831950945 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.31, 0.9, -36.1)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xD6_5"
 
-[node name="D6_C06" parent="World/Crowd" unique_id=197426275 instance=ExtResource("7_excbq")]
+[node name="D6_C06" parent="World/Crowd" unique_id=853314631 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 15.47, 0.05, -35.41)
 patrol_half_length = 1.085
 reward_coin_id = "xD6_6"
 
-[node name="D7_B01" parent="World/Crowd" unique_id=1203152618 instance=ExtResource("8_iav0o")]
+[node name="D7_B01" parent="World/Crowd" unique_id=922732228 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.18, 2.4, 5.11)
 loop_radius = 0.5
 paint_color_id = 1
 reward_coin_id = "xD7_1"
 
-[node name="D7_C02" parent="World/Crowd" unique_id=1185390735 instance=ExtResource("7_excbq")]
+[node name="D7_M02" parent="World/Crowd" unique_id=69552031 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 30.09, 1.55, 4.82)
 patrol_half_length = 0.5075
 paint_color_id = 2
 reward_coin_id = "xD7_2"
 
-[node name="D7_C03" parent="World/Crowd" unique_id=1343702527 instance=ExtResource("7_excbq")]
+[node name="D7_C03" parent="World/Crowd" unique_id=510793250 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 32.37, 1.55, 6.62)
 patrol_half_length = 0.5075
 reward_coin_id = "xD7_3"
 
-[node name="D7_C04" parent="World/Crowd" unique_id=841068165 instance=ExtResource("7_excbq")]
+[node name="D7_C04" parent="World/Crowd" unique_id=633072989 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 29.68, 1.55, 6.17)
 patrol_half_length = 0.5075
 paint_color_id = 2
 reward_coin_id = "xD7_4"
 
-[node name="D8_B01" parent="World/Crowd" unique_id=753814554 instance=ExtResource("8_iav0o")]
+[node name="D8_B01" parent="World/Crowd" unique_id=121367085 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.14, 0.9, -22.96)
 loop_radius = 0.5
 paint_color_id = 3
 reward_coin_id = "xD8_1"
 
-[node name="D8_C02" parent="World/Crowd" unique_id=1565901427 instance=ExtResource("7_excbq")]
+[node name="D8_C02" parent="World/Crowd" unique_id=2063357128 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 31.06, 0.05, -21.23)
 patrol_half_length = 0.5075
 reward_coin_id = "xD8_2"
 
-[node name="D8_C03" parent="World/Crowd" unique_id=1060537582 instance=ExtResource("7_excbq")]
+[node name="D8_T03" parent="World/Crowd" unique_id=1863529972 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 29.22, 0.05, -20.65)
 patrol_half_length = 0.5075
 paint_color_id = 0
 reward_coin_id = "xD8_3"
 
-[node name="D8_B04" parent="World/Crowd" unique_id=2026683269 instance=ExtResource("8_iav0o")]
+[node name="D8_B04" parent="World/Crowd" unique_id=181366148 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.08, 1.1, -22.64)
 loop_radius = 0.4
 paint_color_id = 1
 reward_coin_id = "xD8_4"
 
-[node name="J1_B01" parent="World/Crowd" unique_id=1744011620 instance=ExtResource("8_iav0o")]
+[node name="J1_B01" parent="World/Crowd" unique_id=358584591 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3, 0.9, -32.28)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xJ1_1"
 
-[node name="J1_C02" parent="World/Crowd" unique_id=777097387 instance=ExtResource("7_excbq")]
+[node name="J1_M02" parent="World/Crowd" unique_id=437040176 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 1.94, 0.05, -37.77)
 patrol_half_length = 2
 paint_color_id = 0
 reward_coin_id = "xJ1_2"
 
-[node name="J1_C03" parent="World/Crowd" unique_id=400116395 instance=ExtResource("7_excbq")]
+[node name="J1_C03" parent="World/Crowd" unique_id=528022080 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.11, 0.05, -40.96)
 patrol_half_length = 2
 paint_color_id = 2
 reward_coin_id = "xJ1_3"
 
-[node name="J1_C04" parent="World/Crowd" unique_id=990793525 instance=ExtResource("7_excbq")]
+[node name="J1_T04" parent="World/Crowd" unique_id=316506565 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -6.84, 0.05, -35.21)
 patrol_half_length = 2
+paint_color_id = 1
 reward_coin_id = "xJ1_4"
 
-[node name="J1_B05" parent="World/Crowd" unique_id=1060089797 instance=ExtResource("8_iav0o")]
+[node name="J1_B05" parent="World/Crowd" unique_id=136231847 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13, 0.9, -32.1)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xJ1_5"
 
-[node name="J1_C06" parent="World/Crowd" unique_id=1534712981 instance=ExtResource("7_excbq")]
+[node name="J1_T06" parent="World/Crowd" unique_id=919878259 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 0.65, 0.05, -34.5)
 patrol_half_length = 2
 paint_color_id = 0
 reward_coin_id = "xJ1_6"
 
-[node name="J1_C07" parent="World/Crowd" unique_id=1189731579 instance=ExtResource("7_excbq")]
+[node name="J1_A07" parent="World/Crowd" unique_id=1270533369 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.62, 0.05, -36.96)
 patrol_half_length = 2
 paint_color_id = 3
 reward_coin_id = "xJ1_7"
 
-[node name="J1_B08" parent="World/Crowd" unique_id=1108387706 instance=ExtResource("8_iav0o")]
+[node name="J1_B08" parent="World/Crowd" unique_id=470659051 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04, 0.9, -28.25)
 loop_radius = 0.9
 reward_coin_id = "xJ1_8"
 
-[node name="J1_C09" parent="World/Crowd" unique_id=186613775 instance=ExtResource("7_excbq")]
+[node name="J1_Y09" parent="World/Crowd" unique_id=650447470 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -5.98, 0.05, -33.65)
 patrol_half_length = 2
-paint_color_id = 3
 reward_coin_id = "xJ1_9"
 
-[node name="J1_C10" parent="World/Crowd" unique_id=700517519 instance=ExtResource("7_excbq")]
+[node name="J1_C10" parent="World/Crowd" unique_id=1135472304 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 2.73, 0.05, -27.73)
 patrol_half_length = 2
 paint_color_id = 0
 reward_coin_id = "xJ1_10"
 
-[node name="J1_B11" parent="World/Crowd" unique_id=1998837260 instance=ExtResource("8_iav0o")]
+[node name="J1_B11" parent="World/Crowd" unique_id=706999585 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75, 0.9, -36.28)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xJ1_11"
 
-[node name="J1_C12" parent="World/Crowd" unique_id=1542391723 instance=ExtResource("7_excbq")]
+[node name="J1_M12" parent="World/Crowd" unique_id=1937108126 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -1.63, 0.05, -33.82)
 patrol_half_length = 2
 paint_color_id = 2
 reward_coin_id = "xJ1_12"
 
-[node name="J1_C13" parent="World/Crowd" unique_id=531639390 instance=ExtResource("7_excbq")]
+[node name="J1_A13" parent="World/Crowd" unique_id=2076201149 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 0.55, 0.05, -27.29)
 patrol_half_length = 2
-paint_color_id = 0
 reward_coin_id = "xJ1_13"
 
-[node name="J1_C14" parent="World/Crowd" unique_id=1303715741 instance=ExtResource("7_excbq")]
+[node name="J1_A14" parent="World/Crowd" unique_id=491637108 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 2.83, 0.05, -39.2)
 patrol_half_length = 2
 paint_color_id = 3
 reward_coin_id = "xJ1_14"
 
-[node name="J1_B15" parent="World/Crowd" unique_id=365252798 instance=ExtResource("8_iav0o")]
+[node name="J1_B15" parent="World/Crowd" unique_id=1890534759 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82, 0.9, -34.98)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xJ1_15"
 
-[node name="J1_C16" parent="World/Crowd" unique_id=54618521 instance=ExtResource("7_excbq")]
+[node name="J1_T16" parent="World/Crowd" unique_id=939097591 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -8.25, 0.05, -30.98)
 patrol_half_length = 2
+paint_color_id = 1
 reward_coin_id = "xJ1_16"
 
-[node name="J1_C17" parent="World/Crowd" unique_id=944573387 instance=ExtResource("7_excbq")]
+[node name="J1_T17" parent="World/Crowd" unique_id=1195406290 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.63, 0.05, -40.03)
 patrol_half_length = 2
 paint_color_id = 3
 reward_coin_id = "xJ1_17"
 
-[node name="J1_B18" parent="World/Crowd" unique_id=1259095247 instance=ExtResource("8_iav0o")]
+[node name="J1_B18" parent="World/Crowd" unique_id=628160539 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36, 0.9, -38.15)
 loop_radius = 0.9
 reward_coin_id = "xJ1_18"
 
-[node name="J1_C19" parent="World/Crowd" unique_id=1019872709 instance=ExtResource("7_excbq")]
+[node name="J1_Y19" parent="World/Crowd" unique_id=347177296 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -5.61, 0.05, -27.39)
 patrol_half_length = 2
-paint_color_id = 3
 reward_coin_id = "xJ1_19"
 
-[node name="J1_C20" parent="World/Crowd" unique_id=1947095336 instance=ExtResource("7_excbq")]
+[node name="J1_Y20" parent="World/Crowd" unique_id=1747206316 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -5.93, 0.05, -38.41)
 patrol_half_length = 2
 paint_color_id = 0
 reward_coin_id = "xJ1_20"
 
-[node name="J2_B01" parent="World/Crowd" unique_id=44824077 instance=ExtResource("8_iav0o")]
+[node name="J2_B01" parent="World/Crowd" unique_id=378236993 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26, 4.9, -56.34)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xJ2_1"
 
-[node name="J2_C02" parent="World/Crowd" unique_id=1478392870 instance=ExtResource("7_excbq")]
+[node name="J2_M02" parent="World/Crowd" unique_id=474621291 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 5.78, 4.05, -53.38)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xJ2_2"
 
-[node name="J2_C03" parent="World/Crowd" unique_id=669303792 instance=ExtResource("7_excbq")]
+[node name="J2_C03" parent="World/Crowd" unique_id=921082153 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 1.75, 4.05, -53.49)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xJ2_3"
 
-[node name="J2_B04" parent="World/Crowd" unique_id=665426713 instance=ExtResource("8_iav0o")]
+[node name="J2_B04" parent="World/Crowd" unique_id=887596438 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.67, 4.9, -54.92)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xJ2_4"
 
-[node name="J2_C05" parent="World/Crowd" unique_id=1423199574 instance=ExtResource("7_excbq")]
+[node name="J2_C05" parent="World/Crowd" unique_id=703692636 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 4.09, 4.05, -53.17)
 patrol_half_length = 1.085
 reward_coin_id = "xJ2_5"
 
-[node name="J2_C06" parent="World/Crowd" unique_id=122978021 instance=ExtResource("7_excbq")]
+[node name="J2_Y06" parent="World/Crowd" unique_id=385646738 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.23, 4.05, -55.19)
 patrol_half_length = 1.085
-paint_color_id = 3
 reward_coin_id = "xJ2_6"
 
-[node name="J2_B07" parent="World/Crowd" unique_id=1655837408 instance=ExtResource("8_iav0o")]
+[node name="J2_B07" parent="World/Crowd" unique_id=513621241 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46, 4.9, -54.24)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xJ2_7"
 
-[node name="J2_C08" parent="World/Crowd" unique_id=118946911 instance=ExtResource("7_excbq")]
+[node name="J2_Y08" parent="World/Crowd" unique_id=911866645 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 1.32, 4.05, -57.35)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xJ2_8"
 
-[node name="J2_C09" parent="World/Crowd" unique_id=39288794 instance=ExtResource("7_excbq")]
+[node name="J2_C09" parent="World/Crowd" unique_id=1379048249 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 5.33, 4.05, -56.78)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xJ2_9"
 
-[node name="L1_B01" parent="World/Crowd" unique_id=446517055 instance=ExtResource("8_iav0o")]
+[node name="L1_B01" parent="World/Crowd" unique_id=2023226213 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.47, 0.9, -34.41)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xL1_1"
 
-[node name="L1_C02" parent="World/Crowd" unique_id=1581368995 instance=ExtResource("7_excbq")]
+[node name="L1_M02" parent="World/Crowd" unique_id=1744972402 instance=ExtResource("39_ovy75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.07, 0.05, -32.04)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL1_2"
 
-[node name="L1_C03" parent="World/Crowd" unique_id=1068830876 instance=ExtResource("7_excbq")]
+[node name="L1_M03" parent="World/Crowd" unique_id=973514140 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -18.46, 0.05, -34.92)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL1_3"
 
-[node name="L1_B04" parent="World/Crowd" unique_id=1335000191 instance=ExtResource("8_iav0o")]
+[node name="L1_B04" parent="World/Crowd" unique_id=2082264053 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2, 0.9, -31.31)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xL1_4"
 
-[node name="L1_C05" parent="World/Crowd" unique_id=1194745913 instance=ExtResource("7_excbq")]
+[node name="L1_C05" parent="World/Crowd" unique_id=914802923 instance=ExtResource("7_excbq")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -19.77, 0.05, -36.99)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xL1_5"
 
-[node name="L1_C06" parent="World/Crowd" unique_id=1820347354 instance=ExtResource("7_excbq")]
+[node name="L1_C06" parent="World/Crowd" unique_id=1095908452 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -22.83, 0.05, -33.85)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL1_6"
 
-[node name="L1_B07" parent="World/Crowd" unique_id=191170526 instance=ExtResource("8_iav0o")]
+[node name="L1_B07" parent="World/Crowd" unique_id=1119838824 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.36, 0.9, -31.59)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xL1_7"
 
-[node name="L1_C08" parent="World/Crowd" unique_id=529324500 instance=ExtResource("7_excbq")]
+[node name="L1_C08" parent="World/Crowd" unique_id=1622890395 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -18.07, 0.05, -32.31)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL1_8"
 
-[node name="L1_C09" parent="World/Crowd" unique_id=1942703149 instance=ExtResource("7_excbq")]
+[node name="L1_M09" parent="World/Crowd" unique_id=44461932 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -20.82, 0.05, -35.4)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xL1_9"
 
-[node name="L2_B01" parent="World/Crowd" unique_id=338271061 instance=ExtResource("8_iav0o")]
+[node name="L2_B01" parent="World/Crowd" unique_id=1872865817 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.06, 0.9, -31.01)
 loop_radius = 0.9
 reward_coin_id = "xL2_1"
 
-[node name="L2_C02" parent="World/Crowd" unique_id=514268472 instance=ExtResource("7_excbq")]
+[node name="L2_M02" parent="World/Crowd" unique_id=1909533161 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -38.48, 0.05, -35.8)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xL2_2"
 
-[node name="L2_C03" parent="World/Crowd" unique_id=515215063 instance=ExtResource("7_excbq")]
+[node name="L2_C03" parent="World/Crowd" unique_id=790766449 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -35.52, 0.05, -37.66)
 patrol_half_length = 1.785
 reward_coin_id = "xL2_3"
 
-[node name="L2_C04" parent="World/Crowd" unique_id=432564482 instance=ExtResource("7_excbq")]
+[node name="L2_M04" parent="World/Crowd" unique_id=26435504 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -38.49, 0.05, -32.85)
 patrol_half_length = 1.785
 reward_coin_id = "xL2_4"
 
-[node name="L2_B05" parent="World/Crowd" unique_id=938455740 instance=ExtResource("8_iav0o")]
+[node name="L2_B05" parent="World/Crowd" unique_id=1766158986 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.37, 0.9, -37.39)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xL2_5"
 
-[node name="L2_C06" parent="World/Crowd" unique_id=1227106202 instance=ExtResource("7_excbq")]
+[node name="L2_C06" parent="World/Crowd" unique_id=134526300 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -39.32, 0.05, -37.55)
 patrol_half_length = 1.785
 reward_coin_id = "xL2_6"
 
-[node name="L2_C07" parent="World/Crowd" unique_id=1193340672 instance=ExtResource("7_excbq")]
+[node name="L2_A07" parent="World/Crowd" unique_id=828315277 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -32.02, 0.05, -31.36)
 patrol_half_length = 1.785
+paint_color_id = 1
 reward_coin_id = "xL2_7"
 
-[node name="L2_B08" parent="World/Crowd" unique_id=572384165 instance=ExtResource("8_iav0o")]
+[node name="L2_B08" parent="World/Crowd" unique_id=697533105 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.82, 0.9, -33.35)
 loop_radius = 0.9
 reward_coin_id = "xL2_8"
 
-[node name="L2_C09" parent="World/Crowd" unique_id=1823691794 instance=ExtResource("7_excbq")]
+[node name="L2_T09" parent="World/Crowd" unique_id=1201308398 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -35.73, 0.05, -30.1)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xL2_9"
 
-[node name="L2_C10" parent="World/Crowd" unique_id=165670843 instance=ExtResource("7_excbq")]
+[node name="L2_T10" parent="World/Crowd" unique_id=867324852 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -34.76, 0.05, -32.99)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xL2_10"
 
-[node name="L2_C11" parent="World/Crowd" unique_id=582209782 instance=ExtResource("7_excbq")]
+[node name="L2_C11" parent="World/Crowd" unique_id=203666779 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -32.09, 0.05, -35.93)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xL2_11"
 
-[node name="L2_B12" parent="World/Crowd" unique_id=1809906642 instance=ExtResource("8_iav0o")]
+[node name="L2_B12" parent="World/Crowd" unique_id=564023871 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.47, 0.9, -34.29)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xL2_12"
 
-[node name="L2_C13" parent="World/Crowd" unique_id=209659161 instance=ExtResource("7_excbq")]
+[node name="L2_C13" parent="World/Crowd" unique_id=1853970374 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -41.05, 0.05, -35.09)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xL2_13"
 
-[node name="L2_C14" parent="World/Crowd" unique_id=997986848 instance=ExtResource("7_excbq")]
+[node name="L2_M14" parent="World/Crowd" unique_id=1382489673 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -34.51, 0.05, -35.23)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xL2_14"
 
-[node name="P1_B01" parent="World/Crowd" unique_id=391680627 instance=ExtResource("8_iav0o")]
+[node name="P1_B01" parent="World/Crowd" unique_id=163621302 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.46, 0.9, -32.5)
 loop_radius = 0.5
 paint_color_id = 3
 reward_coin_id = "xP1_1"
 
-[node name="P1_C02" parent="World/Crowd" unique_id=141721785 instance=ExtResource("7_excbq")]
+[node name="P1_Y02" parent="World/Crowd" unique_id=633238023 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -49.63, 0.05, -33.55)
 patrol_half_length = 0.8575
 paint_color_id = 0
 reward_coin_id = "xP1_2"
 
-[node name="P1_C03" parent="World/Crowd" unique_id=1817721091 instance=ExtResource("7_excbq")]
+[node name="P1_T03" parent="World/Crowd" unique_id=209177333 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -48.41, 0.05, -36.1)
 patrol_half_length = 0.8575
 paint_color_id = 3
 reward_coin_id = "xP1_3"
 
-[node name="P1_B04" parent="World/Crowd" unique_id=290974600 instance=ExtResource("8_iav0o")]
+[node name="P1_B04" parent="World/Crowd" unique_id=94524038 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.9, 0.9, -33.89)
 loop_radius = 0.5
 paint_color_id = 1
 reward_coin_id = "xP1_4"
 
-[node name="P1_C05" parent="World/Crowd" unique_id=683029042 instance=ExtResource("7_excbq")]
+[node name="P1_T05" parent="World/Crowd" unique_id=46933918 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -46.96, 0.05, -32.65)
 patrol_half_length = 0.8575
-paint_color_id = 2
 reward_coin_id = "xP1_5"
 
-[node name="P1_C06" parent="World/Crowd" unique_id=1546616593 instance=ExtResource("7_excbq")]
+[node name="P1_Y06" parent="World/Crowd" unique_id=1063354049 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -49.23, 0.05, -35.06)
 patrol_half_length = 0.8575
 paint_color_id = 2
 reward_coin_id = "xP1_6"
 
-[node name="L3_B01" parent="World/Crowd" unique_id=668073148 instance=ExtResource("8_iav0o")]
+[node name="L3_B01" parent="World/Crowd" unique_id=1371260190 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.41, 0.9, -67.41)
 loop_radius = 0.9
 reward_coin_id = "xL3_1"
 
-[node name="L3_C02" parent="World/Crowd" unique_id=1653700275 instance=ExtResource("7_excbq")]
+[node name="L3_C02" parent="World/Crowd" unique_id=554887155 instance=ExtResource("7_excbq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.44, 0.05, -64.84)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL3_2"
 
-[node name="L3_C03" parent="World/Crowd" unique_id=1124326565 instance=ExtResource("7_excbq")]
+[node name="L3_C03" parent="World/Crowd" unique_id=1802516478 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -36.05, 0.05, -68.97)
 patrol_half_length = 1.085
 reward_coin_id = "xL3_3"
 
-[node name="L3_B04" parent="World/Crowd" unique_id=1731348029 instance=ExtResource("8_iav0o")]
+[node name="L3_B04" parent="World/Crowd" unique_id=167744079 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.04, 0.9, -64.1)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xL3_4"
 
-[node name="L3_C05" parent="World/Crowd" unique_id=324379956 instance=ExtResource("7_excbq")]
+[node name="L3_Y05" parent="World/Crowd" unique_id=1296582871 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.08, 0.05, -66.7)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL3_5"
 
-[node name="L3_C06" parent="World/Crowd" unique_id=1578508023 instance=ExtResource("7_excbq")]
+[node name="L3_T06" parent="World/Crowd" unique_id=347962125 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -38.02, 0.05, -64.19)
 patrol_half_length = 1.085
-paint_color_id = 2
 reward_coin_id = "xL3_6"
 
-[node name="L3_B07" parent="World/Crowd" unique_id=1993888469 instance=ExtResource("8_iav0o")]
+[node name="L3_B07" parent="World/Crowd" unique_id=537391372 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.97, 0.9, -67.5)
 loop_radius = 0.9
 reward_coin_id = "xL3_7"
 
-[node name="L3_C08" parent="World/Crowd" unique_id=97146959 instance=ExtResource("7_excbq")]
+[node name="L3_A08" parent="World/Crowd" unique_id=2033913997 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -36.69, 0.05, -67.55)
 patrol_half_length = 1.085
-paint_color_id = 0
 reward_coin_id = "xL3_8"
 
-[node name="L3_C09" parent="World/Crowd" unique_id=122566048 instance=ExtResource("7_excbq")]
+[node name="L3_C09" parent="World/Crowd" unique_id=343833321 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -34.58, 0.05, -68.33)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL3_9"
 
-[node name="L4_B01" parent="World/Crowd" unique_id=553445241 instance=ExtResource("8_iav0o")]
+[node name="L4_B01" parent="World/Crowd" unique_id=391828557 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.31, 3.9, -80.58)
 loop_radius = 0.9
 reward_coin_id = "xL4_1"
 
-[node name="L4_C02" parent="World/Crowd" unique_id=1711102677 instance=ExtResource("7_excbq")]
+[node name="L4_C02" parent="World/Crowd" unique_id=98755307 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -36.89, 3.05, -86.04)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xL4_2"
 
-[node name="L4_C03" parent="World/Crowd" unique_id=587175072 instance=ExtResource("7_excbq")]
+[node name="L4_C03" parent="World/Crowd" unique_id=862482556 instance=ExtResource("7_excbq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -33.27, 3.05, -82.66)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL4_3"
 
-[node name="L4_B04" parent="World/Crowd" unique_id=217790419 instance=ExtResource("8_iav0o")]
+[node name="L4_B04" parent="World/Crowd" unique_id=514412860 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.65, 3.9, -85.25)
 loop_radius = 0.9
 reward_coin_id = "xL4_4"
 
-[node name="L4_C05" parent="World/Crowd" unique_id=117703935 instance=ExtResource("7_excbq")]
+[node name="L4_T05" parent="World/Crowd" unique_id=1885990788 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -37.56, 3.05, -81.34)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xL4_5"
 
-[node name="L4_C06" parent="World/Crowd" unique_id=1314345653 instance=ExtResource("7_excbq")]
+[node name="L4_A06" parent="World/Crowd" unique_id=801596711 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.53, 3.05, -84.24)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xL4_6"
 
-[node name="L4_B07" parent="World/Crowd" unique_id=995069969 instance=ExtResource("8_iav0o")]
+[node name="L4_B07" parent="World/Crowd" unique_id=1957620675 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.57, 3.9, -83.01)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xL4_7"
 
-[node name="L4_C08" parent="World/Crowd" unique_id=1688861435 instance=ExtResource("7_excbq")]
+[node name="L4_T08" parent="World/Crowd" unique_id=1773231026 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -38.99, 3.05, -82.88)
 patrol_half_length = 1.085
-paint_color_id = 2
 reward_coin_id = "xL4_8"
 
-[node name="L4_C09" parent="World/Crowd" unique_id=1417032462 instance=ExtResource("7_excbq")]
+[node name="L4_M09" parent="World/Crowd" unique_id=1798130564 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -34.19, 3.05, -81.26)
 patrol_half_length = 1.085
 reward_coin_id = "xL4_9"
 
-[node name="PK1_B01" parent="World/Crowd" unique_id=802127642 instance=ExtResource("8_iav0o")]
+[node name="PK1_B01" parent="World/Crowd" unique_id=365758303 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.8, 0.9, -17.2)
 loop_radius = 0.5
 reward_coin_id = "xPK1_1"
 
-[node name="PK1_C02" parent="World/Crowd" unique_id=775656536 instance=ExtResource("7_excbq")]
+[node name="PK1_A02" parent="World/Crowd" unique_id=832292267 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -37.43, 0.05, -17.5)
 patrol_half_length = 0.8575
 paint_color_id = 3
 reward_coin_id = "xPK1_2"
 
-[node name="PK1_C03" parent="World/Crowd" unique_id=796287130 instance=ExtResource("7_excbq")]
+[node name="PK1_C03" parent="World/Crowd" unique_id=1689364849 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -35.13, 0.05, -20.61)
 patrol_half_length = 0.8575
 paint_color_id = 3
 reward_coin_id = "xPK1_3"
 
-[node name="PK1_B04" parent="World/Crowd" unique_id=894264830 instance=ExtResource("8_iav0o")]
+[node name="PK1_B04" parent="World/Crowd" unique_id=1344234000 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.15, 0.9, -18.87)
 loop_radius = 0.5
 paint_color_id = 0
 reward_coin_id = "xPK1_4"
 
-[node name="PK1_C05" parent="World/Crowd" unique_id=823496101 instance=ExtResource("7_excbq")]
+[node name="PK1_M05" parent="World/Crowd" unique_id=293495672 instance=ExtResource("39_ovy75")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -37.2, 0.05, -19.54)
 patrol_half_length = 0.8575
 paint_color_id = 3
 reward_coin_id = "xPK1_5"
 
-[node name="PK1_C06" parent="World/Crowd" unique_id=1601454377 instance=ExtResource("7_excbq")]
+[node name="PK1_M06" parent="World/Crowd" unique_id=514064511 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -38.04, 0.05, -20.64)
 patrol_half_length = 0.8575
 paint_color_id = 3
 reward_coin_id = "xPK1_6"
 
-[node name="H2_B01" parent="World/Crowd" unique_id=658758443 instance=ExtResource("8_iav0o")]
+[node name="H2_B01" parent="World/Crowd" unique_id=504411427 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19, 4.9, -70.7)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xH2_1"
 
-[node name="H2_C02" parent="World/Crowd" unique_id=1519232412 instance=ExtResource("7_excbq")]
+[node name="H2_A02" parent="World/Crowd" unique_id=1919195160 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 1.76, 4.05, -69.7)
 patrol_half_length = 1.085
-paint_color_id = 0
 reward_coin_id = "xH2_2"
 
-[node name="H2_C03" parent="World/Crowd" unique_id=1522799588 instance=ExtResource("7_excbq")]
+[node name="H2_M03" parent="World/Crowd" unique_id=61088994 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 5.6, 4.05, -69.5)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xH2_3"
 
-[node name="H2_B04" parent="World/Crowd" unique_id=817317180 instance=ExtResource("8_iav0o")]
+[node name="H2_B04" parent="World/Crowd" unique_id=1974446945 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15, 4.9, -68.81)
 loop_radius = 0.9
 reward_coin_id = "xH2_4"
 
-[node name="H2_C05" parent="World/Crowd" unique_id=1285696379 instance=ExtResource("7_excbq")]
+[node name="H2_A05" parent="World/Crowd" unique_id=1035862109 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 5.76, 4.05, -67.3)
 patrol_half_length = 1.085
-paint_color_id = 0
 reward_coin_id = "xH2_5"
 
-[node name="H2_C06" parent="World/Crowd" unique_id=1949246861 instance=ExtResource("7_excbq")]
+[node name="H2_C06" parent="World/Crowd" unique_id=1616434350 instance=ExtResource("7_excbq")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0.75, 4.05, -68.34)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xH2_6"
 
-[node name="H2_B07" parent="World/Crowd" unique_id=1355814994 instance=ExtResource("8_iav0o")]
+[node name="H2_B07" parent="World/Crowd" unique_id=33747100 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35, 4.9, -67.5)
 loop_radius = 0.9
 reward_coin_id = "xH2_7"
 
-[node name="P2_B01" parent="World/Crowd" unique_id=123383145 instance=ExtResource("8_iav0o")]
+[node name="P2_B01" parent="World/Crowd" unique_id=401309437 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.94, 4.9, -66.97)
 loop_radius = 0.5
 reward_coin_id = "xP2_1"
 
-[node name="P2_C02" parent="World/Crowd" unique_id=114702586 instance=ExtResource("7_excbq")]
+[node name="P2_T02" parent="World/Crowd" unique_id=448800423 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 11.96, 4.05, -67.6)
 patrol_half_length = 0.5075
 paint_color_id = 0
 reward_coin_id = "xP2_2"
 
-[node name="P2_C03" parent="World/Crowd" unique_id=1465698436 instance=ExtResource("7_excbq")]
+[node name="P2_M03" parent="World/Crowd" unique_id=1396735329 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 12.19, 4.05, -66.04)
 patrol_half_length = 0.5075
 reward_coin_id = "xP2_3"
 
-[node name="P2_B04" parent="World/Crowd" unique_id=1172580160 instance=ExtResource("8_iav0o")]
+[node name="P2_B04" parent="World/Crowd" unique_id=1746213955 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.82, 5.1, -67.69)
 loop_radius = 0.4
 paint_color_id = 3
 reward_coin_id = "xP2_4"
 
-[node name="P2_B05" parent="World/Crowd" unique_id=266317406 instance=ExtResource("8_iav0o")]
+[node name="P2_B05" parent="World/Crowd" unique_id=83603513 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.76, 5.1, -65.68)
 loop_radius = 0.4
 reward_coin_id = "xP2_5"
 
-[node name="H3_B01" parent="World/Crowd" unique_id=1602173153 instance=ExtResource("8_iav0o")]
+[node name="H3_B01" parent="World/Crowd" unique_id=1333265958 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52, 6.9, -82.99)
 loop_radius = 0.9
 reward_coin_id = "xH3_1"
 
-[node name="H3_C02" parent="World/Crowd" unique_id=2033669067 instance=ExtResource("7_excbq")]
+[node name="H3_Y02" parent="World/Crowd" unique_id=1226124403 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 4.16, 6.05, -81.6)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xH3_2"
 
-[node name="H3_C03" parent="World/Crowd" unique_id=1392683138 instance=ExtResource("7_excbq")]
+[node name="H3_C03" parent="World/Crowd" unique_id=641494848 instance=ExtResource("7_excbq")]
 transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 0.75, 6.05, -83.71)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xH3_3"
 
-[node name="H3_C04" parent="World/Crowd" unique_id=185549587 instance=ExtResource("7_excbq")]
+[node name="H3_C04" parent="World/Crowd" unique_id=941670716 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 5.55, 6.05, -80.67)
 patrol_half_length = 1.085
 reward_coin_id = "xH3_4"
 
-[node name="H3_B05" parent="World/Crowd" unique_id=423268425 instance=ExtResource("8_iav0o")]
+[node name="H3_B05" parent="World/Crowd" unique_id=788111119 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.76, 6.9, -82.72)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xH3_5"
 
-[node name="H3_C06" parent="World/Crowd" unique_id=1892330972 instance=ExtResource("7_excbq")]
+[node name="H3_M06" parent="World/Crowd" unique_id=1213121204 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 3.26, 6.05, -84.07)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xH3_6"
 
-[node name="H3_C07" parent="World/Crowd" unique_id=1997941098 instance=ExtResource("7_excbq")]
+[node name="H3_T07" parent="World/Crowd" unique_id=165822691 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 4.07, 6.05, -79.65)
 patrol_half_length = 1.085
+paint_color_id = 1
 reward_coin_id = "xH3_7"
 
-[node name="SA_B01" parent="World/Crowd" unique_id=336695274 instance=ExtResource("8_iav0o")]
+[node name="SA_B01" parent="World/Crowd" unique_id=2126992917 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.21, 6.9, -86.24)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xSA_1"
 
-[node name="SA_C02" parent="World/Crowd" unique_id=1971812015 instance=ExtResource("7_excbq")]
+[node name="SA_T02" parent="World/Crowd" unique_id=1185948708 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -17.47, 6.05, -86.64)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xSA_2"
 
-[node name="SA_C03" parent="World/Crowd" unique_id=867935747 instance=ExtResource("7_excbq")]
+[node name="SA_Y03" parent="World/Crowd" unique_id=521216010 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -19.45, 6.05, -82.77)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xSA_3"
 
-[node name="SA_B04" parent="World/Crowd" unique_id=2069542047 instance=ExtResource("8_iav0o")]
+[node name="SA_B04" parent="World/Crowd" unique_id=1638180969 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.83, 6.9, -83.02)
 loop_radius = 0.9
 reward_coin_id = "xSA_4"
 
-[node name="SA_C05" parent="World/Crowd" unique_id=1625164578 instance=ExtResource("7_excbq")]
+[node name="SA_M05" parent="World/Crowd" unique_id=1103349746 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -20.62, 6.05, -79.11)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xSA_5"
 
-[node name="SA_C06" parent="World/Crowd" unique_id=137998160 instance=ExtResource("7_excbq")]
+[node name="SA_Y06" parent="World/Crowd" unique_id=1072898319 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -21.23, 6.05, -83.08)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xSA_6"
 
-[node name="SA_B07" parent="World/Crowd" unique_id=1135434214 instance=ExtResource("8_iav0o")]
+[node name="SA_B07" parent="World/Crowd" unique_id=550380452 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.96, 6.9, -80.77)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xSA_7"
 
-[node name="SA_C08" parent="World/Crowd" unique_id=2121265772 instance=ExtResource("7_excbq")]
+[node name="SA_A08" parent="World/Crowd" unique_id=788784818 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -12.62, 6.05, -83.27)
 patrol_half_length = 1.785
+paint_color_id = 1
 reward_coin_id = "xSA_8"
 
-[node name="SA_C09" parent="World/Crowd" unique_id=1129524049 instance=ExtResource("7_excbq")]
+[node name="SA_C09" parent="World/Crowd" unique_id=3697039 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -15.01, 6.05, -87.3)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xSA_9"
 
-[node name="SA_B10" parent="World/Crowd" unique_id=1212383529 instance=ExtResource("8_iav0o")]
+[node name="SA_B10" parent="World/Crowd" unique_id=803277460 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.19, 6.9, -85.42)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xSA_10"
 
-[node name="SA_C11" parent="World/Crowd" unique_id=685792904 instance=ExtResource("7_excbq")]
+[node name="SA_C11" parent="World/Crowd" unique_id=1807694513 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -15.79, 6.05, -85.45)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xSA_11"
 
-[node name="SA_C12" parent="World/Crowd" unique_id=1576286424 instance=ExtResource("7_excbq")]
+[node name="SA_T12" parent="World/Crowd" unique_id=295326874 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -22.01, 6.05, -81.49)
 patrol_half_length = 1.785
+paint_color_id = 1
 reward_coin_id = "xSA_12"
 
-[node name="SA_B13" parent="World/Crowd" unique_id=1109998309 instance=ExtResource("8_iav0o")]
+[node name="SA_B13" parent="World/Crowd" unique_id=676025113 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.93, 6.9, -78.3)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xSA_13"
 
-[node name="SA_C14" parent="World/Crowd" unique_id=1453267036 instance=ExtResource("7_excbq")]
+[node name="SA_C14" parent="World/Crowd" unique_id=910202532 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -13.19, 6.05, -81.59)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xSA_14"
 
-[node name="SA_C15" parent="World/Crowd" unique_id=1347073898 instance=ExtResource("7_excbq")]
+[node name="SA_M15" parent="World/Crowd" unique_id=1997747512 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -13.19, 6.05, -85.04)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xSA_15"
 
-[node name="P3_B01" parent="World/Crowd" unique_id=937342001 instance=ExtResource("8_iav0o")]
+[node name="P3_B01" parent="World/Crowd" unique_id=1608898265 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.83, 6.9, -91.74)
 loop_radius = 0.5
 reward_coin_id = "xP3_1"
 
-[node name="P3_C02" parent="World/Crowd" unique_id=660807350 instance=ExtResource("7_excbq")]
+[node name="P3_A02" parent="World/Crowd" unique_id=289179848 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -30.25, 6.05, -90.14)
 patrol_half_length = 0.5075
 paint_color_id = 3
 reward_coin_id = "xP3_2"
 
-[node name="P3_C03" parent="World/Crowd" unique_id=613548308 instance=ExtResource("7_excbq")]
+[node name="P3_M03" parent="World/Crowd" unique_id=1649320642 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -30.13, 6.05, -91.83)
 patrol_half_length = 0.5075
 paint_color_id = 0
 reward_coin_id = "xP3_3"
 
-[node name="P3_B04" parent="World/Crowd" unique_id=278597363 instance=ExtResource("8_iav0o")]
+[node name="P3_B04" parent="World/Crowd" unique_id=1959721659 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.31, 7.1, -90.25)
 loop_radius = 0.4
 reward_coin_id = "xP3_4"
 
-[node name="S2_B01" parent="World/Crowd" unique_id=2080031329 instance=ExtResource("8_iav0o")]
+[node name="S2_B01" parent="World/Crowd" unique_id=814973400 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.04, 6.9, -97.27)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xS2_1"
 
-[node name="S2_C02" parent="World/Crowd" unique_id=665668797 instance=ExtResource("7_excbq")]
+[node name="S2_C02" parent="World/Crowd" unique_id=424542773 instance=ExtResource("7_excbq")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -19.25, 6.05, -96.49)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xS2_2"
 
-[node name="S2_C03" parent="World/Crowd" unique_id=358145639 instance=ExtResource("7_excbq")]
+[node name="S2_C03" parent="World/Crowd" unique_id=1167998822 instance=ExtResource("7_excbq")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -19.88, 6.05, -100.23)
 patrol_half_length = 1.085
 reward_coin_id = "xS2_3"
 
-[node name="S2_B04" parent="World/Crowd" unique_id=928816243 instance=ExtResource("8_iav0o")]
+[node name="S2_B04" parent="World/Crowd" unique_id=1604945299 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.33, 6.9, -99.64)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xS2_4"
 
-[node name="S2_C05" parent="World/Crowd" unique_id=1410930890 instance=ExtResource("7_excbq")]
+[node name="S2_M05" parent="World/Crowd" unique_id=2013548296 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -16.24, 6.05, -96.49)
 patrol_half_length = 1.085
 paint_color_id = 2
 reward_coin_id = "xS2_5"
 
-[node name="S2_C06" parent="World/Crowd" unique_id=702522318 instance=ExtResource("7_excbq")]
+[node name="S2_T06" parent="World/Crowd" unique_id=287799489 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -18.29, 6.05, -101.97)
 patrol_half_length = 1.085
 paint_color_id = 0
 reward_coin_id = "xS2_6"
 
-[node name="S2_B07" parent="World/Crowd" unique_id=1447412178 instance=ExtResource("8_iav0o")]
+[node name="S2_B07" parent="World/Crowd" unique_id=2008031286 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.81, 6.9, -96.2)
 loop_radius = 0.9
 reward_coin_id = "xS2_7"
 
-[node name="S2_C08" parent="World/Crowd" unique_id=828513410 instance=ExtResource("7_excbq")]
+[node name="S2_A08" parent="World/Crowd" unique_id=504275669 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -17.69, 6.05, -97.21)
 patrol_half_length = 1.085
 paint_color_id = 3
 reward_coin_id = "xS2_8"
 
-[node name="F_B01" parent="World/Crowd" unique_id=1049178354 instance=ExtResource("8_iav0o")]
+[node name="F_B01" parent="World/Crowd" unique_id=296373318 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.26, 12.9, -115.33)
 loop_radius = 0.9
 reward_coin_id = "xF_1"
 
-[node name="F_C02" parent="World/Crowd" unique_id=1329150867 instance=ExtResource("7_excbq")]
+[node name="F_T02" parent="World/Crowd" unique_id=1143634687 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -18.74, 12.05, -123.31)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xF_2"
 
-[node name="F_C03" parent="World/Crowd" unique_id=812550163 instance=ExtResource("7_excbq")]
+[node name="F_A03" parent="World/Crowd" unique_id=1676011981 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -21, 12.05, -116.93)
 patrol_half_length = 1.785
 paint_color_id = 2
 reward_coin_id = "xF_3"
 
-[node name="F_B04" parent="World/Crowd" unique_id=823181866 instance=ExtResource("8_iav0o")]
+[node name="F_B04" parent="World/Crowd" unique_id=1961932638 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.56, 12.9, -114.29)
 loop_radius = 0.9
 paint_color_id = 1
 reward_coin_id = "xF_4"
 
-[node name="F_C05" parent="World/Crowd" unique_id=1346702960 instance=ExtResource("7_excbq")]
+[node name="F_T05" parent="World/Crowd" unique_id=375668594 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -15, 12.05, -123.13)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xF_5"
 
-[node name="F_C06" parent="World/Crowd" unique_id=1765791674 instance=ExtResource("7_excbq")]
+[node name="F_M06" parent="World/Crowd" unique_id=779165317 instance=ExtResource("39_ovy75")]
 transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -14.24, 12.05, -121.47)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xF_6"
 
-[node name="F_B07" parent="World/Crowd" unique_id=9328021 instance=ExtResource("8_iav0o")]
+[node name="F_B07" parent="World/Crowd" unique_id=945757523 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.66, 12.9, -123.56)
 loop_radius = 0.9
 reward_coin_id = "xF_7"
 
-[node name="F_C08" parent="World/Crowd" unique_id=2133926758 instance=ExtResource("7_excbq")]
+[node name="F_T08" parent="World/Crowd" unique_id=696140128 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -12.78, 12.05, -119.87)
 patrol_half_length = 1.785
 paint_color_id = 3
 reward_coin_id = "xF_8"
 
-[node name="F_C09" parent="World/Crowd" unique_id=1381870399 instance=ExtResource("7_excbq")]
+[node name="F_Y09" parent="World/Crowd" unique_id=414424864 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -13.41, 12.05, -117.89)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xF_9"
 
-[node name="F_B10" parent="World/Crowd" unique_id=1520521716 instance=ExtResource("8_iav0o")]
+[node name="F_B10" parent="World/Crowd" unique_id=1985861395 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.68, 12.9, -118.43)
 loop_radius = 0.9
 paint_color_id = 0
 reward_coin_id = "xF_10"
 
-[node name="F_C11" parent="World/Crowd" unique_id=1752471021 instance=ExtResource("7_excbq")]
+[node name="F_A11" parent="World/Crowd" unique_id=82096682 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -21.99, 12.05, -121.14)
 patrol_half_length = 1.785
+paint_color_id = 1
 reward_coin_id = "xF_11"
 
-[node name="F_C12" parent="World/Crowd" unique_id=2101836984 instance=ExtResource("7_excbq")]
+[node name="F_A12" parent="World/Crowd" unique_id=1369280938 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.4, 12.05, -120.38)
 patrol_half_length = 1.785
-paint_color_id = 0
 reward_coin_id = "xF_12"
 
-[node name="F_B13" parent="World/Crowd" unique_id=1963019118 instance=ExtResource("8_iav0o")]
+[node name="F_B13" parent="World/Crowd" unique_id=508761674 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6, 12.9, -116.1)
 loop_radius = 0.9
 paint_color_id = 3
 reward_coin_id = "xF_13"
 
-[node name="F_C14" parent="World/Crowd" unique_id=1693861114 instance=ExtResource("7_excbq")]
+[node name="F_T14" parent="World/Crowd" unique_id=936791192 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -14.97, 12.05, -115.56)
 patrol_half_length = 1.785
 paint_color_id = 0
 reward_coin_id = "xF_14"
 
-[node name="F_C15" parent="World/Crowd" unique_id=757053462 instance=ExtResource("7_excbq")]
+[node name="F_C15" parent="World/Crowd" unique_id=436659539 instance=ExtResource("7_excbq")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -12.53, 12.05, -122)
 patrol_half_length = 1.785
 reward_coin_id = "xF_15"
 
-[node name="PK2_B01" parent="World/Crowd" unique_id=27597392 instance=ExtResource("8_iav0o")]
+[node name="PK2_B01" parent="World/Crowd" unique_id=1009333170 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.1, 6.9, -99.01)
 loop_radius = 0.5
 paint_color_id = 3
 reward_coin_id = "xPK2_1"
 
-[node name="PK2_C02" parent="World/Crowd" unique_id=275799814 instance=ExtResource("7_excbq")]
+[node name="PK2_T02" parent="World/Crowd" unique_id=1218993140 instance=ExtResource("41_ugk5q")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.11, 6.05, -99.58)
 patrol_half_length = 0.8575
-paint_color_id = 2
 reward_coin_id = "xPK2_2"
 
-[node name="PK2_C03" parent="World/Crowd" unique_id=781504446 instance=ExtResource("7_excbq")]
+[node name="PK2_M03" parent="World/Crowd" unique_id=751984701 instance=ExtResource("39_ovy75")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.37, 6.05, -97.34)
 patrol_half_length = 0.8575
 reward_coin_id = "xPK2_3"
 
-[node name="PK2_B04" parent="World/Crowd" unique_id=2041490966 instance=ExtResource("8_iav0o")]
+[node name="PK2_B04" parent="World/Crowd" unique_id=1331559093 instance=ExtResource("8_iav0o")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.97, 6.9, -96.84)
 loop_radius = 0.5
 reward_coin_id = "xPK2_4"
 
-[node name="PK2_C05" parent="World/Crowd" unique_id=456639772 instance=ExtResource("7_excbq")]
+[node name="PK2_Y05" parent="World/Crowd" unique_id=189520843 instance=ExtResource("38_wtkl1")]
 transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -5.71, 6.05, -100.54)
 patrol_half_length = 0.8575
-paint_color_id = 3
 reward_coin_id = "xPK2_5"
 
-[node name="PK2_C06" parent="World/Crowd" unique_id=1789957048 instance=ExtResource("7_excbq")]
+[node name="PK2_A06" parent="World/Crowd" unique_id=1900962292 instance=ExtResource("40_wk6bc")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -2.78, 6.05, -101.13)
 patrol_half_length = 0.8575
 paint_color_id = 3
