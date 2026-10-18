@@ -127,14 +127,16 @@ func find_occupant(_from_state: int, _to_state: int) -> Node:
 	return null
 
 
-## Shared occupancy query: a box at `xf` with half-size `half` against player/enemy/cargo/head layers.
+## Shared occupancy query: a box at `xf` with half-size `half` against the player, cargo and head layers.
+## Enemies do not block a move (v2: worlds carry hundreds of them, and a wandering crab must never lock a
+## puzzle); a swinging part simply shoves them aside.
 func query_box(xf: Transform3D, half: Vector3) -> Node:
 	var shape := BoxShape3D.new()
 	shape.size = half * 2.0
 	var p := PhysicsShapeQueryParameters3D.new()
 	p.shape = shape
 	p.transform = xf
-	p.collision_mask = 2 | 4 | 16 | 128
+	p.collision_mask = 2 | 16 | 128
 	p.collide_with_bodies = true
 	p.collide_with_areas = false
 	p.exclude = [get_rid()]

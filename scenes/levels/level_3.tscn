@@ -863,7 +863,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 12.05, -130)
 reward_coin_id = "e04"
 
 [node name="Bee05" parent="World/Enemies" unique_id=1487829610 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 18.4, -149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 15.9, -149)
 reward_coin_id = "e05"
 
 [node name="Crab06" parent="World/Enemies" unique_id=1315461825 instance=ExtResource("26_l1xkm")]
@@ -871,7 +871,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.05, -82)
 reward_coin_id = "e06"
 
 [node name="Bee07" parent="World/Enemies" unique_id=543924806 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.4, -139)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.9, -139)
 reward_coin_id = "e07"
 
 [node name="Crab08" parent="World/Enemies" unique_id=1334928664 instance=ExtResource("26_l1xkm")]
@@ -879,7 +879,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.05, -159)
 reward_coin_id = "e08"
 
 [node name="Bee09" parent="World/Enemies" unique_id=1728969769 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 3.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0.9, 0)
 reward_coin_id = "e09"
 
 [node name="Crab10" parent="World/Enemies" unique_id=163377720 instance=ExtResource("26_l1xkm")]
@@ -887,7 +887,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0.05, -20)
 reward_coin_id = "e10"
 
 [node name="Bee11" parent="World/Enemies" unique_id=2091509563 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 21.4, -122)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 18.9, -122)
 reward_coin_id = "e11"
 
 [node name="Crab12" parent="World/Enemies" unique_id=1852068149 instance=ExtResource("26_l1xkm")]
@@ -899,7 +899,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 18.05, -194)
 reward_coin_id = "e13"
 
 [node name="Bee14" parent="World/Enemies" unique_id=1528782635 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 21.4, -226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 18.9, -226)
 reward_coin_id = "e14"
 
 [node name="Crab15" parent="World/Enemies" unique_id=948782711 instance=ExtResource("26_l1xkm")]
@@ -908,12 +908,12 @@ paint_color_id = 2
 reward_coin_id = "e15"
 
 [node name="Bee16" parent="World/Enemies" unique_id=1667212655 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 10.4, -111)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 9.9, -111)
 paint_color_id = 1
 reward_coin_id = "e16"
 
 [node name="Bee17" parent="World/Enemies" unique_id=1660875560 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 13.4, -142)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 12.9, -142)
 paint_color_id = 3
 reward_coin_id = "e17"
 
@@ -937,7 +937,7 @@ paint_color_id = 0
 reward_coin_id = "e21"
 
 [node name="Bee22" parent="World/Enemies" unique_id=480587975 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 19.4, -166)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 18.9, -166)
 reward_coin_id = "e22"
 
 [node name="Crab23" parent="World/Enemies" unique_id=449037420 instance=ExtResource("26_l1xkm")]
@@ -946,7 +946,7 @@ paint_color_id = 3
 reward_coin_id = "e23"
 
 [node name="Bee24" parent="World/Enemies" unique_id=126871133 instance=ExtResource("27_au27u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 19.4, -157)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 18.9, -157)
 paint_color_id = 1
 reward_coin_id = "e24"
 
@@ -6716,6 +6716,3780 @@ transform = Transform3D(-0.7880108, 0, 0.61566144, 0, 1, 0, -0.61566144, 0, -0.7
 
 [node name="PK1_tuft3" parent="World/Dressing/Tufts" unique_id=232002068 instance=ExtResource("40_ooiqn")]
 transform = Transform3D(-0.8386706, 0, -0.544639, 0, 1, 0, 0.544639, 0, -0.8386706, 27.1, 0, -20.6)
+
+[node name="Crowd" type="Node3D" parent="World" unique_id=1550440530]
+
+[node name="A1_B01" parent="World/Crowd" unique_id=174466648 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98, 0.9, 84.39)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xA1_1"
+
+[node name="A1_C02" parent="World/Crowd" unique_id=681457170 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 2.92, 0.05, 92.58)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_2"
+
+[node name="A1_C03" parent="World/Crowd" unique_id=980166489 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.2, 0.05, 89.87)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_3"
+
+[node name="A1_B04" parent="World/Crowd" unique_id=152553247 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.36, 0.9, 92.91)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xA1_4"
+
+[node name="A1_C05" parent="World/Crowd" unique_id=939474165 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -4.48, 0.05, 87.3)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xA1_5"
+
+[node name="A1_C06" parent="World/Crowd" unique_id=1125082235 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 3.06, 0.05, 84.01)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_6"
+
+[node name="A1_B07" parent="World/Crowd" unique_id=1733139601 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2, 0.9, 91.35)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xA1_7"
+
+[node name="A1_C08" parent="World/Crowd" unique_id=1715722883 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 4.63, 0.05, 87.65)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_8"
+
+[node name="A1_C09" parent="World/Crowd" unique_id=475798421 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 4.31, 0.05, 90.86)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_9"
+
+[node name="A1_B10" parent="World/Crowd" unique_id=1732732488 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.75, 0.9, 84.87)
+loop_radius = 0.9
+reward_coin_id = "xA1_10"
+
+[node name="A1_C11" parent="World/Crowd" unique_id=222254594 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -2.87, 0.05, 91.72)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xA1_11"
+
+[node name="A1_C12" parent="World/Crowd" unique_id=1881214512 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.49, 0.05, 85.63)
+patrol_half_length = 1.785
+reward_coin_id = "xA1_12"
+
+[node name="A1_B13" parent="World/Crowd" unique_id=379520777 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44, 0.9, 88.81)
+loop_radius = 0.9
+reward_coin_id = "xA1_13"
+
+[node name="A1_C14" parent="World/Crowd" unique_id=1296047470 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 1.31, 0.05, 92.31)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xA1_14"
+
+[node name="A1_C15" parent="World/Crowd" unique_id=1174783166 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 4.62, 0.05, 85.99)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xA1_15"
+
+[node name="A2_B01" parent="World/Crowd" unique_id=2093274907 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53, 0.9, 73.46)
+loop_radius = 0.9
+reward_coin_id = "xA2_1"
+
+[node name="A2_C02" parent="World/Crowd" unique_id=1847499656 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 1.49, 0.05, 69.43)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xA2_2"
+
+[node name="A2_C03" parent="World/Crowd" unique_id=921241001 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -0.68, 0.05, 72.23)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xA2_3"
+
+[node name="A2_C04" parent="World/Crowd" unique_id=503914830 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 0, 0.05, 74.8)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA2_4"
+
+[node name="A2_B05" parent="World/Crowd" unique_id=1763066992 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0.9, 70.55)
+loop_radius = 0.9
+reward_coin_id = "xA2_5"
+
+[node name="A2_C06" parent="World/Crowd" unique_id=1469924146 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -1.52, 0.05, 69.58)
+patrol_half_length = 1.085
+reward_coin_id = "xA2_6"
+
+[node name="A2_C07" parent="World/Crowd" unique_id=2016376902 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 0.89, 0.05, 72.14)
+patrol_half_length = 1.085
+reward_coin_id = "xA2_7"
+
+[node name="A2_B08" parent="World/Crowd" unique_id=1773603257 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88, 0.9, 71.33)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xA2_8"
+
+[node name="A2_C09" parent="World/Crowd" unique_id=378391272 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -2.41, 0.05, 72.18)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA2_9"
+
+[node name="A2_C10" parent="World/Crowd" unique_id=1587600308 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -1.49, 0.05, 73.73)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA2_10"
+
+[node name="A3_B01" parent="World/Crowd" unique_id=934769563 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44, 0.9, 56.08)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xA3_1"
+
+[node name="A3_C02" parent="World/Crowd" unique_id=1265027593 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -0.97, 0.05, 57.78)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA3_2"
+
+[node name="A3_C03" parent="World/Crowd" unique_id=1150858284 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.61, 0.05, 56.45)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA3_3"
+
+[node name="A3_C04" parent="World/Crowd" unique_id=1109014880 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -0.95, 0.05, 60.41)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA3_4"
+
+[node name="A3_B05" parent="World/Crowd" unique_id=165049184 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58, 0.9, 59.65)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xA3_5"
+
+[node name="A3_C06" parent="World/Crowd" unique_id=1145429449 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -2.75, 0.05, 59.76)
+patrol_half_length = 1.085
+reward_coin_id = "xA3_6"
+
+[node name="A3_C07" parent="World/Crowd" unique_id=1664595909 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 1.26, 0.05, 58)
+patrol_half_length = 1.085
+reward_coin_id = "xA3_7"
+
+[node name="A3_B08" parent="World/Crowd" unique_id=1970246453 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.75, 0.9, 56.37)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xA3_8"
+
+[node name="A3_C09" parent="World/Crowd" unique_id=424563707 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 2.8, 0.05, 56.98)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA3_9"
+
+[node name="A3_C10" parent="World/Crowd" unique_id=1194785945 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -2.57, 0.05, 56.07)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA3_10"
+
+[node name="A4_B01" parent="World/Crowd" unique_id=498264901 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16, 0.9, 41.99)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xA4_1"
+
+[node name="A4_C02" parent="World/Crowd" unique_id=391649360 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 2.15, 0.05, 42.63)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xA4_2"
+
+[node name="A4_C03" parent="World/Crowd" unique_id=1445950731 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -1.84, 0.05, 43.5)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA4_3"
+
+[node name="A4_C04" parent="World/Crowd" unique_id=264151551 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -1.68, 0.05, 41.6)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xA4_4"
+
+[node name="A4_B05" parent="World/Crowd" unique_id=1667463264 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77, 0.9, 42.5)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xA4_5"
+
+[node name="A4_C06" parent="World/Crowd" unique_id=773452511 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 0.02, 0.05, 45.83)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA4_6"
+
+[node name="A4_C07" parent="World/Crowd" unique_id=2076886247 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 2.97, 0.05, 44.61)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA4_7"
+
+[node name="A4_B08" parent="World/Crowd" unique_id=2042407215 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.9, 45.59)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xA4_8"
+
+[node name="A4_C09" parent="World/Crowd" unique_id=483155712 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 1.28, 0.05, 44.15)
+patrol_half_length = 1.085
+reward_coin_id = "xA4_9"
+
+[node name="A4_C10" parent="World/Crowd" unique_id=2974449 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 0.03, 0.05, 43.06)
+patrol_half_length = 1.085
+reward_coin_id = "xA4_10"
+
+[node name="A5_B01" parent="World/Crowd" unique_id=1495992315 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.84, 0.9, 31.55)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xA5_1"
+
+[node name="A5_C02" parent="World/Crowd" unique_id=2104266651 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1, 0.05, 29.04)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xA5_2"
+
+[node name="A5_C03" parent="World/Crowd" unique_id=756220888 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 2.42, 0.05, 31)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xA5_3"
+
+[node name="A5_C04" parent="World/Crowd" unique_id=621311843 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 0.17, 0.05, 32.31)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xA5_4"
+
+[node name="A5_B05" parent="World/Crowd" unique_id=385034018 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.9, 29.49)
+loop_radius = 0.5
+paint_color_id = 1
+reward_coin_id = "xA5_5"
+
+[node name="A5_C06" parent="World/Crowd" unique_id=1026535561 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -2.21, 0.05, 31.22)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xA5_6"
+
+[node name="A5_C07" parent="World/Crowd" unique_id=491392282 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -1.21, 0.05, 32.01)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xA5_7"
+
+[node name="A6_B01" parent="World/Crowd" unique_id=2045686422 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, 0.9, 16.46)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xA6_1"
+
+[node name="A6_C02" parent="World/Crowd" unique_id=1489683528 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 0.92, 0.05, 19.51)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xA6_2"
+
+[node name="A6_C03" parent="World/Crowd" unique_id=665108314 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -1.56, 0.05, 18.63)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA6_3"
+
+[node name="A6_C04" parent="World/Crowd" unique_id=602345390 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -2.52, 0.05, 16.36)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xA6_4"
+
+[node name="A6_B05" parent="World/Crowd" unique_id=998111989 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 0.9, 19.59)
+loop_radius = 0.9
+reward_coin_id = "xA6_5"
+
+[node name="A6_C06" parent="World/Crowd" unique_id=784420627 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 3.09, 0.05, 18.2)
+patrol_half_length = 1.085
+reward_coin_id = "xA6_6"
+
+[node name="A6_C07" parent="World/Crowd" unique_id=87572773 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 2.12, 0.05, 16.6)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xA6_7"
+
+[node name="A6_B08" parent="World/Crowd" unique_id=1296461923 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.68, 0.9, 19.41)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xA6_8"
+
+[node name="X1_B01" parent="World/Crowd" unique_id=727517913 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.71, 0.9, -5.05)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xX1_1"
+
+[node name="X1_C02" parent="World/Crowd" unique_id=506860469 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.85, 0.05, -1.6)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xX1_2"
+
+[node name="X1_C03" parent="World/Crowd" unique_id=1725766187 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 6.71, 0.05, -1.05)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xX1_3"
+
+[node name="X1_C04" parent="World/Crowd" unique_id=1662761476 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -6.16, 0.05, 4.8)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xX1_4"
+
+[node name="X1_B05" parent="World/Crowd" unique_id=811025594 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02, 0.9, 0.92)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xX1_5"
+
+[node name="X1_C06" parent="World/Crowd" unique_id=1162190801 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -5.23, 0.05, -1.41)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xX1_6"
+
+[node name="X1_C07" parent="World/Crowd" unique_id=173042472 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -4.05, 0.05, -0.21)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xX1_7"
+
+[node name="X1_B08" parent="World/Crowd" unique_id=231345036 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.44, 0.9, 6.46)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xX1_8"
+
+[node name="X1_C09" parent="World/Crowd" unique_id=1024967494 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 2.73, 0.05, 2.84)
+patrol_half_length = 2
+reward_coin_id = "xX1_9"
+
+[node name="X1_C10" parent="World/Crowd" unique_id=794052931 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 3.54, 0.05, -1.18)
+patrol_half_length = 2
+reward_coin_id = "xX1_10"
+
+[node name="X1_B11" parent="World/Crowd" unique_id=1345552304 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.92, 0.9, -3.26)
+loop_radius = 0.9
+reward_coin_id = "xX1_11"
+
+[node name="X1_C12" parent="World/Crowd" unique_id=23616172 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 0.93, 0.05, -6.76)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xX1_12"
+
+[node name="X1_C13" parent="World/Crowd" unique_id=1939316112 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.75, 0.05, 5.57)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xX1_13"
+
+[node name="X1_C14" parent="World/Crowd" unique_id=1109971320 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -6.08, 0.05, 2.56)
+patrol_half_length = 2
+reward_coin_id = "xX1_14"
+
+[node name="X1_B15" parent="World/Crowd" unique_id=1645691667 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48, 0.9, 5.6)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xX1_15"
+
+[node name="X1_C16" parent="World/Crowd" unique_id=76904019 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.28, 0.05, -5.09)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xX1_16"
+
+[node name="X1_C17" parent="World/Crowd" unique_id=1517205987 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 1.46, 0.05, 1.76)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xX1_17"
+
+[node name="X1_B18" parent="World/Crowd" unique_id=317538236 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15, 0.9, 2.5)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xX1_18"
+
+[node name="X1_C19" parent="World/Crowd" unique_id=551610658 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -3.87, 0.05, -4.22)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xX1_19"
+
+[node name="X1_C20" parent="World/Crowd" unique_id=1476402134 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 1.2, 0.05, 5.36)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xX1_20"
+
+[node name="Xw_B01" parent="World/Crowd" unique_id=1473425231 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.9, 0.9, -2.88)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xXw_1"
+
+[node name="Xw_C02" parent="World/Crowd" unique_id=581883759 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -22.07, 0.05, -0.95)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXw_2"
+
+[node name="Xw_C03" parent="World/Crowd" unique_id=982952713 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -23.63, 0.05, -0.99)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXw_3"
+
+[node name="Xw_C04" parent="World/Crowd" unique_id=187895475 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -23.73, 0.05, 1.06)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXw_4"
+
+[node name="Xw_B05" parent="World/Crowd" unique_id=352307797 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.64, 0.9, 0.03)
+loop_radius = 0.9
+reward_coin_id = "xXw_5"
+
+[node name="Xw_C06" parent="World/Crowd" unique_id=1474181373 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -20.42, 0.05, 2.73)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXw_6"
+
+[node name="Xw_C07" parent="World/Crowd" unique_id=1367111805 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -19.72, 0.05, -0.69)
+patrol_half_length = 1.085
+reward_coin_id = "xXw_7"
+
+[node name="Xw_B08" parent="World/Crowd" unique_id=472775352 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.07, 0.9, 0.75)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXw_8"
+
+[node name="Xw_C09" parent="World/Crowd" unique_id=1512527517 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -22.51, 0.05, -2.59)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXw_9"
+
+[node name="Xw_C10" parent="World/Crowd" unique_id=277306050 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -21.93, 0.05, 1.83)
+patrol_half_length = 1.085
+reward_coin_id = "xXw_10"
+
+[node name="Xe_B01" parent="World/Crowd" unique_id=367015957 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.56, 0.9, -1.44)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xXe_1"
+
+[node name="Xe_C02" parent="World/Crowd" unique_id=315841058 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 22.74, 0.05, 0.73)
+patrol_half_length = 1.085
+reward_coin_id = "xXe_2"
+
+[node name="Xe_C03" parent="World/Crowd" unique_id=729493460 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 21.47, 0.05, 1.73)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXe_3"
+
+[node name="Xe_C04" parent="World/Crowd" unique_id=1510087207 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 20.2, 0.05, -2.62)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXe_4"
+
+[node name="Xe_B05" parent="World/Crowd" unique_id=339631351 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.61, 0.9, 2.98)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xXe_5"
+
+[node name="Xe_C06" parent="World/Crowd" unique_id=610325164 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.33, 0.05, -0.07)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXe_6"
+
+[node name="Xe_C07" parent="World/Crowd" unique_id=494576090 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 19.4, 0.05, 1.31)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXe_7"
+
+[node name="Xe_B08" parent="World/Crowd" unique_id=1120933456 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.19, 0.9, -0.76)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXe_8"
+
+[node name="Xe_C09" parent="World/Crowd" unique_id=1423148127 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 21.56, 0.05, -0.97)
+patrol_half_length = 1.085
+reward_coin_id = "xXe_9"
+
+[node name="Xe_C10" parent="World/Crowd" unique_id=2045117777 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 19.91, 0.05, 3.05)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXe_10"
+
+[node name="Xn_B01" parent="World/Crowd" unique_id=1355310922 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6, 0.9, -22.09)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXn_1"
+
+[node name="Xn_C02" parent="World/Crowd" unique_id=867752541 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -0.6, 0.05, -22.52)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xXn_2"
+
+[node name="Xn_C03" parent="World/Crowd" unique_id=1690940942 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.85, 0.05, -20.15)
+patrol_half_length = 1.785
+reward_coin_id = "xXn_3"
+
+[node name="Xn_B04" parent="World/Crowd" unique_id=1695079406 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87, 0.9, -17.9)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXn_4"
+
+[node name="Xn_C05" parent="World/Crowd" unique_id=1710663830 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.24, 0.05, -24.06)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xXn_5"
+
+[node name="Xn_C06" parent="World/Crowd" unique_id=2101758737 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0.59, 0.05, -19.27)
+patrol_half_length = 1.785
+reward_coin_id = "xXn_6"
+
+[node name="Xn_B07" parent="World/Crowd" unique_id=1341622382 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68, 0.9, -22.54)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xXn_7"
+
+[node name="Xn_C08" parent="World/Crowd" unique_id=1839158796 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.41, 0.05, -24.23)
+patrol_half_length = 1.785
+reward_coin_id = "xXn_8"
+
+[node name="Xn_C09" parent="World/Crowd" unique_id=930700430 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.04, 0.05, -21.11)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xXn_9"
+
+[node name="Xn_B10" parent="World/Crowd" unique_id=626390126 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89, 0.9, -16.12)
+loop_radius = 0.9
+reward_coin_id = "xXn_10"
+
+[node name="Xn_C11" parent="World/Crowd" unique_id=344310 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -3.91, 0.05, -16.05)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xXn_11"
+
+[node name="Xn_C12" parent="World/Crowd" unique_id=1811400159 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.79, 0.05, -16.5)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xXn_12"
+
+[node name="Xn_B13" parent="World/Crowd" unique_id=1935857199 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37, 0.9, -21.22)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXn_13"
+
+[node name="Xn_C14" parent="World/Crowd" unique_id=647566828 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -4.4, 0.05, -21.17)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xXn_14"
+
+[node name="Xn_C15" parent="World/Crowd" unique_id=18790691 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -2.03, 0.05, -17.92)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xXn_15"
+
+[node name="XnW_B01" parent="World/Crowd" unique_id=1624393255 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.02, 0.9, -20.93)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xXnW_1"
+
+[node name="XnW_C02" parent="World/Crowd" unique_id=4810570 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -13.79, 0.05, -19.23)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXnW_2"
+
+[node name="XnW_C03" parent="World/Crowd" unique_id=1064112009 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -16.85, 0.05, -17.8)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXnW_3"
+
+[node name="XnW_B04" parent="World/Crowd" unique_id=1779429736 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.92, 0.9, -22.3)
+loop_radius = 0.9
+reward_coin_id = "xXnW_4"
+
+[node name="XnW_C05" parent="World/Crowd" unique_id=1980238182 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -17.42, 0.05, -20.82)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXnW_5"
+
+[node name="XnW_C06" parent="World/Crowd" unique_id=1986261128 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -13.75, 0.05, -20.8)
+patrol_half_length = 1.085
+reward_coin_id = "xXnW_6"
+
+[node name="XnW_B07" parent="World/Crowd" unique_id=797573925 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.18, 0.9, -16.96)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXnW_7"
+
+[node name="XnW_C08" parent="World/Crowd" unique_id=982195672 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -15.37, 0.05, -18.45)
+patrol_half_length = 1.085
+reward_coin_id = "xXnW_8"
+
+[node name="XnW_C09" parent="World/Crowd" unique_id=1892615680 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -18.97, 0.05, -19.47)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXnW_9"
+
+[node name="XnE_B01" parent="World/Crowd" unique_id=419682948 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.71, 0.9, -17.5)
+loop_radius = 0.9
+reward_coin_id = "xXnE_1"
+
+[node name="XnE_C02" parent="World/Crowd" unique_id=1356691814 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 15.87, 0.05, -19.11)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXnE_2"
+
+[node name="XnE_C03" parent="World/Crowd" unique_id=1158830102 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 15.24, 0.05, -22.52)
+patrol_half_length = 1.085
+reward_coin_id = "xXnE_3"
+
+[node name="XnE_C04" parent="World/Crowd" unique_id=187078249 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 13.47, 0.05, -19.06)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXnE_4"
+
+[node name="XnE_B05" parent="World/Crowd" unique_id=1233168308 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.45, 0.9, -19.98)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xXnE_5"
+
+[node name="XnE_C06" parent="World/Crowd" unique_id=1033029571 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 18.57, 0.05, -20.87)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xXnE_6"
+
+[node name="XnE_C07" parent="World/Crowd" unique_id=1561956840 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 18.21, 0.05, -19.3)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXnE_7"
+
+[node name="XnE_B08" parent="World/Crowd" unique_id=1804951509 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.02, 0.9, -20.83)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xXnE_8"
+
+[node name="XnE_C09" parent="World/Crowd" unique_id=1042045331 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.46, 0.05, -20.84)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXnE_9"
+
+[node name="XnE_C10" parent="World/Crowd" unique_id=1746514717 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 16.33, 0.05, -17.06)
+patrol_half_length = 1.085
+reward_coin_id = "xXnE_10"
+
+[node name="RL_B01" parent="World/Crowd" unique_id=277558126 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.53, 0.9, -36.14)
+loop_radius = 0.9
+reward_coin_id = "xRL_1"
+
+[node name="RL_C02" parent="World/Crowd" unique_id=454481645 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.48, 0.05, -36.91)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xRL_2"
+
+[node name="RL_C03" parent="World/Crowd" unique_id=1958303912 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -19.03, 0.05, -34.7)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xRL_3"
+
+[node name="RL_C04" parent="World/Crowd" unique_id=536598006 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -17.48, 0.05, -37.08)
+patrol_half_length = 1.085
+reward_coin_id = "xRL_4"
+
+[node name="RL_B05" parent="World/Crowd" unique_id=999470995 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.97, 1.1, -32.09)
+loop_radius = 0.4
+paint_color_id = 0
+reward_coin_id = "xRL_5"
+
+[node name="XL2_B01" parent="World/Crowd" unique_id=686053100 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.17, 0.9, -32.01)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXL2_1"
+
+[node name="XL2_C02" parent="World/Crowd" unique_id=524720742 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 15.38, 0.05, -36.59)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXL2_2"
+
+[node name="XL2_C03" parent="World/Crowd" unique_id=1015553799 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 14.12, 0.05, -35.33)
+patrol_half_length = 1.085
+reward_coin_id = "xXL2_3"
+
+[node name="XL2_B04" parent="World/Crowd" unique_id=1423863670 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.61, 0.9, -36.91)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xXL2_4"
+
+[node name="XL2_C05" parent="World/Crowd" unique_id=1597884262 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 18.45, 0.05, -34.46)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXL2_5"
+
+[node name="XL2_C06" parent="World/Crowd" unique_id=1025035427 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 17.66, 0.05, -36.27)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xXL2_6"
+
+[node name="XL2_B07" parent="World/Crowd" unique_id=1680061741 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.52, 0.9, -32.49)
+loop_radius = 0.9
+reward_coin_id = "xXL2_7"
+
+[node name="XL2_C08" parent="World/Crowd" unique_id=1287051152 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 16.68, 0.05, -32.47)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xXL2_8"
+
+[node name="XL2_C09" parent="World/Crowd" unique_id=1415520008 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 13.51, 0.05, -33.04)
+patrol_half_length = 1.085
+reward_coin_id = "xXL2_9"
+
+[node name="XwP_B01" parent="World/Crowd" unique_id=1020883144 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.21, 0.9, 14.16)
+loop_radius = 0.5
+paint_color_id = 1
+reward_coin_id = "xXwP_1"
+
+[node name="XwP_C02" parent="World/Crowd" unique_id=1588608143 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.64, 0.05, 12.88)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xXwP_2"
+
+[node name="XwP_C03" parent="World/Crowd" unique_id=1083691260 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -20.35, 0.05, 12.96)
+patrol_half_length = 0.8575
+reward_coin_id = "xXwP_3"
+
+[node name="XwP_C04" parent="World/Crowd" unique_id=1020404114 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -20.63, 0.05, 11.4)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xXwP_4"
+
+[node name="XwP_B05" parent="World/Crowd" unique_id=1896602324 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.66, 0.9, 14.51)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xXwP_5"
+
+[node name="XwP_C06" parent="World/Crowd" unique_id=1251064667 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -20.28, 0.05, 14.58)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xXwP_6"
+
+[node name="XwP_C07" parent="World/Crowd" unique_id=1390651135 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.79, 0.05, 11.86)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xXwP_7"
+
+[node name="XeP_B01" parent="World/Crowd" unique_id=268495134 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.07, 0.9, 13.73)
+loop_radius = 0.5
+paint_color_id = 0
+reward_coin_id = "xXeP_1"
+
+[node name="XeP_C02" parent="World/Crowd" unique_id=1838473425 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 21.69, 0.05, 10.6)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xXeP_2"
+
+[node name="XeP_C03" parent="World/Crowd" unique_id=1383750810 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 20.06, 0.05, 14.07)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xXeP_3"
+
+[node name="XeP_C04" parent="World/Crowd" unique_id=2047348668 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 22.57, 0.05, 13.98)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xXeP_4"
+
+[node name="XeP_B05" parent="World/Crowd" unique_id=1190082693 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.94, 0.9, 11.3)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xXeP_5"
+
+[node name="XeP_C06" parent="World/Crowd" unique_id=1837765041 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 23.03, 0.05, 11.91)
+patrol_half_length = 0.8575
+reward_coin_id = "xXeP_6"
+
+[node name="XeP_C07" parent="World/Crowd" unique_id=1214135123 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 19.64, 0.05, 12.78)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xXeP_7"
+
+[node name="PK1_B01" parent="World/Crowd" unique_id=1087777395 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.1, 0.9, -18.95)
+loop_radius = 0.5
+paint_color_id = 0
+reward_coin_id = "xPK1_1"
+
+[node name="PK1_C02" parent="World/Crowd" unique_id=1536993932 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 29.95, 0.05, -22.24)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xPK1_2"
+
+[node name="PK1_C03" parent="World/Crowd" unique_id=1412833446 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 26.82, 0.05, -19.34)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xPK1_3"
+
+[node name="PK1_B04" parent="World/Crowd" unique_id=780415904 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.65, 0.9, -19.85)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xPK1_4"
+
+[node name="PK1_C05" parent="World/Crowd" unique_id=921133450 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 26.81, 0.05, -21.48)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xPK1_5"
+
+[node name="PK1_C06" parent="World/Crowd" unique_id=844860945 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 28.94, 0.05, -18.11)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xPK1_6"
+
+[node name="LD_RA_B01" parent="World/Crowd" unique_id=88822544 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.17, 0.9, -0.64)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLD_RA_1"
+
+[node name="LD_RA_C02" parent="World/Crowd" unique_id=285554600 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -35.9, 0.05, 0.96)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RA_2"
+
+[node name="LD_RA_C03" parent="World/Crowd" unique_id=333806468 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -32.97, 0.05, 3.49)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RA_3"
+
+[node name="LD_RA_B04" parent="World/Crowd" unique_id=1912593030 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4, 0.9, 0.17)
+loop_radius = 0.9
+reward_coin_id = "xLD_RA_4"
+
+[node name="LD_RA_C05" parent="World/Crowd" unique_id=1667771024 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -36.06, 0.05, -2.04)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLD_RA_5"
+
+[node name="LD_RA_C06" parent="World/Crowd" unique_id=140611454 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -41.76, 0.05, 1.11)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RA_6"
+
+[node name="LD_RA_B07" parent="World/Crowd" unique_id=1527226175 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.23, 0.9, 4.31)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLD_RA_7"
+
+[node name="LD_RA_C08" parent="World/Crowd" unique_id=1493662990 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -33.3, 0.05, 1.94)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RA_8"
+
+[node name="LD_RA_C09" parent="World/Crowd" unique_id=1077114712 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -35.94, 0.05, -4.38)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RA_9"
+
+[node name="LD_RA_B10" parent="World/Crowd" unique_id=2019950406 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.38, 0.9, -3.84)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLD_RA_10"
+
+[node name="LD_RA_C11" parent="World/Crowd" unique_id=1889615545 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -35.91, 0.05, 3.66)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RA_11"
+
+[node name="LD_RA_C12" parent="World/Crowd" unique_id=679580601 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -37.51, 0.05, -3.88)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RA_12"
+
+[node name="LD_RA_B13" parent="World/Crowd" unique_id=1618003518 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.88, 0.9, 2.62)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLD_RA_13"
+
+[node name="LD_RA_C14" parent="World/Crowd" unique_id=408477185 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -39.74, 0.05, -0.63)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RA_14"
+
+[node name="LD_RA_C15" parent="World/Crowd" unique_id=767850824 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -40.13, 0.05, -2.37)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLD_RA_15"
+
+[node name="LD_RB_B01" parent="World/Crowd" unique_id=1084655317 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.65, 0.9, 0.51)
+loop_radius = 0.9
+reward_coin_id = "xLD_RB_1"
+
+[node name="LD_RB_C02" parent="World/Crowd" unique_id=695602731 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -63.84, 0.05, 0.2)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_2"
+
+[node name="LD_RB_C03" parent="World/Crowd" unique_id=816117741 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -63.86, 0.05, -4.48)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_3"
+
+[node name="LD_RB_C04" parent="World/Crowd" unique_id=36717985 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -57.77, 0.05, -0.6)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RB_4"
+
+[node name="LD_RB_B05" parent="World/Crowd" unique_id=1000433674 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.3, 0.9, 0.25)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLD_RB_5"
+
+[node name="LD_RB_C06" parent="World/Crowd" unique_id=1471180092 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -60.81, 0.05, -4.35)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_6"
+
+[node name="LD_RB_C07" parent="World/Crowd" unique_id=454980043 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -61.35, 0.05, -2.38)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLD_RB_7"
+
+[node name="LD_RB_B08" parent="World/Crowd" unique_id=1251310021 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.14, 0.9, -2.09)
+loop_radius = 0.9
+reward_coin_id = "xLD_RB_8"
+
+[node name="LD_RB_C09" parent="World/Crowd" unique_id=80843137 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -60.59, 0.05, 2.02)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_9"
+
+[node name="LD_RB_C10" parent="World/Crowd" unique_id=1287576151 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -65.71, 0.05, -0.7)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_10"
+
+[node name="LD_RB_C11" parent="World/Crowd" unique_id=556639626 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -55.9, 0.05, 1.05)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLD_RB_11"
+
+[node name="LD_RB_B12" parent="World/Crowd" unique_id=9407852 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.77, 0.9, 3.34)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLD_RB_12"
+
+[node name="LD_RB_C13" parent="World/Crowd" unique_id=1290191413 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.05, 0.05, -3.84)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLD_RB_13"
+
+[node name="LD_RB_C14" parent="World/Crowd" unique_id=1250865866 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -60.04, 0.05, 3.75)
+patrol_half_length = 1.785
+reward_coin_id = "xLD_RB_14"
+
+[node name="LR3_B01" parent="World/Crowd" unique_id=2096970379 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.32, 3.9, -24.3)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLR3_1"
+
+[node name="LR3_C02" parent="World/Crowd" unique_id=943165154 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -64.05, 3.05, -18.39)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR3_2"
+
+[node name="LR3_C03" parent="World/Crowd" unique_id=910313180 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -58, 3.05, -16.61)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR3_3"
+
+[node name="LR3_C04" parent="World/Crowd" unique_id=403294160 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -57.74, 3.05, -22.74)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_4"
+
+[node name="LR3_B05" parent="World/Crowd" unique_id=946629756 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.99, 3.9, -18.24)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR3_5"
+
+[node name="LR3_C06" parent="World/Crowd" unique_id=1202845095 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -55.93, 3.05, -19.41)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_6"
+
+[node name="LR3_C07" parent="World/Crowd" unique_id=1893509609 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -63.33, 3.05, -24.44)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR3_7"
+
+[node name="LR3_B08" parent="World/Crowd" unique_id=338028761 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.59, 3.9, -16.21)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR3_8"
+
+[node name="LR3_C09" parent="World/Crowd" unique_id=2036768067 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -65.49, 3.05, -20.43)
+patrol_half_length = 1.785
+reward_coin_id = "xLR3_9"
+
+[node name="LR3_C10" parent="World/Crowd" unique_id=1636570192 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -57.7, 3.05, -19.15)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_10"
+
+[node name="LR3_C11" parent="World/Crowd" unique_id=639774451 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -60.99, 3.05, -17.93)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_11"
+
+[node name="LR3_B12" parent="World/Crowd" unique_id=1379990421 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.5, 3.9, -21.11)
+loop_radius = 0.9
+reward_coin_id = "xLR3_12"
+
+[node name="LR3_C13" parent="World/Crowd" unique_id=334232560 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -59.82, 3.05, -16.76)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_13"
+
+[node name="LR3_C14" parent="World/Crowd" unique_id=1422655910 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -63.34, 3.05, -16.47)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR3_14"
+
+[node name="LR4_B01" parent="World/Crowd" unique_id=2110790453 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.42, 3.9, -40.67)
+loop_radius = 0.9
+reward_coin_id = "xLR4_1"
+
+[node name="LR4_C02" parent="World/Crowd" unique_id=626202114 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -59.69, 3.05, -39.97)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR4_2"
+
+[node name="LR4_C03" parent="World/Crowd" unique_id=571141070 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -58.71, 3.05, -41.74)
+patrol_half_length = 1.085
+reward_coin_id = "xLR4_3"
+
+[node name="LR4_B04" parent="World/Crowd" unique_id=1834310162 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.82, 3.9, -43.79)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR4_4"
+
+[node name="LR4_C05" parent="World/Crowd" unique_id=327809551 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -62.96, 3.05, -40.6)
+patrol_half_length = 1.085
+reward_coin_id = "xLR4_5"
+
+[node name="LR4_C06" parent="World/Crowd" unique_id=863163924 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -61.98, 3.05, -44.54)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR4_6"
+
+[node name="LR4_B07" parent="World/Crowd" unique_id=1020753197 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.29, 3.9, -45.26)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR4_7"
+
+[node name="LR4_C08" parent="World/Crowd" unique_id=290326321 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -62.64, 3.05, -42.38)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR4_8"
+
+[node name="LR4_C09" parent="World/Crowd" unique_id=2070546121 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -63.61, 3.05, -43.72)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR4_9"
+
+[node name="LR5_B01" parent="World/Crowd" unique_id=1892669480 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.39, 6.9, -62.38)
+loop_radius = 0.9
+reward_coin_id = "xLR5_1"
+
+[node name="LR5_C02" parent="World/Crowd" unique_id=1109703927 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -59.5, 6.05, -58.57)
+patrol_half_length = 1.785
+reward_coin_id = "xLR5_2"
+
+[node name="LR5_C03" parent="World/Crowd" unique_id=1534260119 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -62.14, 6.05, -57.92)
+patrol_half_length = 1.785
+reward_coin_id = "xLR5_3"
+
+[node name="LR5_C04" parent="World/Crowd" unique_id=509565219 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -65.04, 6.05, -64.89)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLR5_4"
+
+[node name="LR5_B05" parent="World/Crowd" unique_id=2025604044 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.12, 6.9, -58.54)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR5_5"
+
+[node name="LR5_C06" parent="World/Crowd" unique_id=1742074791 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -64.55, 6.05, -63.28)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR5_6"
+
+[node name="LR5_C07" parent="World/Crowd" unique_id=1854175464 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -58.87, 6.05, -66.64)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLR5_7"
+
+[node name="LR5_B08" parent="World/Crowd" unique_id=724418436 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.97, 6.9, -59.29)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR5_8"
+
+[node name="LR5_C09" parent="World/Crowd" unique_id=1788493917 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -58.36, 6.05, -60.91)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR5_9"
+
+[node name="LR5_C10" parent="World/Crowd" unique_id=1889669890 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -57.26, 6.05, -62.22)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR5_10"
+
+[node name="LR5_C11" parent="World/Crowd" unique_id=2042782649 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -64.51, 6.05, -60.62)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLR5_11"
+
+[node name="LR5_B12" parent="World/Crowd" unique_id=895300717 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.5, 6.9, -63.22)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR5_12"
+
+[node name="LR5_C13" parent="World/Crowd" unique_id=1471284073 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -59.8, 6.05, -65)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xLR5_13"
+
+[node name="LR5_C14" parent="World/Crowd" unique_id=1509756409 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -62.01, 6.05, -64.81)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR5_14"
+
+[node name="LR6_B01" parent="World/Crowd" unique_id=1242134372 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.11, 9.9, -80.29)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR6_1"
+
+[node name="LR6_C02" parent="World/Crowd" unique_id=704627569 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -62.41, 9.05, -83.05)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR6_2"
+
+[node name="LR6_C03" parent="World/Crowd" unique_id=146636973 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -59.15, 9.05, -82.75)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR6_3"
+
+[node name="LR6_C04" parent="World/Crowd" unique_id=420649896 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -60.68, 9.05, -81.7)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR6_4"
+
+[node name="LR6_B05" parent="World/Crowd" unique_id=1226582898 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.42, 9.9, -82.29)
+loop_radius = 0.9
+reward_coin_id = "xLR6_5"
+
+[node name="LR6_C06" parent="World/Crowd" unique_id=639148806 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -59.84, 9.05, -78.56)
+patrol_half_length = 1.085
+reward_coin_id = "xLR6_6"
+
+[node name="LR6_C07" parent="World/Crowd" unique_id=1751579972 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -58.37, 9.05, -81.03)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR6_7"
+
+[node name="LR6_B08" parent="World/Crowd" unique_id=1479149577 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.42, 9.9, -83.88)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR6_8"
+
+[node name="LR6_C09" parent="World/Crowd" unique_id=601764604 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -62.51, 9.05, -79.28)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR6_9"
+
+[node name="LR6_C10" parent="World/Crowd" unique_id=1319260645 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -58.34, 9.05, -79.12)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR6_10"
+
+[node name="LR7_B01" parent="World/Crowd" unique_id=1819261989 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.96, 9.9, -110.94)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR7_1"
+
+[node name="LR7_C02" parent="World/Crowd" unique_id=297018673 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -61.14, 9.05, -109.32)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR7_2"
+
+[node name="LR7_C03" parent="World/Crowd" unique_id=880792235 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -63.63, 9.05, -110.13)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR7_3"
+
+[node name="LR7_B04" parent="World/Crowd" unique_id=1357234560 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.58, 9.9, -111.81)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLR7_4"
+
+[node name="LR7_C05" parent="World/Crowd" unique_id=893938768 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -62.02, 9.05, -112.42)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR7_5"
+
+[node name="LR7_C06" parent="World/Crowd" unique_id=254260357 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -62.87, 9.05, -108.69)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR7_6"
+
+[node name="LR7_B07" parent="World/Crowd" unique_id=995472762 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.21, 9.9, -112.14)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLR7_7"
+
+[node name="LR7_C08" parent="World/Crowd" unique_id=228148602 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -58.64, 9.05, -111.8)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR7_8"
+
+[node name="LR7_C09" parent="World/Crowd" unique_id=1188992398 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -60.41, 9.05, -113.72)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR7_9"
+
+[node name="LR8_B01" parent="World/Crowd" unique_id=709103960 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.01, 12.9, -127.97)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR8_1"
+
+[node name="LR8_C02" parent="World/Crowd" unique_id=418193365 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -64.95, 12.05, -128.3)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR8_2"
+
+[node name="LR8_C03" parent="World/Crowd" unique_id=842038980 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -58.06, 12.05, -134.36)
+patrol_half_length = 1.785
+reward_coin_id = "xLR8_3"
+
+[node name="LR8_C04" parent="World/Crowd" unique_id=344617632 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -57.21, 12.05, -132.36)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR8_4"
+
+[node name="LR8_B05" parent="World/Crowd" unique_id=251481989 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.02, 12.9, -125.05)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR8_5"
+
+[node name="LR8_C06" parent="World/Crowd" unique_id=1570819076 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -60.1, 12.05, -126.26)
+patrol_half_length = 1.785
+reward_coin_id = "xLR8_6"
+
+[node name="LR8_C07" parent="World/Crowd" unique_id=674752849 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -62.15, 12.05, -134.29)
+patrol_half_length = 1.785
+reward_coin_id = "xLR8_7"
+
+[node name="LR8_B08" parent="World/Crowd" unique_id=300608696 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.41, 12.9, -130.5)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR8_8"
+
+[node name="LR8_C09" parent="World/Crowd" unique_id=1574020594 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -65.26, 12.05, -132.14)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR8_9"
+
+[node name="LR8_C10" parent="World/Crowd" unique_id=1584868108 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.3, 12.05, -130.4)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR8_10"
+
+[node name="LR8_C11" parent="World/Crowd" unique_id=1384723076 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -64.83, 12.05, -126.61)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR8_11"
+
+[node name="LR8_B12" parent="World/Crowd" unique_id=514832734 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.05, 12.9, -127.3)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLR8_12"
+
+[node name="LR8_C13" parent="World/Crowd" unique_id=237436016 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -64.95, 12.05, -133.77)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xLR8_13"
+
+[node name="LR8_C14" parent="World/Crowd" unique_id=1196108147 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -59.34, 12.05, -131.23)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xLR8_14"
+
+[node name="LR9_B01" parent="World/Crowd" unique_id=1307672621 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.9, 15.9, -149.09)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xLR9_1"
+
+[node name="LR9_C02" parent="World/Crowd" unique_id=2105903842 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -63.51, 15.05, -149.09)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR9_2"
+
+[node name="LR9_C03" parent="World/Crowd" unique_id=874701545 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -60.39, 15.05, -147.41)
+patrol_half_length = 1.085
+reward_coin_id = "xLR9_3"
+
+[node name="LR9_C04" parent="World/Crowd" unique_id=349329177 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.75, 15.05, -149.02)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR9_4"
+
+[node name="LR9_B05" parent="World/Crowd" unique_id=1881404599 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -59.42, 15.9, -151.24)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR9_5"
+
+[node name="LR9_C06" parent="World/Crowd" unique_id=426005524 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, -62.87, 15.05, -147.36)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR9_6"
+
+[node name="LR9_C07" parent="World/Crowd" unique_id=849445460 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -63.29, 15.05, -151.29)
+patrol_half_length = 1.085
+reward_coin_id = "xLR9_7"
+
+[node name="LR9_B08" parent="World/Crowd" unique_id=1164030170 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.97, 15.9, -148.28)
+loop_radius = 0.9
+reward_coin_id = "xLR9_8"
+
+[node name="LR9_C09" parent="World/Crowd" unique_id=668344837 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -61.1, 15.05, -151.03)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR9_9"
+
+[node name="LR10_B01" parent="World/Crowd" unique_id=1197461502 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.1, 18.9, -167.67)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR10_1"
+
+[node name="LR10_C02" parent="World/Crowd" unique_id=957189570 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -58.79, 18.05, -165.3)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xLR10_2"
+
+[node name="LR10_C03" parent="World/Crowd" unique_id=558885861 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -63.03, 18.05, -164.14)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR10_3"
+
+[node name="LR10_B04" parent="World/Crowd" unique_id=45931800 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.75, 18.9, -163.64)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xLR10_4"
+
+[node name="LR10_C05" parent="World/Crowd" unique_id=245983430 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.54, 18.05, -169.05)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR10_5"
+
+[node name="LR10_C06" parent="World/Crowd" unique_id=502308106 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -63.6, 18.05, -166.55)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR10_6"
+
+[node name="LR10_B07" parent="World/Crowd" unique_id=833494007 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.41, 18.9, -166.98)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xLR10_7"
+
+[node name="LR10_C08" parent="World/Crowd" unique_id=300907416 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -59.87, 18.05, -167.76)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xLR10_8"
+
+[node name="LR10_C09" parent="World/Crowd" unique_id=1754078058 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -60.6, 18.05, -163.68)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xLR10_9"
+
+[node name="MB1_BI_B01" parent="World/Crowd" unique_id=1607320546 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07, 3.9, -37.11)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xMB1_BI_1"
+
+[node name="MB1_BI_C02" parent="World/Crowd" unique_id=1028715443 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 2.43, 3.05, -40.6)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB1_BI_2"
+
+[node name="MB1_BI_C03" parent="World/Crowd" unique_id=1190254544 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.77, 3.05, -36.55)
+patrol_half_length = 1.085
+reward_coin_id = "xMB1_BI_3"
+
+[node name="MB1_BI_C04" parent="World/Crowd" unique_id=1089946536 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -1.07, 3.05, -38.81)
+patrol_half_length = 1.085
+reward_coin_id = "xMB1_BI_4"
+
+[node name="MB1_BI_B05" parent="World/Crowd" unique_id=1015808360 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24, 3.9, -39.64)
+loop_radius = 0.9
+reward_coin_id = "xMB1_BI_5"
+
+[node name="MB1_BI_C06" parent="World/Crowd" unique_id=1177219970 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -2.45, 3.05, -37.91)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB1_BI_6"
+
+[node name="MB1_BI_C07" parent="World/Crowd" unique_id=1010891494 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 1.6, 3.05, -36.59)
+patrol_half_length = 1.085
+reward_coin_id = "xMB1_BI_7"
+
+[node name="MB1_BO_B01" parent="World/Crowd" unique_id=714734247 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.43, 3.9, -65.8)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xMB1_BO_1"
+
+[node name="MB1_BO_C02" parent="World/Crowd" unique_id=2132889567 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 0.11, 3.05, -64.75)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB1_BO_2"
+
+[node name="MB1_BO_C03" parent="World/Crowd" unique_id=188401722 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -0.83, 3.05, -62.39)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB1_BO_3"
+
+[node name="MB1_BO_C04" parent="World/Crowd" unique_id=1751405020 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 2.56, 3.05, -62.31)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB1_BO_4"
+
+[node name="MB1_BO_B05" parent="World/Crowd" unique_id=1967032086 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98, 3.9, -64.32)
+loop_radius = 0.9
+reward_coin_id = "xMB1_BO_5"
+
+[node name="MB1_BO_C06" parent="World/Crowd" unique_id=225328182 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 1.69, 3.05, -60.76)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB1_BO_6"
+
+[node name="MB1_BO_C07" parent="World/Crowd" unique_id=2136582226 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -2.38, 3.05, -63.53)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB1_BO_7"
+
+[node name="MB1_BO_B08" parent="World/Crowd" unique_id=781669296 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.68, 3.9, -61.02)
+loop_radius = 0.9
+reward_coin_id = "xMB1_BO_8"
+
+[node name="MB1_BO_C09" parent="World/Crowd" unique_id=1966786933 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -0.66, 3.05, -60.72)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB1_BO_9"
+
+[node name="MB1_BO_C10" parent="World/Crowd" unique_id=2111131882 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 1.49, 3.05, -65.48)
+patrol_half_length = 1.085
+reward_coin_id = "xMB1_BO_10"
+
+[node name="M1_B01" parent="World/Crowd" unique_id=1184089938 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83, 6.9, -82.7)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xM1_1"
+
+[node name="M1_C02" parent="World/Crowd" unique_id=1522978409 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -1.98, 6.05, -84.72)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xM1_2"
+
+[node name="M1_C03" parent="World/Crowd" unique_id=1225026726 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 4.93, 6.05, -81.93)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xM1_3"
+
+[node name="M1_C04" parent="World/Crowd" unique_id=350218713 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -3.74, 6.05, -85.03)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xM1_4"
+
+[node name="M1_B05" parent="World/Crowd" unique_id=1249371678 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.82, 6.9, -83.03)
+loop_radius = 0.9
+reward_coin_id = "xM1_5"
+
+[node name="M1_C06" parent="World/Crowd" unique_id=1552847097 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 3.27, 6.05, -77.75)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xM1_6"
+
+[node name="M1_C07" parent="World/Crowd" unique_id=213484866 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 1.67, 6.05, -85.46)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xM1_7"
+
+[node name="M1_B08" parent="World/Crowd" unique_id=2061874905 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74, 6.9, -83.99)
+loop_radius = 0.9
+reward_coin_id = "xM1_8"
+
+[node name="M1_C09" parent="World/Crowd" unique_id=1787802731 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.77, 6.05, -79.44)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xM1_9"
+
+[node name="M1_C10" parent="World/Crowd" unique_id=1603886034 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86, 6.05, -81.08)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xM1_10"
+
+[node name="M1_C11" parent="World/Crowd" unique_id=2125595622 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -2.38, 6.05, -77.08)
+patrol_half_length = 1.785
+reward_coin_id = "xM1_11"
+
+[node name="M1_B12" parent="World/Crowd" unique_id=1835758377 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26, 6.9, -78.61)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xM1_12"
+
+[node name="M1_C13" parent="World/Crowd" unique_id=1727949828 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 0.82, 6.05, -78.37)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xM1_13"
+
+[node name="M1_C14" parent="World/Crowd" unique_id=788543438 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.88, 6.05, -82.63)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xM1_14"
+
+[node name="MB2_BI_B01" parent="World/Crowd" unique_id=436901341 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 9.9, -99.54)
+loop_radius = 0.9
+reward_coin_id = "xMB2_BI_1"
+
+[node name="MB2_BI_C02" parent="World/Crowd" unique_id=1130146939 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 0.18, 9.05, -101.2)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB2_BI_2"
+
+[node name="MB2_BI_C03" parent="World/Crowd" unique_id=173998521 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -1.88, 9.05, -102.57)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BI_3"
+
+[node name="MB2_BI_C04" parent="World/Crowd" unique_id=855302509 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 0.49, 9.05, -98.41)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB2_BI_4"
+
+[node name="MB2_BI_B05" parent="World/Crowd" unique_id=1604236088 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.35, 9.9, -102.88)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xMB2_BI_5"
+
+[node name="MB2_BI_C06" parent="World/Crowd" unique_id=1932909854 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 1.73, 9.05, -99.47)
+patrol_half_length = 1.085
+reward_coin_id = "xMB2_BI_6"
+
+[node name="MB2_BI_C07" parent="World/Crowd" unique_id=1814267159 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -2.53, 9.05, -100.55)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BI_7"
+
+[node name="MB2_BI_B08" parent="World/Crowd" unique_id=1207591471 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71, 9.9, -98.15)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xMB2_BI_8"
+
+[node name="MB2_BI_C09" parent="World/Crowd" unique_id=2053524756 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.13, 9.05, -99.28)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BI_9"
+
+[node name="MB2_BI_C10" parent="World/Crowd" unique_id=476988738 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 2.05, 9.05, -101.73)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BI_10"
+
+[node name="MB2_BO_B01" parent="World/Crowd" unique_id=1242416811 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22, 9.9, -126.54)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xMB2_BO_1"
+
+[node name="MB2_BO_C02" parent="World/Crowd" unique_id=1982134909 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 0.96, 9.05, -126.71)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BO_2"
+
+[node name="MB2_BO_C03" parent="World/Crowd" unique_id=1024401023 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -2.26, 9.05, -127.11)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BO_3"
+
+[node name="MB2_BO_C04" parent="World/Crowd" unique_id=565542714 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 1.16, 9.05, -124.2)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BO_4"
+
+[node name="MB2_BO_B05" parent="World/Crowd" unique_id=861259444 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58, 9.9, -123.06)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xMB2_BO_5"
+
+[node name="MB2_BO_C06" parent="World/Crowd" unique_id=1419547804 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 2.61, 9.05, -125.54)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB2_BO_6"
+
+[node name="MB2_BO_C07" parent="World/Crowd" unique_id=2060731519 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 0.27, 9.05, -122.34)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB2_BO_7"
+
+[node name="MB2_BO_B08" parent="World/Crowd" unique_id=714497089 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.21, 9.9, -122.35)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xMB2_BO_8"
+
+[node name="MB2_BO_C09" parent="World/Crowd" unique_id=1750545392 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.02, 9.05, -124.2)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB2_BO_9"
+
+[node name="MB2_BO_C10" parent="World/Crowd" unique_id=152872152 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -0.56, 9.05, -125.59)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB2_BO_10"
+
+[node name="M2_B01" parent="World/Crowd" unique_id=523902589 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04, 12.9, -140.76)
+loop_radius = 0.9
+reward_coin_id = "xM2_1"
+
+[node name="M2_C02" parent="World/Crowd" unique_id=1883560197 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.55, 12.05, -144.64)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM2_2"
+
+[node name="M2_C03" parent="World/Crowd" unique_id=2040217112 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -1.76, 12.05, -139.13)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM2_3"
+
+[node name="M2_B04" parent="World/Crowd" unique_id=1880656540 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.53, 13.1, -141.92)
+loop_radius = 0.4
+paint_color_id = 3
+reward_coin_id = "xM2_4"
+
+[node name="M2_B05" parent="World/Crowd" unique_id=1874885804 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64, 13.1, -140.34)
+loop_radius = 0.4
+paint_color_id = 1
+reward_coin_id = "xM2_5"
+
+[node name="MB3_BI_B01" parent="World/Crowd" unique_id=1208256411 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6, 12.9, -140)
+loop_radius = 0.9
+reward_coin_id = "xMB3_BI_1"
+
+[node name="MB3_BI_C02" parent="World/Crowd" unique_id=1615407667 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -11.32, 12.05, -143.2)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB3_BI_2"
+
+[node name="MB3_BI_C03" parent="World/Crowd" unique_id=818079783 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -11.57, 12.05, -141.01)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB3_BI_3"
+
+[node name="MB3_BI_C04" parent="World/Crowd" unique_id=1768719080 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -13.15, 12.05, -142.96)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB3_BI_4"
+
+[node name="MB3_BI_B05" parent="World/Crowd" unique_id=905773152 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.46, 12.9, -142.19)
+loop_radius = 0.9
+reward_coin_id = "xMB3_BI_5"
+
+[node name="MB3_BI_C06" parent="World/Crowd" unique_id=882486426 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -14.9, 12.05, -144.9)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB3_BI_6"
+
+[node name="MB3_BI_C07" parent="World/Crowd" unique_id=1716121489 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -15.74, 12.05, -139.24)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB3_BI_7"
+
+[node name="MB3_BI_B08" parent="World/Crowd" unique_id=698275382 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.49, 12.9, -144.18)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xMB3_BI_8"
+
+[node name="MB3_BO_B01" parent="World/Crowd" unique_id=1454246118 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.04, 12.9, -143.7)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xMB3_BO_1"
+
+[node name="MB3_BO_C02" parent="World/Crowd" unique_id=356213750 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, -40.81, 12.05, -141.48)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB3_BO_2"
+
+[node name="MB3_BO_C03" parent="World/Crowd" unique_id=894761284 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -37.35, 12.05, -144.29)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB3_BO_3"
+
+[node name="MB3_BO_B04" parent="World/Crowd" unique_id=190292929 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.44, 12.9, -140.29)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xMB3_BO_4"
+
+[node name="MB3_BO_C05" parent="World/Crowd" unique_id=1514734210 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -39.58, 12.05, -143.15)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB3_BO_5"
+
+[node name="MB3_BO_C06" parent="World/Crowd" unique_id=580297882 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -37.85, 12.05, -140.41)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xMB3_BO_6"
+
+[node name="MB3_BO_B07" parent="World/Crowd" unique_id=694919580 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.6, 12.9, -141.15)
+loop_radius = 0.9
+reward_coin_id = "xMB3_BO_7"
+
+[node name="MB3_BO_C08" parent="World/Crowd" unique_id=1289690160 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -35.8, 12.05, -141.53)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xMB3_BO_8"
+
+[node name="MB3_BO_C09" parent="World/Crowd" unique_id=1135900637 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -37.01, 12.05, -139.04)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xMB3_BO_9"
+
+[node name="M3_B01" parent="World/Crowd" unique_id=942892003 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.74, 15.9, -161.29)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xM3_1"
+
+[node name="M3_C02" parent="World/Crowd" unique_id=473301898 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -0.78, 15.05, -157.54)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM3_2"
+
+[node name="M3_C03" parent="World/Crowd" unique_id=233298412 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 2.6, 15.05, -157.58)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM3_3"
+
+[node name="M3_B04" parent="World/Crowd" unique_id=1026310222 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.57, 15.9, -158.96)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xM3_4"
+
+[node name="M3_C05" parent="World/Crowd" unique_id=1986336995 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -2.83, 15.05, -158.24)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM3_5"
+
+[node name="M3_C06" parent="World/Crowd" unique_id=861913995 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.62, 15.05, -161.25)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xM3_6"
+
+[node name="M3_B07" parent="World/Crowd" unique_id=1286810617 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38, 15.9, -157.25)
+loop_radius = 0.9
+reward_coin_id = "xM3_7"
+
+[node name="M3_C08" parent="World/Crowd" unique_id=922069517 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -2.02, 15.05, -160.41)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xM3_8"
+
+[node name="M4_B01" parent="World/Crowd" unique_id=341546909 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12, 18.9, -177.21)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xM4_1"
+
+[node name="M4_C02" parent="World/Crowd" unique_id=808896783 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -0.68, 18.05, -177.65)
+patrol_half_length = 1.085
+reward_coin_id = "xM4_2"
+
+[node name="M4_C03" parent="World/Crowd" unique_id=1702992342 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.35, 18.05, -176.05)
+patrol_half_length = 1.085
+reward_coin_id = "xM4_3"
+
+[node name="M4_C04" parent="World/Crowd" unique_id=429789275 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, -2.31, 18.05, -174.85)
+patrol_half_length = 1.085
+reward_coin_id = "xM4_4"
+
+[node name="M4_B05" parent="World/Crowd" unique_id=579223725 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.58, 18.9, -175.89)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xM4_5"
+
+[node name="M4_C06" parent="World/Crowd" unique_id=1277689925 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 1.23, 18.05, -174.08)
+patrol_half_length = 1.085
+reward_coin_id = "xM4_6"
+
+[node name="M4_C07" parent="World/Crowd" unique_id=1856849326 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 1.8, 18.05, -178.23)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xM4_7"
+
+[node name="M4_B08" parent="World/Crowd" unique_id=122527574 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07, 18.9, -174.56)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xM4_8"
+
+[node name="M4_C09" parent="World/Crowd" unique_id=909130537 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -0.98, 18.05, -176.02)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xM4_9"
+
+[node name="M4_C10" parent="World/Crowd" unique_id=1862577565 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.71, 18.05, -177.77)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xM4_10"
+
+[node name="HR1_B01" parent="World/Crowd" unique_id=415460789 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.71, 0.9, -3)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR1_1"
+
+[node name="HR1_C02" parent="World/Crowd" unique_id=444888309 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 38.81, 0.05, 2.07)
+patrol_half_length = 1.785
+reward_coin_id = "xHR1_2"
+
+[node name="HR1_C03" parent="World/Crowd" unique_id=1097547213 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 36.58, 0.05, 1.19)
+patrol_half_length = 1.785
+reward_coin_id = "xHR1_3"
+
+[node name="HR1_B04" parent="World/Crowd" unique_id=1874258506 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.94, 0.9, -4.41)
+loop_radius = 0.9
+reward_coin_id = "xHR1_4"
+
+[node name="HR1_C05" parent="World/Crowd" unique_id=660876931 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 39.77, 0.05, -0.55)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHR1_5"
+
+[node name="HR1_C06" parent="World/Crowd" unique_id=797873656 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.05, 0.05, 2.89)
+patrol_half_length = 1.785
+reward_coin_id = "xHR1_6"
+
+[node name="HR1_B07" parent="World/Crowd" unique_id=1986867857 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.77, 0.9, -3.03)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHR1_7"
+
+[node name="HR1_C08" parent="World/Crowd" unique_id=1827979696 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 40.75, 0.05, 2.42)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHR1_8"
+
+[node name="HR1_C09" parent="World/Crowd" unique_id=896415291 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 34.6, 0.05, 1.06)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHR1_9"
+
+[node name="HR1_B10" parent="World/Crowd" unique_id=275989039 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.78, 0.9, -0.56)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHR1_10"
+
+[node name="HR1_C11" parent="World/Crowd" unique_id=1987160023 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 35.1, 0.05, -0.58)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xHR1_11"
+
+[node name="HR1_C12" parent="World/Crowd" unique_id=1322007041 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 35.74, 0.05, -3.63)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHR1_12"
+
+[node name="HR1_B13" parent="World/Crowd" unique_id=304824439 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.73, 0.9, 2.15)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHR1_13"
+
+[node name="HR1_C14" parent="World/Crowd" unique_id=2126914731 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 37.36, 0.05, 5.09)
+patrol_half_length = 1.785
+reward_coin_id = "xHR1_14"
+
+[node name="HR1_C15" parent="World/Crowd" unique_id=302022696 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 32.92, 0.05, -2.17)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xHR1_15"
+
+[node name="HO_HUB_B01" parent="World/Crowd" unique_id=1656798706 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.65, 0.9, 2.29)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHO_HUB_1"
+
+[node name="HO_HUB_C02" parent="World/Crowd" unique_id=1798513596 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 54.63, 0.05, -2.5)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHO_HUB_2"
+
+[node name="HO_HUB_C03" parent="World/Crowd" unique_id=1792822052 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 55.67, 0.05, 0.62)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xHO_HUB_3"
+
+[node name="HO_HUB_B04" parent="World/Crowd" unique_id=817309610 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.85, 1.1, -0.42)
+loop_radius = 0.4
+paint_color_id = 0
+reward_coin_id = "xHO_HUB_4"
+
+[node name="HO_HUB_B05" parent="World/Crowd" unique_id=1273274311 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.01, 1.1, 2.24)
+loop_radius = 0.4
+paint_color_id = 1
+reward_coin_id = "xHO_HUB_5"
+
+[node name="HO_OUT_B01" parent="World/Crowd" unique_id=471796947 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.06, 0.9, -26.64)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHO_OUT_1"
+
+[node name="HO_OUT_C02" parent="World/Crowd" unique_id=560319341 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 46.94, 0.05, -15.6)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_2"
+
+[node name="HO_OUT_C03" parent="World/Crowd" unique_id=208144247 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 55.77, 0.05, -22.58)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xHO_OUT_3"
+
+[node name="HO_OUT_C04" parent="World/Crowd" unique_id=656011645 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 55.72, 0.05, -17.54)
+patrol_half_length = 2
+reward_coin_id = "xHO_OUT_4"
+
+[node name="HO_OUT_B05" parent="World/Crowd" unique_id=1740627800 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.05, 0.9, -17.17)
+loop_radius = 0.9
+reward_coin_id = "xHO_OUT_5"
+
+[node name="HO_OUT_C06" parent="World/Crowd" unique_id=1039098100 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 53.77, 0.05, -26.53)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xHO_OUT_6"
+
+[node name="HO_OUT_C07" parent="World/Crowd" unique_id=2015082980 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 53.07, 0.05, -13.95)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_7"
+
+[node name="HO_OUT_B08" parent="World/Crowd" unique_id=381105992 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.25, 0.9, -23.94)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_8"
+
+[node name="HO_OUT_C09" parent="World/Crowd" unique_id=1616080005 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 48.6, 0.05, -23.34)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xHO_OUT_9"
+
+[node name="HO_OUT_C10" parent="World/Crowd" unique_id=1651424865 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 51.75, 0.05, -22.32)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_10"
+
+[node name="HO_OUT_B11" parent="World/Crowd" unique_id=2115660557 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.01, 0.9, -20.84)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHO_OUT_11"
+
+[node name="HO_OUT_C12" parent="World/Crowd" unique_id=1670120229 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 46.92, 0.05, -23.22)
+patrol_half_length = 2
+paint_color_id = 3
+reward_coin_id = "xHO_OUT_12"
+
+[node name="HO_OUT_C13" parent="World/Crowd" unique_id=1803090943 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 53.93, 0.05, -20.65)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xHO_OUT_13"
+
+[node name="HO_OUT_B14" parent="World/Crowd" unique_id=657681763 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.11, 0.9, -18.46)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_14"
+
+[node name="HO_OUT_C15" parent="World/Crowd" unique_id=999956468 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.26, 0.05, -13.19)
+patrol_half_length = 2
+paint_color_id = 2
+reward_coin_id = "xHO_OUT_15"
+
+[node name="HO_OUT_C16" parent="World/Crowd" unique_id=956660351 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 59.42, 0.05, -21.1)
+patrol_half_length = 2
+reward_coin_id = "xHO_OUT_16"
+
+[node name="HO_OUT_B17" parent="World/Crowd" unique_id=2015286718 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.34, 0.9, -24.11)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_17"
+
+[node name="HO_OUT_C18" parent="World/Crowd" unique_id=592499307 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 53.73, 0.05, -23.34)
+patrol_half_length = 2
+reward_coin_id = "xHO_OUT_18"
+
+[node name="HO_OUT_C19" parent="World/Crowd" unique_id=586109051 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 58.12, 0.05, -14.28)
+patrol_half_length = 2
+paint_color_id = 0
+reward_coin_id = "xHO_OUT_19"
+
+[node name="HR4_B01" parent="World/Crowd" unique_id=2127761025 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.89, 8.9, -40.03)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR4_1"
+
+[node name="HR4_C02" parent="World/Crowd" unique_id=62049103 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 56.39, 8.05, -39.46)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR4_2"
+
+[node name="HR4_C03" parent="World/Crowd" unique_id=2045155617 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 61.05, 8.05, -38.39)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xHR4_3"
+
+[node name="HR4_C04" parent="World/Crowd" unique_id=1615544517 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 61.59, 8.05, -43.03)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR4_4"
+
+[node name="HR4_B05" parent="World/Crowd" unique_id=1417831979 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.84, 9.1, -43.31)
+loop_radius = 0.4
+paint_color_id = 3
+reward_coin_id = "xHR4_5"
+
+[node name="HS_SI_B01" parent="World/Crowd" unique_id=1730957200 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.77, 11.9, -59.51)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHS_SI_1"
+
+[node name="HS_SI_C02" parent="World/Crowd" unique_id=2065652003 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.16, 11.05, -58.08)
+patrol_half_length = 1.085
+reward_coin_id = "xHS_SI_2"
+
+[node name="HS_SI_C03" parent="World/Crowd" unique_id=1735617387 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 58.33, 11.05, -55.58)
+patrol_half_length = 1.085
+reward_coin_id = "xHS_SI_3"
+
+[node name="HS_SI_C04" parent="World/Crowd" unique_id=386937668 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 58.97, 11.05, -57.27)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHS_SI_4"
+
+[node name="HS_SI_B05" parent="World/Crowd" unique_id=869692464 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.75, 11.9, -56.26)
+loop_radius = 0.9
+reward_coin_id = "xHS_SI_5"
+
+[node name="HS_SI_C06" parent="World/Crowd" unique_id=2087526856 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 62, 11.05, -59.55)
+patrol_half_length = 1.085
+reward_coin_id = "xHS_SI_6"
+
+[node name="HS_SI_C07" parent="World/Crowd" unique_id=488512320 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 61.9, 11.05, -56.1)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHS_SI_7"
+
+[node name="HS_SI_B08" parent="World/Crowd" unique_id=1333854477 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.36, 11.9, -57.17)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHS_SI_8"
+
+[node name="HS_SI_C09" parent="World/Crowd" unique_id=693022466 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 60.37, 11.05, -61.1)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHS_SI_9"
+
+[node name="HS_SO_B01" parent="World/Crowd" unique_id=1990247843 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.45, 11.9, -73.94)
+loop_radius = 0.9
+reward_coin_id = "xHS_SO_1"
+
+[node name="HS_SO_C02" parent="World/Crowd" unique_id=372259744 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 56.06, 11.05, -78.62)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHS_SO_2"
+
+[node name="HS_SO_C03" parent="World/Crowd" unique_id=1067360943 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 62.88, 11.05, -79.22)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xHS_SO_3"
+
+[node name="HS_SO_B04" parent="World/Crowd" unique_id=113662926 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.05, 11.9, -77.8)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHS_SO_4"
+
+[node name="HS_SO_C05" parent="World/Crowd" unique_id=1566313106 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 58.84, 11.05, -75)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHS_SO_5"
+
+[node name="HS_SO_C06" parent="World/Crowd" unique_id=747835140 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 58.47, 11.05, -80.61)
+patrol_half_length = 1.785
+reward_coin_id = "xHS_SO_6"
+
+[node name="HS_SO_B07" parent="World/Crowd" unique_id=24847750 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.67, 11.9, -82.22)
+loop_radius = 0.9
+reward_coin_id = "xHS_SO_7"
+
+[node name="HS_SO_C08" parent="World/Crowd" unique_id=232578378 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 65.09, 11.05, -77.65)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xHS_SO_8"
+
+[node name="HS_SO_C09" parent="World/Crowd" unique_id=2096056508 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 65.12, 11.05, -75.48)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xHS_SO_9"
+
+[node name="HS_SO_B10" parent="World/Crowd" unique_id=1748242874 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.97, 11.9, -77.72)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHS_SO_10"
+
+[node name="HS_SO_C11" parent="World/Crowd" unique_id=77044764 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 61.3, 11.05, -77.4)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xHS_SO_11"
+
+[node name="HS_SO_C12" parent="World/Crowd" unique_id=525281429 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 60.97, 11.05, -74.45)
+patrol_half_length = 1.785
+reward_coin_id = "xHS_SO_12"
+
+[node name="HS_SO_B13" parent="World/Crowd" unique_id=1164565120 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.49, 11.9, -76.88)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHS_SO_13"
+
+[node name="HS_SO_C14" parent="World/Crowd" unique_id=46303460 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 61.08, 11.05, -79.9)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHS_SO_14"
+
+[node name="HS_SO_C15" parent="World/Crowd" unique_id=1958292605 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 64.9, 11.05, -80.17)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xHS_SO_15"
+
+[node name="HR7_B01" parent="World/Crowd" unique_id=334567262 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.41, 13.9, -92.68)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR7_1"
+
+[node name="HR7_C02" parent="World/Crowd" unique_id=238513988 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 58.84, 13.05, -90.5)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xHR7_2"
+
+[node name="HR7_C03" parent="World/Crowd" unique_id=1495306256 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 59.32, 13.05, -92.54)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR7_3"
+
+[node name="HR7_C04" parent="World/Crowd" unique_id=1462564598 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 62.29, 13.05, -93.72)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR7_4"
+
+[node name="HR7_B05" parent="World/Crowd" unique_id=1306229225 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.52, 13.9, -90.76)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHR7_5"
+
+[node name="HR7_C06" parent="World/Crowd" unique_id=449713095 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 62.22, 13.05, -89.92)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR7_6"
+
+[node name="HR7_C07" parent="World/Crowd" unique_id=1102165441 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 61.43, 13.05, -91.83)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR7_7"
+
+[node name="HR7_B08" parent="World/Crowd" unique_id=661944671 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.05, 13.9, -91.48)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR7_8"
+
+[node name="HR7_C09" parent="World/Crowd" unique_id=1800468620 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 57.78, 13.05, -93.07)
+patrol_half_length = 1.085
+reward_coin_id = "xHR7_9"
+
+[node name="HR7_C10" parent="World/Crowd" unique_id=177290173 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 60.41, 13.05, -90.12)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xHR7_10"
+
+[node name="HR8_B01" parent="World/Crowd" unique_id=722577596 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.95, 15.9, -107.35)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR8_1"
+
+[node name="HR8_C02" parent="World/Crowd" unique_id=474996300 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, 61.6, 15.05, -103.21)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR8_2"
+
+[node name="HR8_C03" parent="World/Crowd" unique_id=1930923641 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 62.75, 15.05, -106.52)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR8_3"
+
+[node name="HR8_B04" parent="World/Crowd" unique_id=1014294002 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.75, 15.9, -102.13)
+loop_radius = 0.9
+reward_coin_id = "xHR8_4"
+
+[node name="HR8_C05" parent="World/Crowd" unique_id=324331893 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 58.87, 15.05, -105.94)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR8_5"
+
+[node name="HR8_C06" parent="World/Crowd" unique_id=2001188103 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 57.47, 15.05, -104.48)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR8_6"
+
+[node name="HR8_B07" parent="World/Crowd" unique_id=2129686110 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.18, 15.9, -107.59)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHR8_7"
+
+[node name="HR8_C08" parent="World/Crowd" unique_id=1429955655 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 60.63, 15.05, -107.74)
+patrol_half_length = 1.085
+reward_coin_id = "xHR8_8"
+
+[node name="HR8_C09" parent="World/Crowd" unique_id=893954842 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 63.03, 15.05, -104.93)
+patrol_half_length = 1.085
+reward_coin_id = "xHR8_9"
+
+[node name="HR9_B01" parent="World/Crowd" unique_id=1072466252 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.02, 18.9, -121.88)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR9_1"
+
+[node name="HR9_C02" parent="World/Crowd" unique_id=1626329115 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 60.82, 18.05, -119.75)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR9_2"
+
+[node name="HR9_C03" parent="World/Crowd" unique_id=861167900 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.73, 18.05, -124.22)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR9_3"
+
+[node name="HR9_C04" parent="World/Crowd" unique_id=1457501955 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 58.77, 18.05, -121.23)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR9_4"
+
+[node name="HR9_B05" parent="World/Crowd" unique_id=1152888691 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.26, 18.9, -120.67)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHR9_5"
+
+[node name="HR9_C06" parent="World/Crowd" unique_id=920194422 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 59.06, 18.05, -124.36)
+patrol_half_length = 1.085
+reward_coin_id = "xHR9_6"
+
+[node name="HR9_C07" parent="World/Crowd" unique_id=1395853188 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 62.79, 18.05, -122.12)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR9_7"
+
+[node name="HR9_B08" parent="World/Crowd" unique_id=298606629 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.25, 18.9, -120.24)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xHR9_8"
+
+[node name="HR9_C09" parent="World/Crowd" unique_id=1457043026 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 62.16, 18.05, -123.57)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR9_9"
+
+[node name="HR9_C10" parent="World/Crowd" unique_id=1168202072 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 57.54, 18.05, -123.68)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR9_10"
+
+[node name="HR10_B01" parent="World/Crowd" unique_id=573301261 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.92, 18.9, -154.37)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xHR10_1"
+
+[node name="HR10_C02" parent="World/Crowd" unique_id=1665310818 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 62.29, 18.05, -157.56)
+patrol_half_length = 1.085
+reward_coin_id = "xHR10_2"
+
+[node name="HR10_C03" parent="World/Crowd" unique_id=669550916 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 59.85, 18.05, -160)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR10_3"
+
+[node name="HR10_B04" parent="World/Crowd" unique_id=646668067 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.98, 18.9, -156.24)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xHR10_4"
+
+[node name="HR10_C05" parent="World/Crowd" unique_id=1306887178 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 59.02, 18.05, -155.03)
+patrol_half_length = 1.085
+reward_coin_id = "xHR10_5"
+
+[node name="HR10_C06" parent="World/Crowd" unique_id=1500672351 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 58.06, 18.05, -157.81)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xHR10_6"
+
+[node name="HR10_B07" parent="World/Crowd" unique_id=1813491091 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.21, 18.9, -157.75)
+loop_radius = 0.9
+reward_coin_id = "xHR10_7"
+
+[node name="HR10_C08" parent="World/Crowd" unique_id=1686649737 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 61.94, 18.05, -154.63)
+patrol_half_length = 1.085
+reward_coin_id = "xHR10_8"
+
+[node name="HR10_C09" parent="World/Crowd" unique_id=1139507081 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.26, 18.05, -159.37)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xHR10_9"
+
+[node name="HRg_B01" parent="World/Crowd" unique_id=1036987744 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.12, 0.9, 17.02)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xHRg_1"
+
+[node name="HRg_C02" parent="World/Crowd" unique_id=645745091 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 50.81, 0.05, 13.48)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xHRg_2"
+
+[node name="HRg_C03" parent="World/Crowd" unique_id=1287031752 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 52.98, 0.05, 12.75)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xHRg_3"
+
+[node name="HRg_C04" parent="World/Crowd" unique_id=484846112 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 54.09, 0.05, 14.44)
+patrol_half_length = 0.8575
+reward_coin_id = "xHRg_4"
+
+[node name="HRg_B05" parent="World/Crowd" unique_id=78099231 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.33, 0.9, 15.56)
+loop_radius = 0.5
+reward_coin_id = "xHRg_5"
+
+[node name="HRg_C06" parent="World/Crowd" unique_id=346984357 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 51.45, 0.05, 16.85)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xHRg_6"
+
+[node name="HRg_C07" parent="World/Crowd" unique_id=1426637297 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 55.29, 0.05, 14.8)
+patrol_half_length = 0.8575
+reward_coin_id = "xHRg_7"
+
+[node name="C1_B01" parent="World/Crowd" unique_id=1625921302 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61.43, 18.9, -196.19)
+loop_radius = 0.9
+reward_coin_id = "xC1_1"
+
+[node name="C1_C02" parent="World/Crowd" unique_id=1567361593 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -62.16, 18.05, -189.68)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC1_2"
+
+[node name="C1_C03" parent="World/Crowd" unique_id=163356694 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -56.95, 18.05, -192.66)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC1_3"
+
+[node name="C1_C04" parent="World/Crowd" unique_id=957840484 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -63.66, 18.05, -193.26)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC1_4"
+
+[node name="C1_B05" parent="World/Crowd" unique_id=292047825 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.22, 18.9, -192.07)
+loop_radius = 0.9
+reward_coin_id = "xC1_5"
+
+[node name="C1_C06" parent="World/Crowd" unique_id=2053188729 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, -57.46, 18.05, -197.69)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC1_6"
+
+[node name="C1_C07" parent="World/Crowd" unique_id=1340165842 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -60.82, 18.05, -191.27)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC1_7"
+
+[node name="C1_B08" parent="World/Crowd" unique_id=941989514 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.78, 18.9, -190.6)
+loop_radius = 0.9
+reward_coin_id = "xC1_8"
+
+[node name="C1_C09" parent="World/Crowd" unique_id=302660674 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -59.28, 18.05, -195.77)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC1_9"
+
+[node name="C1_C10" parent="World/Crowd" unique_id=599433281 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -59, 18.05, -193.29)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC1_10"
+
+[node name="C1_C11" parent="World/Crowd" unique_id=948325695 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -63.26, 18.05, -194.87)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC1_11"
+
+[node name="C1_B12" parent="World/Crowd" unique_id=416116233 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.02, 18.9, -197.53)
+loop_radius = 0.9
+reward_coin_id = "xC1_12"
+
+[node name="C1_C13" parent="World/Crowd" unique_id=945671335 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -60.02, 18.05, -197.56)
+patrol_half_length = 1.785
+reward_coin_id = "xC1_13"
+
+[node name="C1_C14" parent="World/Crowd" unique_id=303797819 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -65.62, 18.05, -192.78)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC1_14"
+
+[node name="C2_B01" parent="World/Crowd" unique_id=1915014634 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.67, 18.9, -195.49)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xC2_1"
+
+[node name="C2_C02" parent="World/Crowd" unique_id=980929703 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -27.91, 18.05, -194.49)
+patrol_half_length = 1.785
+reward_coin_id = "xC2_2"
+
+[node name="C2_C03" parent="World/Crowd" unique_id=1103553805 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -32.66, 18.05, -194.47)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC2_3"
+
+[node name="C2_C04" parent="World/Crowd" unique_id=789549526 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -33.17, 18.05, -198.35)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC2_4"
+
+[node name="C2_B05" parent="World/Crowd" unique_id=1958071106 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.42, 18.9, -190.62)
+loop_radius = 0.9
+reward_coin_id = "xC2_5"
+
+[node name="C2_C06" parent="World/Crowd" unique_id=1068279692 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -29.8, 18.05, -195.05)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC2_6"
+
+[node name="C2_C07" parent="World/Crowd" unique_id=413539466 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -35.5, 18.05, -196.66)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC2_7"
+
+[node name="C2_B08" parent="World/Crowd" unique_id=357810550 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.56, 18.9, -191.35)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC2_8"
+
+[node name="C2_C09" parent="World/Crowd" unique_id=814028755 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -26.42, 18.05, -193.78)
+patrol_half_length = 1.785
+reward_coin_id = "xC2_9"
+
+[node name="C2_C10" parent="World/Crowd" unique_id=743516441 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -32.29, 18.05, -196.91)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC2_10"
+
+[node name="C2_C11" parent="World/Crowd" unique_id=1157709445 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -36.07, 18.05, -194.55)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC2_11"
+
+[node name="C2_B12" parent="World/Crowd" unique_id=1825548656 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.63, 18.9, -193.05)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xC2_12"
+
+[node name="C2_C13" parent="World/Crowd" unique_id=1889644080 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -35.92, 18.05, -191.99)
+patrol_half_length = 1.785
+reward_coin_id = "xC2_13"
+
+[node name="C2_C14" parent="World/Crowd" unique_id=899762418 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -33.03, 18.05, -189.19)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC2_14"
+
+[node name="C3_B01" parent="World/Crowd" unique_id=299736247 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11, 18.9, -193.25)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xC3_1"
+
+[node name="C3_C02" parent="World/Crowd" unique_id=312019566 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, -4.75, 18.05, -196.34)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC3_2"
+
+[node name="C3_C03" parent="World/Crowd" unique_id=1857473831 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 3.53, 18.05, -197.79)
+patrol_half_length = 1.785
+reward_coin_id = "xC3_3"
+
+[node name="C3_B04" parent="World/Crowd" unique_id=1944975552 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33, 18.9, -197.76)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC3_4"
+
+[node name="C3_C05" parent="World/Crowd" unique_id=607287858 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -1.75, 18.05, -197.71)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC3_5"
+
+[node name="C3_C06" parent="World/Crowd" unique_id=525057496 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 2.5, 18.05, -191.68)
+patrol_half_length = 1.785
+reward_coin_id = "xC3_6"
+
+[node name="C3_B07" parent="World/Crowd" unique_id=414882458 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89, 18.9, -194.47)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xC3_7"
+
+[node name="C3_C08" parent="World/Crowd" unique_id=1685048605 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -1.59, 18.05, -194.75)
+patrol_half_length = 1.785
+reward_coin_id = "xC3_8"
+
+[node name="C3_C09" parent="World/Crowd" unique_id=1759693382 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -2.48, 18.05, -191.55)
+patrol_half_length = 1.785
+reward_coin_id = "xC3_9"
+
+[node name="C3_B10" parent="World/Crowd" unique_id=65815449 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14, 18.9, -190.83)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC3_10"
+
+[node name="C3_C11" parent="World/Crowd" unique_id=1103814340 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -1.3, 18.05, -190.04)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC3_11"
+
+[node name="C3_C12" parent="World/Crowd" unique_id=222329359 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -2.48, 18.05, -193.17)
+patrol_half_length = 1.785
+reward_coin_id = "xC3_12"
+
+[node name="C3_B13" parent="World/Crowd" unique_id=696828633 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.98, 18.9, -192.28)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xC3_13"
+
+[node name="C3_C14" parent="World/Crowd" unique_id=752907043 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 1.14, 18.05, -198.96)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC3_14"
+
+[node name="C3_C15" parent="World/Crowd" unique_id=2008166941 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 1.82, 18.05, -193.82)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC3_15"
+
+[node name="C4_B01" parent="World/Crowd" unique_id=883909681 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.93, 18.9, -192.49)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xC4_1"
+
+[node name="C4_C02" parent="World/Crowd" unique_id=249085158 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 26.98, 18.05, -198.2)
+patrol_half_length = 1.785
+reward_coin_id = "xC4_2"
+
+[node name="C4_C03" parent="World/Crowd" unique_id=1014396343 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 25.83, 18.05, -189.56)
+patrol_half_length = 1.785
+reward_coin_id = "xC4_3"
+
+[node name="C4_C04" parent="World/Crowd" unique_id=245171960 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, 30.3, 18.05, -190.22)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC4_4"
+
+[node name="C4_B05" parent="World/Crowd" unique_id=1094952187 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.18, 18.9, -194.58)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC4_5"
+
+[node name="C4_C06" parent="World/Crowd" unique_id=888129938 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 27.81, 18.05, -190.26)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC4_6"
+
+[node name="C4_C07" parent="World/Crowd" unique_id=249363978 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 30.06, 18.05, -197.28)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC4_7"
+
+[node name="C4_B08" parent="World/Crowd" unique_id=1800698830 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.1, 18.9, -191.98)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xC4_8"
+
+[node name="C4_C09" parent="World/Crowd" unique_id=2120228422 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, 33.19, 18.05, -194.39)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC4_9"
+
+[node name="C4_C10" parent="World/Crowd" unique_id=2136701296 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.49, 18.05, -197.31)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC4_10"
+
+[node name="C4_C11" parent="World/Crowd" unique_id=1419644051 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 25.92, 18.05, -193.74)
+patrol_half_length = 1.785
+reward_coin_id = "xC4_11"
+
+[node name="C4_B12" parent="World/Crowd" unique_id=1530558298 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.38, 18.9, -198.02)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC4_12"
+
+[node name="C4_C13" parent="World/Crowd" unique_id=1653652297 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 24.61, 18.05, -192.5)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC4_13"
+
+[node name="C4_C14" parent="World/Crowd" unique_id=566201876 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 24.36, 18.05, -190.95)
+patrol_half_length = 1.785
+reward_coin_id = "xC4_14"
+
+[node name="C5_B01" parent="World/Crowd" unique_id=10889884 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.23, 18.9, -191.91)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC5_1"
+
+[node name="C5_C02" parent="World/Crowd" unique_id=1256786803 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 62.4, 18.05, -190.47)
+patrol_half_length = 1.785
+reward_coin_id = "xC5_2"
+
+[node name="C5_C03" parent="World/Crowd" unique_id=1156876274 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 56.01, 18.05, -197.69)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC5_3"
+
+[node name="C5_C04" parent="World/Crowd" unique_id=1795448116 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 57.64, 18.05, -189.59)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC5_4"
+
+[node name="C5_B05" parent="World/Crowd" unique_id=1941663985 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.89, 18.9, -194.89)
+loop_radius = 0.9
+reward_coin_id = "xC5_5"
+
+[node name="C5_C06" parent="World/Crowd" unique_id=384680602 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 55.54, 18.05, -191.92)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC5_6"
+
+[node name="C5_C07" parent="World/Crowd" unique_id=1961964473 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 59.43, 18.05, -198.31)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xC5_7"
+
+[node name="C5_B08" parent="World/Crowd" unique_id=93482434 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.56, 18.9, -195.68)
+loop_radius = 0.9
+reward_coin_id = "xC5_8"
+
+[node name="C5_C09" parent="World/Crowd" unique_id=361763716 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 61.69, 18.05, -192.43)
+patrol_half_length = 1.785
+reward_coin_id = "xC5_9"
+
+[node name="C5_C10" parent="World/Crowd" unique_id=1510491618 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, 61.65, 18.05, -196.74)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC5_10"
+
+[node name="C5_C11" parent="World/Crowd" unique_id=656632379 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 60.2, 18.05, -189.77)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xC5_11"
+
+[node name="C5_B12" parent="World/Crowd" unique_id=2007638755 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.49, 18.9, -198.29)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xC5_12"
+
+[node name="C5_C13" parent="World/Crowd" unique_id=1601684444 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.61, 18.05, -195.95)
+patrol_half_length = 1.785
+reward_coin_id = "xC5_13"
+
+[node name="C5_C14" parent="World/Crowd" unique_id=66023543 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.96592575, 0, -0.25881928, 0, 1, 0, 0.25881928, 0, 0.96592575, 62.32, 18.05, -194.41)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xC5_14"
+
+[node name="CR_RA_B01" parent="World/Crowd" unique_id=1458116680 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98, 18.9, -210.37)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xCR_RA_1"
+
+[node name="CR_RA_C02" parent="World/Crowd" unique_id=507915686 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -0.8, 18.05, -210.13)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xCR_RA_2"
+
+[node name="CR_RA_C03" parent="World/Crowd" unique_id=1307911609 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 1.82, 18.05, -217.84)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xCR_RA_3"
+
+[node name="CR_RA_B04" parent="World/Crowd" unique_id=2038832557 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41, 18.9, -215.81)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RA_4"
+
+[node name="CR_RA_C05" parent="World/Crowd" unique_id=2022407975 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 18.05, -209.34)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RA_5"
+
+[node name="CR_RA_C06" parent="World/Crowd" unique_id=1074404180 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -1.49, 18.05, -208.67)
+patrol_half_length = 1.785
+reward_coin_id = "xCR_RA_6"
+
+[node name="CR_RA_B07" parent="World/Crowd" unique_id=1077736107 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 18.9, -217.49)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RA_7"
+
+[node name="CR_RA_C08" parent="World/Crowd" unique_id=11359576 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, -5.74, 18.05, -214.84)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xCR_RA_8"
+
+[node name="CR_RA_C09" parent="World/Crowd" unique_id=1252202544 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.5, 18.05, -214.4)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xCR_RA_9"
+
+[node name="CR_RA_B10" parent="World/Crowd" unique_id=1985447835 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 18.9, -213.23)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RA_10"
+
+[node name="CR_RA_C11" parent="World/Crowd" unique_id=1875789089 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -2.07, 18.05, -211.83)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xCR_RA_11"
+
+[node name="CR_RA_C12" parent="World/Crowd" unique_id=1830974876 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.36, 18.05, -216.64)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xCR_RA_12"
+
+[node name="CR_RA_B13" parent="World/Crowd" unique_id=382185016 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.42, 18.9, -212.59)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RA_13"
+
+[node name="CR_RA_C14" parent="World/Crowd" unique_id=2077933517 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -1.4, 18.05, -217.49)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xCR_RA_14"
+
+[node name="CR_RA_C15" parent="World/Crowd" unique_id=293690416 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.76, 18.05, -211.85)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RA_15"
+
+[node name="CR_RB_B01" parent="World/Crowd" unique_id=1052652759 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 18.9, -233.02)
+loop_radius = 0.9
+reward_coin_id = "xCR_RB_1"
+
+[node name="CR_RB_C02" parent="World/Crowd" unique_id=1434353221 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 18.05, -232.21)
+patrol_half_length = 1.785
+reward_coin_id = "xCR_RB_2"
+
+[node name="CR_RB_C03" parent="World/Crowd" unique_id=1984507143 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 0.76, 18.05, -232.11)
+patrol_half_length = 1.785
+reward_coin_id = "xCR_RB_3"
+
+[node name="CR_RB_B04" parent="World/Crowd" unique_id=672239364 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.32, 18.9, -236.06)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xCR_RB_4"
+
+[node name="CR_RB_C05" parent="World/Crowd" unique_id=1445896693 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -2.42, 18.05, -233.71)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RB_5"
+
+[node name="CR_RB_C06" parent="World/Crowd" unique_id=1014263699 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -5.43, 18.05, -232.36)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xCR_RB_6"
+
+[node name="CR_RB_B07" parent="World/Crowd" unique_id=636438196 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.94, 18.9, -230.75)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RB_7"
+
+[node name="CR_RB_C08" parent="World/Crowd" unique_id=1563893483 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 1.55, 18.05, -234.57)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RB_8"
+
+[node name="CR_RB_C09" parent="World/Crowd" unique_id=868898853 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.34, 18.05, -234.34)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RB_9"
+
+[node name="CR_RB_B10" parent="World/Crowd" unique_id=1225695102 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.39, 18.9, -228.04)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCR_RB_10"
+
+[node name="CR_RB_C11" parent="World/Crowd" unique_id=1110659664 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, -0.58, 18.05, -234.36)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RB_11"
+
+[node name="CR_RB_C12" parent="World/Crowd" unique_id=1937983196 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.9659258, 0, 0.25881904, 0, 1, 0, -0.25881904, 0, 0.9659258, -2.93, 18.05, -231.57)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xCR_RB_12"
+
+[node name="CR_RB_B13" parent="World/Crowd" unique_id=222009038 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13, 18.9, -234.55)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xCR_RB_13"
+
+[node name="CR_RB_C14" parent="World/Crowd" unique_id=1403956986 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -3.21, 18.05, -226.71)
+patrol_half_length = 1.785
+reward_coin_id = "xCR_RB_14"
+
+[node name="CR_RB_C15" parent="World/Crowd" unique_id=271562475 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, 1.4, 18.05, -226.38)
+patrol_half_length = 1.785
+reward_coin_id = "xCR_RB_15"
+
+[node name="CS_B01" parent="World/Crowd" unique_id=1170183880 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.21, 18.9, -226.26)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xCS_1"
+
+[node name="CS_C02" parent="World/Crowd" unique_id=830886243 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 30.72, 18.05, -223.62)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xCS_2"
+
+[node name="CS_C03" parent="World/Crowd" unique_id=1281382208 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, 27.64, 18.05, -226.95)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xCS_3"
+
+[node name="CS_C04" parent="World/Crowd" unique_id=1499611778 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 27.34, 18.05, -224.26)
+patrol_half_length = 1.085
+reward_coin_id = "xCS_4"
+
+[node name="CS_B05" parent="World/Crowd" unique_id=1003629107 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.84, 18.9, -223.49)
+loop_radius = 0.9
+reward_coin_id = "xCS_5"
+
+[node name="CS_C06" parent="World/Crowd" unique_id=316985935 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 30.68, 18.05, -228.67)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xCS_6"
+
+[node name="CS_C07" parent="World/Crowd" unique_id=1508213093 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 30.44, 18.05, -225.22)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xCS_7"
+
+[node name="CS_B08" parent="World/Crowd" unique_id=1777881981 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.5, 18.9, -225.59)
+loop_radius = 0.9
+reward_coin_id = "xCS_8"
+
+[node name="CS_C09" parent="World/Crowd" unique_id=384368041 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, -0.49999997, 0, 1, 0, 0.49999997, 0, -0.8660254, 32.47, 18.05, -224.23)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xCS_9"
+
+[node name="CS_C10" parent="World/Crowd" unique_id=688870337 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 33.04, 18.05, -227.09)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xCS_10"
+
+[node name="FE_B01" parent="World/Crowd" unique_id=1314145652 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46, 27.9, -249.13)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xFE_1"
+
+[node name="FE_C02" parent="World/Crowd" unique_id=872918595 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 0.09, 27.05, -248.27)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFE_2"
+
+[node name="FE_C03" parent="World/Crowd" unique_id=589619520 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.1, 27.05, -250.04)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xFE_3"
+
+[node name="FE_C04" parent="World/Crowd" unique_id=418091846 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -1.79, 27.05, -250.06)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFE_4"
+
+[node name="FE_B05" parent="World/Crowd" unique_id=1245309006 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89, 27.9, -251.66)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xFE_5"
+
+[node name="FE_C06" parent="World/Crowd" unique_id=1789967279 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 0.03, 27.05, -252.4)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xFE_6"
+
+[node name="FE_C07" parent="World/Crowd" unique_id=196030367 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -1.65, 27.05, -252.39)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFE_7"
+
+[node name="FE_B08" parent="World/Crowd" unique_id=163222385 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 27.9, -247.61)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xFE_8"
+
+[node name="FE_C09" parent="World/Crowd" unique_id=92096718 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -3.92, 27.05, -249.21)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFE_9"
+
+[node name="FE_C10" parent="World/Crowd" unique_id=471816847 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.258819, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.258819, -1.57, 27.05, -247.63)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFE_10"
+
+[node name="FM_B01" parent="World/Crowd" unique_id=980518260 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.55, 30.9, -267.51)
+loop_radius = 0.9
+reward_coin_id = "xFM_1"
+
+[node name="FM_C02" parent="World/Crowd" unique_id=1701564433 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, -1.3, 30.05, -269.55)
+patrol_half_length = 1.085
+reward_coin_id = "xFM_2"
+
+[node name="FM_C03" parent="World/Crowd" unique_id=439097891 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, -0.07, 30.05, -266.66)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xFM_3"
+
+[node name="FM_C04" parent="World/Crowd" unique_id=48562019 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 1.55, 30.05, -266.72)
+patrol_half_length = 1.085
+paint_color_id = 3
+reward_coin_id = "xFM_4"
+
+[node name="FM_B05" parent="World/Crowd" unique_id=1525777826 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88, 30.9, -266.79)
+loop_radius = 0.9
+paint_color_id = 0
+reward_coin_id = "xFM_5"
+
+[node name="FM_C06" parent="World/Crowd" unique_id=61051017 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 0.4, 30.05, -265)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xFM_6"
+
+[node name="FM_C07" parent="World/Crowd" unique_id=1543886853 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -3.67, 30.05, -267.95)
+patrol_half_length = 1.085
+paint_color_id = 0
+reward_coin_id = "xFM_7"
+
+[node name="FM_B08" parent="World/Crowd" unique_id=357850530 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82, 30.9, -265.26)
+loop_radius = 0.9
+reward_coin_id = "xFM_8"
+
+[node name="FM_C09" parent="World/Crowd" unique_id=1942887001 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, -0.70710677, -1.92, 30.05, -264.76)
+patrol_half_length = 1.085
+paint_color_id = 2
+reward_coin_id = "xFM_9"
+
+[node name="F_B01" parent="World/Crowd" unique_id=667727087 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.33, 33.9, -282.48)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xF_1"
+
+[node name="F_C02" parent="World/Crowd" unique_id=215142442 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, 2.79, 33.05, -282.51)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xF_2"
+
+[node name="F_C03" parent="World/Crowd" unique_id=305002365 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 2.51, 33.05, -290.39)
+patrol_half_length = 1.785
+reward_coin_id = "xF_3"
+
+[node name="F_B04" parent="World/Crowd" unique_id=43333757 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54, 33.9, -290.92)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xF_4"
+
+[node name="F_C05" parent="World/Crowd" unique_id=1032458832 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -4.1, 33.05, -288.19)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xF_5"
+
+[node name="F_C06" parent="World/Crowd" unique_id=1801866629 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881898, 0, -0.9659259, 0, 1, 0, 0.9659259, 0, -0.25881898, -2.85, 33.05, -289.29)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xF_6"
+
+[node name="F_B07" parent="World/Crowd" unique_id=1033063212 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 33.9, -285.26)
+loop_radius = 0.9
+paint_color_id = 1
+reward_coin_id = "xF_7"
+
+[node name="F_C08" parent="World/Crowd" unique_id=1975463223 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 1.87, 33.05, -288.76)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xF_8"
+
+[node name="F_C09" parent="World/Crowd" unique_id=1979238168 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -5.24, 33.05, -286.92)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xF_9"
+
+[node name="F_B10" parent="World/Crowd" unique_id=636481878 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07, 33.9, -289.34)
+loop_radius = 0.9
+paint_color_id = 3
+reward_coin_id = "xF_10"
+
+[node name="F_C11" parent="World/Crowd" unique_id=39752020 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 0.84, 33.05, -282.48)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xF_11"
+
+[node name="F_C12" parent="World/Crowd" unique_id=674653207 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.25881904, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, -0.25881904, 2.59, 33.05, -285)
+patrol_half_length = 1.785
+paint_color_id = 0
+reward_coin_id = "xF_12"
+
+[node name="F_B13" parent="World/Crowd" unique_id=935712488 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24, 33.9, -288.65)
+loop_radius = 0.9
+reward_coin_id = "xF_13"
+
+[node name="F_C14" parent="World/Crowd" unique_id=525918157 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -4.84, 33.05, -282.44)
+patrol_half_length = 1.785
+paint_color_id = 2
+reward_coin_id = "xF_14"
+
+[node name="F_C15" parent="World/Crowd" unique_id=1741233392 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -0.17, 33.05, -290.37)
+patrol_half_length = 1.785
+paint_color_id = 3
+reward_coin_id = "xF_15"
+
+[node name="T_W_B01" parent="World/Crowd" unique_id=1994888994 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.29, 33.9, -286.75)
+loop_radius = 0.5
+reward_coin_id = "xT_W_1"
+
+[node name="T_W_C02" parent="World/Crowd" unique_id=1475000478 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -15.21, 33.05, -285.38)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xT_W_2"
+
+[node name="T_W_C03" parent="World/Crowd" unique_id=1543313980 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5, 33.05, -283.83)
+patrol_half_length = 0.8575
+reward_coin_id = "xT_W_3"
+
+[node name="T_W_C04" parent="World/Crowd" unique_id=1482452870 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -17.02, 33.05, -285.61)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xT_W_4"
+
+[node name="T_W_B05" parent="World/Crowd" unique_id=638047197 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.05, 33.9, -284.05)
+loop_radius = 0.5
+paint_color_id = 1
+reward_coin_id = "xT_W_5"
+
+[node name="T_W_C06" parent="World/Crowd" unique_id=1654993506 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.70710665, 0, -0.7071069, 0, 1, 0, 0.7071069, 0, 0.70710665, -14.97, 33.05, -286.8)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xT_W_6"
+
+[node name="T_W_C07" parent="World/Crowd" unique_id=490849854 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, -16.18, 33.05, -287.12)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xT_W_7"
+
+[node name="T_E_B01" parent="World/Crowd" unique_id=456411316 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.27, 33.9, -285.75)
+loop_radius = 0.5
+reward_coin_id = "xT_E_1"
+
+[node name="T_E_C02" parent="World/Crowd" unique_id=158134055 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, 15.68, 33.05, -285.75)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xT_E_2"
+
+[node name="T_E_C03" parent="World/Crowd" unique_id=1517694466 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, -0.25881907, 0, 1, 0, 0.25881907, 0, -0.9659258, 13.12, 33.05, -286.84)
+patrol_half_length = 0.8575
+reward_coin_id = "xT_E_3"
+
+[node name="T_E_C04" parent="World/Crowd" unique_id=1987365326 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 13.77, 33.05, -288.16)
+patrol_half_length = 0.8575
+reward_coin_id = "xT_E_4"
+
+[node name="T_E_B05" parent="World/Crowd" unique_id=1441695276 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.46, 33.9, -285.94)
+loop_radius = 0.5
+paint_color_id = 0
+reward_coin_id = "xT_E_5"
+
+[node name="T_E_C06" parent="World/Crowd" unique_id=1806776245 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 13.44, 33.05, -284.94)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xT_E_6"
+
+[node name="T_E_C07" parent="World/Crowd" unique_id=1951499539 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 14.74, 33.05, -284.62)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xT_E_7"
+
+[node name="T_N_B01" parent="World/Crowd" unique_id=1716867027 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 33.9, -301.31)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xT_N_1"
+
+[node name="T_N_C02" parent="World/Crowd" unique_id=1508464288 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, -2.68, 33.05, -299.2)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xT_N_2"
+
+[node name="T_N_C03" parent="World/Crowd" unique_id=302947475 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -3.13, 33.05, -300.94)
+patrol_half_length = 0.8575
+paint_color_id = 3
+reward_coin_id = "xT_N_3"
+
+[node name="T_N_C04" parent="World/Crowd" unique_id=612316179 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(0.49999997, 0, 0.86602545, 0, 1, 0, -0.86602545, 0, 0.49999997, -2.11, 33.05, -301.75)
+patrol_half_length = 0.8575
+reward_coin_id = "xT_N_4"
+
+[node name="T_N_B05" parent="World/Crowd" unique_id=1976880812 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.55, 33.9, -303.05)
+loop_radius = 0.5
+paint_color_id = 3
+reward_coin_id = "xT_N_5"
+
+[node name="T_N_C06" parent="World/Crowd" unique_id=315626128 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.9659258, 0, 0.25881913, 0, 1, 0, -0.25881913, 0, -0.9659258, -0.68, 33.05, -299.32)
+patrol_half_length = 0.8575
+paint_color_id = 2
+reward_coin_id = "xT_N_6"
+
+[node name="T_N_C07" parent="World/Crowd" unique_id=1281785544 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, -0.71, 33.05, -301.59)
+patrol_half_length = 0.8575
+paint_color_id = 0
+reward_coin_id = "xT_N_7"
 
 [node name="Player" parent="." unique_id=860313022 instance=ExtResource("42_t4hs4")]
 unique_name_in_owner = true

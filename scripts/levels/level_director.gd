@@ -30,6 +30,12 @@ signal respawn_finished
 @export var lost_hint_cooldown: float = 45.0
 ## Getting this much closer to the flag counts as progress.
 @export var progress_distance: float = 4.0
+@export_group("Enemy crowd")
+## Enemies farther than this from the robot sleep (no AI, no animation) and wake as it comes near. Worlds carry
+## hundreds of enemies (5 to 20 per island), so only the nearby ones think.
+@export var enemy_wake_radius: float = 32.0
+## Enemies examined per frame (round robin), so a big crowd costs a few distance checks a frame.
+@export var enemy_checks_per_frame: int = 90
 
 @onready var _player: Player = %Player
 @onready var _spawn: Marker3D = %Spawn
@@ -43,6 +49,8 @@ var _since_progress: float = 0.0
 var _best_goal_dist: float = INF
 var _lost_cooldown: float = 0.0
 var _seen_windup: Dictionary = {}
+var _crowd: Array[EnemyBase] = []
+var _crowd_i: int = 0
 
 
 func _ready() -> void:
@@ -64,6 +72,9 @@ func _ready() -> void:
 	for e in get_tree().get_nodes_in_group(&"enemy"):
 		if e.has_signal(&"windup_started"):
 			e.windup_started.connect(_on_enemy_windup)
+		if e is EnemyBase:
+			_crowd.append(e as EnemyBase)
+	_update_crowd(_crowd.size())
 	Campaign.coins_changed.connect(func(_t: int) -> void: _since_progress = 0.0)
 	Campaign.progress_changed.connect(func() -> void: _since_progress = 0.0)
 	level_ready.emit()
@@ -73,6 +84,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	_update_crowd(enemy_checks_per_frame)
 	if _captured:
 		return
 	Campaign.run_time += delta
@@ -100,6 +112,20 @@ func _say(id: StringName) -> void:
 
 
 ## First wind-up of each enemy kind teaches the matching line (never repeated in a run).
+## Wakes the enemies near the robot and puts far ones to sleep, `count` enemies per call (round robin).
+func _update_crowd(count: int) -> void:
+	var n := _crowd.size()
+	if n == 0:
+		return
+	var pp := _player.global_position
+	var r2 := enemy_wake_radius * enemy_wake_radius
+	for k in mini(count, n):
+		var e := _crowd[_crowd_i]
+		_crowd_i = (_crowd_i + 1) % n
+		if is_instance_valid(e):
+			e.set_dormant(e.global_position.distance_squared_to(pp) > r2)
+
+
 func _on_enemy_windup(enemy: Node) -> void:
 	var key: StringName = &"bee_hint" if enemy.is_in_group(&"bee") or enemy is BeeEnemy else &"combat_hint"
 	if _seen_windup.has(key):

@@ -101,10 +101,12 @@ func _do_patrol(delta: float, p: Player) -> void:
 
 
 func _can_notice(p: Player) -> bool:
-	if not p.is_alive() or _near_safe_zone(p):
+	if not p.is_alive():
 		return false
 	var d := global_position.distance_to(p.global_position)
-	return d <= detect_range and absf(p.global_position.y - global_position.y) < 2.2 and line_of_sight_to_player(detect_range + 1.0)
+	if d > detect_range or absf(p.global_position.y - global_position.y) >= 2.2:
+		return false
+	return not _near_safe_zone(p) and line_of_sight_to_player(detect_range + 1.0)
 
 
 ## No enemy attacks within 3 m of checkpoints, console pads or tutorial anchors.

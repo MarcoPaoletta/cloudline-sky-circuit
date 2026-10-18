@@ -27,6 +27,12 @@ signal windup_started(enemy: EnemyBase)
 @export var knock_tilt_deg: float = 100.0
 @export var fallen_hold: float = 0.45
 @export var vanish_time: float = 0.25
+@export_group("Crowd")
+## Collision mask while alive: the world (1) and other enemies (4), so crowded enemies push each other aside
+## instead of overlapping. Arena monsters set their own mask (their director spaces the horde).
+@export_flags_3d_physics var alive_mask: int = 5
+## The model stops rendering beyond this distance from the camera (0 = always drawn).
+@export var render_distance: float = 70.0
 
 @onready var _hurtbox: EnemyHurtbox = $Hurtbox
 @onready var _model: Node3D = $Model
@@ -43,6 +49,8 @@ var _death_tween: Tween
 var _model_scale0: Vector3 = Vector3.ONE
 var _flash_meshes: Array[GeometryInstance3D] = []
 var _flash_left: float = 0.0
+## Sleeping (far from the robot): no AI and no animation. The level director wakes enemies as the robot nears.
+var dormant: bool = false
 
 const FLASH_MAT: Material = preload("res://resources/materials/hit_flash.tres")
 ## Real-time end of the current hit stop (shared by every enemy so a chain is one stop, not a stutter).
@@ -61,6 +69,9 @@ func _ready() -> void:
 	exempt_from_paint(_model)
 	for g in _model.find_children("*", "GeometryInstance3D", true, false):
 		_flash_meshes.append(g as GeometryInstance3D)
+		if render_distance > 0.0:
+			(g as GeometryInstance3D).visibility_range_end = render_distance
+	collision_mask = alive_mask
 	_setup()
 
 
@@ -74,6 +85,16 @@ func _process(delta: float) -> void:
 ## Virtual: subclass setup after the base is ready.
 func _setup() -> void:
 	pass
+
+
+## Puts the enemy to sleep (no AI, no animation) or wakes it. Called by the level director's crowd pass.
+func set_dormant(on: bool) -> void:
+	if on == dormant:
+		return
+	dormant = on
+	set_physics_process(not on)
+	if _anim:
+		_anim.active = not on
 
 
 ## Characters live on their own visual layer so paint decals never tint them.
@@ -251,7 +272,7 @@ func revive() -> void:
 	_set_flash(false)
 	_flash_left = 0.0
 	collision_layer = 4
-	collision_mask = 1
+	collision_mask = alive_mask
 	_hurtbox.set_enabled(true)
 	_on_revive()
 
