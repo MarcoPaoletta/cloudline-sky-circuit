@@ -48,6 +48,10 @@ var _panel_tween: Tween
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	LightingPreset.apply_to(self)
+	var music := get_node_or_null("/root/Audio")
+	if music:
+		music.play_music(&"menu")
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().paused = false
 	_shade.modulate.a = 0.0

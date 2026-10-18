@@ -20,6 +20,8 @@ signal overview_exited
 @export_group("Smoothing")
 @export var distance_response: float = 5.0
 @export var fov_response: float = 6.0
+## Extra FOV while the robot sprints (none with Reduced Motion).
+@export var sprint_fov_kick: float = 6.0
 @export_group("Overview")
 @export var overview_time: float = 0.65
 @export var reduced_motion_time: float = 0.15
@@ -178,7 +180,10 @@ func _process(delta: float) -> void:
 	var kd := 1.0 - exp(-distance_response * delta)
 	_spring.spring_length = lerpf(_spring.spring_length, _want_distance, kd)
 	var kf := 1.0 - exp(-fov_response * delta)
-	var follow_fov := lerpf(_cam.fov if _overview_w < 0.001 else follow_fov_cache, _want_fov, kf)
+	var want_fov := _want_fov
+	if _player.sprinting and not Campaign.reduced_motion:
+		want_fov += sprint_fov_kick
+	var follow_fov := lerpf(_cam.fov if _overview_w < 0.001 else follow_fov_cache, want_fov, kf)
 	follow_fov_cache = follow_fov
 
 	# Trauma shake (quadratic) and punch.

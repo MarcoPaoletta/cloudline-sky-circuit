@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://on0mucaao30e"]
+
+[ext_resource type="Material" uid="uid://dnvdhxe5aful8" path="res://resources/materials/paint_splat.tres" id="1_yy0bd"]
+[ext_resource type="Script" uid="uid://bkbjyk80ejijm" path="res://scripts/fx/paint_splat.gd" id="2_1wrwe"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_obgmn"]
+size = Vector2(1, 1)
+
+[node name="PaintSplat" type="MeshInstance3D" unique_id=54629284]
+visible = false
+layers = 524288
+material_override = ExtResource("1_yy0bd")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_obgmn")
+script = ExtResource("2_1wrwe")

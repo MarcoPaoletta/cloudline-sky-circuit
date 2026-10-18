@@ -457,3 +457,24 @@ This section records decisions made while building the game. It supersedes earli
 **Assists and comfort.** Arena survival has an optional regeneration and chain-heal assist (Settings); key remapping swaps clashing keys; text size and reduced motion/flash/shake are in Settings; the F1 development panel is removed from release builds.
 
 **Not measured or not claimed.** Frame times are from the editor-embedded run on the development Mac only; no iPad or weakest-device result is claimed. The arena crowds were played by test bots, not by new human players, so the 35-65 s clear targets are untested with people. The supplied packs contain sound effects only, so there is no music or ambience loop.
+
+
+## 24. Revision 1.5: v2 playtest changes (18 October 2026)
+
+Marco played v1 and asked for the changes below. This section supersedes earlier wording only where it says so.
+
+**Audio.** There is music now (supersedes "no music or ambience loop" in section 23): one calm track for the title, one bouncy-but-relaxed track for the worlds and one upbeat track for the arenas. They loop seamlessly and crossfade on the Music bus. The sound palette is soft (bells, marimba, kalimba, soft thumps, airy whooshes); nothing is harsh or chiptune. The boot-muted rule and the M toggle are unchanged.
+
+**Enemy density.** Each world has at least 10 enemies (13 / 15 / 18). The new ones sit on broad islands and side pockets, never on a checkpoint, console or arrival island.
+
+**Bees (supersedes the bee numbers in section 11 where they differ).** A bee loops 0.9 m over the floor under its placement, so a rolled head hits it. When it notices the robot (6 m, same level), it hovers 0.8 s with the amber mark while drifting toward the robot (at most 3.5 m/s, never closer than 2.2 m, never outside its 8 m leash). Then it makes a straight dive of up to 3.2 m at the robot's sampled chest height and returns. The dive can be dodged by moving during the wind-up.
+
+**Hit feedback (game-dev paint-splash "enemy tag").** Every accepted head hit flashes the enemy white for 0.07 s and holds a 45 ms hit stop, shared by a chain and skipped with Reduced Motion. A defeated enemy is bowled over: thrown back about 2.2 m along the roll, tipped onto its back, held 0.45 s, then shrunk away evenly. Enemies are never squashed. The Yeti is shoved 0.7 m per hit and topples slowly when beaten.
+
+**Paint on the ground (rendering note for section 21).** On the Mobile renderer a mesh receives at most 8 decals. Flat ground therefore gets flat splat quads with the same shapes, palette, pop and fade. Decals stay for slopes and edges. Arenas keep their paint vivid for 16 s so the floor fills with colour during a fight.
+
+**Movement.** Hold Sprint (Shift / left stick) to run at 9.5 m/s; run stays 6 m/s.
+
+**Head sockets.** Every world has at least 3 sockets, each powering a device with a purpose: the door or Crown bridge from v1, plus bridges to coin pockets. A socket catches a head that rolls within 1.25 m of its cup.
+
+**Development tools.** F1 adds fly mode, Go to flag, Complete arena and a shortcut to the F2 lighting lab. The lab shows the concept beside the live game, tweaks the scene's light and toon colours live, and saves to the shared environment and material resources and to a per-scene sun preset.

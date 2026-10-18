@@ -56,6 +56,9 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 12.6)
 
 [node name="PaintManager" parent="." unique_id=2113115834 instance=ExtResource("6_yek76")]
+min_radius = 0.8
+max_radius = 1.1
+mark_hold_time = 16
 
 [node name="Hud" parent="." unique_id=842138425 instance=ExtResource("7_q021h")]
 unique_name_in_owner = true

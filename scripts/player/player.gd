@@ -4,7 +4,8 @@ extends CharacterBody3D
 ## The head (HeadController) and the arm (FetchArm) are separate child scenes with their own behavior.
 ##
 ## Metrics follow GDD 4: run 6 m/s, accel 24 m/s2, air control 60 %, coyote 0.12 s, jump buffer 0.12 s,
-## jump launch 8.5 m/s with 20 m/s2 gravity (about 1.8 m peak).
+## jump launch 8.5 m/s with 20 m/s2 gravity (about 1.8 m peak). v2: hold Sprint (Shift) to run at 9.5 m/s;
+## the dev panel's fly mode moves the robot freely through the level (Jump rises, C or Ctrl sinks).
 
 signal jumped
 signal landed(fall_speed: float)
@@ -21,6 +22,7 @@ const CLIP := "RobotArmature|Robot_%s"
 
 @export_group("Movement")
 @export var run_speed: float = 6.0
+@export var sprint_speed: float = 9.5
 @export var ground_accel: float = 24.0
 @export var ground_decel: float = 30.0
 @export var turn_accel: float = 42.0
@@ -30,6 +32,9 @@ const CLIP := "RobotArmature|Robot_%s"
 @export var jump_velocity: float = 8.5
 @export var max_fall_speed: float = 38.0
 @export var turn_rate: float = 16.0
+@export_group("Dev fly mode")
+@export var fly_speed: float = 12.0
+@export var fly_fast_speed: float = 30.0
 @export_group("Health")
 @export var max_health: int = 3
 @export var invulnerable_time: float = 1.2
@@ -49,6 +54,11 @@ var move_input: Vector2 = Vector2.ZERO
 var input_enabled: bool = true
 ## Dev panel (F1) only: ignore all damage.
 var debug_invulnerable: bool = false
+## Dev panel (F1) only: free flight with no collisions.
+var debug_fly: bool = false
+## True while Sprint is held with movement input (camera widens slightly, footsteps and clip speed up).
+var sprinting: bool = false
+var _saved_mask: int = -1
 
 var _gravity: float = 20.0
 var _coyote: float = 0.0
@@ -211,7 +221,42 @@ func _apply_recoil(from_pos: Vector3) -> void:
 	velocity.z = away.z * recoil_speed
 
 
+## Dev fly mode: no gravity and no collision; the body follows the camera-relative input.
+func set_debug_fly(on: bool) -> void:
+	if on == debug_fly:
+		return
+	debug_fly = on
+	if on:
+		_saved_mask = collision_mask
+		collision_mask = 0
+	else:
+		collision_mask = _saved_mask if _saved_mask >= 0 else collision_mask
+		_fell_emitted = false
+	velocity = Vector3.ZERO
+
+
+func _fly(delta: float) -> void:
+	var inp := Vector2.ZERO
+	var up := 0.0
+	if input_enabled:
+		inp = Input.get_vector(&"move_left", &"move_right", &"move_forward", &"move_back")
+		up = (1.0 if Input.is_action_pressed(&"jump") else 0.0) - (1.0 if Input.is_action_pressed(&"fly_down") else 0.0)
+	move_input = inp
+	var wish := _wish_dir()
+	_last_wish = wish
+	var speed := fly_fast_speed if Input.is_action_pressed(&"sprint") else fly_speed
+	var target := wish * speed + Vector3.UP * up * speed
+	velocity = velocity.move_toward(target, speed * 4.0 * delta)
+	global_position += velocity * delta
+	_face(delta)
+	if _clip != "Jump":
+		_play("Jump", blend_jump_in)
+
+
 func _physics_process(delta: float) -> void:
+	if debug_fly:
+		_fly(delta)
+		return
 	_coyote = maxf(0.0, _coyote - delta)
 	_jump_buffer = maxf(0.0, _jump_buffer - delta)
 	_invuln = maxf(0.0, _invuln - delta)
@@ -222,6 +267,7 @@ func _physics_process(delta: float) -> void:
 			_jump_buffer = jump_buffer_time
 	else:
 		move_input = Vector2.ZERO
+	sprinting = input_enabled and move_input.length() > 0.3 and Input.is_action_pressed(&"sprint")
 
 	var grounded := is_on_floor()
 	if grounded:
@@ -246,7 +292,7 @@ func _physics_process(delta: float) -> void:
 	# Horizontal.
 	var wish := _wish_dir()
 	_last_wish = wish
-	var target := wish * run_speed
+	var target := wish * (sprint_speed if sprinting else run_speed)
 	var horiz := Vector3(velocity.x, 0.0, velocity.z)
 	var accel: float
 	if wish.length_squared() > 0.001:
@@ -324,7 +370,7 @@ func _animate(horiz: Vector3, grounded: bool, _delta: float) -> void:
 		var clip := "Running"
 		if _clip != clip:
 			_play(clip, blend_jump_out if _clip == "Jump" else blend_locomotion)
-		_anim.speed_scale = clampf(speed / run_speed, 0.6, 1.25)
+		_anim.speed_scale = clampf(speed / run_speed, 0.6, 1.55)
 	else:
 		if _clip != "Idle":
 			_play("Idle", blend_jump_out if _clip == "Jump" else blend_locomotion)

@@ -77,6 +77,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="Badge" type="PanelContainer" parent="MuteIndicator/Anchor" unique_id=1339340890]
@@ -143,3 +145,11 @@ theme_type_variation = &"KeyLabel"
 text = "M"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MusicA" type="AudioStreamPlayer" parent="." unique_id=838117115]
+volume_db = -40.0
+bus = &"Music"
+
+[node name="MusicB" type="AudioStreamPlayer" parent="." unique_id=626403136]
+volume_db = -40.0
+bus = &"Music"

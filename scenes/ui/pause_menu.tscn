@@ -162,6 +162,20 @@ layout_mode = 2
 theme_type_variation = &"SubheadLabel"
 text = "-"
 
+[node name="Row_sprint" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1224454860]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="ControlsPanel/Box/ControlRows/Row_sprint" unique_id=1155650757]
+custom_minimum_size = Vector2(560, 0)
+layout_mode = 2
+text = "Sprint (hold)"
+
+[node name="Key" type="Label" parent="ControlsPanel/Box/ControlRows/Row_sprint" unique_id=688844465]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+theme_type_variation = &"SubheadLabel"
+text = "-"
+
 [node name="Row_head_deploy" type="HBoxContainer" parent="ControlsPanel/Box/ControlRows" unique_id=1287385712]
 layout_mode = 2
 

@@ -3,6 +3,9 @@ extends CanvasLayer
 ## checkpoint, reset the nearby puzzle, return both parts, invulnerability, unlock all progression, 1x / 2x / 4x
 ## local test speed and Erase Save / Start Over with a confirmation. Hidden at boot, themed like the game, and
 ## removed entirely in release exports. Every grant uses the normal HUD feedback.
+## v2: fly mode (no collision; Jump rises, C or Ctrl sinks, Sprint flies fast), Go to flag (lands the robot a few
+## metres from the world's flag, facing it), Complete arena (clears the running arena through its normal victory)
+## and a shortcut to the F2 lighting lab.
 
 @export var puzzle_reset_radius: float = 45.0
 
@@ -12,6 +15,7 @@ extends CanvasLayer
 @onready var _unlock: Button = %UnlockButton
 @onready var _speed_buttons: Array[Node] = %SpeedRow.get_children()
 @onready var _goto_row: Control = %GotoRow
+@onready var _fly: Button = %FlyButton
 
 var _open: bool = false
 var _prev_mouse: int = Input.MOUSE_MODE_VISIBLE
@@ -33,6 +37,10 @@ func _ready() -> void:
 	(%ResetPuzzleButton as Button).pressed.connect(_on_reset_puzzle)
 	(%ReturnPartsButton as Button).pressed.connect(_on_return_parts)
 	_invuln.toggled.connect(_on_invuln)
+	_fly.toggled.connect(_on_fly)
+	(%FlagButton as Button).pressed.connect(_on_flag)
+	(%ArenaWinButton as Button).pressed.connect(_on_arena_win)
+	(%LabButton as Button).pressed.connect(_on_lab)
 	_unlock.toggled.connect(_on_unlock)
 	for b in _speed_buttons:
 		(b as Button).pressed.connect(_on_speed.bind(float(String(b.name).trim_prefix("Speed"))))
@@ -62,6 +70,8 @@ func open() -> void:
 	_prev_mouse = Input.mouse_mode
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	_invuln.set_pressed_no_signal(_player_flag())
+	var pl := _player()
+	_fly.set_pressed_no_signal(pl != null and pl.debug_fly)
 	_unlock.set_pressed_no_signal(Campaign.debug_unlocked)
 	_refresh_speed()
 	_say("Dev panel. F1 closes it.")
@@ -160,6 +170,72 @@ func _on_invuln(on: bool) -> void:
 	if p != null:
 		p.debug_invulnerable = on
 	_say("Invulnerable: %s" % ("on" if on else "off"))
+
+
+func _on_fly(on: bool) -> void:
+	var p := _player()
+	if p == null:
+		_fly.set_pressed_no_signal(false)
+		_say("No robot in this scene.")
+		return
+	p.set_debug_fly(on)
+	_say("Fly mode: %s (Jump rises, C / Ctrl sinks, Sprint is fast)" % ("on" if on else "off"))
+
+
+## Lands the robot on solid ground a few metres from the flag, facing it (tries eight directions around it).
+func _on_flag() -> void:
+	var p := _player()
+	var flag: FinishFlag = null
+	for n in get_tree().get_nodes_in_group(&"goal_target"):
+		if n is FinishFlag:
+			flag = n
+	if p == null or flag == null:
+		_say("No flag in this scene (worlds only).")
+		return
+	var fpos := flag.global_position
+	var away := p.global_position - fpos
+	away.y = 0.0
+	var start_ang := atan2(away.x, away.z) if away.length() > 0.1 else 0.0
+	var space := flag.get_world_3d().direct_space_state
+	for i in 8:
+		for dist: float in [5.0, 3.5]:
+			var a := start_ang + i * TAU / 8.0
+			var spot := fpos + Vector3(sin(a), 0.0, cos(a)) * dist
+			var q := PhysicsRayQueryParameters3D.create(spot + Vector3.UP * 4.0, spot + Vector3.DOWN * 6.0, 1)
+			var hit := space.intersect_ray(q)
+			if hit.is_empty() or absf((hit["position"] as Vector3).y - fpos.y) > 1.5:
+				continue
+			var land: Vector3 = hit["position"]
+			var to_flag := fpos - land
+			p.set_debug_fly(false)
+			_fly.set_pressed_no_signal(false)
+			p.teleport_to(Transform3D(Basis(), land + Vector3.UP * 0.1), atan2(to_flag.x, to_flag.z))
+			p.set_mode(Player.Mode.EXPLORE)
+			close()
+			_say("Next to the flag.")
+			return
+	p.teleport_to(Transform3D(Basis(), fpos + Vector3.UP * 0.5))
+	close()
+
+
+func _on_arena_win() -> void:
+	var ad := get_tree().get_first_node_in_group(&"arena_director")
+	if ad == null:
+		_say("Not in an arena.")
+		return
+	if ad.debug_complete():
+		close()
+	else:
+		_say("This arena is already over.")
+
+
+func _on_lab() -> void:
+	close()
+	var lab := get_node_or_null("/root/LightingLab")
+	if lab and lab.has_method(&"open"):
+		lab.open()
+	else:
+		_say("Lighting lab not available.")
 
 
 func _on_unlock(on: bool) -> void:

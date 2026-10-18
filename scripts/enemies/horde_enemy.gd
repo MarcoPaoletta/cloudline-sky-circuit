@@ -48,7 +48,7 @@ func activate(pos: Vector3, face: Vector3) -> void:
 	if flat.length() > 0.01:
 		_model_yaw = atan2(flat.x, flat.z)
 		_model.rotation = Vector3(0.0, _model_yaw, 0.0)
-	_model.scale = _unit_scale * 0.05
+	_model.transform.basis = Basis(Vector3.UP, _model_yaw) * Basis.from_scale(_unit_scale * 0.05)
 	var tw := create_tween()
 	tw.tween_property(_model, "scale", _unit_scale, pop_in_time).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	if not hop:
@@ -102,13 +102,13 @@ func _physics_process(delta: float) -> void:
 func _play_defeat() -> void:
 	active = false
 	set_physics_process(false)
-	if _death_tween and _death_tween.is_valid():
-		_death_tween.kill()
-	_death_tween = create_tween()
-	# Quick pop: squash up then out, then free (the paint mark and burst are already out).
-	_death_tween.tween_property(_model, "scale", _unit_scale * Vector3(1.3, 0.55, 1.3), 0.07)
-	_death_tween.tween_property(_model, "scale", _unit_scale * 0.01, 0.13).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	_death_tween.tween_callback(queue_free)
+	_model.position.y = 0.0
+	# Bowled over like a pin (the paint mark and burst are already out), then freed.
+	knockback_fall(_last_hit_dir)
+
+
+func _after_fall() -> void:
+	queue_free()
 
 
 func reset_to_checkpoint() -> void:

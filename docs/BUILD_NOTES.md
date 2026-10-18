@@ -92,3 +92,45 @@ Only the development device was measured; no iPad or weakest-device result is cl
 - Portals are an authored stone arch with a procedural vortex shader; no external portal asset was downloaded.
 - Not measured: iPad or weakest-device frame times, human playtests of the arena clear times, an aspect-ratio matrix capture. No music (the supplied audio pack is sound effects only).
 - Code review fixes: Return Pad input lock and unlock, pending arena overwrite, save atomicity, respawn returning parts, latched gate closing, audio bus offsets, horde clamp radius in arenas 2 and 3, jump pad vs buffered jump, paint decals on the robot, console prompt restore, socket highlight after a plain bowl, duplicate wave banner.
+
+
+## v2: playtest changes (18 October 2026)
+
+Marco's v2 list, after playing v1, and what changed for each item. Everything is authored through `xo` like v1 (saved scenes and resources, no runtime-built trees). v1 stays available as the `v1` tag and branch.
+
+| Request | What changed |
+| --- | --- |
+| Music: one for the main menu, one for the platforms, one for the arena battles | Three original looping tracks, generated for the game (`assets/cloudline/audio/music/`): *Sky Lullaby* (title, 70 BPM: pad, music box, flute), *Cloud Hop* (worlds, 100 BPM: plucked bass, off-beat marimba, soft kit, whistle melody) and *Paint Rush* (arenas, 124 BPM: pulse bass, kalimba arpeggio, soft four-on-the-floor kit, bright lead). Each is rendered twice in a row and the second pass is kept, so the loop seam is clean. They play on a new Music bus through two players in `audio.tscn` that crossfade over 1.4 s (`Audio.play_music`). Settings has a Music slider. The game still boots muted; M toggles. |
+| Better, more relaxing SFX | A soft set of 51 sounds made for the game (`assets/cloudline/audio/soft/`): warm bells, marimba, kalimba plucks, soft thumps and airy whooshes, with no square waves and no hard clicks. `Audio` prefers a soft sound when one exists for an id, so the pack sounds stay in the project untouched as a fallback. |
+| About 10 enemies per world at least | World 1: 6 → 13 (crabs on Discovery, Low Loop, Low Loop 3 and the summit pocket; bees at the Discovery gem, the Junction lift top and the low pocket). World 2: 10 → 15. World 3: 14 → 18. Every new enemy has its own reward coin id. |
+| Do not darken the head when throwing it | The thrown head (and the fetch arm) used the vendor's original materials, extracted with the mesh, so it went dark the moment it left the body. Both now use the same toon robot materials as the body. |
+| Enemies flash white when the head hits them | Every head hit lays a white unshaded overlay on all of the enemy's meshes for 0.07 s, with a 45 ms hit stop (shared by a whole chain, skipped with Reduced Motion). Bosses flash too. |
+| No paint on the arena floor | Root cause: the Mobile renderer applies at most 8 decals to one mesh, and every arena floor is a single mesh already carrying 14 dirt-patch decals, so no paint decal ever got a slot. Island tops were fine. Flat ground now gets a flat splat: a toon-lit quad with the same six splat shapes (`paint_splat.tscn`, pool of 96). Slopes and island edges still get the wrapping decal. Arena paint stays vivid for 16 s instead of 4 and the splats are a bit larger, so the floor visibly fills with colour during a fight. The dirt decals no longer tint the splats or the characters. |
+| Hit enemies fall back instead of being squeezed | A defeated enemy is thrown back along the head's roll with a small arc, tips over onto its back in its recoil pose, lies there for 0.45 s and then shrinks away evenly. The Yeti takes a short shove on each hit and topples slowly when beaten. |
+| Hold Shift to sprint | New `sprint` action (Shift, left stick click), remappable in Settings and listed on the pause menu's Controls page. Sprint is 9.5 m/s (run is 6) with faster footsteps and a 6° wider camera (none with Reduced Motion). |
+| Fly mode in the debug panel | F1 → Fly mode: no gravity and no collision. Jump rises, C or Ctrl sinks, Sprint flies fast. |
+| Go near the flag and complete arena buttons | F1 → Go to flag lands the robot on solid ground a few metres from the world's flag, facing it. F1 → Complete arena defeats everything on the field and runs the normal victory (clear saved, banner, results). |
+| At least 3 places to leave the head in each world | Each world now has 3 sockets, and every new one powers something. World 1: Low Loop island (bridge to a coin pocket with a bee) and the summit's S2 (bridge to a coin pocket with a crab). World 2: the hub's north-west island and Summit 1c, each opening a bridge to a coin pocket. World 3: the Exchange's north-east island, opening a bridge to a coin pocket. The original door and Crown sockets stay. The catch funnel grew from 1.0 to 1.25 m: a head rolled along the floor could touch the pedestal before entering the old sphere and bounce off, depending on frame timing. |
+| Bees too high to hit and unable to hurt | Placements stand bees about 3.4 m over the floor. Bees now hover 0.9 m over the floor under their placement, so a rolled head hits them and their hurtbox reaches the ground. During the 0.8 s wind-up they drift toward the robot (inside their leash, stopping 2.2 m away), so the dive connects unless the robot moves. Their dive can now go below the hover height. |
+| F2 lighting lab (concept on the left, game on the right) | New development-only overlay (`scenes/core/lighting_lab.tscn`, F2, also on the F1 panel). The concept image for the current scene is on the left, with a cycle through all 21 concepts. The live game is on the right, drawn by a second camera in the same world, so the HUD stays out of the frame. Concept camera snaps to the scene's ConceptCam. Below are live controls: exposure, saturation, contrast, brightness, ambient, glow and fog; sun energy, colour, elevation, azimuth and shadow opacity; sky colours; grass, rock, bush and cloud colours. **Save to project** writes the Environment and toon materials into their `.tres` files (keeping their UIDs) and the Sun into `res://resources/lighting/<scene>.tres`, a `LightingPreset` the scene applies on load in every build. **Copy values** puts a text summary on the clipboard. |
+
+### How v2 was verified
+
+| Check | Result |
+| --- | --- |
+| v2 world checks, each world: at least 10 enemies (13 / 15 / 18); 3 sockets, each catching a head rolled along the floor and powering its device; every bee at most 1.2 m over its floor (worst 0.90 m); a rolled head defeats a bee; a bee dive damages the robot; sprint 9.5 m/s and back to 6; fly mode up and collisions restored; Go to flag lands within 6.5 m on the floor; platform music; thrown head uses the toon robot materials | 19 of 19 in each world (57 of 57) |
+| v2 arena checks, each arena: arena music; monsters arrive; a head hit flashes white; the monster is thrown back (more than 0.8 m) and tips over (more than 45°); a flat paint splat is laid and visible; the fallen monster is freed; Complete arena runs the victory and clears the field | 10 of 10 in each arena (30 of 30) |
+| World one route bots (arrival, relay, balance, orbit, junction lift, high route, slide, summit, low loop) | 31 of 31; the junction bot now waits for a fresh lift arrival (it used to start walking at the end of the lift's bottom pause) |
+| Campaign flow bot (flag, fade, all three arenas, results, Finish, title panel) | 25 of 25 |
+| Campaign rules (pending arena, atomic save and backup, validated pending arena, bus offsets) | 15 of 15 |
+| Return pad / respawn returns the parts | 8 of 8 / 5 of 5 |
+| Arena crowd spacing with full waves | arena 1: 1.39 m, arena 3: 1.37 m minimum, no pair under 1.3 m |
+| Smoke run of the title, three worlds and three arenas | all 0 new engine errors; 59-60 fps on the development Mac |
+
+### v2 notes and gaps
+
+- The music and the soft sounds were generated for this game from scratch (sine, FM bell and plucked-string synthesis; the generator scripts are not part of the game). No file was downloaded. They are judged here by waveform, spectrum and loudness (about -18 dB average, -5 dB peak, no DC offset), not by ear. If any track or sound doesn't sit right, the ids and file names are stable, so a replacement drops straight in.
+- The lighting lab's Sun azimuth does not move the painted sun glow and disc (SkyGlow), which keep their per-world direction.
+- The music is 32 kHz stereo WAV with QOA compression on import (about 24 MB in the repository). OGG was not used because this machine's ffmpeg has only the experimental Vorbis encoder.
+
+Evidence: `docs/evidence/v2-arena-paint.png`, `v2-hit-flash-and-fall.png`, `v2-thrown-head.png`, `v2-socket-pocket.png`, `v2-lighting-lab.png`, `v2-soft-sfx-waveforms.png`, `v2-music-spectrograms.png`.

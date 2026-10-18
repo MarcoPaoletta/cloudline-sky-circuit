@@ -79,3 +79,13 @@ New custom visuals: circular arena floor and six portal arches/rings per arena, 
 The updated skill supplies six `splat_0.png` through `splat_5.png` plus `splat_orm.png`, copied into `res://assets/cloudline/paint/`. Reference shaders/scripts/scenes stay under the skill with `.gdignore` in code folders; they need adaptation and proper editor authoring to become game effects. The module's referenced wet-pop WAVs are not included. Select/create the three wet sound variants as a remaining audio task; no ready-made wet-sound claim is made.
 
 Final update: the complete 21-model FBX library and original texture folder from the same creator ZIP are imported under `res://assets/cloudline/monsters/`. The active roster still uses the selected five plus exploration Crab/Bee. `research/monster-bank-manifest.json` inventories the complete bank. The newest skill snapshot is 1f54afc (1.9.0), including actual puddle/decal scenes, manager, styles/materials and three reference stills; read GDD §22 before integration. The source templates are reference-only and are not asserted to be drop-in runnable at their snapshot paths.
+
+
+## Generated audio, v2 (18 October 2026)
+
+Made for this game, not downloaded and not taken from a pack:
+
+- `audio/music/music_menu.wav` (*Sky Lullaby*, 54.9 s loop), `audio/music/music_platform.wav` (*Cloud Hop*, 76.8 s loop) and `audio/music/music_arena.wav` (*Paint Rush*, 61.9 s loop). All are 32 kHz stereo, imported with forward looping and QOA compression, and play on the Music bus.
+- `audio/soft/<id>.wav`: 51 soft one-shots (44.1 kHz mono) covering every sound id the game plays. Ids are the same as in `audio/sfx/`. `Audio` uses the soft file when it exists; the pack sounds above and in `audio/sfx/` stay as the fallback.
+
+Synthesis: sines, FM bells, Karplus-Strong plucks and filtered noise, with a small Schroeder reverb. The generator lived in the build scratchpad and is not part of the game.

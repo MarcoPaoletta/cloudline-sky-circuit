@@ -1,0 +1,724 @@
+[gd_scene format=3 uid="uid://cxmlcfh82l65n"]
+
+[ext_resource type="Script" uid="uid://cw8gjc2lg8k4h" path="res://scripts/core/lighting_lab.gd" id="1_id573"]
+[ext_resource type="Theme" uid="uid://gdedsptlo0ho" path="res://ui/lab_theme.tres" id="2_qnd34"]
+
+[node name="LightingLab" type="CanvasLayer" unique_id=1403449389]
+layer = 120
+visible = false
+script = ExtResource("1_id573")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1334360335]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.06, 0.09, 0.14, 1)
+
+[node name="Main" type="VBoxContainer" parent="." unique_id=1040162597]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = -16.0
+offset_bottom = -10.0
+theme = ExtResource("2_qnd34")
+
+[node name="Views" type="HBoxContainer" parent="Main" unique_id=1011825335]
+layout_mode = 2
+
+[node name="ConceptPane" type="VBoxContainer" parent="Main/Views" unique_id=1791690747]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConceptTitle" type="Label" parent="Main/Views/ConceptPane" unique_id=971504108]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "CONCEPT"
+
+[node name="ConceptView" type="TextureRect" parent="Main/Views/ConceptPane" unique_id=942551769]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GamePane" type="VBoxContainer" parent="Main/Views" unique_id=1769236899]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameTitle" type="Label" parent="Main/Views/GamePane" unique_id=1411661075]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "GAME (live)"
+
+[node name="GameFrame" type="SubViewportContainer" parent="Main/Views/GamePane" unique_id=1369546598]
+custom_minimum_size = Vector2(944, 531)
+layout_mode = 2
+size_flags_horizontal = 4
+stretch = true
+
+[node name="GameViewport" type="SubViewport" parent="Main/Views/GamePane/GameFrame" unique_id=1509087015]
+handle_input_locally = false
+msaa_3d = 1
+size = Vector2i(864, 486)
+render_target_update_mode = 0
+
+[node name="LabCam" type="Camera3D" parent="Main/Views/GamePane/GameFrame/GameViewport" unique_id=2056689835]
+unique_name_in_owner = true
+current = true
+
+[node name="Controls" type="PanelContainer" parent="Main" unique_id=273137329]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"ScreenPanel"
+
+[node name="Cols" type="HBoxContainer" parent="Main/Controls" unique_id=855399396]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ColEnv" type="VBoxContainer" parent="Main/Controls/Cols" unique_id=1304310972]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" type="Label" parent="Main/Controls/Cols/ColEnv" unique_id=467874483]
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "Light & grade"
+
+[node name="R_env__tonemap_exposure" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=2018298897]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__tonemap_exposure" unique_id=999434857]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Exposure"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__tonemap_exposure" unique_id=1222556098]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.3
+max_value = 1.6
+step = 0.01
+value = 0.3
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__tonemap_exposure" unique_id=1127188198]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__adjustment_saturation" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=966373646]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_saturation" unique_id=1728667065]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Saturation"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_saturation" unique_id=600878267]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.5
+max_value = 2.2
+step = 0.01
+value = 0.5
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_saturation" unique_id=1916829968]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__adjustment_contrast" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=91614949]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_contrast" unique_id=2070566674]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Contrast"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_contrast" unique_id=352550548]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.6
+max_value = 1.6
+step = 0.01
+value = 0.6
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_contrast" unique_id=664939338]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__adjustment_brightness" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=1283041069]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_brightness" unique_id=1671302726]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Brightness"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_brightness" unique_id=263877708]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.6
+max_value = 1.5
+step = 0.01
+value = 0.6
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__adjustment_brightness" unique_id=193016832]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__ambient_light_energy" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=1357484911]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_energy" unique_id=888043764]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Ambient energy"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_energy" unique_id=799589448]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 2.0
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_energy" unique_id=1408539673]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__ambient_light_color" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=1735521627]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_color" unique_id=1920033405]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Ambient color"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_color" unique_id=767256903]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__ambient_light_color" unique_id=784825820]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__glow_intensity" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=1740873493]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__glow_intensity" unique_id=841618067]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Glow intensity"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__glow_intensity" unique_id=1097975878]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 2.0
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__glow_intensity" unique_id=1961620160]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__glow_bloom" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=2123353532]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__glow_bloom" unique_id=1216211163]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Glow bloom"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__glow_bloom" unique_id=1734514520]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 0.6
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__glow_bloom" unique_id=583209720]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_env__fog_density" type="HBoxContainer" parent="Main/Controls/Cols/ColEnv" unique_id=1719008325]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__fog_density" unique_id=1365127123]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Fog density"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColEnv/R_env__fog_density" unique_id=1900672143]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 0.006
+step = 0.0001
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColEnv/R_env__fog_density" unique_id=1837986282]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="ColSun" type="VBoxContainer" parent="Main/Controls/Cols" unique_id=1617739040]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" type="Label" parent="Main/Controls/Cols/ColSun" unique_id=2043102839]
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "Sun & sky"
+
+[node name="R_sun__light_energy" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1881813387]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__light_energy" unique_id=1151437159]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sun energy"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColSun/R_sun__light_energy" unique_id=1275941226]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 4.0
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__light_energy" unique_id=950619056]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sun__light_color" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1901270494]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__light_color" unique_id=2123145331]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sun color"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColSun/R_sun__light_color" unique_id=698385492]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__light_color" unique_id=694289715]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sun__elevation" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1557523930]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__elevation" unique_id=478015325]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sun elevation"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColSun/R_sun__elevation" unique_id=1300987136]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 2.0
+max_value = 89.0
+step = 0.5
+value = 2.0
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__elevation" unique_id=1261475352]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sun__azimuth" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1179579805]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__azimuth" unique_id=1994286724]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sun azimuth"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColSun/R_sun__azimuth" unique_id=786906867]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -180.0
+max_value = 180.0
+step = 0.5
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__azimuth" unique_id=375389076]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sun__shadow_opacity" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1132777313]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__shadow_opacity" unique_id=2107036729]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Shadow opacity"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColSun/R_sun__shadow_opacity" unique_id=795350425]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sun__shadow_opacity" unique_id=1238862406]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sky__sky_top_color" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=533480347]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__sky_top_color" unique_id=755491050]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sky top"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColSun/R_sky__sky_top_color" unique_id=1531419575]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__sky_top_color" unique_id=1010804757]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sky__sky_horizon_color" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1462583738]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__sky_horizon_color" unique_id=593121297]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sky horizon"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColSun/R_sky__sky_horizon_color" unique_id=1560336974]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__sky_horizon_color" unique_id=55054826]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_sky__ground_bottom_color" type="HBoxContainer" parent="Main/Controls/Cols/ColSun" unique_id=1928639085]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__ground_bottom_color" unique_id=271466802]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Sky below"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColSun/R_sky__ground_bottom_color" unique_id=1899031773]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColSun/R_sky__ground_bottom_color" unique_id=1935823863]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="ColMat" type="VBoxContainer" parent="Main/Controls/Cols" unique_id=130372384]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" type="Label" parent="Main/Controls/Cols/ColMat" unique_id=915060739]
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "Toon materials"
+
+[node name="R_grass__color_a" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=1152229222]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__color_a" unique_id=1402437143]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Grass"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_grass__color_a" unique_id=233648693]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__color_a" unique_id=15188531]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_grass__color_b" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=74631798]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__color_b" unique_id=1930775060]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Grass patches"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_grass__color_b" unique_id=1830384972]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__color_b" unique_id=2144637178]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_grass__sun_gain" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=479541511]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__sun_gain" unique_id=849505748]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Grass sun gain"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColMat/R_grass__sun_gain" unique_id=27588699]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 0.3
+max_value = 1.8
+step = 0.01
+value = 0.3
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__sun_gain" unique_id=1335965564]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_grass__shade_amount" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=123884260]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__shade_amount" unique_id=249856226]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Grass shade"
+
+[node name="Slider" type="HSlider" parent="Main/Controls/Cols/ColMat/R_grass__shade_amount" unique_id=1839512221]
+custom_minimum_size = Vector2(120, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_grass__shade_amount" unique_id=851191326]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_rock__color_a" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=385962479]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_rock__color_a" unique_id=2132877769]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Island rock"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_rock__color_a" unique_id=330266786]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_rock__color_a" unique_id=1804424875]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_bush__color_a" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=1028784688]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_bush__color_a" unique_id=2113226550]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Bushes"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_bush__color_a" unique_id=612720412]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_bush__color_a" unique_id=538943023]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_cloud__color_top" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=1095277189]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_cloud__color_top" unique_id=418897843]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Cloud top"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_cloud__color_top" unique_id=478850119]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_cloud__color_top" unique_id=471529785]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="R_cloud__color_bottom" type="HBoxContainer" parent="Main/Controls/Cols/ColMat" unique_id=1804547793]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Main/Controls/Cols/ColMat/R_cloud__color_bottom" unique_id=1603315207]
+custom_minimum_size = Vector2(190, 0)
+layout_mode = 2
+text = "Cloud shade"
+
+[node name="Pick" type="ColorPickerButton" parent="Main/Controls/Cols/ColMat/R_cloud__color_bottom" unique_id=1371012159]
+custom_minimum_size = Vector2(120, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+edit_alpha = false
+
+[node name="Value" type="Label" parent="Main/Controls/Cols/ColMat/R_cloud__color_bottom" unique_id=249837871]
+custom_minimum_size = Vector2(84, 0)
+layout_mode = 2
+text = "-"
+horizontal_alignment = 2
+
+[node name="ColActions" type="VBoxContainer" parent="Main/Controls/Cols" unique_id=1856170306]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Header" type="Label" parent="Main/Controls/Cols/ColActions" unique_id=1671281808]
+layout_mode = 2
+theme_type_variation = &"LabHeader"
+text = "Compare"
+
+[node name="ConceptRow" type="HBoxContainer" parent="Main/Controls/Cols/ColActions" unique_id=1367935608]
+layout_mode = 2
+
+[node name="PrevConcept" type="Button" parent="Main/Controls/Cols/ColActions/ConceptRow" unique_id=224845359]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "< Concept"
+
+[node name="NextConcept" type="Button" parent="Main/Controls/Cols/ColActions/ConceptRow" unique_id=1419290910]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Concept >"
+
+[node name="ToggleRow" type="HBoxContainer" parent="Main/Controls/Cols/ColActions" unique_id=581722170]
+layout_mode = 2
+
+[node name="ConceptCamButton" type="Button" parent="Main/Controls/Cols/ColActions/ToggleRow" unique_id=1495782163]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Concept camera"
+
+[node name="FreezeButton" type="Button" parent="Main/Controls/Cols/ColActions/ToggleRow" unique_id=1728875449]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Freeze game"
+
+[node name="FileRow" type="HBoxContainer" parent="Main/Controls/Cols/ColActions" unique_id=1843996352]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Main/Controls/Cols/ColActions/FileRow" unique_id=367672241]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reset"
+
+[node name="CopyButton" type="Button" parent="Main/Controls/Cols/ColActions/FileRow" unique_id=1223374674]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Copy values"
+
+[node name="SaveButton" type="Button" parent="Main/Controls/Cols/ColActions" unique_id=521944280]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Save to project"
+
+[node name="CloseLabButton" type="Button" parent="Main/Controls/Cols/ColActions" unique_id=1318036627]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Close (F2)"
+
+[node name="LabStatus" type="Label" parent="Main/Controls/Cols/ColActions" unique_id=1707329384]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+autowrap_mode = 3

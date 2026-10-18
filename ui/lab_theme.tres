@@ -1,0 +1,9 @@
+[gd_resource type="Theme" format=3 uid="uid://gdedsptlo0ho"]
+
+[resource]
+Button/font_sizes/font_size = 18
+HBoxContainer/constants/separation = 12
+LabHeader/colors/font_color = Color(1, 0.8235294, 0.24705882, 1)
+LabHeader/font_sizes/font_size = 21
+Label/font_sizes/font_size = 17
+VBoxContainer/constants/separation = 3

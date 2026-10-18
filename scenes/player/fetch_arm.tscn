@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bh77oic6aykdk" path="res://scripts/player/fetch_arm.gd" id="1_0qsx2"]
 [ext_resource type="ArrayMesh" uid="uid://dfgh8jmmtntww" path="res://assets/cloudline/derived/robot_forearm.res" id="2_2a75s"]
+[ext_resource type="Material" uid="uid://ckhmo2a3b33dm" path="res://resources/materials/toon/robot_yellow.tres" id="3_bkfrq"]
 [ext_resource type="ArrayMesh" uid="uid://bdyw0rl3ll373" path="res://assets/cloudline/derived/robot_hand.res" id="3_lklhi"]
 [ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="4_bkfrq"]
+[ext_resource type="Material" uid="uid://bbl1hw2p1aioh" path="res://resources/materials/toon/robot_silver.tres" id="5_kwhlt"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_kwhlt"]
 top_radius = 0.035
@@ -21,10 +23,13 @@ visible = false
 [node name="Forearm" type="MeshInstance3D" parent="Rig" unique_id=647144177]
 transform = Transform3D(0, 0, 7.83, 0, 7.83, 0, -7.83, 0, 0, 0, 0, -0.5)
 mesh = ExtResource("2_2a75s")
+surface_material_override/0 = ExtResource("3_bkfrq")
 
 [node name="Hand" type="MeshInstance3D" parent="Rig" unique_id=195747202]
 transform = Transform3D(0, -34.5, 0, 0, 0, 34.5, -34.5, 0, 0, -0.0259, -0.0404, -0.8156)
 mesh = ExtResource("3_lklhi")
+surface_material_override/0 = ExtResource("3_bkfrq")
+surface_material_override/1 = ExtResource("5_kwhlt")
 
 [node name="Tether" type="MeshInstance3D" parent="." unique_id=1798438627]
 visible = false

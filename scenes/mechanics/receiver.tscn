@@ -27,8 +27,8 @@ outer_radius = 0.72
 rings = 10
 ring_segments = 6
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_s1n6q"]
-radius = 1.0
+[sub_resource type="SphereShape3D" id="SphereShape3D_n8r0l"]
+radius = 1.25
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_li3kp"]
 top_radius = 0.06
@@ -74,7 +74,7 @@ monitorable = false
 
 [node name="Shape" type="CollisionShape3D" parent="CatchArea" unique_id=8990425]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.45, 0)
-shape = SubResource("SphereShape3D_s1n6q")
+shape = SubResource("SphereShape3D_n8r0l")
 
 [node name="Beam" type="MeshInstance3D" parent="." unique_id=520101712]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)

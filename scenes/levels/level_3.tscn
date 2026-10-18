@@ -130,6 +130,9 @@ transform = Transform3D(1.1924881e-08, 0, -1, 0, 1, 0, 1, 0, 1.1924881e-08, -21,
 [node name="XeP" parent="World/Exchange" unique_id=840957336 instance=ExtResource("6_tki50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 13)
 
+[node name="PK1" parent="World/Exchange" unique_id=1652788305 instance=ExtResource("6_tki50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0, -20)
+
 [node name="LowRing" type="Node3D" parent="World" unique_id=1518246962]
 
 [node name="LD_RA" parent="World/LowRing" unique_id=295594314 instance=ExtResource("4_0y66q")]
@@ -833,6 +836,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 33, -286)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 18, -229)
 target_path = NodePath("../../Markers/ReturnExchange")
 
+[node name="R_PK1" parent="World/Mechanics" unique_id=187277369 instance=ExtResource("14_apiyn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6, 0, -23.6)
+channel = "relay_b"
+
+[node name="PB_PK1" parent="World/Mechanics" unique_id=1517738264 instance=ExtResource("23_k1q4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, -0.1, -20)
+channel = "relay_b"
+
 [node name="Enemies" type="Node3D" parent="World" unique_id=173995224]
 
 [node name="Crab01" parent="World/Enemies" unique_id=1645236635 instance=ExtResource("26_l1xkm")]
@@ -890,6 +901,26 @@ reward_coin_id = "e13"
 [node name="Bee14" parent="World/Enemies" unique_id=1528782635 instance=ExtResource("27_au27u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 21.4, -226)
 reward_coin_id = "e14"
+
+[node name="Crab15" parent="World/Enemies" unique_id=948782711 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.05, -20)
+paint_color_id = 2
+reward_coin_id = "e15"
+
+[node name="Bee16" parent="World/Enemies" unique_id=1667212655 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 10.4, -111)
+paint_color_id = 1
+reward_coin_id = "e16"
+
+[node name="Bee17" parent="World/Enemies" unique_id=1660875560 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, 13.4, -142)
+paint_color_id = 3
+reward_coin_id = "e17"
+
+[node name="Crab18" parent="World/Enemies" unique_id=257454672 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 18.05, -194)
+paint_color_id = 0
+reward_coin_id = "e18"
 
 [node name="Pickups" type="Node3D" parent="World" unique_id=1237035990]
 
@@ -1393,6 +1424,26 @@ pickup_id = "g04"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 12.2, -96)
 pickup_id = "g05"
 
+[node name="Coin_PK1_1" parent="World/Pickups" unique_id=2060936530 instance=ExtResource("28_fbh0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.7, 1.1, -20)
+pickup_id = "cs1_1"
+
+[node name="Coin_PK1_2" parent="World/Pickups" unique_id=1840687069 instance=ExtResource("28_fbh0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.52533, 1.1, -18.3832)
+pickup_id = "cs1_2"
+
+[node name="Coin_PK1_3" parent="World/Pickups" unique_id=562749472 instance=ExtResource("28_fbh0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.62467, 1.1, -19.00077)
+pickup_id = "cs1_3"
+
+[node name="Coin_PK1_4" parent="World/Pickups" unique_id=1938041309 instance=ExtResource("28_fbh0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.62467, 1.1, -20.99923)
+pickup_id = "cs1_4"
+
+[node name="Coin_PK1_5" parent="World/Pickups" unique_id=579645149 instance=ExtResource("28_fbh0l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.52533, 1.1, -21.6168)
+pickup_id = "cs1_5"
+
 [node name="Markers" type="Node3D" parent="World" unique_id=339882147]
 
 [node name="T_Junction" parent="World/Markers" unique_id=542941223 instance=ExtResource("30_k1o6y")]
@@ -1887,6 +1938,12 @@ transform = Transform3D(-0.71248114, 0, 0.70169127, 0, 1, 0, -0.70169127, 0, -0.
 
 [node name="prop_bush_158" parent="World/Dressing/Props" unique_id=1385220364 instance=ExtResource("33_ascjx")]
 transform = Transform3D(0.9536325, 0, -0.30097365, 0, 1, 0, 0.30097365, 0, 0.9536325, 55.09987, 0, 13.01686)
+
+[node name="PK1_bush" parent="World/Dressing/Props" unique_id=765074908 instance=ExtResource("33_ascjx")]
+transform = Transform3D(0.79863554, 0, 0.601815, 0, 1, 0, -0.601815, 0, 0.79863554, 28.66, 0, -22.125)
+
+[node name="PK1_rock" parent="World/Dressing/Props" unique_id=1291035701 instance=ExtResource("32_twpg0")]
+transform = Transform3D(-0.39073116, 0, 0.92050487, 0, 1, 0, -0.92050487, 0, -0.39073116, 31.04, 0, -18.47)
 
 [node name="CrownSpire" parent="World/Dressing" unique_id=1704205231 instance=ExtResource("41_kirlg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 29, -330)
@@ -6614,6 +6671,18 @@ transform = Transform3D(0.9402795, 0, -0.36425903, 0, 1.00837, 0, 0.36425903, 0,
 
 [node name="G259" parent="World/Dressing/Tufts" unique_id=2127745675 instance=ExtResource("40_ooiqn")]
 transform = Transform3D(-0.75623906, 0, 0.3644573, 0, 0.83948, 0, -0.3644573, 0, -0.75623906, -2.62137, 33, -301.90448)
+
+[node name="PK1_tuft0" parent="World/Dressing/Tufts" unique_id=194577559 instance=ExtResource("40_ooiqn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.4, 0, -18.6)
+
+[node name="PK1_tuft1" parent="World/Dressing/Tufts" unique_id=125534177 instance=ExtResource("40_ooiqn")]
+transform = Transform3D(0.32556814, 0, 0.94551855, 0, 1, 0, -0.94551855, 0, 0.32556814, 30.3, 0, -21.5)
+
+[node name="PK1_tuft2" parent="World/Dressing/Tufts" unique_id=1146678762 instance=ExtResource("40_ooiqn")]
+transform = Transform3D(-0.7880108, 0, 0.61566144, 0, 1, 0, -0.61566144, 0, -0.7880108, 29.4, 0, -18.1)
+
+[node name="PK1_tuft3" parent="World/Dressing/Tufts" unique_id=232002068 instance=ExtResource("40_ooiqn")]
+transform = Transform3D(-0.8386706, 0, -0.544639, 0, 1, 0, 0.544639, 0, -0.8386706, 27.1, 0, -20.6)
 
 [node name="Player" parent="." unique_id=860313022 instance=ExtResource("42_t4hs4")]
 unique_name_in_owner = true

@@ -204,7 +204,8 @@ func _process_rolling(delta: float) -> void:
 
 
 func _check_hits() -> void:
-	if not damage_enabled:
+	# Monitoring switches on (deferred) one frame after launch.
+	if not damage_enabled or not _hit_area.monitoring:
 		return
 	for a in _hit_area.get_overlapping_areas():
 		var id := a.get_instance_id()

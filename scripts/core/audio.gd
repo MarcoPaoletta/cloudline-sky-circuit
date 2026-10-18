@@ -5,10 +5,21 @@ extends Node
 ## `toggle_mute` action (M) flips it on every screen, including while the tree is paused. Nothing about the
 ## mute state is persisted. One-shots come from voices authored in the scene (no runtime node creation).
 ## The speaker + "M" badge lives in this scene so every screen shows why it is silent.
+##
+## v2 (Marco: "music: one main menu, other platform, other arena battle; better SFX, more relaxing"): three
+## original looping tracks on the Music bus, crossfaded between two authored players, and a soft SFX set
+## (bells, marimba, kalimba, soft thumps, generated for the game) that is preferred over the pack sounds.
 
 signal mute_changed(is_muted: bool)
 
 const SFX_DIR := "res://assets/cloudline/audio/sfx/%s.wav"
+## The soft v2 set; an id found here wins over the pack sound.
+const SOFT_DIR := "res://assets/cloudline/audio/soft/%s.wav"
+const MUSIC := {
+	&"menu": "res://assets/cloudline/audio/music/music_menu.wav",
+	&"platform": "res://assets/cloudline/audio/music/music_platform.wav",
+	&"arena": "res://assets/cloudline/audio/music/music_arena.wav",
+}
 ## Sounds that were imported before the sfx folder existed.
 const LEGACY := {
 	&"jump": "res://assets/cloudline/audio/Jumping and Landing/sfx_movement_jump1.wav",
@@ -24,6 +35,10 @@ const LEGACY := {
 @export var min_interval: float = 0.045
 ## Max simultaneous voices playing the same sound id.
 @export var max_same_voices: int = 3
+@export_group("Music")
+## Player level for a track at full volume (the Music bus adds its own authored offset on top).
+@export var music_db: float = 0.0
+@export var music_fade: float = 1.4
 @export_group("Mute badge")
 @export var badge_muted_alpha: float = 1.0
 @export var badge_unmuted_alpha: float = 0.55
@@ -34,6 +49,7 @@ const LEGACY := {
 @onready var _wave_a: CanvasItem = %WaveA
 @onready var _wave_b: CanvasItem = %WaveB
 @onready var _slash: CanvasItem = %MuteSlash
+@onready var _music_players: Array[AudioStreamPlayer] = [$MusicA as AudioStreamPlayer, $MusicB as AudioStreamPlayer]
 
 var _streams: Dictionary = {}
 var _missing: Dictionary = {}
@@ -43,6 +59,9 @@ var _badge_tween: Tween
 var _master_idx: int = 0
 ## Authored bus offsets (default_bus_layout.tres); the settings sliders scale around them.
 var _base_db: Dictionary = {}
+var _music_id: StringName = &""
+var _music_slot: int = 0
+var _music_tweens: Array[Tween] = [null, null]
 
 
 func _ready() -> void:
@@ -142,12 +161,58 @@ func _play(id: StringName, volume_db: float, pitch: float, pool: Array[Node], bu
 	return voice
 
 
+## Crossfades to a looping track (`menu`, `platform`, `arena`). Calling it with the track already playing does
+## nothing, so scenes can call it freely in _ready (a retry keeps the music going).
+func play_music(id: StringName, fade: float = -1.0) -> void:
+	if id == _music_id or not MUSIC.has(id):
+		return
+	var stream := load(MUSIC[id]) as AudioStream
+	if stream == null:
+		return
+	if stream is AudioStreamWAV:
+		var wav := stream as AudioStreamWAV
+		wav.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		wav.loop_begin = 0
+		wav.loop_end = int(wav.get_length() * wav.mix_rate)
+	var t := music_fade if fade < 0.0 else fade
+	_fade_music(_music_slot, -60.0, t, true)
+	_music_slot = 1 - _music_slot
+	_music_id = id
+	var p := _music_players[_music_slot]
+	p.stream = stream
+	p.volume_db = -40.0
+	p.play()
+	_fade_music(_music_slot, music_db, t * 0.8, false)
+
+
+func stop_music(fade: float = -1.0) -> void:
+	_music_id = &""
+	_fade_music(_music_slot, -60.0, music_fade if fade < 0.0 else fade, true)
+
+
+func current_music() -> StringName:
+	return _music_id
+
+
+func _fade_music(slot: int, to_db: float, time: float, stop_after: bool) -> void:
+	var p := _music_players[slot]
+	if _music_tweens[slot] and _music_tweens[slot].is_valid():
+		_music_tweens[slot].kill()
+	if not p.playing:
+		return
+	var tw := create_tween()
+	tw.tween_property(p, "volume_db", to_db, maxf(time, 0.01)).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT if not stop_after else Tween.EASE_IN)
+	if stop_after:
+		tw.tween_callback(p.stop)
+	_music_tweens[slot] = tw
+
+
 func _get_stream(id: StringName) -> AudioStream:
 	if _streams.has(id):
 		return _streams[id]
 	if _missing.has(id):
 		return null
-	var path: String = LEGACY.get(id, SFX_DIR % id)
+	var path: String = SOFT_DIR % id if ResourceLoader.exists(SOFT_DIR % id) else LEGACY.get(id, SFX_DIR % id)
 	var stream: AudioStream = null
 	if ResourceLoader.exists(path):
 		stream = load(path) as AudioStream

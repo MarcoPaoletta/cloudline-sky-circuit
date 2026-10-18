@@ -175,13 +175,7 @@ func _on_hit(head: Node) -> void:
 func _play_defeat() -> void:
 	state = State.DEAD
 	_warn.visible = false
-	play_anim("Death", 1.6, 0.05)
-	if _death_tween and _death_tween.is_valid():
-		_death_tween.kill()
-	_death_tween = create_tween()
-	_death_tween.tween_interval(0.35)
-	_death_tween.tween_property(_model, "scale", Vector3.ONE * 0.01, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	_death_tween.tween_callback(func() -> void: visible = false)
+	knockback_fall(_last_hit_dir)
 
 
 func _on_revive() -> void:

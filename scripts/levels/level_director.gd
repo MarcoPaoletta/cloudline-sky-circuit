@@ -47,6 +47,10 @@ var _seen_windup: Dictionary = {}
 
 func _ready() -> void:
 	add_to_group(&"level")
+	LightingPreset.apply_to(self)
+	var music := get_node_or_null("/root/Audio")
+	if music:
+		music.play_music(&"platform")
 	Campaign.begin_run(level_number)
 	_player.kill_plane_y = kill_plane_y
 	_respawn_xform = _spawn.global_transform

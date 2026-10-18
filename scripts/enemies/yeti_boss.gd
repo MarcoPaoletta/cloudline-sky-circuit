@@ -199,6 +199,7 @@ func take_head_hit(head: Node) -> bool:
 		return false
 	health -= 1
 	_hit_cd = hit_cooldown
+	_last_hit_dir = _hit_direction(head)
 	health_changed.emit(maxi(health, 0), max_health)
 	_flash()
 	var a := get_node_or_null("/root/Audio")
@@ -210,10 +211,13 @@ func take_head_hit(head: Node) -> bool:
 	return true
 
 
+## White flash, hit stop and a short shove back along the roll (a boss staggers; it is never squashed).
 func _flash() -> void:
+	flash_white()
+	hit_stop()
+	var shove := _last_hit_dir * 0.7
 	var tw := create_tween()
-	_model.scale = _unit_scale * 1.1
-	tw.tween_property(_model, "scale", _unit_scale, 0.18).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tw.tween_property(self, "global_position", global_position + shove, 0.16).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 
 func _defeat(_head: Node) -> void:
@@ -229,13 +233,14 @@ func _defeat(_head: Node) -> void:
 	get_tree().call_group(&"arena_director", "boss_down", self)
 	boss_defeated.emit(self)
 	defeated.emit(self)
-	play_anim("MonsterArmature|Death", 0.8, 0.05)
-	if _death_tween and _death_tween.is_valid():
-		_death_tween.kill()
-	_death_tween = create_tween()
-	_death_tween.tween_interval(1.1)
-	_death_tween.tween_property(_model, "scale", _unit_scale * 0.01, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	_death_tween.tween_callback(queue_free)
+	# The big one topples backwards slowly and lies there before fading out.
+	knock_distance = 2.6
+	knock_height = 0.5
+	knock_time = 0.8
+	knock_tilt_deg = 90.0
+	fallen_hold = 1.1
+	vanish_time = 0.4
+	knockback_fall(_last_hit_dir)
 	var a := get_node_or_null("/root/Audio")
 	if a:
 		a.play_sfx(&"boss_roar", 0.0, 0.7)

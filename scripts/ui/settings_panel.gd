@@ -8,7 +8,7 @@ signal closed
 
 const SLIDERS := {
 	&"MasterSlider": &"vol_master", &"SfxSlider": &"vol_sfx", &"UiSlider": &"vol_ui",
-	&"AmbienceSlider": &"vol_ambience", &"SensitivitySlider": &"mouse_sensitivity",
+	&"AmbienceSlider": &"vol_ambience", &"MusicSlider": &"vol_music", &"SensitivitySlider": &"mouse_sensitivity",
 	&"TextScaleSlider": &"text_scale", &"ShakeSlider": &"shake_scale",
 }
 const TOGGLES := {

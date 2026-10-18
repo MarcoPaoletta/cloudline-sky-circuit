@@ -2,7 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dqaksykobap3x" path="res://scripts/player/detached_head.gd" id="1_mxgoy"]
 [ext_resource type="ArrayMesh" uid="uid://bk0dn6mu2lm1i" path="res://assets/cloudline/derived/robot_head.res" id="2_y68hr"]
+[ext_resource type="Material" uid="uid://ckhmo2a3b33dm" path="res://resources/materials/toon/robot_yellow.tres" id="3_efnum"]
 [ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="3_y68hr"]
+[ext_resource type="Material" uid="uid://bbl1hw2p1aioh" path="res://resources/materials/toon/robot_silver.tres" id="4_soiin"]
+[ext_resource type="Material" uid="uid://b3esyakaa7oua" path="res://resources/materials/toon/robot_eye.tres" id="5_4dcw7"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fsdni"]
 friction = 0.7
@@ -51,6 +54,9 @@ shape = SubResource("SphereShape3D_vw71k")
 [node name="HeadMesh" type="MeshInstance3D" parent="Visual" unique_id=123379210]
 transform = Transform3D(34.43346, 1.4001918, -1.620459, 1.6991796, -1.9727628, 34.40159, 1.3035381, -34.415043, -2.037921, 0, 0, 0)
 mesh = ExtResource("2_y68hr")
+surface_material_override/0 = ExtResource("3_efnum")
+surface_material_override/1 = ExtResource("4_soiin")
+surface_material_override/2 = ExtResource("5_4dcw7")
 
 [node name="HitArea" type="Area3D" parent="." unique_id=893289122]
 collision_layer = 0

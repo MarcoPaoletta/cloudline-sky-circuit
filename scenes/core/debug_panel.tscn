@@ -114,12 +114,40 @@ theme_type_variation = &"ToggleButton"
 toggle_mode = true
 text = "Invulnerable"
 
+[node name="TestRow" type="HBoxContainer" parent="Panel/Box" unique_id=1234729534]
+layout_mode = 2
+
+[node name="FlyButton" type="Button" parent="Panel/Box/TestRow" unique_id=35844134]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Fly mode"
+
+[node name="FlagButton" type="Button" parent="Panel/Box/TestRow" unique_id=1029529133]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Go to flag"
+
+[node name="ArenaWinButton" type="Button" parent="Panel/Box/TestRow" unique_id=1709091803]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Complete arena"
+
 [node name="UnlockButton" type="Button" parent="Panel/Box" unique_id=1238926819]
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"ToggleButton"
 toggle_mode = true
 text = "Unlock all progression"
+
+[node name="LabButton" type="Button" parent="Panel/Box" unique_id=617553005]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Lighting lab (F2): concept vs game"
 
 [node name="SpeedLabel" type="Label" parent="Panel/Box" unique_id=175567149]
 layout_mode = 2

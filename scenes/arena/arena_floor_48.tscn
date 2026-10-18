@@ -488,6 +488,7 @@ size = Vector3(6.75243, 1.5, 6.96691)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch01" type="Decal" parent="Dirt" unique_id=2078108662]
 transform = Transform3D(-0.21219768, 0, -0.97722673, 0, 1, 0, 0.97722673, 0, -0.21219768, 10.95581, 0.05, 8.00572)
@@ -495,6 +496,7 @@ size = Vector3(9.30518, 1.5, 9.20029)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch02" type="Decal" parent="Dirt" unique_id=2002840447]
 transform = Transform3D(0.29494637, 0, -0.95551383, 0, 1, 0, 0.95551383, 0, 0.29494637, -13.96982, 0.05, 11.79549)
@@ -502,6 +504,7 @@ size = Vector3(8.20147, 1.5, 8.60728)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch03" type="Decal" parent="Dirt" unique_id=1360833310]
 transform = Transform3D(0.5526406, 0, -0.8334197, 0, 1, 0, 0.8334197, 0, 0.5526406, 6.67908, 0.05, 5.00107)
@@ -509,6 +512,7 @@ size = Vector3(7.13278, 1.5, 7.08935)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch04" type="Decal" parent="Dirt" unique_id=1289050248]
 transform = Transform3D(0.8653951, 0, 0.5010901, 0, 1, 0, -0.5010901, 0, 0.8653951, -10.4769, 0.05, 14.97516)
@@ -516,6 +520,7 @@ size = Vector3(7.73551, 1.5, 5.52367)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch05" type="Decal" parent="Dirt" unique_id=1765975598]
 transform = Transform3D(0.6937807, 0, -0.7201863, 0, 1, 0, 0.7201863, 0, 0.6937807, 0.85113, 0.05, -6.74856)
@@ -523,6 +528,7 @@ size = Vector3(6.62925, 1.5, 5.52706)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch06" type="Decal" parent="Dirt" unique_id=711407428]
 transform = Transform3D(-0.22327922, 0, 0.9747545, 0, 1, 0, -0.9747545, 0, -0.22327922, -7.42021, 0.05, 7.82349)
@@ -530,6 +536,7 @@ size = Vector3(5.60678, 1.5, 5.97657)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch07" type="Decal" parent="Dirt" unique_id=1182527388]
 transform = Transform3D(-0.41554043, 0, -0.9095747, 0, 1, 0, 0.9095747, 0, -0.41554043, 4.64212, 0.05, -5.24662)
@@ -537,6 +544,7 @@ size = Vector3(8.69148, 1.5, 6.50467)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch08" type="Decal" parent="Dirt" unique_id=1294373722]
 transform = Transform3D(0.4662781, 0, -0.8846382, 0, 1, 0, 0.8846382, 0, 0.4662781, -14.43969, 0.05, -5.89643)
@@ -544,6 +552,7 @@ size = Vector3(6.84705, 1.5, 4.85194)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch09" type="Decal" parent="Dirt" unique_id=1998904064]
 transform = Transform3D(-0.5018386, 0, 0.86496127, 0, 1, 0, -0.86496127, 0, -0.5018386, 8.41168, 0.05, -5.31821)
@@ -551,6 +560,7 @@ size = Vector3(9.04589, 1.5, 6.89255)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch10" type="Decal" parent="Dirt" unique_id=1930612955]
 transform = Transform3D(-0.89446455, 0, 0.44713888, 0, 1, 0, -0.44713888, 0, -0.89446455, -14.24378, 0.05, 3.52782)
@@ -558,6 +568,7 @@ size = Vector3(7.4721, 1.5, 7.61529)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch11" type="Decal" parent="Dirt" unique_id=180773972]
 transform = Transform3D(-0.82207996, 0, -0.56937206, 0, 1, 0, 0.56937206, 0, -0.82207996, 17.2658, 0.05, -4.48382)
@@ -565,6 +576,7 @@ size = Vector3(6.72596, 1.5, 4.97287)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch12" type="Decal" parent="Dirt" unique_id=1312575676]
 transform = Transform3D(0.99985313, 0, -0.017138422, 0, 1, 0, 0.017138422, 0, 0.99985313, 3.60332, 0.05, 8.6947)
@@ -572,6 +584,7 @@ size = Vector3(8.17548, 1.5, 6.33553)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Patch13" type="Decal" parent="Dirt" unique_id=216323577]
 transform = Transform3D(0.56036526, 0, -0.82824564, 0, 1, 0, 0.82824564, 0, 0.56036526, -5.93357, 0.05, -9.00635)
@@ -579,6 +592,7 @@ size = Vector3(6.84657, 1.5, 6.20523)
 texture_albedo = ExtResource("16_0wxom")
 modulate = Color(0.72157, 0.54118, 0.3451, 0.85)
 normal_fade = 0.4
+cull_mask = 524287
 
 [node name="Props" type="Node3D" parent="." unique_id=974994490]
 

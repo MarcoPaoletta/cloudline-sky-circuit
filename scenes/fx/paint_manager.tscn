@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bny02dmaipte2" path="res://scripts/fx/paint_manager.gd" id="1_liyyq"]
 [ext_resource type="PackedScene" uid="uid://isqnm8o7cq1m" path="res://scenes/fx/paint_decal.tscn" id="2_iguue"]
 [ext_resource type="PackedScene" uid="uid://rwwe7f8r7pss" path="res://scenes/fx/paint_burst.tscn" id="3_0rnlm"]
+[ext_resource type="PackedScene" uid="uid://on0mucaao30e" path="res://scenes/fx/paint_splat.tscn" id="4_iguue"]
 
 [node name="PaintManager" type="Node3D" unique_id=2113115834]
 script = ExtResource("1_liyyq")
@@ -250,3 +251,197 @@ script = ExtResource("1_liyyq")
 [node name="Burst23" parent="Bursts" unique_id=777483646 instance=ExtResource("3_0rnlm")]
 
 [node name="Burst24" parent="Bursts" unique_id=950400646 instance=ExtResource("3_0rnlm")]
+
+[node name="Splats" type="Node3D" parent="." unique_id=1230277393]
+
+[node name="Splat01" parent="Splats" unique_id=54629284 instance=ExtResource("4_iguue")]
+
+[node name="Splat02" parent="Splats" unique_id=586493307 instance=ExtResource("4_iguue")]
+
+[node name="Splat03" parent="Splats" unique_id=1020650715 instance=ExtResource("4_iguue")]
+
+[node name="Splat04" parent="Splats" unique_id=1706502733 instance=ExtResource("4_iguue")]
+
+[node name="Splat05" parent="Splats" unique_id=1167511347 instance=ExtResource("4_iguue")]
+
+[node name="Splat06" parent="Splats" unique_id=315748018 instance=ExtResource("4_iguue")]
+
+[node name="Splat07" parent="Splats" unique_id=1239674655 instance=ExtResource("4_iguue")]
+
+[node name="Splat08" parent="Splats" unique_id=1128983475 instance=ExtResource("4_iguue")]
+
+[node name="Splat09" parent="Splats" unique_id=689129511 instance=ExtResource("4_iguue")]
+
+[node name="Splat10" parent="Splats" unique_id=143192746 instance=ExtResource("4_iguue")]
+
+[node name="Splat11" parent="Splats" unique_id=990106160 instance=ExtResource("4_iguue")]
+
+[node name="Splat12" parent="Splats" unique_id=635659462 instance=ExtResource("4_iguue")]
+
+[node name="Splat13" parent="Splats" unique_id=1211384996 instance=ExtResource("4_iguue")]
+
+[node name="Splat14" parent="Splats" unique_id=1382058113 instance=ExtResource("4_iguue")]
+
+[node name="Splat15" parent="Splats" unique_id=1639908544 instance=ExtResource("4_iguue")]
+
+[node name="Splat16" parent="Splats" unique_id=1492366747 instance=ExtResource("4_iguue")]
+
+[node name="Splat17" parent="Splats" unique_id=929286429 instance=ExtResource("4_iguue")]
+
+[node name="Splat18" parent="Splats" unique_id=78724994 instance=ExtResource("4_iguue")]
+
+[node name="Splat19" parent="Splats" unique_id=1562590021 instance=ExtResource("4_iguue")]
+
+[node name="Splat20" parent="Splats" unique_id=2016365630 instance=ExtResource("4_iguue")]
+
+[node name="Splat21" parent="Splats" unique_id=1214993590 instance=ExtResource("4_iguue")]
+
+[node name="Splat22" parent="Splats" unique_id=1971185725 instance=ExtResource("4_iguue")]
+
+[node name="Splat23" parent="Splats" unique_id=250682973 instance=ExtResource("4_iguue")]
+
+[node name="Splat24" parent="Splats" unique_id=1129058535 instance=ExtResource("4_iguue")]
+
+[node name="Splat25" parent="Splats" unique_id=558139785 instance=ExtResource("4_iguue")]
+
+[node name="Splat26" parent="Splats" unique_id=178345293 instance=ExtResource("4_iguue")]
+
+[node name="Splat27" parent="Splats" unique_id=961062484 instance=ExtResource("4_iguue")]
+
+[node name="Splat28" parent="Splats" unique_id=2025765562 instance=ExtResource("4_iguue")]
+
+[node name="Splat29" parent="Splats" unique_id=1999879477 instance=ExtResource("4_iguue")]
+
+[node name="Splat30" parent="Splats" unique_id=1587566302 instance=ExtResource("4_iguue")]
+
+[node name="Splat31" parent="Splats" unique_id=1788232012 instance=ExtResource("4_iguue")]
+
+[node name="Splat32" parent="Splats" unique_id=2082878958 instance=ExtResource("4_iguue")]
+
+[node name="Splat33" parent="Splats" unique_id=1489512148 instance=ExtResource("4_iguue")]
+
+[node name="Splat34" parent="Splats" unique_id=389863283 instance=ExtResource("4_iguue")]
+
+[node name="Splat35" parent="Splats" unique_id=143636613 instance=ExtResource("4_iguue")]
+
+[node name="Splat36" parent="Splats" unique_id=1488866871 instance=ExtResource("4_iguue")]
+
+[node name="Splat37" parent="Splats" unique_id=1762895984 instance=ExtResource("4_iguue")]
+
+[node name="Splat38" parent="Splats" unique_id=543502542 instance=ExtResource("4_iguue")]
+
+[node name="Splat39" parent="Splats" unique_id=1134237402 instance=ExtResource("4_iguue")]
+
+[node name="Splat40" parent="Splats" unique_id=972842794 instance=ExtResource("4_iguue")]
+
+[node name="Splat41" parent="Splats" unique_id=1122068778 instance=ExtResource("4_iguue")]
+
+[node name="Splat42" parent="Splats" unique_id=1053600082 instance=ExtResource("4_iguue")]
+
+[node name="Splat43" parent="Splats" unique_id=1882282319 instance=ExtResource("4_iguue")]
+
+[node name="Splat44" parent="Splats" unique_id=1849705517 instance=ExtResource("4_iguue")]
+
+[node name="Splat45" parent="Splats" unique_id=387986468 instance=ExtResource("4_iguue")]
+
+[node name="Splat46" parent="Splats" unique_id=1825711246 instance=ExtResource("4_iguue")]
+
+[node name="Splat47" parent="Splats" unique_id=1221424484 instance=ExtResource("4_iguue")]
+
+[node name="Splat48" parent="Splats" unique_id=1195882956 instance=ExtResource("4_iguue")]
+
+[node name="Splat49" parent="Splats" unique_id=1483520556 instance=ExtResource("4_iguue")]
+
+[node name="Splat50" parent="Splats" unique_id=1127667787 instance=ExtResource("4_iguue")]
+
+[node name="Splat51" parent="Splats" unique_id=92433503 instance=ExtResource("4_iguue")]
+
+[node name="Splat52" parent="Splats" unique_id=603298375 instance=ExtResource("4_iguue")]
+
+[node name="Splat53" parent="Splats" unique_id=31856979 instance=ExtResource("4_iguue")]
+
+[node name="Splat54" parent="Splats" unique_id=316160138 instance=ExtResource("4_iguue")]
+
+[node name="Splat55" parent="Splats" unique_id=2105523029 instance=ExtResource("4_iguue")]
+
+[node name="Splat56" parent="Splats" unique_id=663470684 instance=ExtResource("4_iguue")]
+
+[node name="Splat57" parent="Splats" unique_id=1336701606 instance=ExtResource("4_iguue")]
+
+[node name="Splat58" parent="Splats" unique_id=1527015317 instance=ExtResource("4_iguue")]
+
+[node name="Splat59" parent="Splats" unique_id=1541216135 instance=ExtResource("4_iguue")]
+
+[node name="Splat60" parent="Splats" unique_id=881333753 instance=ExtResource("4_iguue")]
+
+[node name="Splat61" parent="Splats" unique_id=1463388170 instance=ExtResource("4_iguue")]
+
+[node name="Splat62" parent="Splats" unique_id=1634222521 instance=ExtResource("4_iguue")]
+
+[node name="Splat63" parent="Splats" unique_id=1670005656 instance=ExtResource("4_iguue")]
+
+[node name="Splat64" parent="Splats" unique_id=661211391 instance=ExtResource("4_iguue")]
+
+[node name="Splat65" parent="Splats" unique_id=1131792019 instance=ExtResource("4_iguue")]
+
+[node name="Splat66" parent="Splats" unique_id=1364951122 instance=ExtResource("4_iguue")]
+
+[node name="Splat67" parent="Splats" unique_id=1049437043 instance=ExtResource("4_iguue")]
+
+[node name="Splat68" parent="Splats" unique_id=1497135437 instance=ExtResource("4_iguue")]
+
+[node name="Splat69" parent="Splats" unique_id=865592425 instance=ExtResource("4_iguue")]
+
+[node name="Splat70" parent="Splats" unique_id=949545460 instance=ExtResource("4_iguue")]
+
+[node name="Splat71" parent="Splats" unique_id=2018208024 instance=ExtResource("4_iguue")]
+
+[node name="Splat72" parent="Splats" unique_id=618519464 instance=ExtResource("4_iguue")]
+
+[node name="Splat73" parent="Splats" unique_id=1419498734 instance=ExtResource("4_iguue")]
+
+[node name="Splat74" parent="Splats" unique_id=2032879229 instance=ExtResource("4_iguue")]
+
+[node name="Splat75" parent="Splats" unique_id=579794041 instance=ExtResource("4_iguue")]
+
+[node name="Splat76" parent="Splats" unique_id=939732857 instance=ExtResource("4_iguue")]
+
+[node name="Splat77" parent="Splats" unique_id=335303380 instance=ExtResource("4_iguue")]
+
+[node name="Splat78" parent="Splats" unique_id=136748461 instance=ExtResource("4_iguue")]
+
+[node name="Splat79" parent="Splats" unique_id=441833138 instance=ExtResource("4_iguue")]
+
+[node name="Splat80" parent="Splats" unique_id=1411661398 instance=ExtResource("4_iguue")]
+
+[node name="Splat81" parent="Splats" unique_id=672091775 instance=ExtResource("4_iguue")]
+
+[node name="Splat82" parent="Splats" unique_id=197997415 instance=ExtResource("4_iguue")]
+
+[node name="Splat83" parent="Splats" unique_id=647876856 instance=ExtResource("4_iguue")]
+
+[node name="Splat84" parent="Splats" unique_id=1393768184 instance=ExtResource("4_iguue")]
+
+[node name="Splat85" parent="Splats" unique_id=2006951243 instance=ExtResource("4_iguue")]
+
+[node name="Splat86" parent="Splats" unique_id=855391287 instance=ExtResource("4_iguue")]
+
+[node name="Splat87" parent="Splats" unique_id=1184904294 instance=ExtResource("4_iguue")]
+
+[node name="Splat88" parent="Splats" unique_id=1200458771 instance=ExtResource("4_iguue")]
+
+[node name="Splat89" parent="Splats" unique_id=1734597274 instance=ExtResource("4_iguue")]
+
+[node name="Splat90" parent="Splats" unique_id=578407004 instance=ExtResource("4_iguue")]
+
+[node name="Splat91" parent="Splats" unique_id=842651574 instance=ExtResource("4_iguue")]
+
+[node name="Splat92" parent="Splats" unique_id=639181611 instance=ExtResource("4_iguue")]
+
+[node name="Splat93" parent="Splats" unique_id=595851450 instance=ExtResource("4_iguue")]
+
+[node name="Splat94" parent="Splats" unique_id=1950927563 instance=ExtResource("4_iguue")]
+
+[node name="Splat95" parent="Splats" unique_id=624327593 instance=ExtResource("4_iguue")]
+
+[node name="Splat96" parent="Splats" unique_id=7811712 instance=ExtResource("4_iguue")]

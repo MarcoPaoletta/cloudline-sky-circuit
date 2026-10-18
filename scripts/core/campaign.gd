@@ -26,12 +26,12 @@ const ARENA_NAMES := {1: "Opening Burst", 2: "The Summoner", 3: "Twin Paintstorm
 const TITLE_SCENE := "res://scenes/ui/title_screen.tscn"
 ## Actions the player may remap (keyboard / mouse). Pause, mute and the debug panel stay fixed.
 const REBINDABLE: Array[StringName] = [
-	&"move_forward", &"move_back", &"move_left", &"move_right", &"jump", &"head_deploy", &"head_attack",
+	&"move_forward", &"move_back", &"move_left", &"move_right", &"jump", &"sprint", &"head_deploy", &"head_attack",
 	&"aim_assist", &"fetch", &"interact", &"console_left", &"console_right",
 ]
 const ACTION_LABELS := {
 	&"move_forward": "Move forward", &"move_back": "Move back", &"move_left": "Move left", &"move_right": "Move right",
-	&"jump": "Jump", &"head_deploy": "Send / recall head", &"head_attack": "Bowl head", &"aim_assist": "Aim assist (hold)",
+	&"jump": "Jump", &"sprint": "Sprint (hold)", &"head_deploy": "Send / recall head", &"head_attack": "Bowl head", &"aim_assist": "Aim assist (hold)",
 	&"fetch": "Fetch arm", &"interact": "Interact / dialogue", &"console_left": "Console: step left",
 	&"console_right": "Console: step right",
 }
@@ -53,6 +53,7 @@ var vol_master: float = 0.9
 var vol_sfx: float = 1.0
 var vol_ui: float = 1.0
 var vol_ambience: float = 1.0
+var vol_music: float = 1.0
 ## action name -> {"t": "key" | "mouse", "c": physical keycode | button index}. Only overrides are stored.
 var bindings: Dictionary = {}
 
@@ -254,6 +255,7 @@ func apply_audio_settings() -> void:
 	audio.set_bus_linear(&"SFX", vol_sfx)
 	audio.set_bus_linear(&"UI", vol_ui)
 	audio.set_bus_linear(&"Ambience", vol_ambience)
+	audio.set_bus_linear(&"Music", vol_music)
 
 
 func notify_settings_changed() -> void:
@@ -386,7 +388,7 @@ func save_game() -> void:
 			"hold_to_aim": hold_to_aim, "hold_to_bowl": hold_to_bowl, "text_scale": text_scale, "instant_text": instant_text,
 			"reduced_motion": reduced_motion, "reduced_flash": reduced_flash, "shake_scale": shake_scale,
 			"no_recoil": no_recoil, "vol_master": vol_master, "vol_sfx": vol_sfx, "vol_ui": vol_ui,
-			"vol_ambience": vol_ambience,
+			"vol_ambience": vol_ambience, "vol_music": vol_music,
 		},
 		"bindings": bindings,
 		"levels": levels,
@@ -445,6 +447,7 @@ func load_game() -> void:
 	vol_sfx = float(s.get("vol_sfx", vol_sfx))
 	vol_ui = float(s.get("vol_ui", vol_ui))
 	vol_ambience = float(s.get("vol_ambience", vol_ambience))
+	vol_music = float(s.get("vol_music", vol_music))
 	bindings.clear()
 	var bd: Variant = data.get("bindings", {})
 	if bd is Dictionary:

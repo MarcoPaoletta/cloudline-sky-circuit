@@ -90,6 +90,10 @@ var _chain_heal_cd: float = 0.0
 
 func _ready() -> void:
 	add_to_group(&"arena_director")
+	LightingPreset.apply_to(self)
+	var music := get_node_or_null("/root/Audio")
+	if music:
+		music.play_music(&"arena")
 	process_mode = Node.PROCESS_MODE_PAUSABLE
 	for path in ENEMY_PATHS:
 		_packed.append(load(path) as PackedScene)
@@ -402,6 +406,32 @@ func _on_player_died() -> void:
 	defeat_reached.emit()
 	_player.camera_rig().set_capture(false)
 	_hud.show_defeat(self)
+
+
+## Dev panel (F1) only: every wave counts as released, every monster and boss on the field is defeated (normal
+## splash and fall), and the normal victory flow runs (clear saved, banner, results).
+func debug_complete() -> bool:
+	if phase == Phase.VICTORY or phase == Phase.DEFEAT:
+		return false
+	if phase == Phase.READY:
+		_begin_fight()
+	for w in released.size():
+		released[w] = wave_counts[w]
+	pending_births = 0
+	_summon_backlog = 0
+	for c in _horde.get_children():
+		var e := c as HordeEnemy
+		if e != null and e.alive:
+			e.take_head_hit(null)
+	for b in boss_list:
+		if is_instance_valid(b) and b.alive:
+			b.health = 1
+			b._hit_cd = 0.0
+			b.take_head_hit(null)
+	bosses_alive = 0
+	alive_count = 0
+	_victory()
+	return true
 
 
 ## Retry Arena restarts THIS arena only; the platform world and its flag are untouched.
