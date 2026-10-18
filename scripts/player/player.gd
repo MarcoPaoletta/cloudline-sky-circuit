@@ -74,6 +74,9 @@ func _ready() -> void:
 	add_to_group(&"player")
 	_gravity = float(ProjectSettings.get_setting("physics/3d/default_gravity", 20.0))
 	health = max_health
+	# Characters live on their own visual layer so paint decals never tint them (enemies do the same).
+	for v in _model.find_children("*", "VisualInstance3D", true, false):
+		(v as VisualInstance3D).layers = 1 << 19
 	# Imported clips do not loop; locomotion clips must.
 	for n in ["Idle", "Running", "Walking"]:
 		var a := _anim.get_animation(CLIP % n)
@@ -226,7 +229,7 @@ func _physics_process(delta: float) -> void:
 
 	# Jump (one jump, coyote time and buffer).
 	if _jump_buffer > 0.0 and (grounded or _coyote > 0.0) and input_enabled:
-		velocity.y = jump_velocity
+		velocity.y = maxf(velocity.y, jump_velocity)
 		_jump_buffer = 0.0
 		_coyote = 0.0
 		grounded = false

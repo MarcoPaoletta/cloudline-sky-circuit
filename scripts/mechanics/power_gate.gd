@@ -71,9 +71,9 @@ func reset_to_checkpoint() -> void:
 func _try_close() -> void:
 	while _sensor.has_overlapping_bodies() and is_inside_tree():
 		await get_tree().create_timer(0.3).timeout
-		if powered:
+		if powered or latched:
 			return
-	if not powered:
+	if not powered and not latched:
 		is_open = false
 		_go(0.0, Tween.TRANS_SINE)
 		opened_changed.emit(false)

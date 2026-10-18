@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://dfvwknpj027ma"]
+
+[ext_resource type="Script" uid="uid://yke5cpdribx" path="res://scripts/mechanics/return_pad.gd" id="1_1ru5u"]
+[ext_resource type="Material" uid="uid://batfhuke340sw" path="res://resources/materials/metal_navy.tres" id="2_lyvsq"]
+[ext_resource type="Material" uid="uid://hvk873ykh32u" path="res://resources/materials/glow_cyan.tres" id="3_pqnts"]
+[ext_resource type="Material" uid="uid://34fxmnuavi2" path="res://resources/materials/stone_blue.tres" id="4_nos63"]
+[ext_resource type="Material" uid="uid://v4b165h7aw8g" path="res://resources/materials/glow_cyan_soft.tres" id="5_ifdgp"]
+[ext_resource type="PackedScene" uid="uid://cdqjakdb75jec" path="res://assets/cloudline/platformer/Level and Mechanics/Arrow_Up.gltf" id="6_nqfjj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1cu44"]
+height = 1.4
+radius = 1.6
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_smki4"]
+top_radius = 1.7
+bottom_radius = 1.8
+height = 0.34
+radial_segments = 24
+
+[sub_resource type="TorusMesh" id="TorusMesh_yfq8s"]
+inner_radius = 1.1
+outer_radius = 1.45
+rings = 28
+ring_segments = 8
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ddj84"]
+top_radius = 0.85
+bottom_radius = 1.0
+height = 5.0
+radial_segments = 16
+cap_top = false
+cap_bottom = false
+
+[node name="ReturnPad" type="Area3D" unique_id=506389213]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_1ru5u")
+mat_locked = ExtResource("2_lyvsq")
+mat_ready = ExtResource("3_pqnts")
+
+[node name="Shape" type="CollisionShape3D" parent="." unique_id=1187046060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+shape = SubResource("CylinderShape3D_1cu44")
+
+[node name="Base" type="MeshInstance3D" parent="." unique_id=1304301660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17, 0)
+material_override = ExtResource("4_nos63")
+mesh = SubResource("CylinderMesh_smki4")
+
+[node name="Ring" type="MeshInstance3D" parent="." unique_id=1354352797]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36, 0)
+material_override = ExtResource("2_lyvsq")
+mesh = SubResource("TorusMesh_yfq8s")
+
+[node name="Beam" type="MeshInstance3D" parent="." unique_id=1829469862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9, 0)
+visible = false
+material_override = ExtResource("5_ifdgp")
+mesh = SubResource("CylinderMesh_ddj84")
+
+[node name="Arrow" parent="." unique_id=97250515 instance=ExtResource("6_nqfjj")]
+transform = Transform3D(0.6, 0, 0, 0, -0.6, 5.2453668e-08, 0, -5.2453668e-08, -0.6, 0, 3, 0)

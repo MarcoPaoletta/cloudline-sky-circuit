@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bs2kucpin3xxo"]
+
+[ext_resource type="Material" uid="uid://dqmcc5j3em33a" path="res://resources/materials/toon/bush.tres" id="1_ter3q"]
+[ext_resource type="Material" uid="uid://cw0vwk4w8j8sv" path="res://resources/materials/toon/flower_white.tres" id="2_26lt7"]
+[ext_resource type="Material" uid="uid://hgcuetnivhbk" path="res://resources/materials/toon/flower_yellow.tres" id="3_q4ldp"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_27kyf"]
+top_radius = 0.012
+bottom_radius = 0.02
+height = 0.3
+radial_segments = 5
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2s4gk"]
+top_radius = 0.13
+bottom_radius = 0.12
+height = 0.03
+radial_segments = 6
+rings = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_1pia8"]
+radius = 0.05
+height = 0.09
+radial_segments = 8
+rings = 4
+
+[node name="PropFlower" type="Node3D" unique_id=598969321]
+
+[node name="Stem" type="MeshInstance3D" parent="." unique_id=1436694314]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+material_override = ExtResource("1_ter3q")
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_27kyf")
+
+[node name="Petals" type="MeshInstance3D" parent="." unique_id=545564645]
+transform = Transform3D(1, 0, 0, 0, 0.9781476, -0.2079117, 0, 0.2079117, 0.9781476, 0, 0.31, 0)
+material_override = ExtResource("2_26lt7")
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_2s4gk")
+
+[node name="Center" type="MeshInstance3D" parent="." unique_id=1732451595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.335, 0)
+material_override = ExtResource("3_q4ldp")
+cast_shadow = 0
+mesh = SubResource("SphereMesh_1pia8")

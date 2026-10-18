@@ -128,6 +128,7 @@ func _on_checkpoint_activated(cp: Node) -> void:
 	_respawn_xform = cp.get_respawn_transform()
 	_checkpoint_id = cp.checkpoint_id
 	Campaign.checkpoint_id = _checkpoint_id
+	Campaign.save_game()
 	checkpoint_reached.emit(_checkpoint_id)
 
 
@@ -146,6 +147,7 @@ func respawn() -> void:
 	_respawning = true
 	respawn_started.emit()
 	_player.set_input_enabled(false)
+	_return_parts()
 	await ScreenTransition.fade_out(recovery_fade_out)
 	for node in get_tree().get_nodes_in_group(&"resettable"):
 		if node.has_method(&"reset_to_checkpoint"):
@@ -162,6 +164,37 @@ func respawn() -> void:
 	respawn_finished.emit()
 
 
+## Head back on the body and the arm retracted (respawn, return lift, flag capture).
+func _return_parts() -> void:
+	var head := _player.get_node_or_null("HeadController")
+	if head != null and head.has_method(&"reset_to_attached"):
+		head.reset_to_attached()
+	var arm := _player.get_node_or_null("FetchArm")
+	if arm != null and arm.has_method(&"cancel_now"):
+		arm.cancel_now()
+
+
+## Fade-carried trip to another place in the same world (return lift): parts return, the unsafe puzzle state resets,
+## health is kept. Only ScreenTransition fades, so this can never stack a second fade.
+func travel_to(xf: Transform3D) -> void:
+	if _respawning or _captured or _player.mode != Player.Mode.EXPLORE:
+		return
+	_respawning = true
+	_player.set_input_enabled(false)
+	_return_parts()
+	await ScreenTransition.fade_out(0.25)
+	_player.teleport_to(xf)
+	_player.set_mode(Player.Mode.EXPLORE)
+	_player.set_input_enabled(true)
+	_player.camera_rig().snap_behind(_player.facing_yaw())
+	await ScreenTransition.fade_in(0.35)
+	_respawning = false
+	_since_progress = 0.0
+	# A hit that landed while the fade was running was ignored by respawn(); honour it now.
+	if _player.mode == Player.Mode.DEAD:
+		respawn()
+
+
 ## Called by the finish flag. Banks the result and moves to the arena through the transition owner.
 func capture_flag() -> void:
 	if _captured:
@@ -169,12 +202,7 @@ func capture_flag() -> void:
 	_captured = true
 	_player.set_input_enabled(false)
 	_player.set_mode(Player.Mode.LOCKED)
-	var head := _player.get_node_or_null("HeadController")
-	if head != null and head.has_method(&"reset_to_attached"):
-		head.reset_to_attached()
-	var arm := _player.get_node_or_null("FetchArm")
-	if arm != null and arm.has_method(&"cancel_now"):
-		arm.cancel_now()
+	_return_parts()
 	_player.play_action("ThumbsUp", 1.0, capture_celebration)
 	_say(&"final_capture" if level_number >= Campaign.LEVEL_COUNT else &"flag_capture")
 	var first := Campaign.capture_flag(level_number, Campaign.run_time)

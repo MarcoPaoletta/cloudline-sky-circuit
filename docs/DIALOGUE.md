@@ -27,6 +27,7 @@ Robot voice: curious, concise and practical. The robot addresses itself/player t
 | relay_tradeoff | Level 2 powered door, enemy ahead | “Power or protection? I'll need my head back before I fight.” | Safe latch/alternate route reached; tutorial |
 | level2_intro | Level 2 arrival | “Cargo below, shortcuts above. Same tools, more possibilities.” | Once; objective |
 | level3_intro | Level 3 arrival | “Three rings, one crown. Pick a route and keep the beam in sight.” | Once; objective |
+| return_lift | Return pad unlocked by its late checkpoint, once | “Return lift online. The cyan pad carries us back down.” | Nonblocking; tutorial |
 | fall_return | First checkpoint recovery, safe | “Parts accounted for. Let's try another way.” | Once, never after every fall; recovery |
 | flag_capture | Capture accepted and parts returned | “Flag captured. One more piece of sky reconnected.” | Results ready; celebration |
 | final_capture | Level 3 capture | “All three flags. Not bad for a robot who keeps losing its head.” | Campaign results; celebration |

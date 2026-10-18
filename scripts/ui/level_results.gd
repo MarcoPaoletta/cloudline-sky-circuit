@@ -49,7 +49,8 @@ func show_arena_results(d: ArenaDirector) -> void:
 
 func _on_continue() -> void:
 	if _level >= Campaign.LEVEL_COUNT:
-		ScreenTransition.change_scene("res://scenes/ui/title_screen.tscn", "CLOUDLINE", "Campaign complete", 0.4)
+		Campaign.title_view = &"complete"
+		ScreenTransition.change_scene(Campaign.TITLE_SCENE, "CLOUDLINE", "The sky is reconnected", 0.4)
 	else:
 		var n := _level + 1
 		ScreenTransition.change_scene(Campaign.LEVEL_SCENES[n], Campaign.LEVEL_NAMES[n], "World %d" % n, 0.4)
@@ -60,4 +61,4 @@ func _on_replay() -> void:
 
 
 func _on_title() -> void:
-	ScreenTransition.change_scene("res://scenes/ui/title_screen.tscn", "", "", 0.2)
+	ScreenTransition.change_scene(Campaign.TITLE_SCENE, "", "", 0.2)

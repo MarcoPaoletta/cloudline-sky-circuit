@@ -36,7 +36,17 @@ const RESULTS_SCENE := "res://scenes/ui/level_results.tscn"
 @export var spawn_tick: float = 0.3
 @export var max_per_tick: int = 3
 @export var safe_radius: float = 6.0
+## Horde monsters never leave this radius (a metre inside the floor rim; set per arena).
+@export var horde_radius: float = 23.0
 @export var summon_speed_scale: float = 1.0
+@export_group("Crowd")
+## Ground distance below which two monsters are pushed apart, so no body ever clips another.
+@export var separation_distance: float = 1.75
+## Horde monsters keep this distance from a boss's centre; the two bosses keep `boss_separation` from each other.
+@export var boss_clearance: float = 3.3
+@export var boss_separation: float = 3.6
+## Largest correction applied to one body per physics frame (keeps the relaxation smooth).
+@export var max_push_per_frame: float = 0.3
 @export_group("Assists")
 ## One pip returns after this many seconds without taking damage.
 @export var regen_seconds: float = 8.0
@@ -158,6 +168,7 @@ func _run_fight(delta: float) -> void:
 	Campaign.run_time = fight_time
 	_since_hurt += delta
 	_chain_heal_cd = maxf(_chain_heal_cd - delta, 0.0)
+	_separate_horde()
 	if _since_hurt >= regen_seconds and _player.heal(1):
 		_since_hurt = 0.0
 	# Early start of the next wave when the field is empty (never sooner than 2 s after the last release).
@@ -175,6 +186,75 @@ func _run_fight(delta: float) -> void:
 		chain_changed.emit(0)
 	if _all_released() and alive_count == 0 and pending_births == 0 and bosses_alive == 0 and _summon_backlog == 0:
 		_victory()
+
+
+## Crowd relaxation on the ground plane: a spatial hash finds every pair closer than `separation_distance` and pushes both
+## apart; bosses act as larger discs. Positions only move in x/z, so floor contact and the arena clamp are unaffected.
+func _separate_horde() -> void:
+	var mons: Array[HordeEnemy] = []
+	for c in _horde.get_children():
+		var e := c as HordeEnemy
+		if e != null and e.active and e.alive:
+			mons.append(e)
+	var n := mons.size()
+	var pos := PackedVector2Array()
+	pos.resize(n)
+	var push := PackedVector2Array()
+	push.resize(n)
+	var cell := separation_distance
+	var grid := {}
+	for i in n:
+		var g := mons[i].global_position
+		pos[i] = Vector2(g.x, g.z)
+		var key := Vector2i(floori(g.x / cell), floori(g.z / cell))
+		if grid.has(key):
+			(grid[key] as Array).append(i)
+		else:
+			grid[key] = [i]
+	for key: Vector2i in grid:
+		var mine: Array = grid[key]
+		for dx in range(-1, 2):
+			for dz in range(-1, 2):
+				var nk := Vector2i(key.x + dx, key.y + dz)
+				if not grid.has(nk):
+					continue
+				var theirs: Array = grid[nk]
+				for a in mine:
+					for b in theirs:
+						if b <= a:
+							continue
+						var d := pos[a] - pos[b]
+						var l := d.length()
+						if l >= separation_distance:
+							continue
+						var dir := d / l if l > 0.001 else Vector2.from_angle(float((a * 37 + b * 91) % 360) * 0.0174533)
+						var half := (separation_distance - l) * 0.5
+						push[a] += dir * half
+						push[b] -= dir * half
+	for bs in boss_list:
+		if not is_instance_valid(bs) or not bs.alive:
+			continue
+		var bp := Vector2(bs.global_position.x, bs.global_position.z)
+		for i in n:
+			var d := pos[i] - bp
+			var l := d.length()
+			if l < boss_clearance:
+				push[i] += (d / l if l > 0.001 else Vector2.RIGHT) * (boss_clearance - l)
+	for i in n:
+		var p := push[i]
+		if p.length_squared() > 0.000001:
+			p = p.limit_length(max_push_per_frame)
+			mons[i].global_position += Vector3(p.x, 0.0, p.y)
+	if boss_list.size() == 2 and is_instance_valid(boss_list[0]) and is_instance_valid(boss_list[1]):
+		var b0 := boss_list[0]
+		var b1 := boss_list[1]
+		var d := Vector2(b0.global_position.x - b1.global_position.x, b0.global_position.z - b1.global_position.z)
+		var l := d.length()
+		if l < boss_separation and b0.alive and b1.alive:
+			var dir := d / l if l > 0.001 else Vector2.RIGHT
+			var half := minf((boss_separation - l) * 0.5, 0.2)
+			b0.global_position += Vector3(dir.x, 0.0, dir.y) * half
+			b1.global_position -= Vector3(dir.x, 0.0, dir.y) * half
 
 
 func _all_released() -> bool:
@@ -196,7 +276,6 @@ func _release_tick() -> void:
 			_announced[w] = true
 			_started_waves = w + 1
 			wave_started.emit(w + 1, wave_counts.size())
-			_hud.show_wave(w + 1, wave_counts.size())
 			if w > 0:
 				get_tree().call_group(&"dialogue_panel", "say", &"wave_start", true)
 		var target := int(clampf((_clock - start) / maxf(wave_durations[w], 0.1), 0.0, 1.0) * float(wave_counts[w]) + 0.0001)
@@ -237,6 +316,7 @@ func _queue_portal_birth() -> void:
 func _spawn_enemy(pos: Vector3, face: Vector3) -> HordeEnemy:
 	var idx := randi() % _packed.size()
 	var e := _packed[idx].instantiate() as HordeEnemy
+	e.arena_radius = horde_radius
 	_horde.add_child(e)
 	e.activate(pos, face)
 	alive_count += 1

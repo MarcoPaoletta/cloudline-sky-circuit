@@ -33,6 +33,7 @@ const LINES := {
 	&"level2_intro": {"text": "Cargo below, shortcuts above. Same tools, more possibilities.", "priority": OBJECTIVE},
 	&"level3_intro": {"text": "Three rings, one crown. Pick a route and keep the beam in sight.", "priority": OBJECTIVE},
 	&"fall_return": {"text": "Parts accounted for. Let's try another way.", "priority": SAFETY},
+	&"return_lift": {"text": "Return lift online. The cyan pad carries us back down.", "priority": TUTORIAL, "duration": 3.4},
 	&"flag_capture": {"text": "Flag captured. One more piece of sky reconnected.", "priority": FLAVOR},
 	&"final_capture": {"text": "All three flags. Not bad for a robot who keeps losing its head.", "priority": FLAVOR},
 	# Arena additions

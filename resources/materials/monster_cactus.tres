@@ -1,7 +1,16 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://eeo3posff1a4"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://eeo3posff1a4"]
 
+[ext_resource type="Shader" uid="uid://dxiixxypn28n4" path="res://resources/shaders/monster_toon.gdshader" id="1_8ax56"]
 [ext_resource type="Texture2D" uid="uid://x0ediqoyeq22" path="res://assets/cloudline/monsters/Textures/Cactus_Texture.png" id="1_010pl"]
 
 [resource]
-albedo_texture = ExtResource("1_010pl")
-roughness = 0.85
+render_priority = 0
+shader = ExtResource("1_8ax56")
+shader_parameter/albedo_tex = ExtResource("1_010pl")
+shader_parameter/brightness = 2.3
+shader_parameter/saturation = 1.6
+shader_parameter/lift = 0.62
+shader_parameter/tint = Color(1, 1, 1, 1)
+shader_parameter/rim_strength = 0.3
+shader_parameter/rim_color = Color(1, 0.96, 0.85, 1)
+shader_parameter/shade_tint = Color(0.8, 0.78, 0.92, 1)

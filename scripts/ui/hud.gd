@@ -150,7 +150,7 @@ func set_reticle_visible(value: bool) -> void:
 ## Console mode: the Left / Right / E strip replaces the dialogue panel.
 func show_console_strip(on: bool) -> void:
 	_console_strip.show_strip(on)
-	_prompt_box.visible = _prompt_box.visible and not on
+	_prompt_box.visible = not on and not _prompts.is_empty()
 
 
 func console_pulse_key(which: StringName, reject: bool = false) -> void:

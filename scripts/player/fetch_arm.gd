@@ -42,6 +42,9 @@ func _ready() -> void:
 	_palm_bone = _skeleton.find_bone("Palm2.R")
 	_hide_hand = _skeleton.get_node("Hand_R") as Node3D
 	_hide_arm = _skeleton.get_node("Arm_R") as Node3D
+	for v in _rig.find_children("*", "VisualInstance3D", true, false):
+		(v as VisualInstance3D).layers = 1 << 19
+	_tether.layers = 1 << 19
 	_rig.top_level = true
 	_tether.top_level = true
 	_rig.visible = false

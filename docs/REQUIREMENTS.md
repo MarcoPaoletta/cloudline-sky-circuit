@@ -25,3 +25,18 @@ No gameplay, binary export or runtime performance result is claimed. This delive
 Latest additions: GDD §20–21 covers platforming first on every level; flag-to-arena fades; three gradual waves each; arena two has one summoning boss and arena three has two concurrent summoning bosses; 35–45 / 45–55 / 55–65 second clear targets; one circular platform with six rim portals; bowling head kills every ordinary enemy it touches; bounded layered juice and fading surface paint; behind-player camera matched to THREE QUICK WAVES; top overview is layout-only. Full updated skill and paint source masks are imported and shared under the explicit exception.
 
 Final refresh: GDD §22 follows the second skill update at 1f54afc. All 21 monster models and their texture maps are imported as an asset bank. Arena overview shows exactly six rim portals and remains a planning view.
+
+## As built (implementation coverage)
+
+| Request | Where it lives in the game |
+| --- | --- |
+| Three levels, growing larger | `res://scenes/levels/level_1.tscn` (28 islands), `level_2.tscn` (42), `level_3.tscn` (60); route tests in BUILD_NOTES |
+| All selected mechanics from level one | Level one has the relay bridge, crab and bee, fetch arm and crate, counterweight island, orbit and slide consoles, lifts, shuttle and pad |
+| Ground object changes camera smoothly | `ground_console.tscn`: 0.35 s settle, 0.65 s eased perspective blend to the saved overview pose, reduced-motion 0.15 s |
+| Simple Left/Right puzzle controls | One group per console; Left/Right step, E or Esc exit, endpoint and occupied rejections |
+| Bottom-center robot dialogue | `dialogue_panel.tscn` with live robot portrait, two-press typewriter, queue priorities, hint log in the pause menu |
+| Many platforms, bridges, branching paths | Per-level graphs in GDD §9 realised as saved scenes; world two has three routes, world three three rings plus two final lanes |
+| Vertical and horizontal movement, jump pads | `vertical_lift`, `horizontal_shuttle`, `jump_pad` scenes (14 m/s launch), ramp and flat bridge scenes |
+| Flag goal, yellow ray marker | `finish_flag.tscn` with the golden beam, HUD diamond marker with edge arrow |
+| Enemies and head attack | Crab and bee on the platforms, four horde monsters and the Yeti in the arenas, bowling head with deduplicated hits |
+| Bright toon look matched to the concepts | Toon materials through glTF import remaps, tapered faceted rocks, cloud sea, sunrise glow; see the comparison images in `docs/evidence/` |

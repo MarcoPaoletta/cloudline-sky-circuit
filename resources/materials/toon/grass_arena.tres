@@ -1,0 +1,33 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://c53cuni03dv8p"]
+
+[ext_resource type="Shader" uid="uid://dtcdajgopg28v" path="res://resources/shaders/toon_surface.gdshader" id="1_58ybh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_58ybh")
+shader_parameter/color_a = Color(0.62, 0.74, 0.14, 1)
+shader_parameter/color_b = Color(0.44, 0.62, 0.09, 1)
+shader_parameter/patch_scale = 0.3
+shader_parameter/patch_mix = 0.7
+shader_parameter/top_only_patches = true
+shader_parameter/top_gain = 1.0
+shader_parameter/shade_tint = Color(0.5, 0.72, 0.58, 1)
+shader_parameter/shade_amount = 0.75
+shader_parameter/band_center = 0.46
+shader_parameter/band_soft = 0.2
+shader_parameter/sun_gain = 0.95
+shader_parameter/rim_strength = 0.1
+shader_parameter/rim_power = 3.0
+shader_parameter/rim_color = Color(1, 0.95, 0.8, 1)
+shader_parameter/flat_faces = 1.0
+shader_parameter/gradient_height = 0.0
+shader_parameter/gradient_top_y = 0.0
+shader_parameter/taper = 0.0
+shader_parameter/taper_curve = 1.0
+shader_parameter/facet_jitter = 0.0
+shader_parameter/spec_strength = 0.16
+shader_parameter/spec_size = 0.85
+shader_parameter/spec_color = Color(1, 0.98, 0.92, 1)
+shader_parameter/checker_size = 0.0
+shader_parameter/checker_mix = 0.1
+shader_parameter/wobble = 0.0

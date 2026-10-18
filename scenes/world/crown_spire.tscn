@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c0ehxi7e8a2ss"]
+
+[ext_resource type="PackedScene" uid="uid://c6soylxdlus4q" path="res://assets/cloudline/platformer/Nature/RockPlatforms_Large.gltf" id="1_svdjl"]
+
+[node name="CrownSpire" type="Node3D" unique_id=1704205231]
+
+[node name="Spire_Back" parent="." unique_id=1351484237 instance=ExtResource("1_svdjl")]
+transform = Transform3D(4.322586, 0, 1.5732925, 0, 8.6, 0, -1.5732925, 0, 4.322586, 0, 0, -14)
+
+[node name="Spire_L" parent="." unique_id=969754208 instance=ExtResource("1_svdjl")]
+transform = Transform3D(0.5556743, 0, 3.1513848, 0, 6.2, 0, -3.1513848, 0, 0.5556743, -17, 0, -6)
+
+[node name="Spire_R" parent="." unique_id=152188347 instance=ExtResource("1_svdjl")]
+transform = Transform3D(-2.604551, 0, 2.185478, 0, 6.6, 0, -2.185478, 0, -2.604551, 17, 0, -6)
+
+[node name="Spire_FL" parent="." unique_id=1665747668 instance=ExtResource("1_svdjl")]
+transform = Transform3D(-1.9733545, 0, -0.7182423, 0, 3.6, 0, 0.7182423, 0, -1.9733545, -26, 0, 8)
+
+[node name="Spire_FR" parent="." unique_id=946574858 instance=ExtResource("1_svdjl")]
+transform = Transform3D(-0.3820259, 0, -2.166577, 0, 3.9, 0, 2.166577, 0, -0.3820259, 26, 0, 8)
+
+[node name="Spire_Far" parent="." unique_id=1801145542 instance=ExtResource("1_svdjl")]
+transform = Transform3D(1.7999996, 0, -3.1176915, 0, 5.2, 0, 3.1176915, 0, 1.7999996, 6, 0, -34)

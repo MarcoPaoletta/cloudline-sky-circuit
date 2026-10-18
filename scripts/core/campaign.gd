@@ -87,6 +87,12 @@ func _ready() -> void:
 	apply_bindings()
 
 
+## Bank progress when the window closes or the app goes to the background (tablets can kill a backgrounded app).
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
+		save_game()
+
+
 func _level(n: int) -> Dictionary:
 	if not levels.has(n):
 		levels[n] = {"flag": false, "arena": false, "best_time": 0.0, "coins": [], "gems": []}
@@ -209,7 +215,8 @@ func capture_flag(level: int, time_s: float) -> bool:
 	var best: float = float(d["best_time"])
 	if best <= 0.0 or time_s < best:
 		d["best_time"] = time_s
-	pending_arena = level if not bool(d["arena"]) else 0
+	if not bool(d["arena"]):
+		pending_arena = level
 	last_level = level
 	save_game()
 	progress_changed.emit()
@@ -219,7 +226,8 @@ func capture_flag(level: int, time_s: float) -> bool:
 func clear_arena(level: int) -> void:
 	var d := _level(level)
 	d["arena"] = true
-	pending_arena = 0
+	if pending_arena == level:
+		pending_arena = 0
 	if level >= LEVEL_COUNT:
 		campaign_complete = true
 	else:
@@ -386,22 +394,39 @@ func save_game() -> void:
 		"campaign_complete": campaign_complete,
 		"last_level": last_level,
 	}
-	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	# Write a temp file first and swap it in, so a kill mid-write can never leave a truncated save; keep one backup.
+	var tmp := SAVE_PATH + ".tmp"
+	var f := FileAccess.open(tmp, FileAccess.WRITE)
 	if f == null:
-		push_warning("Campaign: cannot write %s (error %d)" % [SAVE_PATH, FileAccess.get_open_error()])
+		push_warning("Campaign: cannot write %s (error %d)" % [tmp, FileAccess.get_open_error()])
 		return
 	f.store_string(JSON.stringify(data, "\t"))
+	f.close()
+	if FileAccess.file_exists(SAVE_PATH):
+		DirAccess.copy_absolute(SAVE_PATH, SAVE_PATH + ".bak")
+		DirAccess.remove_absolute(SAVE_PATH)
+	if DirAccess.rename_absolute(tmp, SAVE_PATH) != OK:
+		push_warning("Campaign: could not replace %s" % SAVE_PATH)
+
+
+func _read_save(path: String) -> Variant:
+	if not FileAccess.file_exists(path):
+		return null
+	var f := FileAccess.open(path, FileAccess.READ)
+	if f == null:
+		return null
+	return JSON.parse_string(f.get_as_text())
 
 
 func load_game() -> void:
-	if not FileAccess.file_exists(SAVE_PATH):
-		return
-	var f := FileAccess.open(SAVE_PATH, FileAccess.READ)
-	if f == null:
-		return
-	var parsed: Variant = JSON.parse_string(f.get_as_text())
+	var parsed: Variant = _read_save(SAVE_PATH)
 	if typeof(parsed) != TYPE_DICTIONARY:
-		push_warning("Campaign: save file is corrupt, starting fresh")
+		parsed = _read_save(SAVE_PATH + ".bak")
+		if typeof(parsed) == TYPE_DICTIONARY:
+			push_warning("Campaign: save file was unreadable, restored the backup")
+	if typeof(parsed) != TYPE_DICTIONARY:
+		if FileAccess.file_exists(SAVE_PATH):
+			push_warning("Campaign: save file is corrupt, starting fresh")
 		return
 	var data: Dictionary = parsed
 	var s: Dictionary = data.get("settings", {})
@@ -436,7 +461,8 @@ func load_game() -> void:
 			"best_time": float(d.get("best_time", 0.0)),
 			"coins": Array(d.get("coins", [])), "gems": Array(d.get("gems", [])),
 		}
-	pending_arena = int(data.get("pending_arena", 0))
+	var pa := int(data.get("pending_arena", 0))
+	pending_arena = pa if pa >= 1 and pa <= LEVEL_COUNT else 0
 	campaign_complete = bool(data.get("campaign_complete", false))
 	last_level = clampi(int(data.get("last_level", 1)), 1, LEVEL_COUNT)
 

@@ -5,13 +5,13 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_7dtaw")
-shader_parameter/color_a = Color(0.3, 0.66, 0.3, 1)
-shader_parameter/color_b = Color(0.2, 0.54, 0.27, 1)
+shader_parameter/color_a = Color(0.16, 0.5, 0.14, 1)
+shader_parameter/color_b = Color(0.1, 0.4, 0.12, 1)
 shader_parameter/patch_scale = 1.1
 shader_parameter/patch_mix = 0.9
 shader_parameter/top_only_patches = false
 shader_parameter/top_gain = 1.25
-shader_parameter/shade_tint = Color(0.7, 0.78, 0.92, 1)
+shader_parameter/shade_tint = Color(0.62, 0.74, 0.7, 1)
 shader_parameter/shade_amount = 0.6
 shader_parameter/band_center = 0.46
 shader_parameter/band_soft = 0.2
@@ -25,4 +25,9 @@ shader_parameter/gradient_top_y = 0.0
 shader_parameter/taper = 0.0
 shader_parameter/taper_curve = 1.0
 shader_parameter/facet_jitter = 0.22
+shader_parameter/spec_strength = 0.25
+shader_parameter/spec_size = 0.5
+shader_parameter/spec_color = Color(1, 0.98, 0.92, 1)
+shader_parameter/checker_size = 0.0
+shader_parameter/checker_mix = 0.1
 shader_parameter/wobble = 0.0

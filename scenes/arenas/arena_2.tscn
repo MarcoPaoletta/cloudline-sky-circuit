@@ -20,20 +20,21 @@ wave_counts = PackedInt32Array(75, 75, 75)
 wave_starts = PackedFloat32Array(0, 13, 26)
 wave_durations = PackedFloat32Array(11, 11, 11)
 active_cap = 60
+horde_radius = 27
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=755295174]
 environment = ExtResource("2_6c3lc")
 
 [node name="Sun" type="DirectionalLight3D" parent="." unique_id=1832212998]
-transform = Transform3D(-0.79863536, 0.18597108, -0.57236016, 0, 0.95105654, 0.309017, 0.601815, 0.24679194, -0.7595475, 0, 0, 0)
-light_color = Color(1, 0.94118, 0.84706, 1)
-light_energy = 1.2
+transform = Transform3D(-0.79863536, 0.35373804, -0.48687866, 0, 0.809017, 0.58778524, 0.60181504, 0.46942616, -0.6461097, 0, 0, 0)
+light_color = Color(1, 0.88, 0.68, 1)
+light_energy = 1.7
 light_angular_distance = 1.2
 shadow_enabled = true
-shadow_opacity = 0.62
+shadow_opacity = 0.45
 shadow_blur = 1.6
 directional_shadow_mode = 1
-directional_shadow_max_distance = 90.0
+directional_shadow_max_distance = 80.0
 
 [node name="Floor" parent="." unique_id=1187883671 instance=ExtResource("3_hhwa0")]
 
@@ -66,3 +67,7 @@ unique_name_in_owner = true
 arena_mode = true
 
 [node name="SkyGlow" parent="." unique_id=449401204 instance=ExtResource("10_hhwa0")]
+toward_sun = Vector3(0.3, 0.65, -0.7)
+disc_size = 70
+glow_color = Color(0.85, 0.95, 1, 0.4)
+disc_color = Color(1, 1, 0.95, 1)

@@ -43,6 +43,7 @@ var _launched: bool = false
 var _hidden_done: bool = false
 var _target_receiver: Node
 var _target_enemy: Node
+var _assist_latched: bool = false
 var _seated_receiver: Node
 var _attached_node: Node3D
 var _skeleton: Skeleton3D
@@ -58,6 +59,8 @@ func _ready() -> void:
 	_attached_node = robot.get_node("RobotArmature/Skeleton3D/Head2") as Node3D
 	_skeleton = robot.get_node("RobotArmature/Skeleton3D") as Skeleton3D
 	_palm_bone = _skeleton.find_bone("Palm2.R")
+	for v in _head.find_children("*", "VisualInstance3D", true, false):
+		(v as VisualInstance3D).layers = 1 << 19
 	_head.returned.connect(_on_head_returned)
 	_head.seated.connect(_on_head_seated)
 	_head.enemy_hit.connect(_on_enemy_hit)
@@ -207,8 +210,11 @@ func _update_targeting() -> void:
 		_hide_arc()
 		if hud and state == State.ATTACHED:
 			hud.clear_prompt(_prompt_owner)
-	# Aim assist target for bowling (hold aim_assist).
-	var want_assist := Campaign.aim_assist and Input.is_action_pressed(&"aim_assist")
+	# Aim assist target for bowling: hold the aim button, or tap it to toggle when "hold to aim" is off in Settings.
+	if Input.is_action_just_pressed(&"aim_assist") and not Campaign.hold_to_aim:
+		_assist_latched = not _assist_latched
+	var assist_down := Input.is_action_pressed(&"aim_assist") if Campaign.hold_to_aim else _assist_latched
+	var want_assist := Campaign.aim_assist and assist_down
 	var enemy := _find_enemy(origin, fwd) if want_assist else null
 	if enemy != _target_enemy:
 		if _target_enemy and is_instance_valid(_target_enemy) and _target_enemy.has_method(&"set_targeted"):
@@ -354,6 +360,7 @@ func _clear_targeting_visuals_only() -> void:
 	_hide_arc()
 	if _target_receiver and is_instance_valid(_target_receiver) and not _is_deploy:
 		_target_receiver.set_highlight(false)
+		_target_receiver = null
 	if _target_enemy and is_instance_valid(_target_enemy) and _target_enemy.has_method(&"set_targeted"):
 		_target_enemy.set_targeted(false)
 	_target_enemy = null

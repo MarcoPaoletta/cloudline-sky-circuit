@@ -41,11 +41,15 @@ var _last_start: Dictionary = {}
 var _last_variant: Dictionary = {}
 var _badge_tween: Tween
 var _master_idx: int = 0
+## Authored bus offsets (default_bus_layout.tres); the settings sliders scale around them.
+var _base_db: Dictionary = {}
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_master_idx = AudioServer.get_bus_index(&"Master")
+	for i in AudioServer.bus_count:
+		_base_db[AudioServer.get_bus_name(i)] = AudioServer.get_bus_volume_db(i)
 	# Step 2b of the build order: mute before any sound can exist.
 	AudioServer.set_bus_mute(_master_idx, true)
 	_refresh_badge(false)
@@ -76,12 +80,12 @@ func toggle_mute() -> void:
 func set_bus_linear(bus: StringName, value: float) -> void:
 	var idx := AudioServer.get_bus_index(bus)
 	if idx >= 0:
-		AudioServer.set_bus_volume_db(idx, linear_to_db(clampf(value, 0.0001, 1.0)))
+		AudioServer.set_bus_volume_db(idx, float(_base_db.get(String(bus), 0.0)) + linear_to_db(clampf(value, 0.0001, 1.0)))
 
 
 func get_bus_linear(bus: StringName) -> float:
 	var idx := AudioServer.get_bus_index(bus)
-	return db_to_linear(AudioServer.get_bus_volume_db(idx)) if idx >= 0 else 1.0
+	return db_to_linear(AudioServer.get_bus_volume_db(idx) - float(_base_db.get(String(bus), 0.0))) if idx >= 0 else 1.0
 
 
 ## Plays a one-shot on the SFX bus. Returns the player used (or null when rate limited / missing).

@@ -1,5 +1,5 @@
 shader_type spatial;
-render_mode cull_back, specular_disabled, depth_draw_opaque;
+render_mode cull_back, depth_draw_opaque;
 // Cloudline toon surface (grass, dirt, rock, props): flat facets, soft two-step sun light, warm shade, rim glow.
 // Colors are the lit surface colors seen in the concept art; the sun brightens them toward yellow and the shaded
 // faces keep their hue (never go grey or blue).
@@ -24,6 +24,11 @@ uniform float gradient_top_y = 0.0;
 uniform float taper = 0.0;          // 0 = off; 0.8 pulls the far end of the gradient axis in to 20% of its width
 uniform float taper_curve = 1.0;
 uniform float facet_jitter = 0.0;   // per-facet brightness variation (crystal look), uses the flat normal as the facet id
+uniform float spec_strength = 0.0;   // toon highlight: a soft, stepped sun glint (plastic / metal / glass sheen)
+uniform float spec_size = 0.5;       // 0 = tight glint, 1 = broad sheen
+uniform vec3 spec_color : source_color = vec3(1.0, 0.98, 0.92);
+uniform float checker_size = 0.0;   // metres; > 0 paints a mowed-lawn checker on upward faces (arena floors)
+uniform float checker_mix = 0.1;
 uniform float wobble = 0.0;         // organic sideways wobble (metres at the far end), differs per island by world position
 
 varying vec3 wpos;
@@ -97,6 +102,10 @@ void fragment() {
 		pm *= step(0.5, wn.y);
 	}
 	vec3 col = mix(color_a, color_b, pm);
+	if (checker_size > 0.01) {
+		float ck = mod(floor(wpos.x / checker_size) + floor(wpos.z / checker_size), 2.0);
+		col *= 1.0 + (ck - 0.5) * 2.0 * checker_mix * step(0.5, wn.y);
+	}
 	if (facet_jitter > 0.0) {
 		vec3 q = floor(wn * 3.0 + 0.5);
 		col *= 1.0 + (hash31(q + 3.7) - 0.5) * facet_jitter;
@@ -121,4 +130,10 @@ void light() {
 	// tint the shadowed part toward a warm/cool shade (applied as a multiplicative darkening of the albedo term)
 	float shade = 1.0 - lit;
 	DIFFUSE_LIGHT *= mix(vec3(1.0), shade_tint, shade * shade_amount);
+	if (spec_strength > 0.001) {
+		vec3 hv = normalize(LIGHT + VIEW);
+		float ndh = max(dot(NORMAL, hv), 0.0);
+		float sp = smoothstep(0.30, 0.62, pow(ndh, mix(90.0, 14.0, spec_size)));
+		SPECULAR_LIGHT += LIGHT_COLOR * spec_color * sp * spec_strength * ATTENUATION / PI;
+	}
 }
