@@ -465,7 +465,7 @@ Marco played v1 and asked for the changes below. This section supersedes earlier
 
 **Audio.** There is music now (supersedes "no music or ambience loop" in section 23): one calm track for the title, one bouncy-but-relaxed track for the worlds and one upbeat track for the arenas. They loop seamlessly and crossfade on the Music bus. The sound palette is soft (bells, marimba, kalimba, soft thumps, airy whooshes); nothing is harsh or chiptune. The boot-muted rule and the M toggle are unchanged.
 
-**Enemy density.** Each world has at least 10 enemies (13 / 15 / 18). The new ones sit on broad islands and side pockets, never on a checkpoint, console or arrival island.
+**Enemy density.** Each world has between 5 and 25 enemies, scaled to its size: 15 / 20 / 25 for 28 / 42 / 60 islands. The new ones sit on broad islands and side pockets, never on a checkpoint, console or arrival island.
 
 **Bees (supersedes the bee numbers in section 11 where they differ).** A bee loops 0.9 m over the floor under its placement, so a rolled head hits it. When it notices the robot (6 m, same level), it hovers 0.8 s with the amber mark while drifting toward the robot (at most 3.5 m/s, never closer than 2.2 m, never outside its 8 m leash). Then it makes a straight dive of up to 3.2 m at the robot's sampled chest height and returns. The dive can be dodged by moving during the wind-up.
 

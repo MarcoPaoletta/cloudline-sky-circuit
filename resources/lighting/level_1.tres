@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LightingPreset" format=3]
+
+[ext_resource type="Script" path="res://scripts/core/lighting_preset.gd" id="1_0lghf"]
+
+[resource]
+script = ExtResource("1_0lghf")
+light_color = Color(1, 0.82, 0.58, 1)
+light_energy = 2.21
+rotation_degrees = Vector3(-36, -173.49998, 0)
+shadow_opacity = 1.0

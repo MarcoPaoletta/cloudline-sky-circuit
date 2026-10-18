@@ -329,7 +329,10 @@ func key_text(action: StringName) -> String:
 	var ev := primary_event(action)
 	if ev is InputEventKey:
 		var code: Key = (ev as InputEventKey).physical_keycode
-		var kc := DisplayServer.keyboard_get_keycode_from_physical(code)
+		# The editor-embedded display server has no keyboard layout lookup (it errors on every call).
+		var kc: Key = KEY_NONE
+		if DisplayServer.get_name() != "embedded" and DisplayServer.get_name() != "headless":
+			kc = DisplayServer.keyboard_get_keycode_from_physical(code)
 		var t := OS.get_keycode_string(kc if kc != KEY_NONE else code)
 		return t if t != "" else "?"
 	if ev is InputEventMouseButton:

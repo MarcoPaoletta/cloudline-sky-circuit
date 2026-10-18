@@ -353,20 +353,32 @@ func _on_save() -> void:
 	_say("Saved: %s" % (", ".join(saved) if not saved.is_empty() else "nothing changed"))
 
 
-## A save from the running game writes the .tres without its `uid=` header (the editor's UID cache is not loaded),
-## so the original first line is put back afterwards and scenes keep resolving the resource by UID.
+## A save from the running game writes the .tres without UIDs (the editor's UID cache is not loaded there): the
+## `uid=` of the header and of every ext_resource line is put back from the file as it was before the save, so
+## scenes and resources keep resolving each other by UID.
 func _save_keeping_uid(r: Resource, path: String) -> bool:
 	var header := ""
+	var uids := {}
 	if FileAccess.file_exists(path):
-		var rf := FileAccess.open(path, FileAccess.READ)
-		header = rf.get_line()
-		rf.close()
+		var old := FileAccess.get_file_as_string(path)
+		header = old.get_slice("\n", 0)
+		var rx := RegEx.create_from_string('\\[ext_resource [^\\]]*uid="([^"]+)"[^\\]]*path="([^"]+)"')
+		for m in rx.search_all(old):
+			uids[m.get_string(2)] = m.get_string(1)
 	if ResourceSaver.save(r, path) != OK:
 		return false
-	if header.contains(" uid="):
-		var text := FileAccess.get_file_as_string(path)
-		var nl := text.find("\n")
-		var wf := FileAccess.open(path, FileAccess.WRITE)
-		wf.store_string(header + (text.substr(nl) if nl >= 0 else "\n"))
-		wf.close()
+	var lines := FileAccess.get_file_as_string(path).split("\n")
+	if header.contains(" uid=") and lines.size() > 0:
+		lines[0] = header
+	for i in lines.size():
+		var l := lines[i]
+		if l.begins_with("[ext_resource ") and not l.contains(" uid="):
+			var p0 := l.find('path="')
+			if p0 >= 0:
+				var p := l.substr(p0 + 6, l.find('"', p0 + 6) - p0 - 6)
+				if uids.has(p):
+					lines[i] = l.replace(' path="', ' uid="%s" path="' % uids[p])
+	var wf := FileAccess.open(path, FileAccess.WRITE)
+	wf.store_string("\n".join(lines))
+	wf.close()
 	return true

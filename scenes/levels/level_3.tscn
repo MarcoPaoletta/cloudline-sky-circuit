@@ -922,6 +922,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 18.05, -194)
 paint_color_id = 0
 reward_coin_id = "e18"
 
+[node name="Crab19" parent="World/Enemies" unique_id=2000281641 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0.05, -34)
+reward_coin_id = "e19"
+
+[node name="Crab20" parent="World/Enemies" unique_id=376222179 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 0.05, 0)
+paint_color_id = 3
+reward_coin_id = "e20"
+
+[node name="Crab21" parent="World/Enemies" unique_id=650117899 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 3.05, -43)
+paint_color_id = 0
+reward_coin_id = "e21"
+
+[node name="Bee22" parent="World/Enemies" unique_id=480587975 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 19.4, -166)
+reward_coin_id = "e22"
+
+[node name="Crab23" parent="World/Enemies" unique_id=449037420 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 15.05, -105)
+paint_color_id = 3
+reward_coin_id = "e23"
+
+[node name="Bee24" parent="World/Enemies" unique_id=126871133 instance=ExtResource("27_au27u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 19.4, -157)
+paint_color_id = 1
+reward_coin_id = "e24"
+
+[node name="Crab25" parent="World/Enemies" unique_id=2117641697 instance=ExtResource("26_l1xkm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 18.05, -194)
+paint_color_id = 2
+reward_coin_id = "e25"
+
 [node name="Pickups" type="Node3D" parent="World" unique_id=1237035990]
 
 [node name="Coin001" parent="World/Pickups" unique_id=79135808 instance=ExtResource("28_fbh0l")]
