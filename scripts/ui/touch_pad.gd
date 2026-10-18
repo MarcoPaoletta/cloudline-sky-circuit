@@ -11,20 +11,20 @@ extends Control
 ## lifted so the mouse a tap emulates never bowls by itself. Three fingers at once toggle the F1 dev panel in
 ## debug builds. Everything sits inside the device safe area (notch, home indicator).
 
-## Action sent by each button node.
+## Actions sent by each button node. USE is both "interact" and "console_exit", like the E key.
 const ACTIONS := {
-	"BtnJump": &"jump", "BtnBowl": &"head_attack", "BtnHead": &"head_deploy", "BtnFetch": &"fetch",
-	"BtnUse": &"interact", "BtnLeft": &"console_left", "BtnRight": &"console_right",
-	"BtnExit": &"console_exit", "BtnPause": &"pause",
+	"BtnJump": [&"jump"], "BtnBowl": [&"head_attack"], "BtnHead": [&"head_deploy"], "BtnFetch": [&"fetch"],
+	"BtnUse": [&"interact", &"console_exit"], "BtnLeft": [&"console_left"], "BtnRight": [&"console_right"],
+	"BtnPause": [&"pause"],
 }
 ## What prompts and the controls list show for an action while touch mode is on.
 const LABELS := {
 	&"jump": "JUMP", &"head_attack": "BOWL", &"head_deploy": "HEAD", &"fetch": "FETCH", &"interact": "USE",
-	&"sprint": "STICK EDGE", &"console_left": "◀", &"console_right": "▶", &"console_exit": "EXIT", &"pause": "II",
+	&"sprint": "STICK EDGE", &"console_left": "◀", &"console_right": "▶", &"console_exit": "USE", &"pause": "II",
 	&"move_forward": "STICK", &"move_back": "STICK", &"move_left": "STICK", &"move_right": "STICK",
 	&"aim_assist": "AUTO", &"reset_local": "MENU", &"objective_help": "MENU",
 }
-const CONSOLE_BUTTONS := ["BtnLeft", "BtnRight", "BtnExit"]
+const CONSOLE_BUTTONS := ["BtnLeft", "BtnRight"]
 const PLAY_BUTTONS := ["BtnJump", "BtnBowl", "BtnHead", "BtnFetch", "BtnUse"]
 const LIFTED_MOUSE_ACTIONS: Array[StringName] = [&"head_attack", &"aim_assist"]
 
@@ -39,7 +39,7 @@ static var touch_mode: bool = false
 @export var look_degrees_per_px: float = 0.16
 ## Share of the screen width (from the left) where a new touch grabs the stick.
 @export var stick_zone: float = 0.42
-@export var base_color: Color = Color(0.06, 0.09, 0.16, 0.38)
+@export var base_color: Color = Color(0.10, 0.16, 0.32, 0.42)
 @export var ring_color: Color = Color(1, 1, 1, 0.55)
 @export var pressed_color: Color = Color(1.0, 0.82, 0.25, 0.75)
 
@@ -71,6 +71,8 @@ func _ready() -> void:
 	get_viewport().size_changed.connect(apply_safe_area)
 	apply_safe_area()
 	_set_shown(false)
+	# Decided before the first scene builds its prompts, so they read JUMP / BOWL... from the start.
+	_set_touch_mode(wanted())
 
 
 ## Touch controls are wanted on touchscreen devices, or always when the player asks for it in Settings.
@@ -189,7 +191,8 @@ func _touch_down(index: int, pos: Vector2) -> void:
 		if r.get_center().distance_to(pos) <= maxf(r.size.x, r.size.y) * 0.62:
 			_btn_finger[index] = n
 			_held[n] = true
-			_send(ACTIONS[n], true)
+			for a in ACTIONS[n]:
+				_send(a, true)
 			return
 	var local := pos - global_position
 	if _stick.visible and _stick_finger < 0 and local.x < size.x * stick_zone:
@@ -207,7 +210,8 @@ func _touch_up(index: int) -> void:
 		var n: String = _btn_finger[index]
 		_btn_finger.erase(index)
 		_held.erase(n)
-		_send(ACTIONS[n], false)
+		for a in ACTIONS[n]:
+			_send(a, false)
 	elif index == _stick_finger:
 		_stick_finger = -1
 		_set_sprint(false)

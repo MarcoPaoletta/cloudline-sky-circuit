@@ -72,6 +72,8 @@ func _ready() -> void:
 		var play := _world_cards.get_node("Card%d/Box/PlayButton" % n) as Button
 		play.pressed.connect(_start_level.bind(n))
 	_quit.visible = not OS.has_feature("web") and not OS.has_feature("ios")
+	if TouchPad.touch_mode:
+		_footer.text = "Tap the speaker to turn sound on or off   ·   II pauses in game"
 	_place_camera()
 	_refresh_all()
 	var first: Control = _main
