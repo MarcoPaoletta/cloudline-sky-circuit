@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg1l4qtfieun3"
 path.s3tc="res://.godot/imported/Yeti_Texture.png-404e96fd2a8b6d215fb0f50c89591e14.s3tc.ctex"
+path.etc2="res://.godot/imported/Yeti_Texture.png-404e96fd2a8b6d215fb0f50c89591e14.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cloudline/monsters/Textures/Yeti_Texture.png"
-dest_files=["res://.godot/imported/Yeti_Texture.png-404e96fd2a8b6d215fb0f50c89591e14.s3tc.ctex"]
+dest_files=["res://.godot/imported/Yeti_Texture.png-404e96fd2a8b6d215fb0f50c89591e14.s3tc.ctex", "res://.godot/imported/Yeti_Texture.png-404e96fd2a8b6d215fb0f50c89591e14.etc2.ctex"]
 
 [params]
 

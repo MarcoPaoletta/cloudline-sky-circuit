@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://tymqphr4ex2m"
 path.s3tc="res://.godot/imported/Alien_Texture.png-d0a2b717e5a6b92f6779e4ad688ade56.s3tc.ctex"
+path.etc2="res://.godot/imported/Alien_Texture.png-d0a2b717e5a6b92f6779e4ad688ade56.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cloudline/monsters/Textures/Alien_Texture.png"
-dest_files=["res://.godot/imported/Alien_Texture.png-d0a2b717e5a6b92f6779e4ad688ade56.s3tc.ctex"]
+dest_files=["res://.godot/imported/Alien_Texture.png-d0a2b717e5a6b92f6779e4ad688ade56.s3tc.ctex", "res://.godot/imported/Alien_Texture.png-d0a2b717e5a6b92f6779e4ad688ade56.etc2.ctex"]
 
 [params]
 

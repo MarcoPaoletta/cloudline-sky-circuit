@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8orlalqx2tkq"
 path.s3tc="res://.godot/imported/Cyclops_Texture.png-83e74e864aa29163fa8b8cb62c5b5542.s3tc.ctex"
+path.etc2="res://.godot/imported/Cyclops_Texture.png-83e74e864aa29163fa8b8cb62c5b5542.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cloudline/monsters/Textures/Cyclops_Texture.png"
-dest_files=["res://.godot/imported/Cyclops_Texture.png-83e74e864aa29163fa8b8cb62c5b5542.s3tc.ctex"]
+dest_files=["res://.godot/imported/Cyclops_Texture.png-83e74e864aa29163fa8b8cb62c5b5542.s3tc.ctex", "res://.godot/imported/Cyclops_Texture.png-83e74e864aa29163fa8b8cb62c5b5542.etc2.ctex"]
 
 [params]
 

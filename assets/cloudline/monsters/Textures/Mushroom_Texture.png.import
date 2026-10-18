@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://18864scnb3hu"
 path.s3tc="res://.godot/imported/Mushroom_Texture.png-935d03e75c52449ebb9d15920ddb7757.s3tc.ctex"
+path.etc2="res://.godot/imported/Mushroom_Texture.png-935d03e75c52449ebb9d15920ddb7757.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/cloudline/monsters/Textures/Mushroom_Texture.png"
-dest_files=["res://.godot/imported/Mushroom_Texture.png-935d03e75c52449ebb9d15920ddb7757.s3tc.ctex"]
+dest_files=["res://.godot/imported/Mushroom_Texture.png-935d03e75c52449ebb9d15920ddb7757.s3tc.ctex", "res://.godot/imported/Mushroom_Texture.png-935d03e75c52449ebb9d15920ddb7757.etc2.ctex"]
 
 [params]
 
