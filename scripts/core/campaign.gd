@@ -45,6 +45,8 @@ var hold_to_aim: bool = true
 var hold_to_bowl: bool = true
 var text_scale: float = 1.0
 var instant_text: bool = false
+## Show the on-screen touch controls even without a touchscreen (v3; they always show on touch devices).
+var touch_always: bool = false
 var reduced_motion: bool = false
 var reduced_flash: bool = false
 var shake_scale: float = 1.0
@@ -326,6 +328,8 @@ func primary_event(action: StringName) -> InputEvent:
 
 ## Short readable name of the action's key, for prompts, dialogue and the controls list.
 func key_text(action: StringName) -> String:
+	if TouchPad.touch_mode and TouchPad.LABELS.has(action):
+		return String(TouchPad.LABELS[action])
 	var ev := primary_event(action)
 	if ev is InputEventKey:
 		var code: Key = (ev as InputEventKey).physical_keycode
@@ -388,7 +392,7 @@ func save_game() -> void:
 		"version": 1,
 		"settings": {
 			"mouse_sensitivity": mouse_sensitivity, "invert_y": invert_y, "aim_assist": aim_assist,
-			"hold_to_aim": hold_to_aim, "hold_to_bowl": hold_to_bowl, "text_scale": text_scale, "instant_text": instant_text,
+			"hold_to_aim": hold_to_aim, "hold_to_bowl": hold_to_bowl, "text_scale": text_scale, "instant_text": instant_text, "touch_always": touch_always,
 			"reduced_motion": reduced_motion, "reduced_flash": reduced_flash, "shake_scale": shake_scale,
 			"no_recoil": no_recoil, "vol_master": vol_master, "vol_sfx": vol_sfx, "vol_ui": vol_ui,
 			"vol_ambience": vol_ambience, "vol_music": vol_music,
@@ -442,6 +446,7 @@ func load_game() -> void:
 	hold_to_bowl = bool(s.get("hold_to_bowl", hold_to_bowl))
 	text_scale = float(s.get("text_scale", text_scale))
 	instant_text = bool(s.get("instant_text", instant_text))
+	touch_always = bool(s.get("touch_always", touch_always))
 	reduced_motion = bool(s.get("reduced_motion", reduced_motion))
 	reduced_flash = bool(s.get("reduced_flash", reduced_flash))
 	shake_scale = float(s.get("shake_scale", shake_scale))

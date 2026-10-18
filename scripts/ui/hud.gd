@@ -34,6 +34,8 @@ var _last_health: int = -1
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	add_to_group(&"hud")
+	_apply_safe_area()
+	get_viewport().size_changed.connect(_apply_safe_area)
 	_prompt_box.modulate.a = 0.0
 	_prompt_box.visible = false
 	_toast.modulate.a = 0.0
@@ -44,6 +46,16 @@ func _ready() -> void:
 	var p := get_tree().get_first_node_in_group(&"player") as Player
 	if p:
 		bind_player(p)
+
+
+## Keeps every HUD element inside the device safe area (notch, rounded corners, home indicator; v3 phones).
+func _apply_safe_area() -> void:
+	var safe := get_node("Safe") as Control
+	var s := TouchPad.safe_insets(get_viewport())
+	safe.offset_left = s.x
+	safe.offset_top = s.y
+	safe.offset_right = -s.z
+	safe.offset_bottom = -s.w
 
 
 func dialogue() -> DialoguePanel:

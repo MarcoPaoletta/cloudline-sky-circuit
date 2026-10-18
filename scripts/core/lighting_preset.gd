@@ -21,6 +21,7 @@ static func path_for(scene: Node) -> String:
 static func apply_to(scene: Node) -> void:
 	if scene == null or scene.scene_file_path == "":
 		return
+	apply_mobile_budget(scene)
 	var path := path_for(scene)
 	if not ResourceLoader.exists(path):
 		return
@@ -28,6 +29,16 @@ static func apply_to(scene: Node) -> void:
 	var sun := scene.get_node_or_null("Sun") as DirectionalLight3D
 	if preset and sun:
 		preset.apply_sun(sun)
+
+
+## Phones (v3): shorter, two-split sun shadows. Desktop keeps the authored values.
+static func apply_mobile_budget(scene: Node) -> void:
+	if not OS.has_feature("mobile"):
+		return
+	var sun := scene.get_node_or_null("Sun") as DirectionalLight3D
+	if sun:
+		sun.directional_shadow_max_distance = minf(sun.directional_shadow_max_distance, 45.0)
+		sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
 
 
 func apply_sun(sun: DirectionalLight3D) -> void:

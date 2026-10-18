@@ -1,0 +1,226 @@
+[gd_scene format=3 uid="uid://c3pohodhqbnog"]
+
+[ext_resource type="Script" uid="uid://blw5uvv5n1ag" path="res://scripts/ui/touch_pad.gd" id="1_cyy65"]
+
+[node name="TouchControls" type="CanvasLayer" unique_id=840506354]
+layer = 70
+
+[node name="Pad" type="Control" parent="." unique_id=943593627]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_cyy65")
+
+[node name="Stick" type="Control" parent="Pad" unique_id=215142641]
+anchors_preset = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 170.0
+offset_top = -420.0
+offset_right = 430.0
+offset_bottom = -160.0
+mouse_filter = 2
+
+[node name="Knob" type="Control" parent="Pad/Stick" unique_id=689577307]
+anchors_preset = 0
+offset_left = 75.0
+offset_top = 75.0
+offset_right = 185.0
+offset_bottom = 185.0
+mouse_filter = 2
+
+[node name="BtnJump" type="Control" parent="Pad" unique_id=1458981983]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -120.0
+offset_bottom = -120.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnJump" unique_id=923407496]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "JUMP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnBowl" type="Control" parent="Pad" unique_id=622464036]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = -260.0
+offset_right = -370.0
+offset_bottom = -90.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnBowl" unique_id=1608921792]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "BOWL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnHead" type="Control" parent="Pad" unique_id=1004089478]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -500.0
+offset_top = -470.0
+offset_right = -350.0
+offset_bottom = -320.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnHead" unique_id=838595504]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "HEAD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnFetch" type="Control" parent="Pad" unique_id=1122910399]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -520.0
+offset_right = -160.0
+offset_bottom = -380.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnFetch" unique_id=318504519]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "FETCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnUse" type="Control" parent="Pad" unique_id=1817512025]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -700.0
+offset_top = -210.0
+offset_right = -570.0
+offset_bottom = -80.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnUse" unique_id=1634728608]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "USE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnLeft" type="Control" parent="Pad" unique_id=321339704]
+anchors_preset = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 170.0
+offset_top = -330.0
+offset_right = 330.0
+offset_bottom = -170.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnLeft" unique_id=1921528480]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "◀"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnRight" type="Control" parent="Pad" unique_id=139739639]
+anchors_preset = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 380.0
+offset_top = -330.0
+offset_right = 540.0
+offset_bottom = -170.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnRight" unique_id=94124360]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "▶"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnExit" type="Control" parent="Pad" unique_id=376204802]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -320.0
+offset_right = -120.0
+offset_bottom = -120.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnExit" unique_id=771682902]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BtnPause" type="Control" parent="Pad" unique_id=77697925]
+anchors_preset = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -290.0
+offset_top = 18.0
+offset_right = -200.0
+offset_bottom = 108.0
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Pad/BtnPause" unique_id=1694946777]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "II"
+horizontal_alignment = 1
+vertical_alignment = 1

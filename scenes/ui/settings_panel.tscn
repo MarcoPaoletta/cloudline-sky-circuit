@@ -325,6 +325,22 @@ theme_type_variation = &"ToggleButton"
 toggle_mode = true
 text = "Off"
 
+[node name="TouchRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=827841403]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/Box/Scroll/List/TouchRow" unique_id=52396791]
+custom_minimum_size = Vector2(440, 0)
+layout_mode = 2
+text = "Always show touch controls"
+
+[node name="TouchToggle" type="Button" parent="Panel/Box/Scroll/List/TouchRow" unique_id=1895464747]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_type_variation = &"ToggleButton"
+toggle_mode = true
+text = "Off"
+
 [node name="ReducedMotionRow" type="HBoxContainer" parent="Panel/Box/Scroll/List" unique_id=541715602]
 layout_mode = 2
 

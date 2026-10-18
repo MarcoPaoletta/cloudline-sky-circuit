@@ -74,6 +74,8 @@ func _ready() -> void:
 			e.windup_started.connect(_on_enemy_windup)
 		if e is EnemyBase:
 			_crowd.append(e as EnemyBase)
+	if OS.has_feature("mobile"):
+		enemy_wake_radius *= 0.75
 	_update_crowd(_crowd.size())
 	Campaign.coins_changed.connect(func(_t: int) -> void: _since_progress = 0.0)
 	Campaign.progress_changed.connect(func() -> void: _since_progress = 0.0)

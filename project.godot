@@ -24,6 +24,7 @@ Campaign="*res://scripts/core/campaign.gd"
 ScreenTransition="*res://scenes/core/screen_transition.tscn"
 DebugPanel="*res://scenes/core/debug_panel.tscn"
 LightingLab="*res://scenes/core/lighting_lab.tscn"
+TouchControls="*res://scenes/core/touch_controls.tscn"
 
 [display]
 
@@ -31,6 +32,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=4
 
 [gui]
 
@@ -207,34 +209,14 @@ common/physics_interpolation=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality.mobile=1
 anti_aliasing/quality/msaa_3d=2
 environment/defaults/default_clear_color=Color(0.52157, 0.81961, 0.99216, 1)
 
 [xogot]
 
-project/editorState=[{
-"column": 13,
-"line": 2,
-"path": "res://skills/game-dev/references/splatwalk-lessons/splatwalk-lessons.md",
-"type": "file"
-}, {
-"column": 0,
-"line": 0,
-"path": "res://skills/game-dev/SKILL.md",
-"type": "file"
-}, {
-"column": 28,
-"line": 445,
-"path": "res://docs/GDD.md",
-"type": "file"
-}, {
-"column": 0,
-"current": true,
-"line": 0,
-"path": "gdscript://-9223370972340418492.gd",
-"transient": true,
-"type": "file"
-}]
+project/editorState=[]
 project/shaderEditorState=[]
 project/breakpoints={}
 project/disabled_breakpoints={}

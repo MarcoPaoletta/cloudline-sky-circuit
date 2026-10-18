@@ -70,7 +70,8 @@ func _ready() -> void:
 	for g in _model.find_children("*", "GeometryInstance3D", true, false):
 		_flash_meshes.append(g as GeometryInstance3D)
 		if render_distance > 0.0:
-			(g as GeometryInstance3D).visibility_range_end = render_distance
+			# Phones draw a shorter distance (v3 mobile budget).
+			(g as GeometryInstance3D).visibility_range_end = render_distance * (0.65 if OS.has_feature("mobile") else 1.0)
 	collision_mask = alive_mask
 	_setup()
 

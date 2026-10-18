@@ -13,7 +13,7 @@ const SLIDERS := {
 }
 const TOGGLES := {
 	&"InvertYToggle": &"invert_y", &"AimAssistToggle": &"aim_assist", &"HoldAimToggle": &"hold_to_aim",
-	&"HoldBowlToggle": &"hold_to_bowl", &"InstantTextToggle": &"instant_text",
+	&"HoldBowlToggle": &"hold_to_bowl", &"InstantTextToggle": &"instant_text", &"TouchToggle": &"touch_always",
 	&"ReducedMotionToggle": &"reduced_motion", &"ReducedFlashToggle": &"reduced_flash",
 	&"NoRecoilToggle": &"no_recoil",
 }

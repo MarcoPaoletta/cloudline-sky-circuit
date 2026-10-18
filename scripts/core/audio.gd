@@ -72,12 +72,21 @@ func _ready() -> void:
 	# Step 2b of the build order: mute before any sound can exist.
 	AudioServer.set_bus_mute(_master_idx, true)
 	_refresh_badge(false)
+	# v3: the badge is a button too (phones have no M key).
+	_badge.mouse_filter = Control.MOUSE_FILTER_STOP
+	_badge.gui_input.connect(_on_badge_input)
 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed(&"toggle_mute") and not event.is_echo():
 		toggle_mute()
 		get_viewport().set_input_as_handled()
+
+
+func _on_badge_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and (event as InputEventMouseButton).pressed and (event as InputEventMouseButton).button_index == MOUSE_BUTTON_LEFT:
+		toggle_mute()
+		_badge.accept_event()
 
 
 ## True while the Master bus is muted.

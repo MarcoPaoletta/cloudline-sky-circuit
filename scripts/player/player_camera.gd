@@ -107,7 +107,17 @@ func snap_behind(model_yaw: float) -> void:
 
 func set_capture(value: bool) -> void:
 	capture_enabled = value
-	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if value else Input.MOUSE_MODE_VISIBLE
+	# Touch mode (v3) never captures the mouse: taps emulate the mouse and must stay free for the UI.
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if value and not TouchPad.touch_mode else Input.MOUSE_MODE_VISIBLE
+
+
+## Camera turn from a finger dragged on the right side of the screen (degrees, already scaled by the pad).
+func apply_touch_look(deg: Vector2) -> void:
+	if not capture_enabled or _look_locked or is_in_overview():
+		return
+	yaw -= deg_to_rad(deg.x * Campaign.mouse_sensitivity)
+	var inv := -1.0 if Campaign.invert_y else 1.0
+	pitch_deg = clampf(pitch_deg - deg.y * Campaign.mouse_sensitivity * inv, pitch_min_deg, pitch_max_deg)
 
 
 func lock_look(value: bool) -> void:
